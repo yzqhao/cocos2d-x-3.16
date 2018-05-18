@@ -204,8 +204,6 @@ public:
     * Get meshes used in sprite 3d
     */
     const Vector<Mesh*>& getMeshes() const { return _meshes; }
-
-CC_CONSTRUCTOR_ACCESS:
     
     Sprite3D();
     virtual ~Sprite3D();

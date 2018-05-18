@@ -77,14 +77,6 @@ bool TransitionScene::initWithDuration(float t, Scene *scene)
     {
         _duration = t;
 
-        // retain
-#if CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-        auto sEngine = ScriptEngineManager::getInstance()->getScriptEngine();
-        if (sEngine)
-        {
-            sEngine->retainScriptObject(this, scene);
-        }
-#endif // CC_ENABLE_GC_FOR_NATIVE_OBJECTS
         _inScene = scene;
         _inScene->retain();
         _outScene = Director::getInstance()->getRunningScene();
@@ -155,13 +147,6 @@ void TransitionScene::setNewScene(float /*dt*/)
     _isSendCleanupToScene = director->isSendCleanupToScene();
     
     director->replaceScene(_inScene);
-#if CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-    auto sEngine = ScriptEngineManager::getInstance()->getScriptEngine();
-    if (sEngine)
-    {
-        sEngine->releaseScriptObject(this, _inScene);
-    }
-#endif // CC_ENABLE_GC_FOR_NATIVE_OBJECTS
     
     // issue #267
     _outScene->setVisible(true);
@@ -177,14 +162,6 @@ void TransitionScene::hideOutShowIn()
 // custom onEnter
 void TransitionScene::onEnter()
 {
-#if CC_ENABLE_SCRIPT_BINDING
-    if (_scriptType == kScriptTypeJavascript)
-    {
-        if (ScriptEngineManager::sendNodeEventToJSExtended(this, kNodeOnEnter))
-            return;
-    }
-#endif // #if CC_ENABLE_SCRIPT_BINDING
-    
     Scene::onEnter();
     
     // disable events while transitions
@@ -200,14 +177,6 @@ void TransitionScene::onEnter()
 // custom onExit
 void TransitionScene::onExit()
 {
-#if CC_ENABLE_SCRIPT_BINDING
-    if (_scriptType == kScriptTypeJavascript)
-    {
-        if (ScriptEngineManager::sendNodeEventToJSExtended(this, kNodeOnExit))
-            return;
-    }
-#endif // #if CC_ENABLE_SCRIPT_BINDING
-    
     Scene::onExit();
     
     // enable events while transitions
@@ -217,24 +186,11 @@ void TransitionScene::onExit()
     // _inScene should not receive the onEnter callback
     // only the onEnterTransitionDidFinish
     _inScene->onEnterTransitionDidFinish();
-
-#if CC_ENABLE_SCRIPT_BINDING
-    if (ScriptEngineManager::getInstance()->getScriptEngine())
-        ScriptEngineManager::getInstance()->getScriptEngine()->garbageCollect();
-#endif // CC_ENABLE_SCRIPT_BINDING
 }
 
 // custom cleanup
 void TransitionScene::cleanup()
 {
-#if CC_ENABLE_SCRIPT_BINDING
-    if (_scriptType == kScriptTypeJavascript)
-    {
-        if (ScriptEngineManager::sendNodeEventToJSExtended(this, kNodeOnCleanup))
-            return;
-    }
-#endif // #if CC_ENABLE_SCRIPT_BINDING
-    
     Scene::cleanup();
 
     if( _isSendCleanupToScene )

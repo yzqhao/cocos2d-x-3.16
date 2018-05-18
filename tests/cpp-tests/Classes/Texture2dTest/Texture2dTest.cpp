@@ -79,10 +79,6 @@ Texture2DTests::Texture2DTests()
     ADD_TEST_CASE(TextureJPEG);
     ADD_TEST_CASE(TextureTIFF);
     ADD_TEST_CASE(TextureTGA);
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WINRT)
-    ADD_TEST_CASE(TextureWEBP);
-    ADD_TEST_CASE(TextureWEBPNoAlpha)
-#endif
     ADD_TEST_CASE(TexturePixelFormat);
     ADD_TEST_CASE(TextureBlend);
     ADD_TEST_CASE(TextureAsync);

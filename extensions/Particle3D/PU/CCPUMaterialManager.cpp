@@ -29,7 +29,7 @@
 #include "platform/CCFileUtils.h"
 #include "platform/CCPlatformMacros.h"
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
 #include <io.h>
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "platform/android/CCFileUtils-android.h"
@@ -126,7 +126,7 @@ int iterPath(const char *fpath, const struct stat* /*sb*/, int typeflag)
 bool PUMaterialCache::loadMaterialsFromSearchPaths( const std::string &fileFolder )
 {
     bool state = false;
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
         std::string seg("/");
         std::string fullPath = fileFolder + seg + std::string("*.material");
         _finddata_t data;
@@ -139,7 +139,7 @@ bool PUMaterialCache::loadMaterialsFromSearchPaths( const std::string &fileFolde
             state = true;
         }
         _findclose(handle);
-#elif (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID/* || CC_TARGET_PLATFORM == CC_PLATFORM_LINUX*/)
+#elif (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     std::string::size_type pos = fileFolder.find("assets/");
     std::string relativePath = fileFolder;
     if (pos != std::string::npos) {

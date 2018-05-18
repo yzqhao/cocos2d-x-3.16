@@ -64,12 +64,6 @@ typedef void (Ref::*SEL_TouchEvent)(Ref*,TouchEventType);
 #define toucheventselector(_SELECTOR) (SEL_TouchEvent)(&_SELECTOR)
 
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-#ifdef ABSOLUTE
-#undef ABSOLUTE
-#endif
-#endif
-
 /**
  *@brief Base class for all ui widgets.
  * This class inherent from `ProtectedNode` and `LayoutParameterProtocol`.

@@ -143,7 +143,7 @@ bool Effect::initGLProgramState(const std::string &fragmentFilename)
     auto fragSource = fileUtiles->getStringFromFile(fragmentFullPath);
     auto glprogram = GLProgram::createWithByteArrays(ccPositionTextureColor_noMVP_vert, fragSource.c_str());
     
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     _fragSource = fragSource;
 #endif
     
@@ -156,7 +156,7 @@ bool Effect::initGLProgramState(const std::string &fragmentFilename)
 Effect::Effect()
 : _glprogramstate(nullptr)
 {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     _backgroundListener = EventListenerCustom::create(EVENT_RENDERER_RECREATED,
                                                       [this](EventCustom*)
                                                       {
@@ -174,7 +174,7 @@ Effect::Effect()
 Effect::~Effect()
 {
     CC_SAFE_RELEASE_NULL(_glprogramstate);
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     Director::getInstance()->getEventDispatcher()->removeEventListener(_backgroundListener);
 #endif
 }
@@ -202,19 +202,13 @@ void EffectBlur::setTarget(EffectSprite *sprite)
     
     Size size = sprite->getTexture()->getContentSizeInPixels();
     _glprogramstate->setUniformVec2("resolution", size);
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WINRT)
     _glprogramstate->setUniformFloat("blurRadius", _blurRadius);
     _glprogramstate->setUniformFloat("sampleNum", _blurSampleNum);
-#endif
 }
 
 bool EffectBlur::init(float blurRadius, float sampleNum)
 {
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WINRT)
     initGLProgramState("Shaders/example_Blur.fsh");
-#else
-    initGLProgramState("Shaders/example_Blur_winrt.fsh");
-#endif
     _blurRadius = blurRadius;
     _blurSampleNum = sampleNum;
     

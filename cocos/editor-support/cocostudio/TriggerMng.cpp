@@ -77,34 +77,14 @@ void TriggerMng::parse(const rapidjson::Value &root)
 {
     CCLOG("%s", triggerMngVersion());
     int count = DICTOOL->getArrayCount_json(root, "Triggers");
-    
-#if CC_ENABLE_SCRIPT_BINDING
-    ScriptEngineProtocol* engine = ScriptEngineManager::getInstance()->getScriptEngine();
-    bool useBindings = engine != nullptr;
 
-    if (useBindings)
+    for (int i = 0; i < count; ++i)
     {
-        if (count > 0)
-        {
-            const rapidjson::Value &subDict = DICTOOL->getSubDictionary_json(root, "Triggers");
-            rapidjson::StringBuffer buffer;
-            rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
-            subDict.Accept(writer);
-            
-            engine->parseConfig(ScriptEngineProtocol::ConfigType::COCOSTUDIO, buffer.GetString());
-        }
-    }
-    else
-#endif // #if CC_ENABLE_SCRIPT_BINDING
-    {
-        for (int i = 0; i < count; ++i)
-        {
-            const rapidjson::Value &subDict = DICTOOL->getSubDictionary_json(root, "Triggers", i);
-            TriggerObj *obj = TriggerObj::create();
-            obj->serialize(subDict);
-            _triggerObjs.insert(std::pair<unsigned int, TriggerObj*>(obj->getId(), obj));
-            obj->retain();
-        }
+        const rapidjson::Value &subDict = DICTOOL->getSubDictionary_json(root, "Triggers", i);
+        TriggerObj *obj = TriggerObj::create();
+        obj->serialize(subDict);
+        _triggerObjs.insert(std::pair<unsigned int, TriggerObj*>(obj->getId(), obj));
+        obj->retain();
     }
 }
     
@@ -116,33 +96,12 @@ void TriggerMng::parse(cocostudio::CocoLoader *pCocoLoader, cocostudio::stExpCoc
     int count = pCocoNode[13].GetChildNum();
     stExpCocoNode *pTriggersArray = pCocoNode[13].GetChildArray(pCocoLoader);
 
-#if CC_ENABLE_SCRIPT_BINDING
-    ScriptEngineProtocol* engine = ScriptEngineManager::getInstance()->getScriptEngine();
-    bool useBindings = engine != nullptr;
-    
-    if (useBindings)
+    for (int i = 0; i < count; ++i)
     {
-        if (count > 0 )
-        {
-            rapidjson::Document document;
-            buildJson(document, pCocoLoader, pCocoNode);
-            rapidjson::StringBuffer buffer;
-            rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
-            document.Accept(writer);
-            
-            engine->parseConfig(ScriptEngineProtocol::ConfigType::COCOSTUDIO, buffer.GetString());
-        }
-    }
-    else
-#endif // #if CC_ENABLE_SCRIPT_BINDING
-    {
-        for (int i = 0; i < count; ++i)
-        {
-            TriggerObj *obj = TriggerObj::create();
-            obj->serialize(pCocoLoader, &pTriggersArray[i]);
-            _triggerObjs.insert(std::pair<unsigned int, TriggerObj*>(obj->getId(), obj));
-            obj->retain();
-        }
+        TriggerObj *obj = TriggerObj::create();
+        obj->serialize(pCocoLoader, &pTriggersArray[i]);
+        _triggerObjs.insert(std::pair<unsigned int, TriggerObj*>(obj->getId(), obj));
+        obj->retain();
     }
 }
 

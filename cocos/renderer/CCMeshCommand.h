@@ -66,7 +66,7 @@ public:
     
     uint32_t getMaterialID() const;
     
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     void listenRendererRecreated(EventCustom* event);
 #endif
 
@@ -112,7 +112,7 @@ protected:
     GLuint _textureID;
 
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     EventListenerCustom* _rendererRecreatedListener;
 #endif
 };

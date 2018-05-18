@@ -58,21 +58,6 @@ Menu* Menu::create()
     return Menu::create(nullptr, nullptr);
 }
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-Menu * Menu::variadicCreate(MenuItem* item, ...)
-{
-    va_list args;
-    va_start(args,item);
-    
-    Menu *ret = Menu::createWithItems(item, args);
-    
-    va_end(args);
-    
-    return ret;
-}
-#else
-
-
 Menu * Menu::create(MenuItem* item, ...)
 {
     va_list args;
@@ -84,8 +69,6 @@ Menu * Menu::create(MenuItem* item, ...)
     
     return ret;
 }
-#endif
-
 
 Menu* Menu::createWithArray(const Vector<MenuItem*>& arrayOfItems)
 {
@@ -201,27 +184,11 @@ void Menu::addChild(Node * child, int zOrder, const std::string &name)
 
 void Menu::onEnter()
 {
-#if CC_ENABLE_SCRIPT_BINDING
-    if (_scriptType == kScriptTypeJavascript)
-    {
-        if (ScriptEngineManager::sendNodeEventToJSExtended(this, kNodeOnEnter))
-            return;
-    }
-#endif
-    
     Layer::onEnter();
 }
 
 void Menu::onExit()
 {
-#if CC_ENABLE_SCRIPT_BINDING
-    if (_scriptType == kScriptTypeJavascript)
-    {
-        if (ScriptEngineManager::sendNodeEventToJSExtended(this, kNodeOnExit))
-            return;
-    }
-#endif
-    
     if (_state == Menu::State::TRACKING_TOUCH)
     {
         if (_selectedItem)

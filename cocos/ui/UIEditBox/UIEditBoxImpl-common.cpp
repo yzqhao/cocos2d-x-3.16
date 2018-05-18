@@ -34,7 +34,7 @@
 
 static const int CC_EDIT_BOX_PADDING = 5;
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT || CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
 #define PASSWORD_CHAR "*"
 #else
 #define PASSWORD_CHAR "\u25CF"
@@ -335,15 +335,6 @@ void EditBoxImplCommon::editBoxEditingDidBegin()
     {
         pDelegate->editBoxEditingDidBegin(_editBox);
     }
-    
-#if CC_ENABLE_SCRIPT_BINDING
-    if (NULL != _editBox && 0 != _editBox->getScriptEditBoxHandler())
-    {
-        cocos2d::CommonScriptData data(_editBox->getScriptEditBoxHandler(), "began", _editBox);
-        cocos2d::ScriptEvent event(cocos2d::kCommonEvent, (void *)&data);
-        cocos2d::ScriptEngineManager::getInstance()->getScriptEngine()->sendEvent(&event);
-    }
-#endif
 }
 
 void EditBoxImplCommon::editBoxEditingDidEnd(const std::string& text, EditBoxDelegate::EditBoxEndAction action)
@@ -371,19 +362,6 @@ void EditBoxImplCommon::editBoxEditingDidEnd(const std::string& text, EditBoxDel
         pDelegate->editBoxReturn(_editBox);
     }
     
-#if CC_ENABLE_SCRIPT_BINDING
-    if (_editBox != nullptr && 0 != _editBox->getScriptEditBoxHandler())
-    {
-        cocos2d::CommonScriptData data(_editBox->getScriptEditBoxHandler(), "ended", _editBox);
-        cocos2d::ScriptEvent event(cocos2d::kCommonEvent, (void *)&data);
-        cocos2d::ScriptEngineManager::getInstance()->getScriptEngine()->sendEvent(&event);
-        memset(data.eventName, 0, sizeof(data.eventName));
-        strncpy(data.eventName, "return", sizeof(data.eventName));
-        event.data = (void *)&data;
-        cocos2d::ScriptEngineManager::getInstance()->getScriptEngine()->sendEvent(&event);
-    }
-#endif
-    
     if (_editBox != nullptr)
     {
         this->onEndEditing(_text);
@@ -399,15 +377,6 @@ void EditBoxImplCommon::editBoxEditingChanged(const std::string& text)
     {
         pDelegate->editBoxTextChanged(_editBox, text);
     }
-    
-#if CC_ENABLE_SCRIPT_BINDING
-    if (NULL != _editBox && 0 != _editBox->getScriptEditBoxHandler())
-    {
-        cocos2d::CommonScriptData data(_editBox->getScriptEditBoxHandler(), "changed", _editBox);
-        cocos2d::ScriptEvent event(cocos2d::kCommonEvent, (void *)&data);
-        cocos2d::ScriptEngineManager::getInstance()->getScriptEngine()->sendEvent(&event);
-    }
-#endif
 }
 
 

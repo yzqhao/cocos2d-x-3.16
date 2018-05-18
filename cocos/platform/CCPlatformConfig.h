@@ -51,7 +51,6 @@ THE SOFTWARE.
 #define CC_PLATFORM_EMSCRIPTEN        10
 #define CC_PLATFORM_TIZEN             11
 #define CC_PLATFORM_QT5               12
-#define CC_PLATFORM_WINRT             13
 
 // Determine target platform by compile environment macro.
 #define CC_TARGET_PLATFORM             CC_PLATFORM_UNKNOWN
@@ -126,12 +125,6 @@ THE SOFTWARE.
 #if defined(CC_TARGET_QT5)
     #undef  CC_TARGET_PLATFORM
     #define CC_TARGET_PLATFORM     CC_PLATFORM_QT5
-#endif
-
-// WinRT (Windows 8.1 Store/Phone App)
-#if defined(WINRT)
-    #undef  CC_TARGET_PLATFORM
-    #define CC_TARGET_PLATFORM          CC_PLATFORM_WINRT
 #endif
 
 //////////////////////////////////////////////////////////////////////////

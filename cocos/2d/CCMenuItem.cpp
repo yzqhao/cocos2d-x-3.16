@@ -104,14 +104,6 @@ void MenuItem::activate()
         {
             _callback(this);
         }
-#if CC_ENABLE_SCRIPT_BINDING
-        if (kScriptTypeLua == _scriptType)
-        {
-            BasicScriptData data(this);
-            ScriptEvent scriptEvent(kMenuClickedEvent, &data);
-            ScriptEngineManager::getInstance()->getScriptEngine()->sendEvent(&scriptEvent);
-        }
-#endif
     }
 }
 
@@ -780,19 +772,6 @@ MenuItemToggle * MenuItemToggle::createWithTarget(Ref* target, SEL_MenuHandler s
     MenuItemToggle *ret = new (std::nothrow) MenuItemToggle();
     ret->MenuItem::initWithCallback(std::bind(selector, target, std::placeholders::_1));
     ret->autorelease();
-#if CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-    auto sEngine = ScriptEngineManager::getInstance()->getScriptEngine();
-    if (sEngine)
-    {
-        for (const auto &item : menuItems)
-        {
-            if (item)
-            {
-                sEngine->retainScriptObject(ret, item);
-            }
-        }
-    }
-#endif // CC_ENABLE_GC_FOR_NATIVE_OBJECTS
     ret->_subItems = menuItems;
     ret->_selectedIndex = UINT_MAX;
     ret->setSelectedIndex(0);
@@ -804,19 +783,6 @@ MenuItemToggle * MenuItemToggle::createWithCallback(const ccMenuCallback &callba
     MenuItemToggle *ret = new (std::nothrow) MenuItemToggle();
     ret->MenuItem::initWithCallback(callback);
     ret->autorelease();
-#if CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-    auto sEngine = ScriptEngineManager::getInstance()->getScriptEngine();
-    if (sEngine)
-    {
-        for (const auto &item : menuItems)
-        {
-            if (item)
-            {
-                sEngine->retainScriptObject(ret, item);
-            }
-        }
-    }
-#endif // CC_ENABLE_GC_FOR_NATIVE_OBJECTS
     ret->_subItems = menuItems;
     ret->_selectedIndex = UINT_MAX;
     ret->setSelectedIndex(0);
@@ -835,18 +801,6 @@ MenuItemToggle * MenuItemToggle::createWithTarget(Ref* target, SEL_MenuHandler s
     return ret;
 }
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-MenuItemToggle * MenuItemToggle::createWithCallbackVA(const ccMenuCallback &callback, MenuItem* item, ...)
-{
-    va_list args;
-    va_start(args, item);
-    MenuItemToggle *ret = new (std::nothrow) MenuItemToggle();
-    ret->initWithCallback(callback, item, args);
-    ret->autorelease();
-    va_end(args);
-    return ret;
-}
-#else
 MenuItemToggle * MenuItemToggle::createWithCallback(const ccMenuCallback &callback, MenuItem* item, ...)
 {
     va_list args;
@@ -857,7 +811,6 @@ MenuItemToggle * MenuItemToggle::createWithCallback(const ccMenuCallback &callba
     va_end(args);
     return ret;
 }
-#endif
 
 MenuItemToggle * MenuItemToggle::create()
 {
@@ -880,19 +833,9 @@ bool MenuItemToggle::initWithCallback(const ccMenuCallback &callback, MenuItem *
     int z = 0;
     MenuItem *i = item;
     
-#if CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-    auto sEngine = ScriptEngineManager::getInstance()->getScriptEngine();
-#endif // CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-    
     while(i)
     {
         z++;
-#if CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-        if (sEngine)
-        {
-            sEngine->retainScriptObject(this, i);
-        }
-#endif // CC_ENABLE_GC_FOR_NATIVE_OBJECTS
         _subItems.pushBack(i);
         i = va_arg(args, MenuItem*);
     }
@@ -928,13 +871,6 @@ bool MenuItemToggle::initWithItem(MenuItem *item)
 
 void MenuItemToggle::addSubItem(MenuItem *item)
 {
-#if CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-    auto sEngine = ScriptEngineManager::getInstance()->getScriptEngine();
-    if (sEngine)
-    {
-        sEngine->retainScriptObject(this, item);
-    }
-#endif // CC_ENABLE_GC_FOR_NATIVE_OBJECTS
     _subItems.pushBack(item);
 }
 

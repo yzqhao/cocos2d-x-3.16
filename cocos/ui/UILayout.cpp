@@ -92,14 +92,6 @@ Layout::~Layout()
     
 void Layout::onEnter()
 {
-#if CC_ENABLE_SCRIPT_BINDING
-    if (_scriptType == kScriptTypeJavascript)
-    {
-        if (ScriptEngineManager::sendNodeEventToJSExtended(this, kNodeOnEnter))
-            return;
-    }
-#endif
-    
     Widget::onEnter();
     if (_clippingStencil)
     {
@@ -111,14 +103,6 @@ void Layout::onEnter()
     
 void Layout::onExit()
 {
-#if CC_ENABLE_SCRIPT_BINDING
-    if (_scriptType == kScriptTypeJavascript)
-    {
-        if (ScriptEngineManager::sendNodeEventToJSExtended(this, kNodeOnExit))
-            return;
-    }
-#endif
-    
     Widget::onExit();
     if (_clippingStencil)
     {
