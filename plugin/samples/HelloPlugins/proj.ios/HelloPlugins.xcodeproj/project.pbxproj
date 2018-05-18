@@ -619,7 +619,7 @@
 				PRODUCT_NAME = HelloPlugins;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../cocos/math\" \"$(SRCROOT)/../../../../cocos/base\" \"$(SRCROOT)/../../../../cocos\" \"$(SRCROOT)/../../../../cocos/2d\" \"$(SRCROOT)/../../../../cocos/platform/ios\" \"$(SRCROOT)/../../../../cocos/physics\" \"$(SRCROOT)/../../../protocols/include\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../cocos/math\" \"$(SRCROOT)/../../../../cocos/base\" \"$(SRCROOT)/../../../../cocos\" \"$(SRCROOT)/../../../../cocos/2d\" \"$(SRCROOT)/../../../../cocos/platform/ios\" \"$(SRCROOT)/../../../protocols/include\"";
 				VALID_ARCHS = "armv7s armv7 arm64";
 			};
 			name = Debug;
@@ -656,7 +656,7 @@
 				PRODUCT_NAME = HelloPlugins;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../cocos/math\" \"$(SRCROOT)/../../../../cocos/base\" \"$(SRCROOT)/../../../../cocos\" \"$(SRCROOT)/../../../../cocos/2d\" \"$(SRCROOT)/../../../../cocos/platform/ios\" \"$(SRCROOT)/../../../../cocos/physics\" \"$(SRCROOT)/../../../protocols/include\"";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../../../cocos/math\" \"$(SRCROOT)/../../../../cocos/base\" \"$(SRCROOT)/../../../../cocos\" \"$(SRCROOT)/../../../../cocos/2d\" \"$(SRCROOT)/../../../../cocos/platform/ios\" \"$(SRCROOT)/../../../protocols/include\"";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7s armv7 arm64";
 			};

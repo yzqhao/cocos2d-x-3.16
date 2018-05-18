@@ -44,7 +44,6 @@
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/2d"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/physics"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/base"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/math/kazmath"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/ui"/>
@@ -123,7 +122,6 @@
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/2d"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos"/>
-									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/physics"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/base"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/math/kazmath"/>
 									<listOptionValue builtIn="false" value="${ProjDirPath}/../cocos2d/cocos/ui"/>

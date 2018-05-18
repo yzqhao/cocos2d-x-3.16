@@ -38,9 +38,6 @@
     <Filter Include="network">
       <UniqueIdentifier>{a2141e87-a561-433e-905b-63ff5c4e0e6e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="physics">
-      <UniqueIdentifier>{661c905d-7ec2-4161-8b09-1c22ddefb830}</UniqueIdentifier>
-    </Filter>
     <Filter Include="platform">
       <UniqueIdentifier>{6b13d475-62b0-4d73-8cee-52f077aa3fe7}</UniqueIdentifier>
     </Filter>
@@ -235,12 +232,6 @@
     </Filter>
     <Filter Include="audioengine">
       <UniqueIdentifier>{5937896e-882c-429a-ada7-72c799c06920}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="physics3d">
-      <UniqueIdentifier>{f68e83b4-2fa3-4f47-9864-e7dfd90c16a6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="navmesh">
-      <UniqueIdentifier>{cc4f6ca9-4231-479d-8e19-ede4dff3382e}</UniqueIdentifier>
     </Filter>
     <Filter Include="external\clipper">
       <UniqueIdentifier>{e3a5fe25-a92e-4c98-9026-782b2b5b1388}</UniqueIdentifier>
@@ -1789,21 +1780,6 @@
       <Filter>audioengine</Filter>
     </ClCompile>
     <ClCompile Include="..\..\renderer\CCFrameBuffer.cpp" />
-    <ClCompile Include="..\..\navmesh\CCNavMesh.cpp">
-      <Filter>navmesh</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\navmesh\CCNavMeshAgent.cpp">
-      <Filter>navmesh</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\navmesh\CCNavMeshDebugDraw.cpp">
-      <Filter>navmesh</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\navmesh\CCNavMeshObstacle.cpp">
-      <Filter>navmesh</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\navmesh\CCNavMeshUtils.cpp">
-      <Filter>navmesh</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCAutoPolygon.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -1836,45 +1812,6 @@
     </ClCompile>
     <ClCompile Include="..\..\renderer\CCTextureCube.cpp">
       <Filter>renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics\CCPhysicsBody.cpp">
-      <Filter>physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics\CCPhysicsContact.cpp">
-      <Filter>physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics\CCPhysicsJoint.cpp">
-      <Filter>physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics\CCPhysicsShape.cpp">
-      <Filter>physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics\CCPhysicsWorld.cpp">
-      <Filter>physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics3d\CCPhysics3D.cpp">
-      <Filter>physics3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics3d\CCPhysics3DComponent.cpp">
-      <Filter>physics3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics3d\CCPhysics3DConstraint.cpp">
-      <Filter>physics3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics3d\CCPhysics3DDebugDrawer.cpp">
-      <Filter>physics3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics3d\CCPhysics3DObject.cpp">
-      <Filter>physics3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics3d\CCPhysics3DShape.cpp">
-      <Filter>physics3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics3d\CCPhysics3DWorld.cpp">
-      <Filter>physics3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\physics3d\CCPhysicsSprite3D.cpp">
-      <Filter>physics3d</Filter>
     </ClCompile>
     <ClCompile Include="..\..\3d\CCAABB.cpp">
       <Filter>3d</Filter>
@@ -3674,21 +3611,6 @@
     <ClInclude Include="..\..\audio\winrt\AudioSourceReader.h">
       <Filter>audioengine</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\navmesh\CCNavMesh.h">
-      <Filter>navmesh</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\navmesh\CCNavMeshAgent.h">
-      <Filter>navmesh</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\navmesh\CCNavMeshDebugDraw.h">
-      <Filter>navmesh</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\navmesh\CCNavMeshObstacle.h">
-      <Filter>navmesh</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\navmesh\CCNavMeshUtils.h">
-      <Filter>navmesh</Filter>
-    </ClInclude>
     <ClInclude Include="..\CCAutoPolygon.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -3724,48 +3646,6 @@
     </ClInclude>
     <ClInclude Include="..\..\renderer\CCTextureCube.h">
       <Filter>renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics\CCPhysicsBody.h">
-      <Filter>physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics\CCPhysicsContact.h">
-      <Filter>physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics\CCPhysicsHelper.h">
-      <Filter>physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics\CCPhysicsJoint.h">
-      <Filter>physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics\CCPhysicsShape.h">
-      <Filter>physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics\CCPhysicsWorld.h">
-      <Filter>physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics3d\CCPhysics3D.h">
-      <Filter>physics3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics3d\CCPhysics3DComponent.h">
-      <Filter>physics3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics3d\CCPhysics3DConstraint.h">
-      <Filter>physics3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics3d\CCPhysics3DDebugDrawer.h">
-      <Filter>physics3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics3d\CCPhysics3DObject.h">
-      <Filter>physics3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics3d\CCPhysics3DShape.h">
-      <Filter>physics3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics3d\CCPhysics3DWorld.h">
-      <Filter>physics3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\physics3d\CCPhysicsSprite3D.h">
-      <Filter>physics3d</Filter>
     </ClInclude>
     <ClInclude Include="..\..\3d\CCAABB.h">
       <Filter>3d</Filter>

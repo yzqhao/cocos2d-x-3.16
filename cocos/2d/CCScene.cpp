@@ -34,23 +34,10 @@ THE SOFTWARE.
 #include "renderer/CCRenderer.h"
 #include "renderer/CCFrameBuffer.h"
 
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-#include "physics3d/CCPhysics3DWorld.h"
-#include "physics3d/CCPhysics3DComponent.h"
-#endif
-
-#if CC_USE_NAVMESH
-#include "navmesh/CCNavMesh.h"
-#endif
-
 NS_CC_BEGIN
 
 Scene::Scene()
 {
-#if CC_USE_NAVMESH
-    _navMesh = nullptr;
-    _navMeshDebugCamera = nullptr;
-#endif
     _ignoreAnchorPointForPosition = true;
     setAnchorPoint(Vec2(0.5f, 0.5f));
     
@@ -68,9 +55,6 @@ Scene::Scene()
 
 Scene::~Scene()
 {
-#if CC_USE_NAVMESH
-    CC_SAFE_RELEASE(_navMesh);
-#endif
     Director::getInstance()->getEventDispatcher()->removeEventListener(_event);
     CC_SAFE_RELEASE(_event);
     
@@ -82,18 +66,6 @@ Scene::~Scene()
     }
 #endif // CC_ENABLE_GC_FOR_NATIVE_OBJECTS
 }
-
-#if CC_USE_NAVMESH
-void Scene::setNavMesh(NavMesh* navMesh)
-{
-    if (_navMesh != navMesh)
-    {
-        CC_SAFE_RETAIN(navMesh);
-        CC_SAFE_RELEASE(_navMesh);
-        _navMesh = navMesh;
-    }
-}
-#endif
 
 bool Scene::init()
 {
@@ -208,12 +180,6 @@ void Scene::render(Renderer* renderer, const Mat4* eyeTransforms, const Mat4* ey
         camera->clearBackground();
         //visit the scene
         visit(renderer, transform, 0);
-#if CC_USE_NAVMESH
-        if (_navMesh && _navMeshDebugCamera == camera)
-        {
-            _navMesh->debugDraw(renderer);
-        }
-#endif
 
         renderer->render();
         camera->restore();
@@ -243,15 +209,5 @@ void Scene::removeAllChildren()
         _defaultCamera->release();
     }
 }
-
-#if CC_USE_NAVMESH
-void Scene::setNavMeshDebugCamera(Camera *camera)
-{
-    CC_SAFE_RETAIN(camera);
-    CC_SAFE_RELEASE(_navMeshDebugCamera);
-    _navMeshDebugCamera = camera;
-}
-
-#endif
 
 NS_CC_END

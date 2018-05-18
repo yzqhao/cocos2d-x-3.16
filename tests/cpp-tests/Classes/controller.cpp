@@ -52,7 +52,6 @@ public:
         addTest("JNIHelper", []() { return new JNITests(); });
 #endif
         addTest("Material System", [](){return new MaterialSystemTest(); });
-        addTest("Navigation Mesh", [](){return new NavMeshTests(); });
         addTest("Node: BillBoard Test", [](){  return new BillBoardTests(); });
         addTest("Node: Camera 3D Test", [](){  return new Camera3DTests(); });
         addTest("Node: Clipping", []() { return new ClippingNodeTests(); });

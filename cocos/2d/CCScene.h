@@ -38,12 +38,6 @@ class BaseLight;
 class Renderer;
 class EventListenerCustom;
 class EventCustom;
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-class Physics3DWorld;
-#endif
-#if CC_USE_NAVMESH
-class NavMesh;
-#endif
 
 /**
  * @addtogroup _2d
@@ -150,22 +144,6 @@ protected:
     
 private:
     CC_DISALLOW_COPY_AND_ASSIGN(Scene);
-    
-#if CC_USE_NAVMESH
-public:
-    /** set navigation mesh */
-    void setNavMesh(NavMesh* navMesh);
-    /** get navigation mesh */
-    NavMesh* getNavMesh() const { return _navMesh; }
-    /**
-    * Set NavMesh debug draw camera.
-    */
-    void setNavMeshDebugCamera(Camera *camera);
-
-protected:
-    NavMesh*        _navMesh;
-    Camera *        _navMeshDebugCamera;
-#endif
     
 };
 
