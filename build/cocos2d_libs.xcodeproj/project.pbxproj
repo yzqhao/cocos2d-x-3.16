@@ -6505,7 +6505,6 @@
 				1551A340158F2AB200E66CFE /* Products */,
 				500DC89819105D41007B91BF /* renderer */,
 				1AAF5849180E40B8000584C8 /* storage */,
-				50F9654D1CD0360000ADE813 /* vr */,
 				2905F9E618CF08D000240AA3 /* ui */,
 			);
 			sourceTree = "<group>";
@@ -8716,23 +8715,6 @@
 			);
 			name = mac;
 			path = ../external/glfw3/include/mac;
-			sourceTree = "<group>";
-		};
-		50F9654D1CD0360000ADE813 /* vr */ = {
-			isa = PBXGroup;
-			children = (
-				502AF9771D0711B8006AF256 /* CCVRGenericHeadTracker.cpp */,
-				50F9654E1CD0360000ADE813 /* CCVRGenericRenderer.cpp */,
-				50F9654F1CD0360000ADE813 /* CCVRGenericRenderer.h */,
-				50F965501CD0360000ADE813 /* CCVRProtocol.h */,
-				503D4F611CE29D4E0054A2D1 /* CCVRDistortionMesh.cpp */,
-				503D4F621CE29D4E0054A2D1 /* CCVRDistortionMesh.h */,
-				503D4F691CE2BDBE0054A2D1 /* CCVRDistortion.cpp */,
-				503D4F6A1CE2BDBE0054A2D1 /* CCVRDistortion.h */,
-				5030C03E1CE6DF8B00C5D3E7 /* CCVRGenericHeadTracker.h */,
-			);
-			name = vr;
-			path = ../cocos/vr;
 			sourceTree = "<group>";
 		};
 		50FCEB6818C72017004AD434 /* WidgetReader */ = {
