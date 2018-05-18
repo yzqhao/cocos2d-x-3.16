@@ -32,7 +32,6 @@ public:
         addTest("Box2d - TestBed", []() { return new (std::nothrow) Box2dTestBedSuite(); });
 #endif
         addTest("Bugs", []() { return new BugsTests(); });
-        addTest("Chipmunk", []() { return new ChipmunkTests(); });
         addTest("Click and Move", [](){return new ClickAndMoveTest(); });
         addTest("Configuration", []() { return new ConfigurationTests(); });
         addTest("Console", []() { return new ConsoleTests(); });
@@ -68,10 +67,6 @@ public:
         addTest("Node: Parallax", [](){return new ParallaxTests(); });
         addTest("Node: Particles", [](){return new ParticleTests(); });
         addTest("Node: Particle3D (PU)", [](){return new Particle3DTests(); });
-#if CC_USE_PHYSICS
-        addTest("Node: Physics", []() { return new PhysicsTests(); });
-#endif
-        addTest("Node: Physics3D", []() { return new Physics3DTests(); } );
         addTest("Node: RenderTexture", [](){return new RenderTextureTests(); });
         addTest("Node: Scene", [](){return new SceneTests(); });
         addTest("Node: Spine", [](){return new SpineTests(); });

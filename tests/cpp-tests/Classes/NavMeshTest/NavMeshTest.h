@@ -31,15 +31,6 @@
 
 DEFINE_TEST_SUITE(NavMeshTests);
 
-#if ( CC_USE_NAVMESH == 0 ) || ( CC_USE_PHYSICS == 0 )
-class NavMeshDisabled : public TestCase
-{
-public:
-    CREATE_FUNC(NavMeshDisabled);
-
-    virtual void onEnter() override;
-};
-#else
 
 class NavMeshBaseTestDemo : public TestCase
 {
@@ -121,7 +112,5 @@ protected:
     cocos2d::Label *_agentLabel;
     cocos2d::Label *_debugLabel;
 };
-
-#endif
 
 #endif

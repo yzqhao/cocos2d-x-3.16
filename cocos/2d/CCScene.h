@@ -38,9 +38,6 @@ class BaseLight;
 class Renderer;
 class EventListenerCustom;
 class EventCustom;
-#if CC_USE_PHYSICS
-class PhysicsWorld;
-#endif
 #if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
 class Physics3DWorld;
 #endif
@@ -154,52 +151,6 @@ protected:
 private:
     CC_DISALLOW_COPY_AND_ASSIGN(Scene);
     
-#if (CC_USE_PHYSICS || (CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION))
-public:
-    
-#if CC_USE_PHYSICS
-    /** Get the physics world of the scene.
-     * @return The physics world of the scene.
-     * @js NA
-     */
-    PhysicsWorld* getPhysicsWorld() const { return _physicsWorld; }
-#endif
-    
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-    /** Get the 3d physics world of the scene.
-     * @return The 3d physics world of the scene.
-     * @js NA
-     */
-    Physics3DWorld* getPhysics3DWorld() { return _physics3DWorld; }
-    
-    /** 
-     * Set Physics3D debug draw camera.
-     */
-    void setPhysics3DDebugCamera(Camera* camera);
-#endif
-    
-    /** Create a scene with physics.
-     * @return An autoreleased Scene object with physics.
-     * @js NA
-     */
-    static Scene *createWithPhysics();
-    
-CC_CONSTRUCTOR_ACCESS:
-    bool initWithPhysics();
-    
-protected:
-    void addChildToPhysicsWorld(Node* child);
-
-#if CC_USE_PHYSICS
-    PhysicsWorld* _physicsWorld;
-#endif
-    
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-    Physics3DWorld*            _physics3DWorld;
-    Camera*                    _physics3dDebugCamera; //
-#endif
-#endif // (CC_USE_PHYSICS || CC_USE_3D_PHYSICS)
-    
 #if CC_USE_NAVMESH
 public:
     /** set navigation mesh */
@@ -216,10 +167,6 @@ protected:
     Camera *        _navMeshDebugCamera;
 #endif
     
-#if (CC_USE_PHYSICS || (CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION) || CC_USE_NAVMESH)
-public:
-    void stepPhysicsAndNavigation(float deltaTime);
-#endif
 };
 
 // end of _2d group

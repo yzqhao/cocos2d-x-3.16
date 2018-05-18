@@ -34,10 +34,6 @@ THE SOFTWARE.
 #include "renderer/CCRenderer.h"
 #include "renderer/CCFrameBuffer.h"
 
-#if CC_USE_PHYSICS
-#include "physics/CCPhysicsWorld.h"
-#endif
-
 #if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
 #include "physics3d/CCPhysics3DWorld.h"
 #include "physics3d/CCPhysics3DComponent.h"
@@ -51,16 +47,9 @@ NS_CC_BEGIN
 
 Scene::Scene()
 {
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-    _physics3DWorld = nullptr;
-    _physics3dDebugCamera = nullptr;
-#endif
 #if CC_USE_NAVMESH
     _navMesh = nullptr;
     _navMeshDebugCamera = nullptr;
-#endif
-#if CC_USE_PHYSICS
-    _physicsWorld = nullptr;
 #endif
     _ignoreAnchorPointForPosition = true;
     setAnchorPoint(Vec2(0.5f, 0.5f));
@@ -79,19 +68,11 @@ Scene::Scene()
 
 Scene::~Scene()
 {
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-    CC_SAFE_RELEASE(_physics3DWorld);
-    CC_SAFE_RELEASE(_physics3dDebugCamera);
-#endif
 #if CC_USE_NAVMESH
     CC_SAFE_RELEASE(_navMesh);
 #endif
     Director::getInstance()->getEventDispatcher()->removeEventListener(_event);
     CC_SAFE_RELEASE(_event);
-    
-#if CC_USE_PHYSICS
-    delete _physicsWorld;
-#endif
     
 #if CC_ENABLE_GC_FOR_NATIVE_OBJECTS
     auto sEngine = ScriptEngineManager::getInstance()->getScriptEngine();
@@ -245,33 +226,6 @@ void Scene::render(Renderer* renderer, const Mat4* eyeTransforms, const Mat4* ey
 //        camera->setNodeToParentTransform(eyeCopy);
     }
 
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-    if (_physics3DWorld && _physics3DWorld->isDebugDrawEnabled())
-    {
-        Camera *physics3dDebugCamera = _physics3dDebugCamera != nullptr ? _physics3dDebugCamera: defaultCamera;
-        
-        for (unsigned int i = 0; i < multiViewCount; ++i) {
-            if (eyeProjections)
-                physics3dDebugCamera->setAdditionalProjection(eyeProjections[i] * physics3dDebugCamera->getProjectionMatrix().getInversed());
-            if (eyeTransforms)
-                physics3dDebugCamera->setAdditionalTransform(eyeTransforms[i].getInversed());
-            director->pushProjectionMatrix(i);
-            director->loadProjectionMatrix(physics3dDebugCamera->getViewProjectionMatrix(), i);
-        }
-        
-        physics3dDebugCamera->apply();
-        physics3dDebugCamera->clearBackground();
-
-        _physics3DWorld->debugDraw(renderer);
-        renderer->render();
-        
-        physics3dDebugCamera->restore();
-
-        for (unsigned int i = 0; i < multiViewCount; ++i)
-            director->popProjectionMatrix(i);
-    }
-#endif
-
     Camera::_visitingCamera = nullptr;
 //    experimental::FrameBuffer::applyDefaultFBO();
 }
@@ -290,15 +244,6 @@ void Scene::removeAllChildren()
     }
 }
 
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-void Scene::setPhysics3DDebugCamera(Camera* camera)
-{
-    CC_SAFE_RETAIN(camera);
-    CC_SAFE_RELEASE(_physics3dDebugCamera);
-    _physics3dDebugCamera = camera;
-}
-#endif
-
 #if CC_USE_NAVMESH
 void Scene::setNavMeshDebugCamera(Camera *camera)
 {
@@ -307,74 +252,6 @@ void Scene::setNavMeshDebugCamera(Camera *camera)
     _navMeshDebugCamera = camera;
 }
 
-#endif
-
-#if (CC_USE_PHYSICS || (CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION))
-
-Scene* Scene::createWithPhysics()
-{
-    Scene *ret = new (std::nothrow) Scene();
-    if (ret && ret->initWithPhysics())
-    {
-        ret->autorelease();
-        return ret;
-    }
-    else
-    {
-        CC_SAFE_DELETE(ret);
-        return nullptr;
-    }
-}
-
-bool Scene::initWithPhysics()
-{
-#if CC_USE_PHYSICS
-    _physicsWorld = PhysicsWorld::construct(this);
-#endif
-
-    bool ret = false;
-    do
-    {
-        Director * director;
-        CC_BREAK_IF( ! (director = Director::getInstance()) );
-
-        this->setContentSize(director->getWinSize());
-
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-        Physics3DWorldDes info;
-        CC_BREAK_IF(! (_physics3DWorld = Physics3DWorld::create(&info)));
-        _physics3DWorld->retain();
-#endif
-
-        // success
-        ret = true;
-    } while (0);
-    return ret;
-}
-
-#endif
-
-#if (CC_USE_PHYSICS || (CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION) || CC_USE_NAVMESH)
-void Scene::stepPhysicsAndNavigation(float deltaTime)
-{
-#if CC_USE_PHYSICS
-    if (_physicsWorld && _physicsWorld->isAutoStep())
-        _physicsWorld->update(deltaTime);
-#endif
-
-#if CC_USE_3D_PHYSICS && CC_ENABLE_BULLET_INTEGRATION
-    if (_physics3DWorld)
-    {
-        _physics3DWorld->stepSimulate(deltaTime);
-    }
-#endif
-#if CC_USE_NAVMESH
-    if (_navMesh)
-    {
-        _navMesh->update(deltaTime);
-    }
-#endif
-}
 #endif
 
 NS_CC_END
