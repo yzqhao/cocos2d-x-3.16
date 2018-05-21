@@ -14,11 +14,6 @@ else()
     set(_chipmunk_libs chipmunk libchipmunk)
 endif(WINDOWS)
 
-set(_bullet_inc bullet/Bullet-C-Api.h BulletCollision/btBulletCollisionCommon.h)
-set(_bullet_inc_paths  bullet)
-# sequence is important
-set(_bullet_libs BulletDynamics libBulletDynamics BulletCollision libBulletCollision BulletMultiThreaded libBulletMultiThreaded LinearMath libLinearMath MiniCL libMiniCL)
-
 set(_curl_inc curl/curl.h)
 # order: curl, ssl, crypto
 set(_curl_libs curl libcurl_imp libcurl ssl libeay32 ssleay32 crypto)
@@ -123,7 +118,6 @@ set(all_prebuilt_libs
   webp
   websockets
   openssl
-  bullet
 )
 
 

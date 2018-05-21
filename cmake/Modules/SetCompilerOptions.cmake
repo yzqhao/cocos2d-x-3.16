@@ -13,22 +13,6 @@ macro (SetCompilerOptions)
 		add_definitions(-DCC_USE_PHYSICS=0)
 	endif()
 
-    # definitions for box2d
-	if (USE_BOX2D)
-		add_definitions(-DCC_ENABLE_BOX2D_INTEGRATION=1)
-	else()
-		add_definitions(-DCC_ENABLE_BOX2D_INTEGRATION=0)
-	endif()
-
-    # definitions for bullet
-	if (USE_BULLET)
-		add_definitions(-DCC_ENABLE_BULLET_INTEGRATION=1)
-        add_definitions(-DCC_USE_3D_PHYSICS=1)
-	else()
-		add_definitions(-DCC_ENABLE_BULLET_INTEGRATION=0)
-        add_definitions(-DCC_USE_3D_PHYSICS=0)
-	endif()
-
 	# Compiler options
 	if(MSVC)
 	  add_definitions(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS

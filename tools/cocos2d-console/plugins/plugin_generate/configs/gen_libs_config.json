@@ -32,7 +32,6 @@
         "cocos/scripting/js-bindings/proj.android/Android.mk",
         "cocos/scripting/lua-bindings/proj.android/Android.mk",
         "cocos/storage/local-storage/Android.mk",
-        "external/bullet/Android.mk",
         "external/flatbuffers/Android.mk",
         "external/android-specific/tremolo/Android.mk",
         "external/android-specific/pvmp3dec/Android.mk",

@@ -1152,9 +1152,6 @@
     <None Include="..\cocos2d.def" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\external\bullet\proj.win10\libbullet.vcxproj">
-      <Project>{ecee1119-ce2e-4f7e-83a8-1932ea48e893}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\editor-support\spine\proj.win10\libSpine.vcxproj">
       <Project>{4b3ba10a-941f-4e08-8a50-8a7fcb822bb8}</Project>
     </ProjectReference>

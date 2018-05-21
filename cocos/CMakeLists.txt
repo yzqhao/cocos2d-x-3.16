@@ -159,10 +159,6 @@ else()
   add_definitions(-DCC_USE_WEBP=0)
 endif()
 
-if(USE_BULLET)
-  cocos_use_pkg(cocos2dInternal BULLET)
-endif()
-
 ADD_LIBRARY(cocos2d cc_dummy.c)
 
 if(ANDROID)

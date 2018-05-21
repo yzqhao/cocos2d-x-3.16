@@ -40,14 +40,6 @@ macro (BuildModules)
 	  cocos_find_package(WebP WEBP REQUIRED)
 	endif(USE_WEBP)
 
-	# Bullet
-	if(USE_BULLET)
-	  if(USE_PREBUILT_LIBS)
-	    cocos_find_package(bullet BULLET REQUIRED)
-	  endif()
-	  message(STATUS "Bullet include dirs: ${BULLET_INCLUDE_DIRS}")
-	endif(USE_BULLET)
-
 	# Tinyxml2 (not prebuilded, exists as source)
 	if(USE_PREBUILT_LIBS OR USE_SOURCES_EXTERNAL)
 	  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/external/tinyxml2)
