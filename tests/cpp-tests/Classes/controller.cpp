@@ -27,10 +27,6 @@ public:
         addTest("Allocator - Basic", [](){return new (std::nothrow) AllocatorTests(); });
         addTest("Audio - CocosDenshion", []() { return new (std::nothrow) CocosDenshionTests(); });
         addTest("Audio - NewAudioEngine", []() { return new (std::nothrow) AudioEngineTests(); });
-#if CC_ENABLE_BOX2D_INTEGRATION
-        addTest("Box2d - Basic", []() { return new (std::nothrow) Box2DTests(); });
-        addTest("Box2d - TestBed", []() { return new (std::nothrow) Box2dTestBedSuite(); });
-#endif
         addTest("Bugs", []() { return new BugsTests(); });
         addTest("Click and Move", [](){return new ClickAndMoveTest(); });
         addTest("Configuration", []() { return new ConfigurationTests(); });

@@ -29,13 +29,6 @@ macro (SetCompilerOptions)
         add_definitions(-DCC_USE_3D_PHYSICS=0)
 	endif()
 
-    # definitions for recast
-	if (USE_RECAST)
-		add_definitions(-DCC_USE_NAVMESH=1)
-	else()
-		add_definitions(-DCC_USE_NAVMESH=0)
-	endif()
-
 	# Compiler options
 	if(MSVC)
 	  add_definitions(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS

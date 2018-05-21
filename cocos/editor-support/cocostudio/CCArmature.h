@@ -192,9 +192,7 @@ public:
     virtual bool getArmatureTransformDirty() const;
 
 
-#if ENABLE_PHYSICS_BOX2D_DETECT || ENABLE_PHYSICS_CHIPMUNK_DETECT
-    virtual void setColliderFilter(ColliderFilter *filter);
-#elif ENABLE_PHYSICS_SAVE_CALCULATED_VERTEX
+#if ENABLE_PHYSICS_SAVE_CALCULATED_VERTEX
     CC_DEPRECATED_ATTRIBUTE virtual void drawContour();
 #endif
 
@@ -211,36 +209,6 @@ public:
 
     virtual void setBatchNode(BatchNode *batchNode) { _batchNode = batchNode; }
     virtual BatchNode *getBatchNode() const { return _batchNode; }
-
-#if ENABLE_PHYSICS_BOX2D_DETECT
-    virtual b2Fixture *getShapeList();
-    /**
-     *  @js NA
-     *  @lua NA
-     */
-    virtual void setBody(b2Body *body);
-    /**
-     *  @js NA
-     *  @lua NA
-     */
-    virtual b2Body *getBody() const;
-#elif ENABLE_PHYSICS_CHIPMUNK_DETECT
-    /**
-     *  @js NA
-     *  @lua NA
-     */
-    virtual cpShape *getShapeList();
-    /**
-     *  @js NA
-     *  @lua NA
-     */
-    virtual void setBody(cpBody *body);
-    /**
-     *  @js NA
-     *  @lua NA
-     */
-    virtual cpBody *getBody() const;
-#endif
 
 protected:
 
@@ -271,12 +239,6 @@ protected:
     cocos2d::Vec2 _realAnchorPointInPoints;
 
     ArmatureAnimation *_animation;
-
-#if ENABLE_PHYSICS_BOX2D_DETECT
-    b2Body *_body;
-#elif ENABLE_PHYSICS_CHIPMUNK_DETECT
-    cpBody *_body;
-#endif
 };
 
 }

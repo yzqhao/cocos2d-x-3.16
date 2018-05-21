@@ -17,11 +17,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/AppDelegate.cpp \
 ../../../Classes/BaseTest.cpp \
 ../../../Classes/BillBoardTest/BillBoardTest.cpp \
-../../../Classes/Box2DTest/Box2dTest.cpp \
-../../../Classes/Box2DTestBed/Box2dView.cpp \
-../../../Classes/Box2DTestBed/GLES-Render.cpp \
-../../../Classes/Box2DTestBed/Test.cpp \
-../../../Classes/Box2DTestBed/TestEntries.cpp \
 ../../../Classes/BugsTest/Bug-CCDrawNode.cpp \
 ../../../Classes/BugsTest/Bug-1159.cpp \
 ../../../Classes/BugsTest/Bug-1174.cpp \

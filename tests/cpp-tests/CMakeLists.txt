@@ -163,20 +163,6 @@ if(WIN32 OR MACOSX OR LINUX)
     )
 endif()
 
-if(USE_CHIPMUNK)
-  include_directories(${CHIPMUNK_INCLUDE_DIRS})
-endif()
-
-if(USE_BOX2D)
-  list(APPEND TESTS_SRC
-    Classes/Box2DTest/Box2dTest.cpp
-    Classes/Box2DTestBed/Box2dView.cpp
-    Classes/Box2DTestBed/GLES-Render.cpp
-    Classes/Box2DTestBed/Test.cpp
-    Classes/Box2DTestBed/TestEntries.cpp
-    )
-endif()
-
 if(USE_BULLET)
   list(APPEND TESTS_SRC
     Classes/Physics3DTest/Physics3DTest.cpp

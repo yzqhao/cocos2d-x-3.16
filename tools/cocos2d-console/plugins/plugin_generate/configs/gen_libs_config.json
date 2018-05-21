@@ -20,7 +20,7 @@
                 "libluacocos2d", "libjscocos2d", "libsimulator"
             ],
             "rename_targets" : [
-                "libSpine", "libbox2d", "libbullet", "librecast",
+                "libSpine", "libbox2d", "libbullet",
                 "libcocos2d", "libluacocos2d", "libjscocos2d", 
                 "libsimulator"
             ]
@@ -33,9 +33,7 @@
         "cocos/scripting/lua-bindings/proj.android/Android.mk",
         "cocos/storage/local-storage/Android.mk",
         "external/bullet/Android.mk",
-        "external/recast/Android.mk",
         "external/flatbuffers/Android.mk",
-        "external/Box2D/Android.mk",
         "external/android-specific/tremolo/Android.mk",
         "external/android-specific/pvmp3dec/Android.mk",
         "cocos/editor-support/cocosbuilder/Android.mk",

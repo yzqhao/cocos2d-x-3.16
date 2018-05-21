@@ -35,12 +35,6 @@ THE SOFTWARE.
 #include "2d/CCDrawingPrimitives.h"
 #include "base/CCDirector.h"
 
-#if ENABLE_PHYSICS_BOX2D_DETECT
-#include "Box2D/Box2D.h"
-#elif ENABLE_PHYSICS_CHIPMUNK_DETECT
-#include "chipmunk/chipmunk.h"
-#endif
-
 using namespace cocos2d;
 
 
@@ -566,16 +560,8 @@ Bone *Armature::getParentBone() const
     return _parentBone;
 }
 
-#if ENABLE_PHYSICS_BOX2D_DETECT || ENABLE_PHYSICS_CHIPMUNK_DETECT
 
-void Armature::setColliderFilter(ColliderFilter *filter)
-{
-    for (auto& element : _boneDic)
-    {
-        element.second->setColliderFilter(filter);
-    }
-}
-#elif ENABLE_PHYSICS_SAVE_CALCULATED_VERTEX
+#if ENABLE_PHYSICS_SAVE_CALCULATED_VERTEX
 
 void Armature::drawContour()
 {
@@ -624,99 +610,5 @@ void Armature::drawContour()
 }
 
 #endif
-
-#if ENABLE_PHYSICS_BOX2D_DETECT
-b2Body *Armature::getBody() const
-{
-    return _body;
-}
-
-void Armature::setBody(b2Body *body)
-{
-    if (_body == body)
-    {
-        return;
-    }
-
-    _body = body;
-    _body->SetUserData(this);
-
-    for(auto& object : _children)
-    {
-        if (Bone *bone = dynamic_cast<Bone *>(object))
-        {
-            auto displayList = bone->getDisplayManager()->getDecorativeDisplayList();
-
-            for(auto displayObject : displayList)
-            {
-                ColliderDetector *detector = static_cast<DecorativeDisplay *>(displayObject)->getColliderDetector();
-                if (detector != nullptr)
-                {
-                    detector->setBody(_body);
-                }
-            }
-        }
-    }
-}
-
-b2Fixture *Armature::getShapeList()
-{
-    if (_body)
-    {
-        return _body->GetFixtureList();
-    }
-    else
-    {
-        return nullptr;
-    }
-}
-
-#elif ENABLE_PHYSICS_CHIPMUNK_DETECT
-cpBody *Armature::getBody() const
-{
-    return _body;
-}
-
-void Armature::setBody(cpBody *body)
-{
-    if (_body == body)
-    {
-        return;
-    }
-
-    _body = body;
-    _body->data = this;
-
-    for (const auto& object : _children)
-    {
-        if (Bone *bone = dynamic_cast<Bone *>(object))
-        {
-            auto displayList = bone->getDisplayManager()->getDecorativeDisplayList();
-
-            for (const auto& displayObject : displayList)
-            {
-                auto detector = displayObject->getColliderDetector();
-                if (detector != nullptr)
-                {
-                    detector->setBody(body);
-                }
-            });
-        }
-    }
-}
-
-cpShape *Armature::getShapeList()
-{
-    if (_body)
-    {
-        return _body->shapeList_private;
-    }
-    else
-    {
-        return nullptr;
-    }
-}
-#endif
-
 
 }

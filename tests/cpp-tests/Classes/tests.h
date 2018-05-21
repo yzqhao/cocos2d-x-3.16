@@ -1,10 +1,6 @@
 #ifndef _TESTS_H_
 #define _TESTS_H_
 
-#if CC_ENABLE_BOX2D_INTEGRATION
-#include "Box2DTest/Box2dTest.h"
-#include "Box2DTestBed/Box2dView.h"
-#endif
 #if (CC_TARGET_PLATFORM != CC_PLATFORM_MARMALADE)
 #include "ClippingNodeTest/ClippingNodeTest.h"
 #endif

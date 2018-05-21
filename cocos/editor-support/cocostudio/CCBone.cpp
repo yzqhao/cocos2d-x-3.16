@@ -449,32 +449,4 @@ ColliderDetector* Bone::getColliderDetector() const
     return nullptr;
 }
 
-
-#if ENABLE_PHYSICS_BOX2D_DETECT || ENABLE_PHYSICS_CHIPMUNK_DETECT
-void Bone::setColliderFilter(ColliderFilter *filter)
-{
-    auto array = _displayManager->getDecorativeDisplayList();
-
-    for(auto& object : array)
-    {
-        DecorativeDisplay *decoDisplay = static_cast<DecorativeDisplay *>(object);
-        if (ColliderDetector *detector = decoDisplay->getColliderDetector())
-        {
-            detector->setColliderFilter(filter);
-        }
-    }
-}
-ColliderFilter *Bone::getColliderFilter()
-{
-    if (DecorativeDisplay *decoDisplay = _displayManager->getCurrentDecorativeDisplay())
-    {
-        if (ColliderDetector *detector = decoDisplay->getColliderDetector())
-        {
-            return detector->getColliderFilter();
-        }
-    }
-    return nullptr;
-}
-#endif
-
 }
