@@ -181,7 +181,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClCompile Include="..\Classes\NewAudioEngineTest\NewAudioEngineTest.cpp" />
     <ClCompile Include="..\Classes\NewEventDispatcherTest\NewEventDispatcherTest.cpp" />
     <ClCompile Include="..\Classes\NewRendererTest\NewRendererTest.cpp" />
-    <ClCompile Include="..\Classes\Particle3DTest\Particle3DTest.cpp" />
     <ClCompile Include="..\Classes\ReleasePoolTest\ReleasePoolTest.cpp" />
     <ClCompile Include="..\Classes\Scene3DTest\Scene3DTest.cpp" />
     <ClCompile Include="..\Classes\ShaderTest\ShaderTest2.cpp" />
@@ -316,7 +315,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClInclude Include="..\Classes\NewAudioEngineTest\NewAudioEngineTest.h" />
     <ClInclude Include="..\Classes\NewEventDispatcherTest\NewEventDispatcherTest.h" />
     <ClInclude Include="..\Classes\NewRendererTest\NewRendererTest.h" />
-    <ClInclude Include="..\Classes\Particle3DTest\Particle3DTest.h" />
     <ClInclude Include="..\Classes\ReleasePoolTest\ReleasePoolTest.h" />
     <ClInclude Include="..\Classes\Scene3DTest\Scene3DTest.h" />
     <ClInclude Include="..\Classes\ShaderTest\ShaderTest2.h" />

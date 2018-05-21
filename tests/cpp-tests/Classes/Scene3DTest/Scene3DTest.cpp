@@ -412,18 +412,6 @@ void Scene3DTestScene::createWorld3D()
         auto animate = Animate3D::create(animation);
         _player->runAction(RepeatForever::create(animate));
     }
-    // add a particle 3d above player
-    auto rootps =
-        PUParticleSystem3D::create("Particle3D/scripts/blackHole.pu",
-                                   "Particle3D/materials/pu_mediapack_01.material");
-    rootps->setScale(2);
-    rootps->setPosition3D(Vec3(0, 150, 0));
-    auto moveby = MoveBy::create(2.0f, Vec2(50.0f, 0.0f));
-    auto moveby1 = MoveBy::create(2.0f, Vec2(-50.0f, 0.0f));
-    rootps->runAction(RepeatForever::create(Sequence::create(moveby, moveby1, nullptr)));
-    rootps->startParticleSystem();
-    
-    _player->addChild(rootps, 0);
     
     // add BillBoard for test blend
     auto billboard = BillBoard::create("Images/btn-play-normal.png");

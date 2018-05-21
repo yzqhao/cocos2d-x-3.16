@@ -199,9 +199,6 @@
     <Filter Include="Classes\OpenURLTest">
       <UniqueIdentifier>{fc47533b-f876-4254-b0f8-4af8f5e2837f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\Particle3DTest">
-      <UniqueIdentifier>{e45d4916-24d0-49b8-a864-d273ea13a248}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\AllocatorTest">
       <UniqueIdentifier>{eed1887a-757e-4625-b21c-bbfcfaa5200f}</UniqueIdentifier>
     </Filter>
@@ -497,9 +494,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\OpenURLTest\OpenURLTest.cpp">
       <Filter>Classes\OpenURLTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Particle3DTest\Particle3DTest.cpp">
-      <Filter>Classes\Particle3DTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AllocatorTest\AllocatorTest.cpp">
       <Filter>Classes\AllocatorTest</Filter>
@@ -991,9 +985,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\OpenURLTest\OpenURLTest.h">
       <Filter>Classes\OpenURLTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Particle3DTest\Particle3DTest.h">
-      <Filter>Classes\Particle3DTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AllocatorTest\AllocatorTest.h">
       <Filter>Classes\AllocatorTest</Filter>

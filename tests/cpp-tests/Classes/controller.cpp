@@ -65,7 +65,6 @@ public:
         addTest("Node: Node", [](){return new CocosNodeTests(); });
         addTest("Node: Parallax", [](){return new ParallaxTests(); });
         addTest("Node: Particles", [](){return new ParticleTests(); });
-        addTest("Node: Particle3D (PU)", [](){return new Particle3DTests(); });
         addTest("Node: RenderTexture", [](){return new RenderTextureTests(); });
         addTest("Node: Scene", [](){return new SceneTests(); });
         addTest("Node: Spine", [](){return new SpineTests(); });

@@ -29,8 +29,6 @@
 #include "3d/CCSprite3DMaterial.h"
 #include "3d/CCMotionStreak3D.h"
 
-#include "extensions/Particle3D/PU/CCPUParticleSystem3D.h"
-
 #include <algorithm>
 #include "../testResource.h"
 
@@ -2265,9 +2263,6 @@ std::string Sprite3DClippingTest::subtitle() const
 
 Animate3DCallbackTest::Animate3DCallbackTest()
 {
-    FileUtils::getInstance()->addSearchPath("Particle3D/materials");
-    FileUtils::getInstance()->addSearchPath("Particle3D/scripts");
-    
     auto s = Director::getInstance()->getWinSize();
     _sprite3d = Sprite3D::create("Sprite3DTest/ReskinGirl.c3b");
     _sprite3d->setPosition(Vec2(s.width / 2.0f, s.height / 3.0f));
@@ -2279,12 +2274,6 @@ Animate3DCallbackTest::Animate3DCallbackTest()
     _sprite3d->getMeshByName("Girl_LowerBody02")->setVisible(false);
     _sprite3d->getMeshByName("Girl_Shoes02")->setVisible(false);
     _sprite3d->getMeshByName("Girl_Hair02")->setVisible(false);
-    
-    
-    auto rootps = PUParticleSystem3D::create("explosionSystem.pu");
-    rootps->stopParticleSystem();
-    rootps->setScale(4.0f);
-    this->addChild(rootps, 0, 100);
 
     auto animation = Animation3D::create("Sprite3DTest/ReskinGirl.c3b");
     if (animation)
@@ -2298,15 +2287,7 @@ Animate3DCallbackTest::Animate3DCallbackTest()
         auto listener = EventListenerCustom::create(Animate3DDisplayedNotification, [&](EventCustom* event)
         {
             auto info = (Animate3D::Animate3DDisplayedEventInfo*)event->getUserData();
-            auto node = getChildByTag(100);
-            if (node)
-            {
-                auto mat = _sprite3d->getNodeToWorldTransform() * _sprite3d->getSkeleton()->getBoneByName("Bip01 R Hand")->getWorldMat();
-                node->setPosition3D(Vec3(mat.m[12] + 100, mat.m[13], mat.m[14]));
-                ((PUParticleSystem3D*)node)->startParticleSystem();
-            }
-                
-            
+
             cocos2d::log("frame %d", info->frame);
         });
         Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(listener, -1);

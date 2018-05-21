@@ -67,7 +67,6 @@ WidgetReader/TextReader/TextReader.cpp \
 WidgetReader/Node3DReader/Node3DReader.cpp \
 WidgetReader/Sprite3DReader/Sprite3DReader.cpp \
 WidgetReader/UserCameraReader/UserCameraReader.cpp \
-WidgetReader/Particle3DReader/Particle3DReader.cpp \
 WidgetReader/SkeletonReader/BoneNodeReader.cpp \
 WidgetReader/SkeletonReader/SkeletonNodeReader.cpp \
 WidgetReader/GameNode3DReader/GameNode3DReader.cpp \

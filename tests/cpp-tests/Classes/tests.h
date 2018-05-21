@@ -61,7 +61,6 @@
 #include "NodeTest/NodeTest.h"
 #include "OpenURLTest/OpenURLTest.h"
 #include "ParallaxTest/ParallaxTest.h"
-#include "Particle3DTest/Particle3DTest.h"
 #include "ParticleTest/ParticleTest.h"
 #include "ReleasePoolTest/ReleasePoolTest.h"
 #include "RenderTextureTest/RenderTextureTest.h"

@@ -26,7 +26,6 @@
 #include "editor-support/cocostudio/WidgetReader/Node3DReader/Node3DReader.h"
 #include "editor-support/cocostudio/WidgetReader/Sprite3DReader/Sprite3DReader.h"
 #include "editor-support/cocostudio/WidgetReader/UserCameraReader/UserCameraReader.h"
-#include "editor-support/cocostudio/WidgetReader/Particle3DReader/Particle3DReader.h"
 
 
 namespace cocostudio
@@ -60,7 +59,6 @@ namespace cocostudio
         Node3DReader::destroyInstance();
         Sprite3DReader::destroyInstance();
         UserCameraReader::destroyInstance();
-        Particle3DReader::destroyInstance();
         
         cocos2d::CSLoader::destroyInstance();
         
