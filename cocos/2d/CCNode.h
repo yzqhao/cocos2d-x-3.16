@@ -61,7 +61,6 @@ class GLProgram;
 class GLProgramState;
 class Material;
 class Camera;
-class PhysicsBody;
 
 /**
  * @addtogroup _2d
