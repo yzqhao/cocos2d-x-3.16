@@ -198,8 +198,6 @@
     <ClCompile Include="..\..\..\extensions\Particle3D\PU\CCPUVertexEmitter.cpp" />
     <ClCompile Include="..\..\..\extensions\Particle3D\PU\CCPUVortexAffector.cpp" />
     <ClCompile Include="..\..\..\extensions\Particle3D\PU\CCPUVortexAffectorTranslator.cpp" />
-    <ClCompile Include="..\..\..\extensions\physics-nodes\CCPhysicsDebugNode.cpp" />
-    <ClCompile Include="..\..\..\extensions\physics-nodes\CCPhysicsSprite.cpp" />
     <ClCompile Include="..\..\..\external\clipper\clipper.cpp" />
     <ClCompile Include="..\..\..\external\ConvertUTF\ConvertUTF.c">
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
@@ -927,8 +925,6 @@
     <ClInclude Include="..\..\..\extensions\Particle3D\PU\CCPUVertexEmitter.h" />
     <ClInclude Include="..\..\..\extensions\Particle3D\PU\CCPUVortexAffector.h" />
     <ClInclude Include="..\..\..\extensions\Particle3D\PU\CCPUVortexAffectorTranslator.h" />
-    <ClInclude Include="..\..\..\extensions\physics-nodes\CCPhysicsDebugNode.h" />
-    <ClInclude Include="..\..\..\extensions\physics-nodes\CCPhysicsSprite.h" />
     <ClInclude Include="..\..\..\external\clipper\clipper.hpp" />
     <ClInclude Include="..\..\..\external\ConvertUTF\ConvertUTF.h" />
     <ClInclude Include="..\..\..\external\edtaa3func\edtaa3func.h" />

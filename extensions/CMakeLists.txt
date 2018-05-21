@@ -27,8 +27,6 @@ set(COCOS_EXTENSIONS_SRC
   ../extensions/GUI/CCScrollView/CCScrollView.cpp
   ../extensions/GUI/CCScrollView/CCTableView.cpp
   ../extensions/GUI/CCScrollView/CCTableViewCell.cpp
-  ../extensions/physics-nodes/CCPhysicsDebugNode.cpp
-  ../extensions/physics-nodes/CCPhysicsSprite.cpp
   ../extensions/Particle3D/CCParticle3DAffector.cpp
   ../extensions/Particle3D/CCParticle3DEmitter.cpp
   ../extensions/Particle3D/CCParticle3DRender.cpp

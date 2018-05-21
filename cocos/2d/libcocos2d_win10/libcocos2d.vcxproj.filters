@@ -1419,12 +1419,6 @@
     <ClCompile Include="..\..\..\extensions\Particle3D\PU\CCPUVortexAffectorTranslator.cpp">
       <Filter>extension\Particle3D\PU</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\extensions\physics-nodes\CCPhysicsDebugNode.cpp">
-      <Filter>extension\physics_nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\physics-nodes\CCPhysicsSprite.cpp">
-      <Filter>extension\physics_nodes</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\extensions\ExtensionDeprecated.cpp">
       <Filter>extension</Filter>
     </ClCompile>
@@ -3193,12 +3187,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\extensions\Particle3D\PU\CCPUVortexAffectorTranslator.h">
       <Filter>extension\Particle3D\PU</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\physics-nodes\CCPhysicsDebugNode.h">
-      <Filter>extension\physics_nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\physics-nodes\CCPhysicsSprite.h">
-      <Filter>extension\physics_nodes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\extensions\cocos-ext.h">
       <Filter>extension</Filter>

@@ -359,8 +359,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\..\extensions\Particle3D\PU\CCPUVertexEmitter.cpp" />
     <ClCompile Include="..\..\extensions\Particle3D\PU\CCPUVortexAffector.cpp" />
     <ClCompile Include="..\..\extensions\Particle3D\PU\CCPUVortexAffectorTranslator.cpp" />
-    <ClCompile Include="..\..\extensions\physics-nodes\CCPhysicsDebugNode.cpp" />
-    <ClCompile Include="..\..\extensions\physics-nodes\CCPhysicsSprite.cpp" />
     <ClCompile Include="..\..\external\clipper\clipper.cpp" />
     <ClCompile Include="..\..\external\ConvertUTF\ConvertUTF.c" />
     <ClCompile Include="..\..\external\ConvertUTF\ConvertUTFWrapper.cpp" />
@@ -915,8 +913,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\..\extensions\Particle3D\PU\CCPUVertexEmitter.h" />
     <ClInclude Include="..\..\extensions\Particle3D\PU\CCPUVortexAffector.h" />
     <ClInclude Include="..\..\extensions\Particle3D\PU\CCPUVortexAffectorTranslator.h" />
-    <ClInclude Include="..\..\extensions\physics-nodes\CCPhysicsDebugNode.h" />
-    <ClInclude Include="..\..\extensions\physics-nodes\CCPhysicsSprite.h" />
     <ClInclude Include="..\..\external\clipper\clipper.hpp" />
     <ClInclude Include="..\..\external\ConvertUTF\ConvertUTF.h" />
     <ClInclude Include="..\..\external\edtaa3func\edtaa3func.h" />
