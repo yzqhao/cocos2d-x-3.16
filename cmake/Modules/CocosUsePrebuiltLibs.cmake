@@ -2,18 +2,6 @@
 
 # START CONFIG
 
-set(_chipmunk_inc chipmunk/chipmunk.h)
-set(_chipmunk_inc_paths include)
-if(WINDOWS)
-    if (${MSVC_VERSION} EQUAL 1900 OR ${MSVC_VERSION} GREATER 1900)
-        set(_chipmunk_libs chipmunk libchipmunk-2015)
-    else()
-        set(_chipmunk_libs chipmunk libchipmunk)
-    endif(${MSVC_VERSION})
-else()
-    set(_chipmunk_libs chipmunk libchipmunk)
-endif(WINDOWS)
-
 set(_curl_inc curl/curl.h)
 # order: curl, ssl, crypto
 set(_curl_libs curl libcurl_imp libcurl ssl libeay32 ssleay32 crypto)
@@ -109,7 +97,6 @@ set(_fmod_inc fmod.hpp)
 set(_fmod_libs fmod fmod64 fmod fmod64)
 
 set(all_prebuilt_libs
-  chipmunk
   curl
   freetype2
   jpeg

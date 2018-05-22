@@ -56,8 +56,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/InputTest/MouseTest.cpp \
 ../../../Classes/IntervalTest/IntervalTest.cpp \
 ../../../Classes/JNITest/JNITest.cpp \
-../../../Classes/LabelTest/LabelTest.cpp \
-../../../Classes/LabelTest/LabelTestNew.cpp \
 ../../../Classes/LayerTest/LayerTest.cpp \
 ../../../Classes/LightTest/LightTest.cpp \
 ../../../Classes/MaterialSystemTest/MaterialSystemTest.cpp \
@@ -70,7 +68,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/NodeTest/NodeTest.cpp \
 ../../../Classes/OpenURLTest/OpenURLTest.cpp \
 ../../../Classes/ParallaxTest/ParallaxTest.cpp \
-../../../Classes/ParticleTest/ParticleTest.cpp \
 ../../../Classes/ReleasePoolTest/ReleasePoolTest.cpp \
 ../../../Classes/RenderTextureTest/RenderTextureTest.cpp \
 ../../../Classes/RotateWorldTest/RotateWorldTest.cpp \
@@ -83,7 +80,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/Sprite3DTest/DrawNode3D.cpp \
 ../../../Classes/Sprite3DTest/Sprite3DTest.cpp \
 ../../../Classes/SpritePolygonTest/SpritePolygonTest.cpp \
-../../../Classes/SpriteTest/SpriteTest.cpp \
 ../../../Classes/TerrainTest/TerrainTest.cpp \
 ../../../Classes/TextInputTest/TextInputTest.cpp \
 ../../../Classes/Texture2dTest/Texture2dTest.cpp \
@@ -95,8 +91,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../../Classes/TouchesTest/Paddle.cpp \
 ../../../Classes/TouchesTest/TouchesTest.cpp \
 ../../../Classes/TransitionsTest/TransitionsTest.cpp \
-../../../Classes/UnitTest/RefPtrTest.cpp \
-../../../Classes/UnitTest/UnitTest.cpp \
 ../../../Classes/UserDefaultTest/UserDefaultTest.cpp \
 ../../../Classes/VisibleRect.cpp \
 ../../../Classes/VibrateTest/VibrateTest.cpp \

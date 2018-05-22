@@ -57,7 +57,6 @@ set(TESTS_SRC
   Classes/BugsTest/Bug-Child.cpp
   Classes/BugsTest/BugsTest.cpp
   Classes/Camera3DTest/Camera3DTest.cpp
-  Classes/ChipmunkTest/ChipmunkTest.cpp
   Classes/ClickAndMoveTest/ClickAndMoveTest.cpp
   Classes/ClippingNodeTest/ClippingNodeTest.cpp
   Classes/ConfigurationTest/ConfigurationTest.cpp
@@ -78,8 +77,6 @@ set(TESTS_SRC
   Classes/FontTest/FontTest.cpp
   Classes/InputTest/MouseTest.cpp
   Classes/IntervalTest/IntervalTest.cpp
-  Classes/LabelTest/LabelTest.cpp
-  Classes/LabelTest/LabelTestNew.cpp
   Classes/LayerTest/LayerTest.cpp
   Classes/LightTest/LightTest.cpp
   Classes/MaterialSystemTest/MaterialSystemTest
@@ -89,13 +86,9 @@ set(TESTS_SRC
   Classes/NewAudioEngineTest/NewAudioEngineTest.cpp
   Classes/NewEventDispatcherTest/NewEventDispatcherTest.cpp
   Classes/NewRendererTest/NewRendererTest.cpp
-  Classes/NavMeshTest/NavMeshTest.cpp
   Classes/NodeTest/NodeTest.cpp
   Classes/OpenURLTest/OpenURLTest.cpp
   Classes/ParallaxTest/ParallaxTest.cpp
-  Classes/Particle3DTest/Particle3DTest.cpp
-  Classes/ParticleTest/ParticleTest.cpp
-  Classes/PhysicsTest/PhysicsTest.cpp
   Classes/ReleasePoolTest/ReleasePoolTest.cpp
   Classes/RenderTextureTest/RenderTextureTest.cpp
   Classes/RotateWorldTest/RotateWorldTest.cpp
@@ -108,7 +101,6 @@ set(TESTS_SRC
   Classes/Sprite3DTest/DrawNode3D.cpp
   Classes/Sprite3DTest/Sprite3DTest.cpp
   Classes/SpritePolygonTest/SpritePolygonTest.cpp
-  Classes/SpriteTest/SpriteTest.cpp
   Classes/TerrainTest/TerrainTest.cpp
   Classes/TextInputTest/TextInputTest.cpp
   Classes/Texture2dTest/Texture2dTest.cpp
@@ -132,20 +124,6 @@ set(TESTS_SRC
 if(WIN32 OR MACOSX OR LINUX)
   list(APPEND TESTS_SRC
     Classes/WindowTest/WindowTest.cpp
-    )
-endif()
-
-set (EXTENDED_TESTS_SRC
-      Classes/ExtensionsTest/NetworkTest/HttpClientTest.cpp
-      Classes/ExtensionsTest/NetworkTest/SocketIOTest.cpp
-      Classes/ExtensionsTest/NetworkTest/WebSocketTest.cpp
-    )
-
-if(LINUX)
-
-else()
-    list(APPEND EXTENDED_TESTS_SRC
-        Classes/UITest/CocoStudioGUITest/UIEditBoxTest.cpp
     )
 endif()
 
