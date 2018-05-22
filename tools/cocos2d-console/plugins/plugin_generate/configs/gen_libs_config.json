@@ -37,8 +37,6 @@
         "external/android-specific/pvmp3dec/Android.mk",
         "extensions/Android.mk",
         "cocos/3d/Android.mk",
-        "cocos/ui/Android.mk",
-        "cocos/editor-support/cocostudio/Android.mk",
         "cocos/network/Android.mk",
         "cocos/platform/android/Android.mk",
         "cocos/editor-support/spine/Android.mk",

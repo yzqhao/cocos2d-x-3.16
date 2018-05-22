@@ -60,7 +60,6 @@ set(TESTS_SRC
   Classes/ChipmunkTest/ChipmunkTest.cpp
   Classes/ClickAndMoveTest/ClickAndMoveTest.cpp
   Classes/ClippingNodeTest/ClippingNodeTest.cpp
-  Classes/CocosDenshionTest/CocosDenshionTest.cpp
   Classes/ConfigurationTest/ConfigurationTest.cpp
   Classes/ConsoleTest/ConsoleTest.cpp
   Classes/CurlTest/CurlTest.cpp
@@ -121,39 +120,12 @@ set(TESTS_SRC
   Classes/TouchesTest/Paddle.cpp
   Classes/TouchesTest/TouchesTest.cpp
   Classes/TransitionsTest/TransitionsTest.cpp
-  Classes/UITest/CocoStudioGUITest/CocosGUIScene.cpp
-  Classes/UITest/CocoStudioGUITest/UIButtonTest/UIButtonTest.cpp
-  Classes/UITest/CocoStudioGUITest/UICheckBoxTest/UICheckBoxTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIRadioButtonTest/UIRadioButtonTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIFocusTest/UIFocusTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIImageViewTest/UIImageViewTest.cpp
-  Classes/UITest/CocoStudioGUITest/UILayoutTest/UILayoutTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIListViewTest/UIListViewTest.cpp
-  Classes/UITest/CocoStudioGUITest/UILoadingBarTest/UILoadingBarTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIPageViewTest/UIPageViewTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIRichTextTest/UIRichTextTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIScale9SpriteTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIScene.cpp
-  Classes/UITest/CocoStudioGUITest/UISceneManager.cpp
-  Classes/UITest/CocoStudioGUITest/UIScrollViewTest/UIScrollViewTest.cpp
-  Classes/UITest/CocoStudioGUITest/UISliderTest/UISliderTest.cpp
-  Classes/UITest/CocoStudioGUITest/UITextAtlasTest/UITextAtlasTest.cpp
-  Classes/UITest/CocoStudioGUITest/UITextBMFontTest/UITextBMFontTest.cpp
-  Classes/UITest/CocoStudioGUITest/UITextFieldTest/UITextFieldTest.cpp
-  Classes/UITest/CocoStudioGUITest/UITextTest/UITextTest.cpp
-  Classes/UITest/CocoStudioGUITest/UIWidgetAddNodeTest/UIWidgetAddNodeTest.cpp
-  Classes/UITest/CocoStudioGUITest/UITabControlTest/UITabControlTest.cpp
-  Classes/UITest/UITest.cpp
-  Classes/UnitTest/RefPtrTest.cpp
-  Classes/UnitTest/UnitTest.cpp
   Classes/UserDefaultTest/UserDefaultTest.cpp
   Classes/VisibleRect.cpp
   Classes/VibrateTest/VibrateTest.cpp
   Classes/ZwoptexTest/ZwoptexTest.cpp
   Classes/SpriteFrameCacheTest/SpriteFrameCacheTest.cpp
   Classes/controller.cpp
-  Classes/VRTest/VRTest.cpp
-  Classes/VRTest/VRTest.h
   ${PLATFORM_SRC}
 )
 

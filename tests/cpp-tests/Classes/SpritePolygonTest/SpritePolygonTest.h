@@ -1,7 +1,6 @@
 #ifndef __cocos2d_tests__SpritePolygonTest__
 
 #include "../BaseTest.h"
-#include "ui/CocosGUI.h"
 
 DEFINE_TEST_SUITE(SpritePolygonTest);
 
@@ -59,7 +58,6 @@ protected:
     void initSliders();
     virtual void initSprites(){};
     void makeSprites(const std::string* list, const int count, const float y);
-    void changeEpsilon(Ref *pSender, cocos2d::ui::Slider::EventType type);
     void updateLabel(const cocos2d::Sprite* sp, const cocos2d::PolygonInfo &pinfo);
 };
 

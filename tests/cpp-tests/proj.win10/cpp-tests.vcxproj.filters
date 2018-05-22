@@ -41,9 +41,6 @@
     <Filter Include="Classes\ClippingNodeTest">
       <UniqueIdentifier>{e05a72bb-7eed-46a8-8216-1714220c79bf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\CocosDenshionTest">
-      <UniqueIdentifier>{6990fa3c-1895-48ec-9823-c82132260315}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\ConfigurationTest">
       <UniqueIdentifier>{440a9c5a-db16-4c28-99ee-58ff0f719ba2}</UniqueIdentifier>
     </Filter>
@@ -367,9 +364,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\ClippingNodeTest\ClippingNodeTest.cpp">
       <Filter>Classes\ClippingNodeTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\CocosDenshionTest\CocosDenshionTest.cpp">
-      <Filter>Classes\CocosDenshionTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\ConfigurationTest\ConfigurationTest.cpp">
       <Filter>Classes\ConfigurationTest</Filter>
@@ -753,9 +747,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ClippingNodeTest\ClippingNodeTest.h">
       <Filter>Classes\ClippingNodeTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\CocosDenshionTest\CocosDenshionTest.h">
-      <Filter>Classes\CocosDenshionTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\ConfigurationTest\ConfigurationTest.h">
       <Filter>Classes\ConfigurationTest</Filter>

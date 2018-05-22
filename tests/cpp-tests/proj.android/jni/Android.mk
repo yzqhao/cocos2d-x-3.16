@@ -37,7 +37,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../Classes/ChipmunkTest/ChipmunkTest.cpp \
 ../../Classes/ClickAndMoveTest/ClickAndMoveTest.cpp \
 ../../Classes/ClippingNodeTest/ClippingNodeTest.cpp \
-../../Classes/CocosDenshionTest/CocosDenshionTest.cpp \
 ../../Classes/ConfigurationTest/ConfigurationTest.cpp \
 ../../Classes/ConsoleTest/ConsoleTest.cpp \
 ../../Classes/CurlTest/CurlTest.cpp \

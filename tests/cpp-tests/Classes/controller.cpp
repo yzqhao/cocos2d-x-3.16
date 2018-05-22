@@ -25,7 +25,6 @@ public:
         addTest("Actions - Ease", [](){return new (std::nothrow) ActionsEaseTests(); });
         addTest("Actions - Progress", [](){return new (std::nothrow) ActionsProgressTests(); });
         addTest("Allocator - Basic", [](){return new (std::nothrow) AllocatorTests(); });
-        addTest("Audio - CocosDenshion", []() { return new (std::nothrow) CocosDenshionTests(); });
         addTest("Audio - NewAudioEngine", []() { return new (std::nothrow) AudioEngineTests(); });
         addTest("Bugs", []() { return new BugsTests(); });
         addTest("Click and Move", [](){return new ClickAndMoveTest(); });
@@ -52,26 +51,21 @@ public:
         addTest("Node: Camera 3D Test", [](){  return new Camera3DTests(); });
         addTest("Node: Clipping", []() { return new ClippingNodeTests(); });
         addTest("Node: Draw", [](){return new DrawPrimitivesTests(); });
-        addTest("Node: Label - New API", [](){return new NewLabelTests(); });
-        addTest("Node: Label - Old API", [](){return new LabelTests(); });
         addTest("Node: Layer", [](){return new LayerTests(); });
         addTest("Node: Light", [](){return new LightTests(); });
         addTest("Node: Menu", [](){return new MenuTests(); });
         addTest("Node: MotionStreak", [](){return new MotionStreakTests(); });
         addTest("Node: Node", [](){return new CocosNodeTests(); });
         addTest("Node: Parallax", [](){return new ParallaxTests(); });
-        addTest("Node: Particles", [](){return new ParticleTests(); });
         addTest("Node: RenderTexture", [](){return new RenderTextureTests(); });
         addTest("Node: Scene", [](){return new SceneTests(); });
         addTest("Node: Spine", [](){return new SpineTests(); });
-        addTest("Node: Sprite", [](){return new SpriteTests(); });
         addTest("Node: Sprite3D", [](){  return new Sprite3DTests(); });
         addTest("Node: SpritePolygon", [](){return new (std::nothrow) SpritePolygonTest(); });
         addTest("Node: Terrain", [](){  return new TerrainTests(); });
         addTest("Node: TileMap", [](){return new TileMapTests(); });
         addTest("Node: FastTileMap", [](){return new FastTileMapTests(); });
         addTest("Node: Text Input", [](){return new TextInputTests(); });
-        addTest("Node: UI", [](){  return new UITests(); });
         addTest("Mouse", []() { return new MouseTests(); });
         addTest("MultiTouch", []() { return new MultiTouchTests(); });
         addTest("Renderer", []() { return new NewRendererTests(); });
@@ -85,7 +79,6 @@ public:
         addTest("TexturePacker Encryption", []() { return new TextureAtlasEncryptionTests(); });
         addTest("Touches", [](){return new TouchesTests(); });
         addTest("Transitions", [](){return new TransitionsTests(); });
-        addTest("Unit Test", []() { return new UnitTests(); });
         addTest("URL Open Test", []() { return new OpenURLTests(); });
         addTest("UserDefault", []() { return new UserDefaultTests(); });
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)

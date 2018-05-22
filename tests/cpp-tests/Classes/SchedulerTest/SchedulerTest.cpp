@@ -1,6 +1,5 @@
 #include "SchedulerTest.h"
 #include "../testResource.h"
-#include "ui/UIText.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -754,30 +753,6 @@ void SchedulerDelayAndRepeat::update(float dt)
     log("update called:%f", dt);
 }
 
-// SchedulerTimeScale
-
-ControlSlider* SchedulerTimeScale::sliderCtl()
-{
-    ControlSlider * slider = ControlSlider::create("extensions/sliderTrack2.png","extensions/sliderProgress2.png" ,"extensions/sliderThumb.png");
-
-    slider->addTargetWithActionForControlEvents(this, cccontrol_selector(SchedulerTimeScale::sliderAction), Control::EventType::VALUE_CHANGED);
-
-    slider->setMinimumValue(-3.0f);
-    slider->setMaximumValue(3.0f);
-    slider->setValue(1.0f);
-
-    return slider;
-}
-
-void SchedulerTimeScale::sliderAction(Ref* sender, Control::EventType /*controlEvent*/)
-{
-    ControlSlider* pSliderCtl = static_cast<ControlSlider*>(sender);
-    float scale;
-    scale = pSliderCtl->getValue();
-
-    Director::getInstance()->getScheduler()->setTimeScale(scale);
-}
-
 void SchedulerTimeScale::onEnter()
 {
     SchedulerTestLayer::onEnter();
@@ -817,11 +792,6 @@ void SchedulerTimeScale::onEnter()
     auto emitter = ParticleFireworks::create();
     emitter->setTexture( Director::getInstance()->getTextureCache()->addImage(s_stars1) );
     addChild(emitter);
-
-    _sliderCtl = sliderCtl();
-    _sliderCtl->setPosition(Vec2(s.width / 2.0f, s.height / 3.0f));
-
-    addChild(_sliderCtl);
 }
 
 void SchedulerTimeScale::onExit()
@@ -839,39 +809,6 @@ std::string SchedulerTimeScale::title() const
 std::string SchedulerTimeScale::subtitle() const
 {
     return "Fast-forward and rewind using scheduler.timeScale";
-}
-
-//TwoSchedulers
-
-ControlSlider *TwoSchedulers::sliderCtl()
-{
-   // auto frame = CGRectMake(12.0f, 12.0f, 120.0f, 7.0f);
-    ControlSlider *slider = ControlSlider::create("extensions/sliderTrack2.png","extensions/sliderProgress2.png" ,"extensions/sliderThumb.png");
-        //[[UISlider alloc] initWithFrame:frame];
-    slider->addTargetWithActionForControlEvents(this, cccontrol_selector(TwoSchedulers::sliderAction), Control::EventType::VALUE_CHANGED);
-
-    // in case the parent view draws with a custom color or gradient, use a transparent color
-    //slider.backgroundColor = [UIColor clearColor];
-
-    slider->setMinimumValue(0.0f);
-    slider->setMaximumValue(2.0f);
-    //slider.continuous = YES;
-    slider->setValue(1.0f);
-
-    return slider;
-}
-
-void TwoSchedulers::sliderAction(Ref* sender, Control::EventType /*controlEvent*/)
-{
-    float scale;
-
-    ControlSlider *slider = static_cast<ControlSlider*>(sender);
-    scale = slider->getValue();
-
-    if( sender == sliderCtl1 )
-        sched1->setTimeScale(scale);
-    else
-        sched2->setTimeScale(scale);
 }
 
 void TwoSchedulers::onEnter()
@@ -947,16 +884,6 @@ void TwoSchedulers::onEnter()
 
         sprite->runAction(action->clone());
     }
-
-    sliderCtl1 = sliderCtl();
-    addChild(sliderCtl1);
-    sliderCtl1->retain();
-    sliderCtl1->setPosition(Vec2(s.width / 4.0f, VisibleRect::top().y - 20));
-
-    sliderCtl2 = sliderCtl();
-    addChild(sliderCtl2);
-    sliderCtl2->retain();
-    sliderCtl2->setPosition(Vec2(s.width / 4.0f*3.0f, VisibleRect::top().y-20));
 }
 
 
@@ -965,9 +892,6 @@ TwoSchedulers::~TwoSchedulers()
     auto defaultScheduler = Director::getInstance()->getScheduler();
     defaultScheduler->unscheduleAllForTarget(sched1);
     defaultScheduler->unscheduleAllForTarget(sched2);
-
-    sliderCtl1->release();
-    sliderCtl2->release();
 
     sched1->release();
     sched2->release();
@@ -1053,11 +977,7 @@ void SchedulerIssueWithReschedule::onEnter()
 	SchedulerTestLayer::onEnter();
     
     Size widgetSize = getContentSize();
-    
-    auto status_text = Text::create("Checking..", "fonts/Marker Felt.ttf", 18);
-    status_text->setColor(Color3B(255, 255, 255));
-    status_text->setPosition(Vec2(widgetSize.width / 2.0f, widgetSize.height / 2.0f));
-    addChild(status_text);
+ 
     
     // schedule(callback, target, interval, repeat, delay, paused, key);
     auto verified = std::make_shared<bool>();
@@ -1073,21 +993,6 @@ void SchedulerIssueWithReschedule::onEnter()
         
     }, this, 0.1f, 0, 0, false, "test_timer");
     
-    _scheduler->schedule([verified, status_text](float dt){
-        if (*verified)
-        {
-            log("SchedulerIssueWithReschedule - test OK");
-            status_text->setString("OK");
-            status_text->setColor(Color3B(0, 255, 0));
-        }
-        else
-        {
-            log("SchedulerIssueWithReschedule - test failed!");
-            status_text->setString("Failed");
-            status_text->setColor(Color3B(255, 0, 0));
-        }
-
-    }, this, 0.5f, 0, 0, false, "test_verify_timer");
 }
 
 std::string SchedulerIssueWithReschedule::title() const

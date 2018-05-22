@@ -439,34 +439,12 @@ void ShaderBlur::createSliderCtls()
     auto screenSize = Director::getInstance()->getWinSize();
     
     {
-        ControlSlider *slider = ControlSlider::create("extensions/sliderTrack.png","extensions/sliderProgress.png" ,"extensions/sliderThumb.png");
-        slider->setAnchorPoint(Vec2(0.5f, 1.0f));
-        slider->setMinimumValue(0.0f);
-        slider->setMaximumValue(25.0f);
-        slider->setScale(0.6f);
-        slider->setPosition(Vec2(screenSize.width / 4.0f, screenSize.height / 3.0f + 24.0f));
-        slider->addTargetWithActionForControlEvents(this, cccontrol_selector(ShaderBlur::onRadiusChanged), Control::EventType::VALUE_CHANGED);
-        slider->setValue(2.0f);
-        addChild(slider);
-        _sliderRadiusCtl = slider;
-        
         auto label = Label::createWithTTF("Blur Radius", "fonts/arial.ttf", 12.0f);
         addChild(label);
         label->setPosition(Vec2(screenSize.width / 4.0f, screenSize.height / 3.0f));
     }
     
     {
-        ControlSlider *slider = ControlSlider::create("extensions/sliderTrack.png","extensions/sliderProgress.png" ,"extensions/sliderThumb.png");
-        slider->setAnchorPoint(Vec2(0.5f, 1.0f));
-        slider->setMinimumValue(0.0f);
-        slider->setMaximumValue(11.0f);
-        slider->setScale(0.6f);
-        slider->setPosition(Vec2(screenSize.width / 4.0f, screenSize.height / 3.0f - 10.0f));
-        slider->addTargetWithActionForControlEvents(this, cccontrol_selector(ShaderBlur::onSampleNumChanged), Control::EventType::VALUE_CHANGED);
-        slider->setValue(7.0f);
-        addChild(slider);
-        _sliderNumCtrl = slider;
-        
         auto label = Label::createWithTTF("Blur Sample Num", "fonts/arial.ttf", 12.0f);
         addChild(label);
         label->setPosition(Vec2(screenSize.width / 4.0f, screenSize.height / 3.0f - 34.0f));
@@ -496,18 +474,6 @@ bool ShaderBlur::init()
     }
 
     return false;
-}
-
-void ShaderBlur::onRadiusChanged(Ref* sender, Control::EventType)
-{
-    ControlSlider* slider = (ControlSlider*)sender;
-    _blurSprite->setBlurRadius(slider->getValue());
-}
-
-void ShaderBlur::onSampleNumChanged(Ref* sender, Control::EventType)
-{
-    ControlSlider* slider = (ControlSlider*)sender;
-    _blurSprite->setBlurSampleNum(slider->getValue());
 }
 
 // ShaderRetroEffect
@@ -658,31 +624,6 @@ std::string ShaderMultiTexture::subtitle() const
     return "MultiTexture";
 }
 
-ui::Slider* ShaderMultiTexture::createSliderCtl()
-{
-    auto screenSize = Director::getInstance()->getWinSize();
-
-    ui::Slider* slider = ui::Slider::create();
-    slider->loadBarTexture("cocosui/sliderTrack.png");
-    slider->loadSlidBallTextures("cocosui/sliderThumb.png", "cocosui/sliderThumb.png", "");
-    slider->loadProgressBarTexture("cocosui/sliderProgress.png");
-    slider->setPercent(50);
-
-    slider->setPosition(Vec2(screenSize.width / 2.0f, screenSize.height / 3.0f));
-    addChild(slider);
-
-    slider->addEventListener([&](Ref* sender, ui::Slider::EventType type) {
-
-        if (type == ui::Slider::EventType::ON_PERCENTAGE_CHANGED)
-        {
-            ui::Slider* slider = dynamic_cast<ui::Slider*>(sender);
-            float p = slider->getPercent() / 100.0f;
-            _sprite->getGLProgramState()->setUniformFloat("u_interpolate",p);
-        }
-    });
-    return slider;
-}
-
 bool ShaderMultiTexture::init()
 {
     if (ShaderTestDemo::init())
@@ -711,9 +652,6 @@ bool ShaderMultiTexture::init()
 
         glprogramstate->setUniformTexture("u_texture1", right->getTexture());
         glprogramstate->setUniformFloat("u_interpolate",0.5);
-
-        // slider
-        createSliderCtl();
         
         // menu
         auto label = Label::createWithTTF(TTFConfig("fonts/arial.ttf"), "change");

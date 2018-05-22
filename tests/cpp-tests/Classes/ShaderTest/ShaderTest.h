@@ -1,8 +1,6 @@
 #ifndef _SHADER_TEST_H_
 #define _SHADER_TEST_H_
 
-#include "ui/CocosGUI.h"
-
 #include "extensions/cocos-ext.h"
 #include "../BaseTest.h"
 
@@ -90,13 +88,9 @@ public:
     virtual std::string subtitle() const override;
     virtual bool init() override;
     void createSliderCtls();
-    void onRadiusChanged(cocos2d::Ref* sender, cocos2d::extension::Control::EventType controlEvent);
-    void onSampleNumChanged(cocos2d::Ref* sender, cocos2d::extension::Control::EventType controlEvent);
     
 protected:
     SpriteBlur* _blurSprite;
-    cocos2d::extension::ControlSlider* _sliderRadiusCtl;
-    cocos2d::extension::ControlSlider* _sliderNumCtrl;
 };
 
 class ShaderRetroEffect : public ShaderTestDemo
@@ -168,7 +162,6 @@ class ShaderMultiTexture : public ShaderTestDemo
 public:
     CREATE_FUNC(ShaderMultiTexture);
     ShaderMultiTexture();
-    cocos2d::ui::Slider* createSliderCtl();
     void changeTexture(cocos2d::Ref*);
     int _changedTextureId;
     cocos2d::Sprite* _sprite;

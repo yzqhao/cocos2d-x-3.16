@@ -236,11 +236,6 @@
             "replace_string": "$(call import-module,\\1/prebuilt-mk)"
         },
         {
-            "file_path": "js-template-binary/project.json",
-            "pattern": "\\\"modules\\\"[ \\t]*:[ \\t]*\\[(.*)\\]",
-            "replace_string": "\"modules\" : [\\1, \"cocostudio\"]"
-        },
-        {
             "file_path": "cpp-template-binary/proj.win32/cocos2dx.props",
             "pattern": "(libbox2d\\.lib;)|(libSpine\\.lib;)",
             "replace_string": ""

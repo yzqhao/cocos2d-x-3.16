@@ -24,7 +24,6 @@
 
 #include "platform/CCPlatformConfig.h"
 #include "NewAudioEngineTest.h"
-#include "ui/CocosGUI.h"
 
 using namespace cocos2d;
 using namespace cocos2d::ui;
@@ -152,42 +151,6 @@ namespace {
         
         bool _enabled;
     };
-    
-    class SliderEx : public Slider
-    {
-    public:
-        static SliderEx* create(){
-            auto ret = new (std::nothrow) SliderEx();
-            if (ret && ret->init())
-            {
-                ret->loadBarTexture("cocosui/sliderTrack.png");
-                ret->loadSlidBallTextures("cocosui/sliderThumb.png", "cocosui/sliderThumb.png", "");
-                ret->loadProgressBarTexture("cocosui/sliderProgress.png");
-                ret->setTouchEnabled(true);
-                
-                ret->autorelease();
-                
-                return ret;
-            }
-            CC_SAFE_DELETE(ret);
-            return ret;
-        }
-        
-        void setRatio(float ratio) {
-            ratio = clampf(ratio, 0.0f, 1.0f);
-            
-            _ratio = ratio;
-            setPercent(100 * _ratio);
-        }
-        
-        float getRatio () {
-            _ratio = 1.0f * _percent / _maxPercent;
-            return _ratio;
-        }
-        
-    private:
-        float _ratio;
-    };
 }
 
 AudioEngineTestDemo::AudioEngineTestDemo()
@@ -256,7 +219,6 @@ bool AudioControlTest::init()
                     ((TextButton*)_playItem)->setEnabled(true);
                     
                     _timeRatio = 0.0f;
-                    ((SliderEx*)_timeSlider)->setRatio(_timeRatio);
                 });
             }
         }
@@ -309,56 +271,6 @@ bool AudioControlTest::init()
     loopItem->setPosition(layerSize.width * 0.5f, layerSize.height * 0.5f);
     addChild(loopItem);
     
-    auto volumeSlider = SliderEx::create();
-    volumeSlider->setPercent(100);
-    volumeSlider->addEventListener([&](Ref* sender, Slider::EventType event){
-        SliderEx *slider = dynamic_cast<SliderEx *>(sender);
-        _volume = slider->getRatio();
-        if (_audioID != AudioEngine::INVALID_AUDIO_ID ) {
-            AudioEngine::setVolume(_audioID, _volume);
-        }
-    });
-    volumeSlider->setPosition(Vec2(layerSize.width * 0.5f,layerSize.height * 0.35f));
-    addChild(volumeSlider);
-    
-    auto timeSlider = SliderEx::create();
-    timeSlider->addEventListener([&](Ref* sender, Slider::EventType event){
-        SliderEx *slider = dynamic_cast<SliderEx *>(sender);
-        switch(event){
-            case Slider::EventType::ON_PERCENTAGE_CHANGED:
-            case Slider::EventType::ON_SLIDEBALL_DOWN:
-                _updateTimeSlider = false;
-                break;
-            case Slider::EventType::ON_SLIDEBALL_UP:
-                if (_audioID != AudioEngine::INVALID_AUDIO_ID && _duration != AudioEngine::TIME_UNKNOWN) {
-                    float ratio = (float)slider->getPercent() / 100;
-                    ratio = clampf(ratio, 0.0f, 1.0f);
-                    AudioEngine::setCurrentTime(_audioID, _duration * ratio);
-                }
-            case Slider::EventType::ON_SLIDEBALL_CANCEL:
-                _updateTimeSlider = true;
-                break;
-        }
-    });
-    timeSlider->setPosition(Vec2(layerSize.width * 0.5f,layerSize.height * 0.25f));
-    addChild(timeSlider);
-    _timeSlider = timeSlider;
-    
-    auto& volumeSliderPos = volumeSlider->getPosition();
-    auto& sliderSize = volumeSlider->getContentSize();
-    auto volumeLabel = Label::createWithTTF("volume:  ", fontFilePath, 20);
-    volumeLabel->setAnchorPoint(Vec2::ANCHOR_MIDDLE_RIGHT);
-    volumeLabel->setPosition(volumeSliderPos.x - sliderSize.width / 2, volumeSliderPos.y);
-    addChild(volumeLabel);
-    
-    auto& timeSliderPos = timeSlider->getPosition();
-    auto timeLabel = Label::createWithTTF("time:  ", fontFilePath, 20);
-    timeLabel->setAnchorPoint(Vec2::ANCHOR_MIDDLE_RIGHT);
-    timeLabel->setPosition(timeSliderPos.x - sliderSize.width / 2, timeSliderPos.y);
-    addChild(timeLabel);
-    
-    this->schedule(CC_CALLBACK_1(AudioControlTest::update, this), 0.1f, "update_key");
-    
     return ret;
 }
 
@@ -371,9 +283,6 @@ void AudioControlTest::update(float dt)
         if(_duration != AudioEngine::TIME_UNKNOWN){
             auto time = AudioEngine::getCurrentTime(_audioID);
             _timeRatio = time / _duration;
-            if(_updateTimeSlider){
-                ((SliderEx*)_timeSlider)->setRatio(_timeRatio);
-            }
         }
     }
 }
@@ -555,12 +464,7 @@ bool AudioProfileTest::init()
     _showLabel->setAnchorPoint(Vec2::ANCHOR_MIDDLE_LEFT);
     _showLabel->setPosition(Vec2(origin.x, origin.y + size.height * 0.5f));
     addChild(_showLabel);
-    
-    auto timeSlider = SliderEx::create();
-    timeSlider->setEnabled(false);
-    timeSlider->setPositionNormalized(pos);
-    addChild(timeSlider);
-    _timeSlider = timeSlider;
+   
     
     this->schedule(CC_CALLBACK_1(AudioProfileTest::update, this), 0.05f, "update_key");
     
@@ -572,7 +476,6 @@ void AudioProfileTest::update(float dt)
     if(_time > 0.0f)
     {
         _time -= dt;
-        ((SliderEx*)_timeSlider)->setRatio(_time / _minDelay);
     }
 }
 

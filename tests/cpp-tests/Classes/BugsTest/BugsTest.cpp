@@ -14,10 +14,6 @@
 #include "Bug-15594.h"
 #include "Bug-15776.h"
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
-#include "Bug-14327.h"
-#endif
-
 BugsTests::BugsTests()
 {
     ADD_TEST_CASE(Bug350Layer);
@@ -38,7 +34,4 @@ BugsTests::BugsTests()
     // NOTE: comment this out because it currently crashes during autotest
     //ADD_TEST_CASE(Bug15776Layer);
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
-    ADD_TEST_CASE(Bug14327Layer);
-#endif
 }

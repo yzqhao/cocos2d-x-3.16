@@ -1,6 +1,5 @@
 #include "Scene3DTest.h"
 
-#include "ui/CocosGUI.h"
 #include "renderer/CCRenderState.h"
 #include <spine/spine-cocos2dx.h>
 
@@ -86,12 +85,6 @@ private:
     Node* _descItem;
     Node* _ui;
     
-    // init in createPlayerDlg()
-    Node* _playerDlg;
-    // init in createDetailDlg()
-    Node* _detailDlg;
-    // init in createDescDlg()
-    Node* _descDlg;
     enum SkinType
     {
         HAIR = 0,
@@ -210,9 +203,6 @@ Scene3DTestScene::Scene3DTestScene()
 , _detailItem(nullptr)
 , _descItem(nullptr)
 , _ui(nullptr)
-, _playerDlg(nullptr)
-, _detailDlg(nullptr)
-, _descDlg(nullptr)
 {
     _monsters[0] = _monsters[1] = nullptr;
 }
@@ -299,11 +289,6 @@ bool Scene3DTestScene::init()
         ca->setName(s_CameraNames[CAMERA_DIALOG_2D_ABOVE]);
         ca->setCameraFlag(s_CF[LAYER_TOP]);
         _dlgScene->addChild(ca);
-        // create dialogs and add to dialog scene
-        createPlayerDlg();
-        _dlgScene->addChild(_playerDlg);
-        createDetailDlg();
-        _dlgScene->addChild(_detailDlg);
         // add dialog scene to test scene, which can't see the other element
         _dlgScene->setPosition3D(s_scenePositons[SCENE_DIALOG]);
         this->addChild(_dlgScene);
@@ -328,16 +313,9 @@ bool Scene3DTestScene::init()
         ca->setName(s_CameraNames[CAMERA_OSD_2D_ABOVE]);
         ca->setCameraFlag(s_CF[LAYER_TOP]);
         _osdScene->addChild(ca);
-        // create desc dialog and add to osd scene
-        createDescDlg();
-        _osdScene->addChild(_descDlg);
         // add osd scene to test scene, which can't see the other elements
         _osdScene->setPosition3D(s_scenePositons[SCENE_OSD]);
         this->addChild(_osdScene);
-
-        _playerDlg->setVisible(false);
-        _detailDlg->setVisible(false);
-        _descDlg->setVisible(false);
 
         ////////////////////////////////////////////////////////////////////////
         // add touch event callback
@@ -438,8 +416,8 @@ void Scene3DTestScene::createUI()
     // create player button
     auto showPlayerDlgItem = MenuItemImage::create("Images/Pea.png",
                                                    "Images/Pea.png",
-                                                   [this](Ref* sender){
-        this->_playerDlg->setVisible(!this->_playerDlg->isVisible());
+                                                   [this](Ref* sender)
+	{
     });
     showPlayerDlgItem->setName("showPlayerDlgItem");
     showPlayerDlgItem->setPosition(VisibleRect::left().x + 30, VisibleRect::top().y - 30);
@@ -449,18 +427,7 @@ void Scene3DTestScene::createUI()
     auto descItem = MenuItemLabel::create(Label::createWithTTF(ttfConfig, "Description"),
                                           [this](Ref* sender)
     {
-        if (this->_descDlg->isVisible())
-        {
-            // hide descDlg
-            _descDlg->setVisible(false);
-        }
-        else
-        {
-            // animate show descDlg
-            _descDlg->setVisible(true);
-            _descDlg->setScale(0);
-            _descDlg->runAction(ScaleTo::create(2, 1.0));
-        }
+       
     });
     descItem->setName("descItem");
     descItem->setPosition(Vec2(VisibleRect::right().x - 50, VisibleRect::top().y - 25));
@@ -471,57 +438,7 @@ void Scene3DTestScene::createUI()
     menu->setPosition(Vec2::ZERO);
     _ui->addChild(menu);
     
-    // second, add cameras control button to ui
-    auto createCameraButton = [this](int tag, const char* text)-> Node *
-    {
-        auto cb = ui::CheckBox::create("cocosui/check_box_normal.png",
-                                       "cocosui/check_box_normal_press.png",
-                                       "cocosui/check_box_active.png",
-                                       "cocosui/check_box_normal_disable.png",
-                                       "cocosui/check_box_active_disable.png");
-        cb->setTag(tag);
-        cb->setSelected(true);
-        if (text) cb->setName(text);
-        cb->setAnchorPoint(Vec2(0, 0.5));
-        cb->setScale(0.8f);
-        cb->addClickEventListener([this](Ref* sender)
-            {
-                auto index = static_cast<Node *>(sender)->getTag();
-                auto camera = this->_gameCameras[index];
-                camera->setVisible(!camera->isVisible());
-            });
-        if (text)
-        {
-            auto label = ui::Text::create();
-            label->setString(text);
-            label->setAnchorPoint(Vec2(0, 0));
-            label->setPositionX(cb->getContentSize().width);
-            cb->addChild(label);
-        }
-        return cb;
-    };
     
-    Vec2 pos = VisibleRect::leftBottom();
-    pos.y += 30;
-    float stepY = 25;
-    for (int i = CAMERA_COUNT - 1; i >= 0; --i)
-    {
-        // if hide CAMERA_UI_2D, the menu won't show again
-        // so skip it
-        if (CAMERA_UI_2D == i)
-        {
-            continue;
-        }
-        auto cameraBtn = createCameraButton(i, s_CameraNames[i]);
-        cameraBtn->setPosition(pos);
-        _ui->addChild(cameraBtn);
-        pos.y += stepY;
-    }
-    auto labelCameras = ui::Text::create();
-    labelCameras->setString("Cameras");
-    labelCameras->setAnchorPoint(Vec2(0, 0));
-    labelCameras->setPosition(pos);
-    _ui->addChild(labelCameras);
 }
 
 void Scene3DTestScene::createPlayerDlg()
@@ -531,96 +448,6 @@ void Scene3DTestScene::createPlayerDlg()
     Size dlgSize(190, 240);
     Vec2 pos = VisibleRect::center();
     float margin = 10;
-    
-    // first, create dialog ui part, include background, title and buttons
-    _playerDlg = ui::Scale9Sprite::createWithSpriteFrameName("button_actived.png");
-    _playerDlg->setContentSize(dlgSize);
-    _playerDlg->setAnchorPoint(Vec2(1, 0.5));
-    pos.y -= margin;
-    pos.x -= margin;
-    _playerDlg->setPosition(pos);
-    
-    // title
-    auto title = Label::createWithTTF("Player Dialog","fonts/arial.ttf",16);
-    title->setPosition(dlgSize.width / 2, dlgSize.height - margin * 2);
-    _playerDlg->addChild(title);
-    
-    // player background
-    Size bgSize(110, 180);
-    Vec2 bgPos(margin, dlgSize.height / 2 - margin);
-    auto playerBg = ui::Scale9Sprite::createWithSpriteFrameName("item_bg.png");
-    playerBg->setContentSize(bgSize);
-    playerBg->setAnchorPoint(Vec2(0, 0.5));
-    playerBg->setPosition(bgPos);
-    _playerDlg->addChild(playerBg);
-
-    // item background and item
-    Size itemSize(48, 48);
-    Vec2 itemAnchor(0, 1);
-    Vec2 itemPos(bgPos.x + bgSize.width + margin, bgPos.y + bgSize.height / 2);
-    auto itemBg = ui::Scale9Sprite::createWithSpriteFrameName("item_bg.png");
-    itemBg->setContentSize(itemSize);
-    itemBg->setAnchorPoint(itemAnchor);
-    itemBg->setPosition(itemPos);
-    _playerDlg->addChild(itemBg);
-    
-    auto item = ui::Button::create("crystal.png", "", "", ui::Widget::TextureResType::PLIST);
-    item->setTitleText("Crystal");
-    item->setScale(1.5);
-    item->setAnchorPoint(itemAnchor);
-    item->setPosition(itemPos);
-    item->addClickEventListener([this](Ref* sender){
-        this->_detailDlg->setVisible(!this->_detailDlg->isVisible());
-    });
-    _playerDlg->addChild(item);
-    
-    // second, add 3d actor, which on dialog layer
-    std::string filename = "Sprite3DTest/girl.c3b";
-    auto girl = Sprite3D::create(filename);
-    girl->setScale(0.5);
-    girl->setPosition(bgSize.width / 2, margin * 2);
-    girl->setCameraMask(s_CM[LAYER_MIDDLE]);
-    playerBg->addChild(girl);
-
-    // third, add zoom in/out button, which is 2d ui element and over 3d actor
-    ui::Button* zoomIn = ui::Button::create("cocosui/animationbuttonnormal.png",
-                                    "cocosui/animationbuttonpressed.png");
-    zoomIn->setScale(0.5);
-    zoomIn->setAnchorPoint(Vec2(1, 1));
-    zoomIn->setPosition(Vec2(bgSize.width / 2 - margin / 2, bgSize.height - margin));
-    zoomIn->addClickEventListener([girl](Ref* sender){
-        girl->setScale(girl->getScale() * 2);
-    });
-    zoomIn->setTitleText("Zoom In");
-    zoomIn->setName("Zoom In");
-    zoomIn->setCameraMask(s_CM[LAYER_TOP]);
-    playerBg->addChild(zoomIn);
-
-    ui::Button* zoomOut = ui::Button::create("cocosui/animationbuttonnormal.png",
-                                            "cocosui/animationbuttonpressed.png");
-    zoomOut->setScale(0.5);
-    zoomOut->setAnchorPoint(Vec2(0, 1));
-    zoomOut->setPosition(Vec2(bgSize.width / 2 + margin / 2, bgSize.height - margin));
-    zoomOut->addClickEventListener([girl](Ref* sender){
-        girl->setScale(girl->getScale() / 2);
-    });
-    zoomOut->setTitleText("Zoom Out");
-    zoomOut->setName("Zoom Out");
-    zoomOut->setCameraMask(s_CM[LAYER_TOP]);
-    playerBg->addChild(zoomOut);
-    
-    // forth, add slider bar
-    ui::Slider* slider = ui::Slider::create("cocosui/slidbar.png", "cocosui/sliderballnormal.png");
-    slider->setScale9Enabled(true);
-    slider->setPosition(Vec2(bgSize.width / 2, margin));
-    slider->setContentSize(Size(bgSize.width - margin, slider->getContentSize().height));
-    slider->addEventListener([girl, slider](Ref* sender,ui::Slider::EventType type)
-    {
-        girl->setRotation3D(Vec3(0, 360 * slider->getPercent() / 100, 0));
-    });
-    slider->setName("Slider");
-    slider->setCameraMask(s_CM[LAYER_TOP]);
-    playerBg->addChild(slider);
 }
 
 void Scene3DTestScene::createDetailDlg()
@@ -630,76 +457,6 @@ void Scene3DTestScene::createDetailDlg()
     Size dlgSize(190, 240);
     Vec2 pos = VisibleRect::center();
     float margin = 10;
-    
-    // create dialog
-    // use Scale9Sprite as background, it won't swallow touch event
-    _detailDlg = ui::Scale9Sprite::createWithSpriteFrameName("button_actived.png");
-    _detailDlg->setContentSize(dlgSize);
-    _detailDlg->setAnchorPoint(Vec2(0, 0.5));
-    _detailDlg->setOpacity(224);
-    pos.y -= margin;
-    pos.x += margin;
-    _detailDlg->setPosition(pos);
-    
-    // title
-    auto title = Label::createWithTTF("Detail Dialog","fonts/arial.ttf",16);
-    title->setPosition(dlgSize.width / 2, dlgSize.height - margin * 2);
-    _detailDlg->addChild(title);
-
-    
-    // add capture screen buttons
-    ui::Button* capture = ui::Button::create("cocosui/animationbuttonnormal.png",
-                                             "cocosui/animationbuttonpressed.png");
-    capture->setScale(0.5);
-    capture->setAnchorPoint(Vec2(0.5, 0));
-    capture->setPosition(Vec2(dlgSize.width / 3, margin));
-    capture->addClickEventListener([this](Ref* sender)
-    {
-        Director::getInstance()->getTextureCache()->removeTextureForKey(_snapshotFile);
-        _osdScene->removeChildByTag(SNAPSHOT_TAG);
-        _snapshotFile = "CaptureScreenTest.png";
-        utils::captureScreen([this](bool succeed, const std::string& outputFile)
-        {
-            if (!succeed)
-            {
-                log("Capture screen failed.");
-                return;
-            }
-            auto sp = Sprite::create(outputFile);
-            _osdScene->addChild(sp, 0, SNAPSHOT_TAG);
-            Size s = Director::getInstance()->getWinSize();
-            sp->setPosition(s.width / 2, s.height / 2);
-            sp->setScale(0.25);
-            _snapshotFile = outputFile;
-        }, _snapshotFile);
-    });
-    capture->setTitleText("Take Snapshot");
-    capture->setName("Take Snapshot");
-    _detailDlg->addChild(capture);
-    
-    ui::Button* remove = ui::Button::create("cocosui/animationbuttonnormal.png",
-                                            "cocosui/animationbuttonpressed.png");
-    remove->setScale(0.5);
-    remove->setAnchorPoint(Vec2(0.5, 0));
-    remove->setPosition(Vec2(dlgSize.width * 2 / 3, margin));
-    remove->addClickEventListener([this](Ref* sender)
-    {
-        _osdScene->removeChildByTag(SNAPSHOT_TAG);
-    });
-    remove->setTitleText("Del Snapshot");
-    remove->setName("Del Snapshot");
-    _detailDlg->addChild(remove);
-    
-    // add a spine ffd animation on it
-    auto skeletonNode =
-        SkeletonAnimationCullingFix::createWithFile("spine/goblins_mesh.json", "spine/goblins.atlas", 1.5f);
-    skeletonNode->setAnimation(0, "walk", true);
-    skeletonNode->setSkin("goblin");
-    
-    skeletonNode->setScale(0.25);
-    Size windowSize = Director::getInstance()->getWinSize();
-    skeletonNode->setPosition(Vec2(dlgSize.width / 2, remove->getContentSize().height / 2 + 2 * margin));
-    _detailDlg->addChild(skeletonNode);
 }
 
 void Scene3DTestScene::createDescDlg()
@@ -710,146 +467,7 @@ void Scene3DTestScene::createDescDlg()
     Vec2 pos = VisibleRect::center();
     float margin = 10;
     
-    // first, create dialog, add title and description text on it
-    // use Layout, which setTouchEnabled(true), as background, it will swallow touch event
-    auto desdDlg = ui::Layout::create();
-    desdDlg->setBackGroundImageScale9Enabled(true);
-    desdDlg->setBackGroundImage("button_actived.png", ui::Widget::TextureResType::PLIST);
-    desdDlg->setContentSize(dlgSize);
-    desdDlg->setAnchorPoint(Vec2(0.5f, 0.5f));
-    desdDlg->setOpacity(224);
-    desdDlg->setPosition(pos);
-    desdDlg->setTouchEnabled(true);
-    _descDlg = desdDlg;
-
     
-    // title
-    auto title = Label::createWithTTF("Description Dialog","fonts/arial.ttf",16);
-    title->setPosition(dlgSize.width / 2, dlgSize.height - margin * 2);
-    _descDlg->addChild(title);
-
-    // add a label to retain description text
-    Size textSize(400, 220);
-    Vec2 textPos(margin, dlgSize.height - (20 + margin));
-    std::string desc = std::string(
-    "    Scene 3D test for 2D and 3D mix rendering.\n"
-    "- Game world composite with terrain, skybox and 3D objects.\n"
-    "- UI composite with 2D nodes.\n"
-    "- Click the icon at the topleft conner, will show a player dialog which "
-    "there is a 3D sprite on it.\n"
-    "- There are two button to zoom the player model, which should keep above "
-    "on 3D model.\n"
-    " - This description dialog should above all other elements.\n"
-    "\n"
-    "    Game scene composite with root scene and three sub scene. These scene "
-    " located at different location, they can't see each other.\n"
-    "- Root scene contains ui layer\n"
-    "- World scene contains skybox and 3d scene.\n"
-    "- Dialog scene contains actor dialog and detail dialog.\n"
-    "- OSD scene contains description dialog.\n"
-    "\n"
-    "Click \"Description\" button to hide this dialog.\n");
-    auto text = Label::createWithSystemFont(desc, "", 9, textSize);
-    text->setAnchorPoint(Vec2(0, 1));
-    text->setPosition(textPos);
-    _descDlg->addChild(text);
-    
-    // second, add a 3D model
-    std::string fileName = "Sprite3DTest/ReskinGirl.c3b";
-    Vec2 girlPos(textPos.x + textSize.width - 40, margin);
-    _reskinGirl = Sprite3D::create(fileName);
-    _reskinGirl->setCameraMask(s_CM[LAYER_MIDDLE]);
-    _reskinGirl->setScale(2.5);
-    _reskinGirl->setPosition(girlPos);
-    _descDlg->addChild(_reskinGirl);
-    auto animation = Animation3D::create(fileName);
-    if (animation)
-    {
-        auto animate = Animate3D::create(animation);
-        
-        _reskinGirl->runAction(RepeatForever::create(animate));
-    }
-    
-    auto& body = _skins[(int)SkinType::UPPER_BODY];
-    body.push_back("Girl_UpperBody01");
-    body.push_back("Girl_UpperBody02");
-    
-    auto& pants = _skins[(int)SkinType::PANTS];
-    pants.push_back("Girl_LowerBody01");
-    pants.push_back("Girl_LowerBody02");
-    
-    auto& shoes = _skins[(int)SkinType::SHOES];
-    shoes.push_back("Girl_Shoes01");
-    shoes.push_back("Girl_Shoes02");
-    
-    auto& hair = _skins[(int)SkinType::HAIR];
-    hair.push_back("Girl_Hair01");
-    hair.push_back("Girl_Hair02");
-    
-    auto& face = _skins[(int)SkinType::FACE];
-    face.push_back("Girl_Face01");
-    face.push_back("Girl_Face02");
-    
-    auto& hand = _skins[(int)SkinType::HAND];
-    hand.push_back("Girl_Hand01");
-    hand.push_back("Girl_Hand02");
-    
-    auto& glasses = _skins[(int)SkinType::GLASSES];
-    glasses.push_back("");
-    glasses.push_back("Girl_Glasses01");
-    
-    memset(_curSkin, 0, (int)SkinType::MAX_TYPE * sizeof(int));
-    
-    auto applyCurSkin = [this]()
-    {
-        for (ssize_t i = 0; i < this->_reskinGirl->getMeshCount(); i++) {
-            auto mesh = this->_reskinGirl->getMeshByIndex(static_cast<int>(i));
-            bool isVisible = false;
-            for (int j = 0; j < (int)SkinType::MAX_TYPE; j++) {
-                if (mesh->getName() == _skins[j].at(_curSkin[j]))
-                {
-                    isVisible = true;
-                    break;
-                }
-            }
-            this->_reskinGirl->getMeshByIndex(static_cast<int>(i))->setVisible(isVisible);
-        }
-    };
-    applyCurSkin();
-    
-    // third, add reskin buttons above 3D model
-    static const std::string btnTexts[SkinType::MAX_TYPE] =
-    {
-        "Hair",
-        "Glasses",
-        "Face",
-        "Coat",
-        "Hand",
-        "Pants",
-        "Shoes",
-    };
-    Vec2 btnPos(dlgSize.width - margin, margin);
-    for (int i = SkinType::MAX_TYPE - 1; i >= 0; --i) {
-        auto btn = ui::Button::create("cocosui/animationbuttonnormal.png",
-                                      "cocosui/animationbuttonpressed.png");
-        btn->setScale(0.5);
-        btn->setTag(i);
-        btn->setAnchorPoint(Vec2(1, 0));
-        btn->setPosition(btnPos);
-        btnPos.y += 20;
-        btn->addClickEventListener([this, applyCurSkin](Ref* sender)
-        {
-            auto index = static_cast<Node *>(sender)->getTag();
-            if (index < SkinType::MAX_TYPE)
-            {
-                _curSkin[index] = (_curSkin[index] + 1) % _skins[index].size();
-                applyCurSkin();
-            }
-        });
-        btn->setTitleText(btnTexts[i]);
-        btn->setCameraMask(s_CM[LAYER_TOP]);
-        _descDlg->addChild(btn);
-    }
 }
 
 void Scene3DTestScene::onTouchEnd(Touch* touch, Event* event)

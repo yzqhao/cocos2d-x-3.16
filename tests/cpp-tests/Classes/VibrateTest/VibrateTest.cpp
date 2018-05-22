@@ -25,7 +25,6 @@
 #include "platform/CCPlatformConfig.h"
 
 #include "VibrateTest.h"
-#include "ui/CocosGUI.h"
 
 using namespace cocos2d;
 using namespace cocos2d::ui;
@@ -131,125 +130,6 @@ namespace {
         
         bool _enabled;
     };
-    
-    class SliderEx : public Slider
-    {
-    public:
-        enum class TouchEvent
-        {
-            DOWN,
-            MOVE,
-            UP,
-            CANCEL
-        };
-        typedef std::function<void(SliderEx*,float,TouchEvent)> ccSliderExCallback;
-        
-        static SliderEx* create(){
-            auto ret = new (std::nothrow) SliderEx();
-            if (ret && ret->init())
-            {
-                ret->_callback = nullptr;
-                ret->loadBarTexture("ccs-res/cocosui/sliderTrack.png");
-                ret->loadSlidBallTextures("ccs-res/cocosui/sliderThumb.png", "ccs-res/cocosui/sliderThumb.png", "");
-                ret->loadProgressBarTexture("ccs-res/cocosui/sliderProgress.png");
-                
-                ret->autorelease();
-                
-                return ret;
-            }
-            CC_SAFE_DELETE(ret);
-            return ret;
-        }
-        
-        void setCallBack(const ccSliderExCallback& callback){
-            _callback = callback;
-        }
-        
-        void setRatio(float ratio) {
-            if (ratio > 1.0f){
-                ratio = 1.0f;
-            }
-            else if (ratio < 0.0f){
-                ratio = 0.0f;
-            }
-            
-            _ratio = ratio;
-            _percent = 100 * _ratio;
-            
-            float dis = _barLength * _ratio;
-            _slidBallRenderer->setPosition(Vec2(dis, _contentSize.height / 2.0f));
-            if (_scale9Enabled){
-                _progressBarRenderer->setPreferredSize(Size(dis,_progressBarTextureSize.height));
-            }
-            else
-            {
-                auto spriteRenderer = _progressBarRenderer->getSprite();
-                
-                if (nullptr != spriteRenderer) {
-                    Rect rect = spriteRenderer->getTextureRect();
-                    rect.size.width = _progressBarTextureSize.width * _ratio;
-                    spriteRenderer->setTextureRect(rect, spriteRenderer->isTextureRectRotated(), rect.size);
-                }
-            }
-        }
-        
-        virtual bool onTouchBegan(Touch *touch, Event *unusedEvent) override{
-            auto ret = Slider::onTouchBegan(touch, unusedEvent);
-            if(ret && _callback){
-                _touchEvent = TouchEvent::DOWN;
-                Vec2 nsp = convertToNodeSpace(_touchBeganPosition);
-                _ratio = nsp.x / _barLength;
-                if(_ratio < 0.0f)
-                    _ratio = 0.0f;
-                else if(_ratio > 1.0f)
-                    _ratio = 1.0f;
-                _callback(this,_ratio,_touchEvent);
-            }
-            return ret;
-        }
-        
-        virtual void onTouchMoved(Touch *touch, Event *unusedEvent) override{
-            _touchEvent = TouchEvent::MOVE;
-            Slider::onTouchMoved(touch, unusedEvent);
-            Vec2 nsp = convertToNodeSpace(_touchMovePosition);
-            _ratio = nsp.x / _barLength;
-            if(_ratio < 0.0f)
-                _ratio = 0.0f;
-            else if(_ratio > 1.0f)
-                _ratio = 1.0f;
-            if(_callback){
-                _callback(this,_ratio,_touchEvent);
-            }
-        }
-        
-        virtual void onTouchEnded(Touch *touch, Event *unusedEvent) override{
-            _touchEvent = TouchEvent::UP;
-            Slider::onTouchEnded(touch, unusedEvent);
-            Vec2 nsp = convertToNodeSpace(_touchEndPosition);
-            _ratio = nsp.x / _barLength;
-            if(_ratio < 0.0f)
-                _ratio = 0.0f;
-            else if(_ratio > 1.0f)
-                _ratio = 1.0f;
-            if(_callback){
-                _callback(this,_ratio,_touchEvent);
-            }
-        }
-        
-        virtual void onTouchCancelled(Touch *touch, Event *unusedEvent) override{
-            _touchEvent = TouchEvent::CANCEL;
-            Slider::onTouchCancelled(touch, unusedEvent);
-            
-            if(_callback){
-                _callback(this,_ratio,_touchEvent);
-            }
-        }
-        
-    private:
-        TouchEvent _touchEvent;
-        float _ratio;
-        ccSliderExCallback _callback;
-    };
 }
 
 void VibrateTestDemo::onExit()
@@ -285,17 +165,6 @@ bool VibrateControlTest::init()
     durationLabel->setPosition(layerSize.width * 0.5f, layerSize.height * 0.5f);
     addChild(durationLabel);
     _durationLabel = durationLabel;
-
-    auto durationSlider = SliderEx::create();
-    durationSlider->setPercent(0);
-    durationSlider->setCallBack([&](SliderEx* sender, float ratio, SliderEx::TouchEvent event){
-        _duration = ratio * 1.9f + 0.1f; // From 0.1s to 2s
-        auto durationLabelValue = StringUtils::format("duration: %.3fs", _duration);
-        (static_cast<Label*>(_durationLabel))->setString(durationLabelValue);
-    });
-    durationSlider->setPosition(Vec2(layerSize.width * 0.5f, layerSize.height * 0.35f));
-    addChild(durationSlider);
-    _durationSlider = durationSlider;
         
     return ret;
 }

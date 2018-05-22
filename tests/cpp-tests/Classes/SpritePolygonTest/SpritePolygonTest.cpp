@@ -1,6 +1,5 @@
 #include "SpritePolygonTest.h"
 #include "../testResource.h"
-#include "ui/CocosGUI.h"
 
 USING_NS_CC;
 
@@ -268,20 +267,12 @@ bool SpritePolygonTestSlider::init()
 void SpritePolygonTestSlider::initSliders()
 {
     auto vsize =Director::getInstance()->getVisibleSize();
-    cocos2d::ui::Slider* slider = cocos2d::ui::Slider::create();
-    slider->loadBarTexture("cocosui/sliderTrack.png");
-    slider->loadSlidBallTextures("cocosui/sliderThumb.png", "cocosui/sliderThumb.png", "");
-    slider->loadProgressBarTexture("cocosui/sliderProgress.png");
-    slider->setPosition(Vec2(vsize.width/2, vsize.height/4));
-    
-    slider->addEventListener(CC_CALLBACK_2(SpritePolygonTestSlider::changeEpsilon, this));
-    slider->setPercent((int)(sqrtf(1.0f/19.0f)*100));
+   
     
     auto ttfConfig = TTFConfig("fonts/arial.ttf", 8);
     _epsilonLabel = Label::createWithTTF(ttfConfig, "Epsilon: 2.0");
     addChild(_epsilonLabel);
     _epsilonLabel->setPosition(Vec2(vsize.width/2, vsize.height/4 + 15));
-    addChild(slider);
 }
 
 void SpritePolygonTestSlider::makeSprites(const std::string* list, const int count, const float y)
@@ -292,28 +283,6 @@ void SpritePolygonTestSlider::makeSprites(const std::string* list, const int cou
         float offset = (vsize.width/(count+1)) * (i+1);
         auto sp = makeSprite(list[i], Vec2(offset, y));
         addChild(sp);
-    }
-}
-
-void SpritePolygonTestSlider::changeEpsilon(cocos2d::Ref *pSender, cocos2d::ui::Slider::EventType type)
-{
-    if (type == cocos2d::ui::Slider::EventType::ON_PERCENTAGE_CHANGED)
-    {
-        cocos2d::ui::Slider* slider = dynamic_cast<cocos2d::ui::Slider*>(pSender);
-        float epsilon = powf(slider->getPercent()/100.0,2)*19.0f + 1.0f;
-        for(auto child : _children)
-        {
-            if(child->getName().size())
-            {
-                Sprite *sp = (Sprite*)child;
-                auto file = sp->getName();
-                auto pinfo = AutoPolygon::generatePolygon(file, Rect::ZERO, epsilon);
-                sp->setPolygonInfo(pinfo);
-                updateLabel(sp, pinfo);
-            }
-        }
-        _epsilonLabel->setString("Epsilon: "+ Value(epsilon).asString());
-        updateDrawNode();
     }
 }
 

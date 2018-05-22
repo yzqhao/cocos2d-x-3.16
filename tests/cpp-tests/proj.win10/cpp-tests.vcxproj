@@ -267,7 +267,6 @@
     <ClInclude Include="..\Classes\ChipmunkTest\ChipmunkTest.h" />
     <ClInclude Include="..\Classes\ClickAndMoveTest\ClickAndMoveTest.h" />
     <ClInclude Include="..\Classes\ClippingNodeTest\ClippingNodeTest.h" />
-    <ClInclude Include="..\Classes\CocosDenshionTest\CocosDenshionTest.h" />
     <ClInclude Include="..\Classes\CocosStudio3DTest\CocosStudio3DTest.h" />
     <ClInclude Include="..\Classes\ConfigurationTest\ConfigurationTest.h" />
     <ClInclude Include="..\Classes\ConsoleTest\ConsoleTest.h" />
@@ -428,7 +427,6 @@
     <ClCompile Include="..\Classes\ChipmunkTest\ChipmunkTest.cpp" />
     <ClCompile Include="..\Classes\ClickAndMoveTest\ClickAndMoveTest.cpp" />
     <ClCompile Include="..\Classes\ClippingNodeTest\ClippingNodeTest.cpp" />
-    <ClCompile Include="..\Classes\CocosDenshionTest\CocosDenshionTest.cpp" />
     <ClCompile Include="..\Classes\ConfigurationTest\ConfigurationTest.cpp" />
     <ClCompile Include="..\Classes\ConsoleTest\ConsoleTest.cpp" />
     <ClCompile Include="..\Classes\controller.cpp" />
