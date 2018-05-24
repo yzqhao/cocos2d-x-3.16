@@ -2,17 +2,6 @@ macro (SetCompilerOptions)
 	set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -DCOCOS2D_DEBUG=1")
 	set(CMAKE_CXX_FLAGS_DEBUG ${CMAKE_C_FLAGS_DEBUG})
 
-    # definitions for chipmunk
-	if (USE_CHIPMUNK)
-		add_definitions(-DCC_ENABLE_CHIPMUNK_INTEGRATION=1)
-		if (IOS OR MACOSX)
-			# without this chipmunk will try to use apple defined geometry types, that conflicts with cocos
-            add_definitions(-DCP_USE_CGPOINTS=0)
-		endif()
-	else()
-		add_definitions(-DCC_USE_PHYSICS=0)
-	endif()
-
 	# Compiler options
 	if(MSVC)
 	  add_definitions(-D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS

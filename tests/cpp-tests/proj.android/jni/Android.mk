@@ -45,6 +45,13 @@ LOCAL_SRC_FILES := main.cpp \
 ../../Classes/DrawPrimitivesTest/DrawPrimitivesTest.cpp \
 ../../Classes/EffectsAdvancedTest/EffectsAdvancedTest.cpp \
 ../../Classes/EffectsTest/EffectsTest.cpp \
+../../Classes/ExtensionsTest/AssetsManagerExTest/AssetsManagerExTest.cpp \
+../../Classes/ExtensionsTest/ExtensionsTest.cpp \
+../../Classes/ExtensionsTest/NetworkTest/HttpClientTest.cpp \
+../../Classes/ExtensionsTest/NetworkTest/SocketIOTest.cpp \
+../../Classes/ExtensionsTest/NetworkTest/WebSocketTest.cpp \
+../../Classes/ExtensionsTest/TableViewTest/CustomTableViewCell.cpp \
+../../Classes/ExtensionsTest/TableViewTest/TableViewTestScene.cpp \
 ../../Classes/FileUtilsTest/FileUtilsTest.cpp \
 ../../Classes/FontTest/FontTest.cpp \
 ../../Classes/InputTest/MouseTest.cpp \

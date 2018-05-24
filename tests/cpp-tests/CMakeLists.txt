@@ -132,6 +132,12 @@ include_directories(
   ${CMAKE_SOURCE_DIR}/cocos/editor-support
 )
 
+set (EXTENDED_TESTS_SRC
+      Classes/ExtensionsTest/NetworkTest/HttpClientTest.cpp
+      Classes/ExtensionsTest/NetworkTest/SocketIOTest.cpp
+      Classes/ExtensionsTest/NetworkTest/WebSocketTest.cpp
+    )
+
 if(ANDROID)
     add_library(${APP_NAME} SHARED ${TESTS_SRC} ${EXTENDED_TESTS_SRC})
     IF(CMAKE_BUILD_TYPE MATCHES RELEASE)
