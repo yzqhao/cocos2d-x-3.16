@@ -353,9 +353,6 @@ xcopy "$(EngineRoot)cocos\platform\win8.1-universal\pch.h" "$(EngineRoot)templat
     <ProjectReference Include="..\..\..\cocos\2d\libcocos2d_win10\libcocos2d.vcxproj">
       <Project>{07c2895d-720c-487d-b7b4-12c293ea533f}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\cocos\editor-support\spine\proj.win10\libSpine.vcxproj">
-      <Project>{4b3ba10a-941f-4e08-8a50-8a7fcb822bb8}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Page Include="..\..\..\cocos\platform\win8.1-universal\OpenGLESPage.xaml" />

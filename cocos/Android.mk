@@ -275,7 +275,6 @@ LOCAL_MODULE_FILENAME := libcocos2d
 
 LOCAL_STATIC_LIBRARIES += cocos_extension_static
 LOCAL_STATIC_LIBRARIES += cocos3d_static
-LOCAL_STATIC_LIBRARIES += spine_static
 LOCAL_STATIC_LIBRARIES += cocos_network_static
 
 include $(BUILD_STATIC_LIBRARY)
@@ -289,7 +288,6 @@ $(call import-module,jpeg/prebuilt/android)
 $(call import-module,tiff/prebuilt/android)
 $(call import-module,webp/prebuilt/android)
 $(call import-module,3d)
-$(call import-module,editor-support/spine)
 $(call import-module,network)
 $(call import-module,extensions)
 # $(call import-module,curl/prebuilt/android)

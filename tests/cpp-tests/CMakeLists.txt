@@ -95,7 +95,6 @@ set(TESTS_SRC
   Classes/SchedulerTest/SchedulerTest.cpp
   Classes/ShaderTest/ShaderTest.cpp
   Classes/ShaderTest/ShaderTest2.cpp
-  Classes/SpineTest/SpineTest.cpp
   Classes/Scene3DTest/Scene3DTest.cpp
   Classes/Sprite3DTest/DrawNode3D.cpp
   Classes/Sprite3DTest/Sprite3DTest.cpp
@@ -125,11 +124,6 @@ if(WIN32 OR MACOSX OR LINUX)
     Classes/WindowTest/WindowTest.cpp
     )
 endif()
-
-include_directories(
-  Classes
-  ${CMAKE_SOURCE_DIR}/cocos/editor-support
-)
 
 set (EXTENDED_TESTS_SRC
       Classes/ExtensionsTest/NetworkTest/HttpClientTest.cpp

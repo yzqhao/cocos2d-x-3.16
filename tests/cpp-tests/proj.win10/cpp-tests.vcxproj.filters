@@ -137,9 +137,6 @@
     <Filter Include="Classes\ShaderTest">
       <UniqueIdentifier>{d93b735e-696c-43b7-9a79-993ca680b953}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\SpineTest">
-      <UniqueIdentifier>{19e37819-45ae-474d-86d9-46104d51e247}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\Sprite3DTest">
       <UniqueIdentifier>{aa8d908d-05dd-4dd3-9cd7-1a381e167ba8}</UniqueIdentifier>
     </Filter>
@@ -478,9 +475,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\ShaderTest\ShaderTest2.cpp">
       <Filter>Classes\ShaderTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\SpineTest\SpineTest.cpp">
-      <Filter>Classes\SpineTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Sprite3DTest\DrawNode3D.cpp">
       <Filter>Classes\Sprite3DTest</Filter>
@@ -864,9 +858,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ShaderTest\ShaderTest2.h">
       <Filter>Classes\ShaderTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\SpineTest\SpineTest.h">
-      <Filter>Classes\SpineTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Sprite3DTest\DrawNode3D.h">
       <Filter>Classes\Sprite3DTest</Filter>

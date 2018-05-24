@@ -1,37 +1,11 @@
 #include "Scene3DTest.h"
 
 #include "renderer/CCRenderState.h"
-#include <spine/spine-cocos2dx.h>
 
 #include "../testResource.h"
 #include "../TerrainTest/TerrainTest.h"
 
 USING_NS_CC;
-using namespace spine;
-
-class SkeletonAnimationCullingFix : public SkeletonAnimation
-{
-public:
-    SkeletonAnimationCullingFix()
-    : SkeletonAnimation()
-    {}
-    
-    virtual void draw(cocos2d::Renderer* renderer, const cocos2d::Mat4& transform, uint32_t transformFlags) override
-    {
-        glDisable(GL_CULL_FACE);
-        SkeletonAnimation::draw(renderer, transform, transformFlags);
-        RenderState::StateBlock::invalidate(cocos2d::RenderState::StateBlock::RS_ALL_ONES);
-    }
-    
-    static SkeletonAnimationCullingFix* createWithFile (const std::string& skeletonDataFile, const std::string& atlasFile, float scale = 1)
-    {
-        SkeletonAnimationCullingFix* node = new SkeletonAnimationCullingFix();
-        spAtlas* atlas = spAtlas_createFromFile(atlasFile.c_str(), 0);
-        node->initWithJsonFile(skeletonDataFile, atlas, scale);
-        node->autorelease();
-        return node;
-    }
-};
 
 ////////////////////////////////////////////////////////////////////////////////
 // Declare Scene3DTestScene

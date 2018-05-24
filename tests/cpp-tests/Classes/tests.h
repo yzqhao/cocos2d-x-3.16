@@ -61,7 +61,6 @@
 #include "SchedulerTest/SchedulerTest.h"
 #include "ShaderTest/ShaderTest.h"
 #include "ShaderTest/ShaderTest2.h"
-#include "SpineTest/SpineTest.h"
 #include "Sprite3DTest/Sprite3DTest.h"
 #include "SpritePolygonTest/SpritePolygonTest.h"
 #include "TerrainTest/TerrainTest.h"
