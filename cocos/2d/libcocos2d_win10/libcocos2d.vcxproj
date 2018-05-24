@@ -153,8 +153,6 @@
     <ClCompile Include="..\..\3d\CCSprite3D.cpp" />
     <ClCompile Include="..\..\3d\CCSprite3DMaterial.cpp" />
     <ClCompile Include="..\..\3d\CCTerrain.cpp" />
-    <ClCompile Include="..\..\audio\AudioEngine.cpp" />
-    <ClCompile Include="..\..\audio\winrt\Audio.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
@@ -174,30 +172,6 @@
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </ForcedIncludeFiles>
     </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\AudioCachePlayer.cpp" />
-    <ClCompile Include="..\..\audio\winrt\AudioEngine-winrt.cpp" />
-    <ClCompile Include="..\..\audio\winrt\AudioSourceReader.cpp" />
-    <ClCompile Include="..\..\audio\winrt\MediaStreamer.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </ForcedIncludeFiles>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\SimpleAudioEngine.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
@@ -543,14 +517,6 @@
     <ClInclude Include="..\..\3d\CCSprite3DMaterial.h" />
     <ClInclude Include="..\..\3d\CCTerrain.h" />
     <ClInclude Include="..\..\3d\cocos3d.h" />
-    <ClInclude Include="..\..\audio\include\AudioEngine.h" />
-    <ClInclude Include="..\..\audio\include\Export.h" />
-    <ClInclude Include="..\..\audio\include\SimpleAudioEngine.h" />
-    <ClInclude Include="..\..\audio\winrt\Audio.h" />
-    <ClInclude Include="..\..\audio\winrt\AudioCachePlayer.h" />
-    <ClInclude Include="..\..\audio\winrt\AudioEngine-winrt.h" />
-    <ClInclude Include="..\..\audio\winrt\AudioSourceReader.h" />
-    <ClInclude Include="..\..\audio\winrt\MediaStreamer.h" />
     <ClInclude Include="..\..\base\allocator\CCAllocatorBase.h" />
     <ClInclude Include="..\..\base\allocator\CCAllocatorDiagnostics.h" />
     <ClInclude Include="..\..\base\allocator\CCAllocatorGlobal.h" />

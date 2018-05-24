@@ -32,7 +32,6 @@ THE SOFTWARE.
 #include "renderer/CCRenderer.h"
 #include "2d/CCParticleSystem.h"
 #include "2d/CCActionManager.h"
-#include "audio/include/AudioEngine.h"
 #include <android/log.h>
 #include <limits.h>
 #include <sstream>
@@ -233,14 +232,13 @@ struct CpuLevelInfo
     unsigned int nodeCount;
     unsigned int particleCount;
     unsigned int actionCount;
-    unsigned int audioCount;
 };
 
 std::vector<CpuLevelInfo> _cpuLevelArr = {
-    {500 , 500,  500,   6},
-    {1250, 1500, 2000,  20},
-    {1750, 2000, 3000,  32},
-    {2750, 2500, 7000,  50}
+    {500 , 500,  500},
+    {1250, 1500, 2000},
+    {1750, 2000, 3000},
+    {2750, 2500, 7000}
 };
 
 // GPU Level
@@ -424,7 +422,6 @@ bool _isCollectFpsEnabled = false;
 int cbCpuLevelNode(int i) { return _cpuLevelArr[i].nodeCount; }
 int cbCpuLevelParticle(int i) { return _cpuLevelArr[i].particleCount; }
 int cbCpuLevelAction(int i) { return _cpuLevelArr[i].actionCount; }
-int cbCpuLevelAudio(int i) { return _cpuLevelArr[i].audioCount; }
 
 float toCpuLevelPerFactor(int value, int (*cb)(int i))
 {
@@ -792,10 +789,6 @@ void parseDebugConfig()
                     {
                         cpuLevelInfo.actionCount = (uint32_t)atoi(tmp.c_str());
                     }
-                    if (getValueFromMap(kvMap, "audio", &tmp))
-                    {
-                        cpuLevelInfo.audioCount = (uint32_t)atoi(tmp.c_str());
-                    }
                 }
 
                 _cpuLevelArr.push_back(cpuLevelInfo);
@@ -868,7 +861,7 @@ void parseDebugConfig()
          for (; iter != _cpuLevelArr.end(); ++iter)
          {
              CpuLevelInfo level = *iter;
-             LOGD("cpu level: %u, %u, %u, %u", level.nodeCount, level.particleCount, level.actionCount, level.audioCount);
+             LOGD("cpu level: %u, %u, %u", level.nodeCount, level.particleCount, level.actionCount);
          }
          LOGD("-----------------------------------------");
      }
@@ -1038,14 +1031,12 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
     int totalNodeCount = Node::getAttachedNodeCount();
     int totalParticleCount = getTotalParticleCount();
     int totalActionCount = director->getActionManager()->getNumberOfRunningActions();
-    int totalPlayingAudioCount = experimental::AudioEngine::getPlayingAudioCount();
 
     {
         float cpuLevelNode = toCpuLevelPerFactor(totalNodeCount, cbCpuLevelNode);
         float cpuLevelParticle = toCpuLevelPerFactor(totalParticleCount, cbCpuLevelParticle);
         float cpuLevelAction = toCpuLevelPerFactor(totalActionCount, cbCpuLevelAction);
-        float cpuLevelAudio = toCpuLevelPerFactor(totalPlayingAudioCount, cbCpuLevelAudio);
-        float fCpuLevel = cpuLevelNode + cpuLevelParticle + cpuLevelAction + cpuLevelAudio;
+        float fCpuLevel = cpuLevelNode + cpuLevelParticle + cpuLevelAction;
         float highestCpuLevel = CARRAY_SIZE(_cpuLevelArr) * 1.0f;
         fCpuLevel = fCpuLevel > highestCpuLevel ? highestCpuLevel : fCpuLevel;
         cpuLevel = std::floor(fCpuLevel);
@@ -1053,8 +1044,8 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
 #if EDM_DEBUG
         if (_printCpuGpuLevelCounter > _printCpuGpuLevelThreshold)
         {
-            LOGD("DEBUG: cpu level: %d, node: (%f, %d), particle: (%f, %d), action: (%f, %d), audio: (%f, %d)", 
-                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelParticle, totalParticleCount, cpuLevelAction, totalActionCount, cpuLevelAudio, totalPlayingAudioCount);
+            LOGD("DEBUG: cpu level: %d, node: (%f, %d), particle: (%f, %d), action: (%f, %d)", 
+                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelParticle, totalParticleCount, cpuLevelAction, totalActionCount);
         }
 #endif
         if (_oldCpuLevel < 0
@@ -1062,8 +1053,8 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
             || cpuLevel > _oldCpuLevel
             )
         {
-            LOGD("NOTIFY: cpu level: %d, node: (%f, %d), particle: (%f, %d), action: (%f, %d), audio: (%f, %d)", 
-                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelParticle, totalParticleCount, cpuLevelAction, totalActionCount, cpuLevelAudio, totalPlayingAudioCount);
+            LOGD("NOTIFY: cpu level: %d, node: (%f, %d), particle: (%f, %d), action: (%f, %d)", 
+                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelParticle, totalParticleCount, cpuLevelAction, totalActionCount);
             levelChangeReason |= LEVEL_CHANGE_REASON_CPU;
             _oldCpuLevel = cpuLevel;
         }
@@ -1633,7 +1624,6 @@ void EngineDataManager::nativeOnChangeMuteEnabled(JNIEnv* env, jobject thiz, jbo
         return;
 
     LOGD("nativeOnChangeMuteEnabled, isMuteEnabled: %d", isMuteEnabled);
-    cocos2d::experimental::AudioEngine::setEnabled(!isMuteEnabled);
 }
 
 } // namespace cocos2d {

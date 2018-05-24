@@ -83,7 +83,6 @@ set(TESTS_SRC
   Classes/MenuTest/MenuTest.cpp
   Classes/MotionStreakTest/MotionStreakTest.cpp
   Classes/MultiTouchTest/MultiTouchTest.cpp
-  Classes/NewAudioEngineTest/NewAudioEngineTest.cpp
   Classes/NewEventDispatcherTest/NewEventDispatcherTest.cpp
   Classes/NewRendererTest/NewRendererTest.cpp
   Classes/NodeTest/NodeTest.cpp

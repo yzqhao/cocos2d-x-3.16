@@ -679,12 +679,6 @@
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp">
       <Filter>extension\GUI\CCScrollView</Filter>
     </ClCompile>
-    <ClCompile Include="..\audio\win32\MciPlayer.cpp">
-      <Filter>cocosdenshion\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\win32\SimpleAudioEngine.cpp">
-      <Filter>cocosdenshion\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\network\HttpClient.cpp">
       <Filter>network\Source Files</Filter>
     </ClCompile>
@@ -732,18 +726,6 @@
     </ClCompile>
     <ClCompile Include="..\..\extensions\assets-manager\Manifest.cpp">
       <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\AudioEngine.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\win32\AudioCache.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\win32\AudioEngine-win32.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\win32\AudioPlayer.cpp">
-      <Filter>audioengine</Filter>
     </ClCompile>
     <ClCompile Include="CCCamera.cpp">
       <Filter>2d</Filter>
@@ -847,18 +829,6 @@
     </ClCompile>
     <ClCompile Include="..\renderer\CCTextureCube.cpp">
       <Filter>renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\win32\AudioDecoder.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\win32\AudioDecoderMp3.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\win32\AudioDecoderOgg.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\audio\win32\AudioDecoderManager.cpp">
-      <Filter>audioengine</Filter>
     </ClCompile>
     <ClCompile Include="..\network\CCDownloader-curl.cpp">
       <Filter>network\Source Files</Filter>
@@ -1500,15 +1470,6 @@
     <ClInclude Include="..\..\extensions\ExtensionMacros.h">
       <Filter>extension</Filter>
     </ClInclude>
-    <ClInclude Include="..\audio\include\Export.h">
-      <Filter>cocosdenshion\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\MciPlayer.h">
-      <Filter>cocosdenshion\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\include\SimpleAudioEngine.h">
-      <Filter>cocosdenshion\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\network\HttpClient.h">
       <Filter>network\Header Files</Filter>
     </ClInclude>
@@ -1595,18 +1556,6 @@
     </ClInclude>
     <ClInclude Include="..\..\extensions\assets-manager\Manifest.h">
       <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\include\AudioEngine.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\AudioCache.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\AudioEngine-win32.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\AudioPlayer.h">
-      <Filter>audioengine</Filter>
     </ClInclude>
     <ClInclude Include="CCCamera.h">
       <Filter>2d</Filter>
@@ -1734,21 +1683,6 @@
     </ClInclude>
     <ClInclude Include="..\network\CCDownloader-curl.h">
       <Filter>network\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\AudioDecoder.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\AudioMacros.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\AudioDecoderMp3.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\AudioDecoderOgg.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\audio\win32\AudioDecoderManager.h">
-      <Filter>audioengine</Filter>
     </ClInclude>
     <ClInclude Include="..\network\Uri.h">
       <Filter>network\Header Files</Filter>

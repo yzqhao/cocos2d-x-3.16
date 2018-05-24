@@ -95,9 +95,6 @@
     <Filter Include="Classes\MultiTouchTest">
       <UniqueIdentifier>{a6a92123-dd2f-4c1e-9780-a8183491b3d2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\NewAudioEngineTest">
-      <UniqueIdentifier>{ee4418eb-5a74-4ba6-a3d9-361793492383}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\NewEventDispatcherTest">
       <UniqueIdentifier>{50348955-c1df-4e27-ba81-7f1f7a7f7d0b}</UniqueIdentifier>
     </Filter>
@@ -618,9 +615,6 @@
     <ClCompile Include="..\Classes\MaterialSystemTest\MaterialSystemTest.cpp">
       <Filter>Classes\MaterialSystemTest</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\NewAudioEngineTest\NewAudioEngineTest.cpp">
-      <Filter>Classes\NewAudioEngineTest</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Physics3DTest\Physics3DTest.cpp">
       <Filter>Classes\Physics3DTest</Filter>
     </ClCompile>
@@ -1006,9 +1000,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\MaterialSystemTest\MaterialSystemTest.h">
       <Filter>Classes\MaterialSystemTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\NewAudioEngineTest\NewAudioEngineTest.h">
-      <Filter>Classes\NewAudioEngineTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Physics3DTest\Physics3DTest.h">
       <Filter>Classes\Physics3DTest</Filter>

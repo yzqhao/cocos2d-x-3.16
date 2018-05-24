@@ -140,7 +140,6 @@ include_directories(
 	${COCOS2D_ROOT}/cocos
 	${COCOS2D_ROOT}/external
 	${COCOS2D_ROOT}/cocos/platform
-	${COCOS2D_ROOT}/cocos/audio/include/
 	Classes
 )
 if ( WINDOWS )

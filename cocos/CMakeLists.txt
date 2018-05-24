@@ -40,7 +40,6 @@ include(renderer/CMakeLists.txt)
 include(base/CMakeLists.txt)
 include(deprecated/CMakeLists.txt)
 include(network/CMakeLists.txt)
-include(audio/CMakeLists.txt)
 include(storage/CMakeLists.txt)
 
 if(BUILD_EDITOR_SPINE)

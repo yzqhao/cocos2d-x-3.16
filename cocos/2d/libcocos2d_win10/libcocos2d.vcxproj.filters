@@ -480,15 +480,6 @@
     <ClCompile Include="..\..\base\allocator\CCAllocatorGlobalNewDelete.cpp">
       <Filter>base\allocator</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\Audio.cpp">
-      <Filter>cocosdenshion\winrt</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\MediaStreamer.cpp">
-      <Filter>cocosdenshion\winrt</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\SimpleAudioEngine.cpp">
-      <Filter>cocosdenshion\winrt</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\deprecated\CCArray.cpp">
       <Filter>deprecated</Filter>
     </ClCompile>
@@ -755,18 +746,6 @@
     </ClCompile>
     <ClCompile Include="..\..\base\CCProperties.cpp">
       <Filter>base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\AudioEngine.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\AudioCachePlayer.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\AudioEngine-winrt.cpp">
-      <Filter>audioengine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\AudioSourceReader.cpp">
-      <Filter>audioengine</Filter>
     </ClCompile>
     <ClCompile Include="..\..\renderer\CCFrameBuffer.cpp" />
     <ClCompile Include="..\CCAutoPolygon.cpp">
@@ -1301,21 +1280,6 @@
     <ClInclude Include="..\..\base\allocator\CCAllocatorStrategyPool.h">
       <Filter>base\allocator</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\audio\include\AudioEngine.h">
-      <Filter>cocosdenshion\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\audio\include\Export.h">
-      <Filter>cocosdenshion\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\audio\include\SimpleAudioEngine.h">
-      <Filter>cocosdenshion\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\audio\winrt\Audio.h">
-      <Filter>cocosdenshion\winrt</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\audio\winrt\MediaStreamer.h">
-      <Filter>cocosdenshion\winrt</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\deprecated\CCArray.h">
       <Filter>deprecated</Filter>
     </ClInclude>
@@ -1657,15 +1621,6 @@
     </ClInclude>
     <ClInclude Include="..\..\base\CCProperties.h">
       <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\audio\winrt\AudioCachePlayer.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\audio\winrt\AudioEngine-winrt.h">
-      <Filter>audioengine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\audio\winrt\AudioSourceReader.h">
-      <Filter>audioengine</Filter>
     </ClInclude>
     <ClInclude Include="..\CCAutoPolygon.h">
       <Filter>2d</Filter>
