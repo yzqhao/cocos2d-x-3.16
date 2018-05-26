@@ -36,7 +36,6 @@
         "external/android-specific/pvmp3dec/Android.mk",
         "extensions/Android.mk",
         "cocos/3d/Android.mk",
-        "cocos/network/Android.mk",
         "cocos/platform/android/Android.mk",
         "tools/simulator/libsimulator/proj.android/Android.mk"
     ],

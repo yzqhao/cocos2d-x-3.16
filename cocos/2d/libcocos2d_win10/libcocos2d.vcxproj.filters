@@ -29,9 +29,6 @@
     <Filter Include="math">
       <UniqueIdentifier>{94bbb957-b493-45d2-9f5a-753ac1ab78ce}</UniqueIdentifier>
     </Filter>
-    <Filter Include="network">
-      <UniqueIdentifier>{a2141e87-a561-433e-905b-63ff5c4e0e6e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="platform">
       <UniqueIdentifier>{6b13d475-62b0-4d73-8cee-52f077aa3fe7}</UniqueIdentifier>
     </Filter>
@@ -564,18 +561,6 @@
     <ClCompile Include="..\..\math\Vec4.cpp">
       <Filter>math</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\network\HttpCookie.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\network\SocketIO.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\network\Uri.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\network\WebSocket.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\platform\CCFileUtils.cpp">
       <Filter>platform</Filter>
     </ClCompile>
@@ -714,12 +699,6 @@
     <ClCompile Include="..\..\..\external\poly2tri\sweep\sweep_context.cc">
       <Filter>external\poly2tri\sweep</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\network\HttpClient-winrt.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\network\HttpConnection-winrt.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\base\CCNinePatchImageParser.cpp">
       <Filter>base</Filter>
     </ClCompile>
@@ -822,27 +801,6 @@
     </ClCompile>
     <ClCompile Include="..\..\3d\CCTerrain.cpp">
       <Filter>3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\assets-manager\AssetsManager.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\assets-manager\AssetsManagerEx.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\assets-manager\CCEventAssetsManagerEx.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\assets-manager\CCEventListenerAssetsManagerEx.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\assets-manager\Manifest.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\network\CCDownloader.cpp">
-      <Filter>network</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\network\CCDownloader-curl.cpp">
-      <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\external\md5\md5.c">
       <Filter>external\md5</Filter>
@@ -1391,27 +1349,6 @@
     <ClInclude Include="..\..\math\Vec4.h">
       <Filter>math</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\network\HttpClient.h">
-      <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\HttpCookie.h">
-      <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\HttpRequest.h">
-      <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\HttpResponse.h">
-      <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\SocketIO.h">
-      <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\Uri.h">
-      <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\WebSocket.h">
-      <Filter>network</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\platform\CCApplication.h">
       <Filter>platform</Filter>
     </ClInclude>
@@ -1592,9 +1529,6 @@
     <ClInclude Include="..\..\..\external\poly2tri\sweep\sweep_context.h">
       <Filter>external\poly2tri\sweep</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\network\HttpConnection-winrt.h">
-      <Filter>network</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\base\CCNinePatchImageParser.h">
       <Filter>base</Filter>
     </ClInclude>
@@ -1705,30 +1639,6 @@
     </ClInclude>
     <ClInclude Include="..\..\3d\cocos3d.h">
       <Filter>3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\assets-manager\AssetsManager.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\assets-manager\AssetsManagerEx.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\assets-manager\CCEventAssetsManagerEx.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\assets-manager\CCEventListenerAssetsManagerEx.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\assets-manager\Manifest.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\CCDownloader.h">
-      <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\CCDownloader-curl.h">
-      <Filter>network</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\network\CCIDownloaderImpl.h">
-      <Filter>network</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\external\md5\md5.h">
       <Filter>external\md5</Filter>

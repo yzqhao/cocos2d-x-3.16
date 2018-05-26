@@ -8,17 +8,11 @@ LOCAL_MODULE_FILENAME := libextension
 LOCAL_ARM_MODE := arm
 
 LOCAL_SRC_FILES := \
-assets-manager/AssetsManager.cpp \
-assets-manager/Manifest.cpp \
-assets-manager/AssetsManagerEx.cpp \
-assets-manager/CCEventAssetsManagerEx.cpp \
-assets-manager/CCEventListenerAssetsManagerEx.cpp \
 GUI/CCScrollView/CCScrollView.cpp \
 GUI/CCScrollView/CCTableView.cpp \
 GUI/CCScrollView/CCTableViewCell.cpp 
 
 LOCAL_STATIC_LIBRARIES := cocos2dx_internal_static
-LOCAL_STATIC_LIBRARIES += cocos_network_static
 
 LOCAL_CXXFLAGS += -fexceptions
 

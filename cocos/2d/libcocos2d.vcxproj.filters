@@ -79,15 +79,6 @@
     <Filter Include="cocosdenshion\Source Files">
       <UniqueIdentifier>{f42ec238-cddc-475a-b343-6d0984cb9681}</UniqueIdentifier>
     </Filter>
-    <Filter Include="network">
-      <UniqueIdentifier>{31338a7d-ebe1-4867-9c17-d3645122a864}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="network\Header Files">
-      <UniqueIdentifier>{5a094fe5-f941-4dd4-a892-28d721162ea7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="network\Source Files">
-      <UniqueIdentifier>{9702eb68-42c9-405a-bc89-a1bd85a40ec7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ui\BaseClasses">
       <UniqueIdentifier>{ad654e6b-96ee-4693-9789-dc4aa1c52e70}</UniqueIdentifier>
     </Filter>
@@ -667,9 +658,6 @@
     <ClCompile Include="..\3d\CCMotionStreak3D.cpp">
       <Filter>3d</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\extensions\assets-manager\AssetsManager.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCScrollView.cpp">
       <Filter>extension\GUI\CCScrollView</Filter>
     </ClCompile>
@@ -678,15 +666,6 @@
     </ClCompile>
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp">
       <Filter>extension\GUI\CCScrollView</Filter>
-    </ClCompile>
-    <ClCompile Include="..\network\HttpClient.cpp">
-      <Filter>network\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\network\SocketIO.cpp">
-      <Filter>network\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\network\WebSocket.cpp">
-      <Filter>network\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\3d\CCMeshVertexIndexData.cpp">
       <Filter>3d</Filter>
@@ -714,18 +693,6 @@
     </ClCompile>
     <ClCompile Include="..\platform\desktop\CCGLViewImpl-desktop.cpp">
       <Filter>platform\desktop</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\assets-manager\AssetsManagerEx.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\assets-manager\CCEventAssetsManagerEx.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\assets-manager\CCEventListenerAssetsManagerEx.cpp">
-      <Filter>extension\AssetsManager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\assets-manager\Manifest.cpp">
-      <Filter>extension\AssetsManager</Filter>
     </ClCompile>
     <ClCompile Include="CCCamera.cpp">
       <Filter>2d</Filter>
@@ -821,20 +788,11 @@
     <ClCompile Include="..\..\external\clipper\clipper.cpp">
       <Filter>external\clipper</Filter>
     </ClCompile>
-    <ClCompile Include="..\network\CCDownloader.cpp">
-      <Filter>network\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CCCameraBackgroundBrush.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="..\renderer\CCTextureCube.cpp">
       <Filter>renderer</Filter>
-    </ClCompile>
-    <ClCompile Include="..\network\CCDownloader-curl.cpp">
-      <Filter>network\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\network\Uri.cpp">
-      <Filter>network\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\3d\CCFrustum.cpp">
       <Filter>3d</Filter>
@@ -1449,9 +1407,6 @@
     <ClInclude Include="..\3d\cocos3d.h">
       <Filter>3d</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\extensions\assets-manager\AssetsManager.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCScrollView.h">
       <Filter>extension\GUI\CCScrollView</Filter>
     </ClInclude>
@@ -1469,21 +1424,6 @@
     </ClInclude>
     <ClInclude Include="..\..\extensions\ExtensionMacros.h">
       <Filter>extension</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\HttpClient.h">
-      <Filter>network\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\HttpRequest.h">
-      <Filter>network\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\HttpResponse.h">
-      <Filter>network\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\SocketIO.h">
-      <Filter>network\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\WebSocket.h">
-      <Filter>network\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\external\json\document.h">
       <Filter>cocostudio\json\rapidjson</Filter>
@@ -1544,18 +1484,6 @@
     </ClInclude>
     <ClInclude Include="..\platform\desktop\CCGLViewImpl-desktop.h">
       <Filter>platform\desktop</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\assets-manager\AssetsManagerEx.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\assets-manager\CCEventAssetsManagerEx.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\assets-manager\CCEventListenerAssetsManagerEx.h">
-      <Filter>extension\AssetsManager</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\assets-manager\Manifest.h">
-      <Filter>extension\AssetsManager</Filter>
     </ClInclude>
     <ClInclude Include="CCCamera.h">
       <Filter>2d</Filter>
@@ -1669,23 +1597,11 @@
     <ClInclude Include="..\..\external\clipper\clipper.hpp">
       <Filter>external\clipper</Filter>
     </ClInclude>
-    <ClInclude Include="..\network\CCDownloader.h">
-      <Filter>network\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\CCIDownloaderImpl.h">
-      <Filter>network\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CCCameraBackgroundBrush.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\renderer\CCTextureCube.h">
       <Filter>renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\CCDownloader-curl.h">
-      <Filter>network\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\network\Uri.h">
-      <Filter>network\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\3d\CCFrustum.h">
       <Filter>3d</Filter>

@@ -64,13 +64,10 @@ set(TESTS_SRC
   Classes/CurlTest/CurlTest.cpp
   Classes/CurrentLanguageTest/CurrentLanguageTest.cpp
   Classes/DataVisitorTest/DataVisitorTest.cpp
-  Classes/DownloaderTest/DownloaderTest.cpp
   Classes/DrawPrimitivesTest/DrawPrimitivesTest.cpp
   Classes/EffectsAdvancedTest/EffectsAdvancedTest.cpp
   Classes/EffectsTest/EffectsTest.cpp
-  Classes/ExtensionsTest/AssetsManagerExTest/AssetsManagerExTest.cpp
   Classes/ExtensionsTest/ExtensionsTest.cpp
-  Classes/ExtensionsTest/NetworkTest/HttpClientTest.cpp
   Classes/ExtensionsTest/TableViewTest/CustomTableViewCell.cpp
   Classes/ExtensionsTest/TableViewTest/TableViewTestScene.cpp
   Classes/FileUtilsTest/FileUtilsTest.cpp
@@ -125,20 +122,12 @@ if(WIN32 OR MACOSX OR LINUX)
     )
 endif()
 
-set (EXTENDED_TESTS_SRC
-      Classes/ExtensionsTest/NetworkTest/HttpClientTest.cpp
-      Classes/ExtensionsTest/NetworkTest/SocketIOTest.cpp
-      Classes/ExtensionsTest/NetworkTest/WebSocketTest.cpp
-    )
 
 if(ANDROID)
-    add_library(${APP_NAME} SHARED ${TESTS_SRC} ${EXTENDED_TESTS_SRC})
     IF(CMAKE_BUILD_TYPE MATCHES RELEASE)
         ADD_CUSTOM_COMMAND(TARGET ${APP_NAME} POST_BUILD COMMAND ${CMAKE_STRIP} lib${APP_NAME}.so)
     ENDIF()
 else()
-    # add the executable
-    add_executable(${APP_NAME} ${TESTS_SRC} ${EXTENDED_TESTS_SRC})
 endif()
 
 target_link_libraries(${APP_NAME} cocos2d)

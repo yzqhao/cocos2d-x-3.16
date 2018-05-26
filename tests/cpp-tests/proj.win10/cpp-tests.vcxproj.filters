@@ -185,9 +185,6 @@
     <Filter Include="Classes\BugsTest\Bug-458">
       <UniqueIdentifier>{ff68b4b0-3bdf-4813-8552-b79af838c8a3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\ExtensionsTest\AssetsManagerExTest">
-      <UniqueIdentifier>{a60b411f-fae8-461b-afe7-8e8033d2153c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\FontTest">
       <UniqueIdentifier>{ccc87a7c-9e62-4035-a4c5-f7a5880139a8}</UniqueIdentifier>
     </Filter>
@@ -259,9 +256,6 @@
     </Filter>
     <Filter Include="Classes\NavMeshTest">
       <UniqueIdentifier>{a49e5dee-6eab-4a2a-9769-9f84ff6a5610}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\DownloaderTest">
-      <UniqueIdentifier>{a6b76076-ceeb-43e6-9005-1656c65778b6}</UniqueIdentifier>
     </Filter>
     <Filter Include="Classes\UITest\CocoStudioGUITest\UIRadioButtonTest">
       <UniqueIdentifier>{fd63b656-b611-447b-b4a1-f2d11f92ff83}</UniqueIdentifier>
@@ -382,15 +376,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\ExtensionsTest\ExtensionsTest.cpp">
       <Filter>Classes\ExtensionsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\ExtensionsTest\NetworkTest\HttpClientTest.cpp">
-      <Filter>Classes\ExtensionsTest\NetworkTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\ExtensionsTest\NetworkTest\SocketIOTest.cpp">
-      <Filter>Classes\ExtensionsTest\NetworkTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\ExtensionsTest\NetworkTest\WebSocketTest.cpp">
-      <Filter>Classes\ExtensionsTest\NetworkTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\ExtensionsTest\TableViewTest\CustomTableViewCell.cpp">
       <Filter>Classes\ExtensionsTest\TableViewTest</Filter>
@@ -627,12 +612,6 @@
     <ClCompile Include="..\Classes\CurlTest\CurlTest.cpp">
       <Filter>Classes\CurlTest</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\ExtensionsTest\AssetsManagerExTest\AssetsManagerExTest.cpp">
-      <Filter>Classes\ExtensionsTest\AssetsManagerExTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\DownloaderTest\DownloaderTest.cpp">
-      <Filter>Classes\DownloaderTest</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\UITest\CocoStudioGUITest\UIRadioButtonTest\UIRadioButtonTest.cpp">
       <Filter>Classes\UITest\CocoStudioGUITest\UIRadioButtonTest</Filter>
     </ClCompile>
@@ -759,15 +738,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ExtensionsTest\ExtensionsTest.h">
       <Filter>Classes\ExtensionsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\ExtensionsTest\NetworkTest\HttpClientTest.h">
-      <Filter>Classes\ExtensionsTest\NetworkTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\ExtensionsTest\NetworkTest\SocketIOTest.h">
-      <Filter>Classes\ExtensionsTest\NetworkTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\ExtensionsTest\NetworkTest\WebSocketTest.h">
-      <Filter>Classes\ExtensionsTest\NetworkTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\ExtensionsTest\TableViewTest\CustomTableViewCell.h">
       <Filter>Classes\ExtensionsTest\TableViewTest</Filter>
@@ -1009,12 +979,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\CurlTest\CurlTest.h">
       <Filter>Classes\CurlTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\ExtensionsTest\AssetsManagerExTest\AssetsManagerExTest.h">
-      <Filter>Classes\ExtensionsTest\AssetsManagerExTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\DownloaderTest\DownloaderTest.h">
-      <Filter>Classes\DownloaderTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\UITest\CocoStudioGUITest\UIRadioButtonTest\UIRadioButtonTest.h">
       <Filter>Classes\UITest\CocoStudioGUITest\UIRadioButtonTest</Filter>

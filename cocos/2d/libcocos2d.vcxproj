@@ -187,11 +187,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\extensions\assets-manager\AssetsManager.cpp" />
-    <ClCompile Include="..\..\extensions\assets-manager\AssetsManagerEx.cpp" />
-    <ClCompile Include="..\..\extensions\assets-manager\CCEventAssetsManagerEx.cpp" />
-    <ClCompile Include="..\..\extensions\assets-manager\CCEventListenerAssetsManagerEx.cpp" />
-    <ClCompile Include="..\..\extensions\assets-manager\Manifest.cpp" />
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCScrollView.cpp" />
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableView.cpp" />
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp" />
@@ -308,12 +303,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\math\Vec2.cpp" />
     <ClCompile Include="..\math\Vec3.cpp" />
     <ClCompile Include="..\math\Vec4.cpp" />
-    <ClCompile Include="..\network\CCDownloader-curl.cpp" />
-    <ClCompile Include="..\network\CCDownloader.cpp" />
-    <ClCompile Include="..\network\HttpClient.cpp" />
-    <ClCompile Include="..\network\SocketIO.cpp" />
-    <ClCompile Include="..\network\Uri.cpp" />
-    <ClCompile Include="..\network\WebSocket.cpp" />
     <ClCompile Include="..\platform\CCFileUtils.cpp" />
     <ClCompile Include="..\platform\CCGLView.cpp" />
     <ClCompile Include="..\platform\CCImage.cpp" />
@@ -427,11 +416,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCTweenFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\extensions\assets-manager\AssetsManager.h" />
-    <ClInclude Include="..\..\extensions\assets-manager\AssetsManagerEx.h" />
-    <ClInclude Include="..\..\extensions\assets-manager\CCEventAssetsManagerEx.h" />
-    <ClInclude Include="..\..\extensions\assets-manager\CCEventListenerAssetsManagerEx.h" />
-    <ClInclude Include="..\..\extensions\assets-manager\Manifest.h" />
     <ClInclude Include="..\..\extensions\cocos-ext.h" />
     <ClInclude Include="..\..\extensions\ExtensionExport.h" />
     <ClInclude Include="..\..\extensions\ExtensionMacros.h" />
@@ -585,15 +569,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\math\Vec2.h" />
     <ClInclude Include="..\math\Vec3.h" />
     <ClInclude Include="..\math\Vec4.h" />
-    <ClInclude Include="..\network\CCDownloader-curl.h" />
-    <ClInclude Include="..\network\CCDownloader.h" />
-    <ClInclude Include="..\network\CCIDownloaderImpl.h" />
-    <ClInclude Include="..\network\HttpClient.h" />
-    <ClInclude Include="..\network\HttpRequest.h" />
-    <ClInclude Include="..\network\HttpResponse.h" />
-    <ClInclude Include="..\network\SocketIO.h" />
-    <ClInclude Include="..\network\Uri.h" />
-    <ClInclude Include="..\network\WebSocket.h" />
     <ClInclude Include="..\platform\CCApplicationProtocol.h" />
     <ClInclude Include="..\platform\CCCommon.h" />
     <ClInclude Include="..\platform\CCDevice.h" />

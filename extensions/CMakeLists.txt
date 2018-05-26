@@ -8,11 +8,6 @@ include_directories(
 
 set(COCOS_EXTENSIONS_SRC
 
-  ../extensions/assets-manager/AssetsManager.cpp
-  ../extensions/assets-manager/AssetsManagerEx.cpp
-  ../extensions/assets-manager/CCEventAssetsManagerEx.cpp
-  ../extensions/assets-manager/CCEventListenerAssetsManagerEx.cpp
-  ../extensions/assets-manager/Manifest.cpp
   ../extensions/GUI/CCScrollView/CCScrollView.cpp
   ../extensions/GUI/CCScrollView/CCTableView.cpp
   ../extensions/GUI/CCScrollView/CCTableViewCell.cpp
