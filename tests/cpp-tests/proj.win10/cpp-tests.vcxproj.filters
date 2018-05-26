@@ -20,9 +20,6 @@
     <Filter Include="Classes\ActionsTest">
       <UniqueIdentifier>{c71ed4ef-b44c-4efa-a557-96d792c4082f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\AllocatorTest">
-      <UniqueIdentifier>{a762d21f-dab4-4e65-9635-8a2d1c3720a5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\BillBoardTest">
       <UniqueIdentifier>{ff2c6e21-2e15-47ba-8e8a-d32db4c4bd7d}</UniqueIdentifier>
     </Filter>
@@ -295,9 +292,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\ActionsTest\ActionsTest.cpp">
       <Filter>Classes\ActionsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AllocatorTest\AllocatorTest.cpp">
-      <Filter>Classes\AllocatorTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\BillBoardTest\BillBoardTest.cpp">
       <Filter>Classes\BillBoardTest</Filter>
@@ -657,9 +651,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ActionsTest\ActionsTest.h">
       <Filter>Classes\ActionsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AllocatorTest\AllocatorTest.h">
-      <Filter>Classes\AllocatorTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\BillBoardTest\BillBoardTest.h">
       <Filter>Classes\BillBoardTest</Filter>

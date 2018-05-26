@@ -145,9 +145,6 @@ base/CCValue.cpp \
 base/ObjectFactory.cpp \
 base/TGAlib.cpp \
 base/ZipUtils.cpp \
-base/allocator/CCAllocatorDiagnostics.cpp \
-base/allocator/CCAllocatorGlobal.cpp \
-base/allocator/CCAllocatorGlobalNewDelete.cpp \
 base/atitc.cpp \
 base/base64.cpp \
 base/ccCArray.cpp \

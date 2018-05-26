@@ -160,9 +160,6 @@
     <Filter Include="Classes\OpenURLTest">
       <UniqueIdentifier>{fc47533b-f876-4254-b0f8-4af8f5e2837f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\AllocatorTest">
-      <UniqueIdentifier>{eed1887a-757e-4625-b21c-bbfcfaa5200f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\TerrainTest">
       <UniqueIdentifier>{3f5069e6-78e5-4388-b614-04c0ea943b4c}</UniqueIdentifier>
     </Filter>
@@ -395,9 +392,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\OpenURLTest\OpenURLTest.cpp">
       <Filter>Classes\OpenURLTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AllocatorTest\AllocatorTest.cpp">
-      <Filter>Classes\AllocatorTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\TerrainTest\TerrainTest.cpp">
       <Filter>Classes\TerrainTest</Filter>
@@ -653,9 +647,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\OpenURLTest\OpenURLTest.h">
       <Filter>Classes\OpenURLTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AllocatorTest\AllocatorTest.h">
-      <Filter>Classes\AllocatorTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TerrainTest\TerrainTest.h">
       <Filter>Classes\TerrainTest</Filter>

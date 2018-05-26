@@ -24,7 +24,6 @@
 #include "ActionsEaseTest/ActionsEaseTest.h"
 #include "ActionsProgressTest/ActionsProgressTest.h"
 #include "ActionsTest/ActionsTest.h"
-#include "AllocatorTest/AllocatorTest.h"
 #include "BillBoardTest/BillBoardTest.h"
 #include "BugsTest/BugsTest.h"
 #include "Camera3DTest/Camera3DTest.h"

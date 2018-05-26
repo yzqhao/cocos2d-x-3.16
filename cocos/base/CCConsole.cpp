@@ -67,7 +67,6 @@
 #include "renderer/CCTextureCache.h"
 #include "base/base64.h"
 #include "base/ccUtils.h"
-#include "base/allocator/CCAllocatorDiagnostics.h"
 NS_CC_BEGIN
 
 extern const char* cocos2dVersion(void);
@@ -1025,12 +1024,7 @@ void Console::createCommandVersion()
 
 void Console::commandAllocator(int fd, const std::string& /*args*/)
 {
-#if CC_ENABLE_ALLOCATOR_DIAGNOSTICS
-    auto info = allocator::AllocatorDiagnostics::instance()->diagnostics();
-    Console::Utility::mydprintf(fd, info.c_str());
-#else
     Console::Utility::mydprintf(fd, "allocator diagnostics not available. CC_ENABLE_ALLOCATOR_DIAGNOSTICS must be set to 1 in ccConfig.h\n");
-#endif
 }
 
 void Console::commandConfig(int fd, const std::string& /*args*/)

@@ -55,9 +55,6 @@ set(COCOS_BASE_SRC
   base/CCStencilStateManager.cpp
   base/TGAlib.cpp
   base/ZipUtils.cpp
-  base/allocator/CCAllocatorDiagnostics.cpp
-  base/allocator/CCAllocatorGlobal.cpp
-  base/allocator/CCAllocatorGlobalNewDelete.cpp
   base/atitc.cpp
   base/base64.cpp
   base/ccCArray.cpp

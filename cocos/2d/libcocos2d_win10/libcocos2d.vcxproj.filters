@@ -38,9 +38,6 @@
     <Filter Include="storage">
       <UniqueIdentifier>{abb46246-b4f9-4ad0-8db8-11b47ce43a1f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="base\allocator">
-      <UniqueIdentifier>{769e8f33-4eef-4d34-a192-6113354d584f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="cocosdenshion\include">
       <UniqueIdentifier>{2775a689-9303-4568-8bdd-85793c152dc0}</UniqueIdentifier>
     </Filter>
@@ -467,15 +464,6 @@
     </ClCompile>
     <ClCompile Include="..\..\base\ZipUtils.cpp">
       <Filter>base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\base\allocator\CCAllocatorDiagnostics.cpp">
-      <Filter>base\allocator</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\base\allocator\CCAllocatorGlobal.cpp">
-      <Filter>base\allocator</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\base\allocator\CCAllocatorGlobalNewDelete.cpp">
-      <Filter>base\allocator</Filter>
     </ClCompile>
     <ClCompile Include="..\..\deprecated\CCArray.cpp">
       <Filter>deprecated</Filter>
@@ -1210,33 +1198,6 @@
     </ClInclude>
     <ClInclude Include="..\..\base\ZipUtils.h">
       <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorBase.h">
-      <Filter>base\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorDiagnostics.h">
-      <Filter>base\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorGlobal.h">
-      <Filter>base\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorMacros.h">
-      <Filter>base\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorMutex.h">
-      <Filter>base\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorStrategyDefault.h">
-      <Filter>base\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorStrategyFixedBlock.h">
-      <Filter>base\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorStrategyGlobalSmallBlock.h">
-      <Filter>base\allocator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\allocator\CCAllocatorStrategyPool.h">
-      <Filter>base\allocator</Filter>
     </ClInclude>
     <ClInclude Include="..\..\deprecated\CCArray.h">
       <Filter>deprecated</Filter>

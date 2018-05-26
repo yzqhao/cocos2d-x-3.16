@@ -243,7 +243,6 @@
     <ClInclude Include="..\Classes\ActionsEaseTest\ActionsEaseTest.h" />
     <ClInclude Include="..\Classes\ActionsProgressTest\ActionsProgressTest.h" />
     <ClInclude Include="..\Classes\ActionsTest\ActionsTest.h" />
-    <ClInclude Include="..\Classes\AllocatorTest\AllocatorTest.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\BaseTest.h" />
     <ClInclude Include="..\Classes\BillBoardTest\BillBoardTest.h" />
@@ -396,7 +395,6 @@
     <ClCompile Include="..\Classes\ActionsEaseTest\ActionsEaseTest.cpp" />
     <ClCompile Include="..\Classes\ActionsProgressTest\ActionsProgressTest.cpp" />
     <ClCompile Include="..\Classes\ActionsTest\ActionsTest.cpp" />
-    <ClCompile Include="..\Classes\AllocatorTest\AllocatorTest.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\BaseTest.cpp" />
     <ClCompile Include="..\Classes\BillBoardTest\BillBoardTest.cpp" />

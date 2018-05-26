@@ -13,7 +13,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../Classes/ActionsEaseTest/ActionsEaseTest.cpp \
 ../../Classes/ActionsProgressTest/ActionsProgressTest.cpp \
 ../../Classes/ActionsTest/ActionsTest.cpp \
-../../Classes/AllocatorTest/AllocatorTest.cpp \
 ../../Classes/AppDelegate.cpp \
 ../../Classes/BaseTest.cpp \
 ../../Classes/BillBoardTest/BillBoardTest.cpp \
