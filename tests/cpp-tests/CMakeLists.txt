@@ -83,7 +83,6 @@ set(TESTS_SRC
   Classes/NewRendererTest/NewRendererTest.cpp
   Classes/NodeTest/NodeTest.cpp
   Classes/OpenURLTest/OpenURLTest.cpp
-  Classes/ParallaxTest/ParallaxTest.cpp
   Classes/ReleasePoolTest/ReleasePoolTest.cpp
   Classes/RenderTextureTest/RenderTextureTest.cpp
   Classes/RotateWorldTest/RotateWorldTest.cpp
@@ -100,8 +99,6 @@ set(TESTS_SRC
   Classes/Texture2dTest/Texture2dTest.cpp
   Classes/TextureCacheTest/TextureCacheTest.cpp
   Classes/TexturePackerEncryptionTest/TextureAtlasEncryptionTest.cpp
-  Classes/TileMapTest/TileMapTest.cpp
-  Classes/TileMapTest/TileMapTest2.cpp
   Classes/TouchesTest/Ball.cpp
   Classes/TouchesTest/Paddle.cpp
   Classes/TouchesTest/TouchesTest.cpp

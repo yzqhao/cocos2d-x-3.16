@@ -104,9 +104,6 @@
     <Filter Include="Classes\OpenURLTest">
       <UniqueIdentifier>{24c2bc37-1b31-4844-981f-d0b842636df1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\ParallaxTest">
-      <UniqueIdentifier>{a8c99d83-bb5b-4732-9654-5c4a46833584}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\Particle3DTest">
       <UniqueIdentifier>{df4917f4-0ed9-483b-9133-71d60ba8a4fd}</UniqueIdentifier>
     </Filter>
@@ -154,9 +151,6 @@
     </Filter>
     <Filter Include="Classes\TexturePackerEncryptionTest">
       <UniqueIdentifier>{1ec92552-3f16-4080-ba2f-a171b3a7f92c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\TileMapTest">
-      <UniqueIdentifier>{cf755f22-4dbd-427a-b92a-f7ef14f72990}</UniqueIdentifier>
     </Filter>
     <Filter Include="Classes\TouchesTest">
       <UniqueIdentifier>{8240d810-c3a1-403c-8d60-f83ca945bf34}</UniqueIdentifier>
@@ -419,9 +413,6 @@
     <ClCompile Include="..\Classes\OpenURLTest\OpenURLTest.cpp">
       <Filter>Classes\OpenURLTest</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\ParallaxTest\ParallaxTest.cpp">
-      <Filter>Classes\ParallaxTest</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Particle3DTest\Particle3DTest.cpp">
       <Filter>Classes\Particle3DTest</Filter>
     </ClCompile>
@@ -475,12 +466,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\TexturePackerEncryptionTest\TextureAtlasEncryptionTest.cpp">
       <Filter>Classes\TexturePackerEncryptionTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\TileMapTest\TileMapTest.cpp">
-      <Filter>Classes\TileMapTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\TileMapTest\TileMapTest2.cpp">
-      <Filter>Classes\TileMapTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\TouchesTest\Ball.cpp">
       <Filter>Classes\TouchesTest</Filter>
@@ -775,9 +760,6 @@
     <ClInclude Include="..\Classes\OpenURLTest\OpenURLTest.h">
       <Filter>Classes\OpenURLTest</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\ParallaxTest\ParallaxTest.h">
-      <Filter>Classes\ParallaxTest</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Particle3DTest\Particle3DTest.h">
       <Filter>Classes\Particle3DTest</Filter>
     </ClInclude>
@@ -837,12 +819,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TexturePackerEncryptionTest\TextureAtlasEncryptionTest.h">
       <Filter>Classes\TexturePackerEncryptionTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\TileMapTest\TileMapTest.h">
-      <Filter>Classes\TileMapTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\TileMapTest\TileMapTest2.h">
-      <Filter>Classes\TileMapTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\TouchesTest\Ball.h">
       <Filter>Classes\TouchesTest</Filter>

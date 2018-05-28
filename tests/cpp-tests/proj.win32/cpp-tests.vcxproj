@@ -180,7 +180,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClCompile Include="..\Classes\SpritePolygonTest\SpritePolygonTest.cpp" />
     <ClCompile Include="..\Classes\TerrainTest\TerrainTest.cpp" />
     <ClCompile Include="..\Classes\TexturePackerEncryptionTest\TextureAtlasEncryptionTest.cpp" />
-    <ClCompile Include="..\Classes\TileMapTest\TileMapTest2.cpp" />
     <ClCompile Include="..\Classes\VisibleRect.cpp" />
     <ClCompile Include="..\Classes\WindowTest\WindowTest.cpp" />
     <ClCompile Include="main.cpp" />
@@ -202,8 +201,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClCompile Include="..\Classes\ActionManagerTest\ActionManagerTest.cpp" />
     <ClCompile Include="..\Classes\LayerTest\LayerTest.cpp" />
     <ClCompile Include="..\Classes\SceneTest\SceneTest.cpp" />
-    <ClCompile Include="..\Classes\ParallaxTest\ParallaxTest.cpp" />
-    <ClCompile Include="..\Classes\TileMapTest\TileMapTest.cpp" />
     <ClCompile Include="..\Classes\IntervalTest\IntervalTest.cpp" />
     <ClCompile Include="..\Classes\SchedulerTest\SchedulerTest.cpp" />
     <ClCompile Include="..\Classes\RenderTextureTest\RenderTextureTest.cpp" />
@@ -263,7 +260,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClInclude Include="..\Classes\SpritePolygonTest\SpritePolygonTest.h" />
     <ClInclude Include="..\Classes\TerrainTest\TerrainTest.h" />
     <ClInclude Include="..\Classes\TexturePackerEncryptionTest\TextureAtlasEncryptionTest.h" />
-    <ClInclude Include="..\Classes\TileMapTest\TileMapTest2.h" />
     <ClInclude Include="..\Classes\VisibleRect.h" />
     <ClInclude Include="..\Classes\WindowTest\WindowTest.h" />
     <ClInclude Include="main.h" />
@@ -288,8 +284,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClInclude Include="..\Classes\ActionManagerTest\ActionManagerTest.h" />
     <ClInclude Include="..\Classes\LayerTest\LayerTest.h" />
     <ClInclude Include="..\Classes\SceneTest\SceneTest.h" />
-    <ClInclude Include="..\Classes\ParallaxTest\ParallaxTest.h" />
-    <ClInclude Include="..\Classes\TileMapTest\TileMapTest.h" />
     <ClInclude Include="..\Classes\IntervalTest\IntervalTest.h" />
     <ClInclude Include="..\Classes\SchedulerTest\SchedulerTest.h" />
     <ClInclude Include="..\Classes\RenderTextureTest\RenderTextureTest.h" />

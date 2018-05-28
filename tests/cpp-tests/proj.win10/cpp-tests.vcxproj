@@ -296,7 +296,6 @@
     <ClInclude Include="..\Classes\NewRendererTest\NewRendererTest.h" />
     <ClInclude Include="..\Classes\NodeTest\NodeTest.h" />
     <ClInclude Include="..\Classes\OpenURLTest\OpenURLTest.h" />
-    <ClInclude Include="..\Classes\ParallaxTest\ParallaxTest.h" />
     <ClInclude Include="..\Classes\Particle3DTest\Particle3DTest.h" />
     <ClInclude Include="..\Classes\ParticleTest\ParticleTest.h" />
     <ClInclude Include="..\Classes\Physics3DTest\Physics3DTest.h" />
@@ -323,8 +322,6 @@
     <ClInclude Include="..\Classes\Texture2dTest\Texture2dTest.h" />
     <ClInclude Include="..\Classes\TextureCacheTest\TextureCacheTest.h" />
     <ClInclude Include="..\Classes\TexturePackerEncryptionTest\TextureAtlasEncryptionTest.h" />
-    <ClInclude Include="..\Classes\TileMapTest\TileMapTest.h" />
-    <ClInclude Include="..\Classes\TileMapTest\TileMapTest2.h" />
     <ClInclude Include="..\Classes\TouchesTest\Ball.h" />
     <ClInclude Include="..\Classes\TouchesTest\Paddle.h" />
     <ClInclude Include="..\Classes\TouchesTest\TouchesTest.h" />
@@ -446,7 +443,6 @@
     <ClCompile Include="..\Classes\NewRendererTest\NewRendererTest.cpp" />
     <ClCompile Include="..\Classes\NodeTest\NodeTest.cpp" />
     <ClCompile Include="..\Classes\OpenURLTest\OpenURLTest.cpp" />
-    <ClCompile Include="..\Classes\ParallaxTest\ParallaxTest.cpp" />
     <ClCompile Include="..\Classes\Particle3DTest\Particle3DTest.cpp" />
     <ClCompile Include="..\Classes\ParticleTest\ParticleTest.cpp" />
     <ClCompile Include="..\Classes\Physics3DTest\Physics3DTest.cpp" />
@@ -468,8 +464,6 @@
     <ClCompile Include="..\Classes\Texture2dTest\Texture2dTest.cpp" />
     <ClCompile Include="..\Classes\TextureCacheTest\TextureCacheTest.cpp" />
     <ClCompile Include="..\Classes\TexturePackerEncryptionTest\TextureAtlasEncryptionTest.cpp" />
-    <ClCompile Include="..\Classes\TileMapTest\TileMapTest.cpp" />
-    <ClCompile Include="..\Classes\TileMapTest\TileMapTest2.cpp" />
     <ClCompile Include="..\Classes\TouchesTest\Ball.cpp" />
     <ClCompile Include="..\Classes\TouchesTest\Paddle.cpp" />
     <ClCompile Include="..\Classes\TouchesTest\TouchesTest.cpp" />

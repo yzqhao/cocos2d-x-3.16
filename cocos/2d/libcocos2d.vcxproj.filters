@@ -283,9 +283,6 @@
     <ClCompile Include="CCNodeGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCParallaxNode.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCParticleBatchNode.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -320,21 +317,6 @@
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCTextFieldTTF.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTileMapAtlas.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTMXLayer.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTMXObjectGroup.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTMXTiledMap.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTMXXMLParser.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCTransition.cpp">
@@ -579,12 +561,6 @@
     </ClCompile>
     <ClCompile Include="..\base\ObjectFactory.cpp">
       <Filter>base</Filter>
-    </ClCompile>
-    <ClCompile Include="CCFastTMXLayer.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCFastTMXTiledMap.cpp">
-      <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="..\storage\local-storage\LocalStorage.cpp">
       <Filter>storage</Filter>
@@ -954,9 +930,6 @@
     <ClInclude Include="CCNodeGrid.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="CCParallaxNode.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCParticleBatchNode.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -991,21 +964,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCTextFieldTTF.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTileMapAtlas.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTMXLayer.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTMXObjectGroup.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTMXTiledMap.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTMXXMLParser.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCTransition.h">
@@ -1304,12 +1262,6 @@
     </ClInclude>
     <ClInclude Include="..\base\ObjectFactory.h">
       <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="CCFastTMXTiledMap.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCFastTMXLayer.h">
-      <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\storage\local-storage\LocalStorage.h">
       <Filter>storage</Filter>

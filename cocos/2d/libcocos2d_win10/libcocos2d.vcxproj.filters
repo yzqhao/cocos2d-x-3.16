@@ -183,12 +183,6 @@
     <ClCompile Include="..\CCDrawNode.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCFastTMXLayer.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCFastTMXTiledMap.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCFont.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -252,9 +246,6 @@
     <ClCompile Include="..\CCNodeGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCParallaxNode.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCParticleBatchNode.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -292,21 +283,6 @@
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="..\CCTextFieldTTF.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCTileMapAtlas.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCTMXLayer.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCTMXObjectGroup.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCTMXTiledMap.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCTMXXMLParser.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="..\CCTransition.cpp">
@@ -878,12 +854,6 @@
     <ClInclude Include="..\CCDrawNode.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="..\CCFastTMXLayer.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCFastTMXTiledMap.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="..\CCFont.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -947,9 +917,6 @@
     <ClInclude Include="..\CCNodeGrid.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="..\CCParallaxNode.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="..\CCParticleBatchNode.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -989,19 +956,10 @@
     <ClInclude Include="..\CCTextFieldTTF.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="..\CCTileMapAtlas.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCTMXLayer.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="..\CCTMXObjectGroup.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCTMXTiledMap.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCTMXXMLParser.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCTransition.h">

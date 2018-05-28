@@ -61,7 +61,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../Classes/NewRendererTest/NewRendererTest.cpp \
 ../../Classes/NodeTest/NodeTest.cpp \
 ../../Classes/OpenURLTest/OpenURLTest.cpp \
-../../Classes/ParallaxTest/ParallaxTest.cpp \
 ../../Classes/ReleasePoolTest/ReleasePoolTest.cpp \
 ../../Classes/RenderTextureTest/RenderTextureTest.cpp \
 ../../Classes/RotateWorldTest/RotateWorldTest.cpp \
@@ -78,8 +77,6 @@ LOCAL_SRC_FILES := main.cpp \
 ../../Classes/Texture2dTest/Texture2dTest.cpp \
 ../../Classes/TextureCacheTest/TextureCacheTest.cpp \
 ../../Classes/TexturePackerEncryptionTest/TextureAtlasEncryptionTest.cpp \
-../../Classes/TileMapTest/TileMapTest.cpp \
-../../Classes/TileMapTest/TileMapTest2.cpp \
 ../../Classes/TouchesTest/Ball.cpp \
 ../../Classes/TouchesTest/Paddle.cpp \
 ../../Classes/TouchesTest/TouchesTest.cpp \

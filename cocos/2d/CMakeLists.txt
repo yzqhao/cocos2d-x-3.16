@@ -31,8 +31,6 @@ set(COCOS_2D_SRC
   2d/CCComponent.cpp
   2d/CCDrawingPrimitives.cpp
   2d/CCDrawNode.cpp
-  2d/CCFastTMXLayer.cpp
-  2d/CCFastTMXTiledMap.cpp
   2d/CCFontAtlasCache.cpp
   2d/CCFontAtlas.cpp
   2d/CCFontCharMap.cpp
@@ -54,7 +52,6 @@ set(COCOS_2D_SRC
   2d/CCMotionStreak.cpp
   2d/CCNode.cpp
   2d/CCNodeGrid.cpp
-  2d/CCParallaxNode.cpp
   2d/CCParticleBatchNode.cpp
   2d/CCParticleExamples.cpp
   2d/CCParticleSystem.cpp
@@ -70,11 +67,6 @@ set(COCOS_2D_SRC
   2d/CCAutoPolygon.cpp
   ../external/clipper/clipper.cpp
   2d/CCTextFieldTTF.cpp
-  2d/CCTileMapAtlas.cpp
-  2d/CCTMXLayer.cpp
-  2d/CCTMXObjectGroup.cpp
-  2d/CCTMXTiledMap.cpp
-  2d/CCTMXXMLParser.cpp
   2d/CCTransition.cpp
   2d/CCTransitionPageTurn.cpp
   2d/CCTransitionProgress.cpp

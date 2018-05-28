@@ -54,18 +54,12 @@
 #include "2d/CCMenu.h"
 #include "2d/CCMenuItem.h"
 #include "2d/CCMotionStreak.h"
-#include "2d/CCParallaxNode.h"
 #include "2d/CCParticleBatchNode.h"
 #include "2d/CCParticleExamples.h"
 #include "2d/CCParticleSystemQuad.h"
 #include "2d/CCProgressTimer.h"
 #include "2d/CCSpriteFrameCache.h"
-#include "2d/CCTMXLayer.h"
-#include "2d/CCTMXObjectGroup.h"
-#include "2d/CCTMXTiledMap.h"
-#include "2d/CCTMXXMLParser.h"
 #include "2d/CCTextFieldTTF.h"
-#include "2d/CCTileMapAtlas.h"
 #include "2d/CCTransition.h"
 #include "2d/CCTransitionPageTurn.h"
 #include "2d/CCTransitionProgress.h"
@@ -814,14 +808,6 @@ CC_DEPRECATED_ATTRIBUTE typedef GLProgramCache ShaderCache;
 CC_DEPRECATED_ATTRIBUTE typedef AnimationCache CCAnimationCache;
 CC_DEPRECATED_ATTRIBUTE typedef SpriteFrameCache CCSpriteFrameCache;
 CC_DEPRECATED_ATTRIBUTE typedef TextureCache CCTextureCache;
-CC_DEPRECATED_ATTRIBUTE typedef ParallaxNode CCParallaxNode;
-CC_DEPRECATED_ATTRIBUTE typedef TMXObjectGroup CCTMXObjectGroup;
-CC_DEPRECATED_ATTRIBUTE typedef TMXLayerInfo CCTMXLayerInfo;
-CC_DEPRECATED_ATTRIBUTE typedef TMXTilesetInfo CCTMXTilesetInfo;
-CC_DEPRECATED_ATTRIBUTE typedef TMXMapInfo CCTMXMapInfo;
-CC_DEPRECATED_ATTRIBUTE typedef TMXLayer CCTMXLayer;
-CC_DEPRECATED_ATTRIBUTE typedef TMXTiledMap CCTMXTiledMap;
-CC_DEPRECATED_ATTRIBUTE typedef TileMapAtlas CCTileMapAtlas;
 CC_DEPRECATED_ATTRIBUTE typedef Timer CCTimer;
 CC_DEPRECATED_ATTRIBUTE typedef Scheduler CCScheduler;
 CC_DEPRECATED_ATTRIBUTE typedef GLView CCEGLView;

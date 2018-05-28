@@ -359,8 +359,6 @@
     <ClCompile Include="..\CCComponentContainer.cpp" />
     <ClCompile Include="..\CCDrawingPrimitives.cpp" />
     <ClCompile Include="..\CCDrawNode.cpp" />
-    <ClCompile Include="..\CCFastTMXLayer.cpp" />
-    <ClCompile Include="..\CCFastTMXTiledMap.cpp" />
     <ClCompile Include="..\CCFont.cpp" />
     <ClCompile Include="..\CCFontAtlas.cpp" />
     <ClCompile Include="..\CCFontAtlasCache.cpp" />
@@ -382,7 +380,6 @@
     <ClCompile Include="..\CCMotionStreak.cpp" />
     <ClCompile Include="..\CCNode.cpp" />
     <ClCompile Include="..\CCNodeGrid.cpp" />
-    <ClCompile Include="..\CCParallaxNode.cpp" />
     <ClCompile Include="..\CCParticleBatchNode.cpp" />
     <ClCompile Include="..\CCParticleExamples.cpp" />
     <ClCompile Include="..\CCParticleSystem.cpp" />
@@ -396,11 +393,6 @@
     <ClCompile Include="..\CCSpriteFrame.cpp" />
     <ClCompile Include="..\CCSpriteFrameCache.cpp" />
     <ClCompile Include="..\CCTextFieldTTF.cpp" />
-    <ClCompile Include="..\CCTileMapAtlas.cpp" />
-    <ClCompile Include="..\CCTMXLayer.cpp" />
-    <ClCompile Include="..\CCTMXObjectGroup.cpp" />
-    <ClCompile Include="..\CCTMXTiledMap.cpp" />
-    <ClCompile Include="..\CCTMXXMLParser.cpp" />
     <ClCompile Include="..\CCTransition.cpp" />
     <ClCompile Include="..\CCTransitionPageTurn.cpp" />
     <ClCompile Include="..\CCTransitionProgress.cpp" />
@@ -664,8 +656,6 @@
     <ClInclude Include="..\CCComponentContainer.h" />
     <ClInclude Include="..\CCDrawingPrimitives.h" />
     <ClInclude Include="..\CCDrawNode.h" />
-    <ClInclude Include="..\CCFastTMXLayer.h" />
-    <ClInclude Include="..\CCFastTMXTiledMap.h" />
     <ClInclude Include="..\CCFont.h" />
     <ClInclude Include="..\CCFontAtlas.h" />
     <ClInclude Include="..\CCFontAtlasCache.h" />
@@ -687,7 +677,6 @@
     <ClInclude Include="..\CCMotionStreak.h" />
     <ClInclude Include="..\CCNode.h" />
     <ClInclude Include="..\CCNodeGrid.h" />
-    <ClInclude Include="..\CCParallaxNode.h" />
     <ClInclude Include="..\CCParticleBatchNode.h" />
     <ClInclude Include="..\CCParticleExamples.h" />
     <ClInclude Include="..\CCParticleSystem.h" />
@@ -701,11 +690,6 @@
     <ClInclude Include="..\CCSpriteFrame.h" />
     <ClInclude Include="..\CCSpriteFrameCache.h" />
     <ClInclude Include="..\CCTextFieldTTF.h" />
-    <ClInclude Include="..\CCTileMapAtlas.h" />
-    <ClInclude Include="..\CCTMXLayer.h" />
-    <ClInclude Include="..\CCTMXObjectGroup.h" />
-    <ClInclude Include="..\CCTMXTiledMap.h" />
-    <ClInclude Include="..\CCTMXXMLParser.h" />
     <ClInclude Include="..\CCTransition.h" />
     <ClInclude Include="..\CCTransitionPageTurn.h" />
     <ClInclude Include="..\CCTransitionProgress.h" />
