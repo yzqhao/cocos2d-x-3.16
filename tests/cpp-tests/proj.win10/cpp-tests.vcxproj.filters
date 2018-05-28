@@ -170,9 +170,6 @@
     <Filter Include="Classes\UnitTest">
       <UniqueIdentifier>{e45b72a6-fe38-4c7a-986a-424d303b847f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\UserDefaultTest">
-      <UniqueIdentifier>{7ec771c0-0344-43e9-9ae8-0f8a278791a2}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\VibrateTest">
       <UniqueIdentifier>{3bd8ffaa-c24f-455b-bb31-25b038490329}</UniqueIdentifier>
     </Filter>
@@ -566,9 +563,6 @@
     <ClCompile Include="..\Classes\UnitTest\UnitTest.cpp">
       <Filter>Classes\UnitTest</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\UserDefaultTest\UserDefaultTest.cpp">
-      <Filter>Classes\UserDefaultTest</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\VibrateTest\VibrateTest.cpp">
       <Filter>Classes\VibrateTest</Filter>
     </ClCompile>
@@ -930,9 +924,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\UnitTest\UnitTest.h">
       <Filter>Classes\UnitTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\UserDefaultTest\UserDefaultTest.h">
-      <Filter>Classes\UserDefaultTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\VibrateTest\VibrateTest.h">
       <Filter>Classes\VibrateTest</Filter>

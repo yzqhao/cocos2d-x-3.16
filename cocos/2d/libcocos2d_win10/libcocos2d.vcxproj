@@ -252,8 +252,6 @@
     <ClCompile Include="..\..\base\CCScheduler.cpp" />
     <ClCompile Include="..\..\base\CCTouch.cpp" />
     <ClCompile Include="..\..\base\ccTypes.cpp" />
-    <ClCompile Include="..\..\base\CCUserDefault-android.cpp" />
-    <ClCompile Include="..\..\base\CCUserDefault-winrt.cpp" />
     <ClCompile Include="..\..\base\ccUTF8.cpp" />
     <ClCompile Include="..\..\base\ccUtils.cpp" />
     <ClCompile Include="..\..\base\CCValue.cpp" />
@@ -544,7 +542,6 @@
     <ClInclude Include="..\..\base\CCScheduler.h" />
     <ClInclude Include="..\..\base\CCTouch.h" />
     <ClInclude Include="..\..\base\ccTypes.h" />
-    <ClInclude Include="..\..\base\CCUserDefault.h" />
     <ClInclude Include="..\..\base\ccUTF8.h" />
     <ClInclude Include="..\..\base\ccUtils.h" />
     <ClInclude Include="..\..\base\CCValue.h" />
@@ -717,7 +714,6 @@
   <ItemGroup>
     <None Include="..\..\3d\CCAnimationCurve.inl" />
     <None Include="..\..\base\CCController-iOS.mm" />
-    <None Include="..\..\base\CCUserDefault-apple.mm" />
     <None Include="..\..\math\Mat4.inl" />
     <None Include="..\..\math\MathUtil.inl" />
     <None Include="..\..\math\MathUtilNeon.inl" />

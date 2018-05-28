@@ -74,7 +74,6 @@
 #include "base/CCEvent.h"
 #include "base/CCIMEDelegate.h"
 #include "base/CCScheduler.h"
-#include "base/CCUserDefault.h"
 #include "base/ccTypes.h"
 #include "deprecated/CCArray.h"
 #include "deprecated/CCBool.h"
@@ -613,7 +612,6 @@ CC_DEPRECATED_ATTRIBUTE typedef __NotificationCenter NotificationCenter;
 //CC_DEPRECATED_ATTRIBUTE typedef StandardTouchDelegate CCStandardTouchDelegate;
 //CC_DEPRECATED_ATTRIBUTE typedef TouchDelegate CCTouchDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef Image CCImage;
-CC_DEPRECATED_ATTRIBUTE typedef UserDefault CCUserDefault;
 
 CC_DEPRECATED_ATTRIBUTE typedef Action CCAction;
 CC_DEPRECATED_ATTRIBUTE typedef FiniteTimeAction CCFiniteTimeAction;

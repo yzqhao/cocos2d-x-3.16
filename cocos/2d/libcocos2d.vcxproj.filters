@@ -442,9 +442,6 @@
     <ClCompile Include="..\base\ccTypes.cpp">
       <Filter>base</Filter>
     </ClCompile>
-    <ClCompile Include="..\base\CCUserDefault.cpp">
-      <Filter>base</Filter>
-    </ClCompile>
     <ClCompile Include="..\base\ccUTF8.cpp">
       <Filter>base</Filter>
     </ClCompile>
@@ -1132,9 +1129,6 @@
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\base\ccTypes.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\base\CCUserDefault.h">
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\base\ccUTF8.h">

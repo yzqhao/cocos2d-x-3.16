@@ -50,7 +50,6 @@ THE SOFTWARE.
 #include "renderer/CCRenderState.h"
 #include "renderer/CCFrameBuffer.h"
 #include "2d/CCCamera.h"
-#include "base/CCUserDefault.h"
 #include "base/ccFPSImages.h"
 #include "base/CCScheduler.h"
 #include "base/ccMacros.h"
@@ -1057,9 +1056,6 @@ void Director::reset()
     GLProgramStateCache::destroyInstance();
     FileUtils::destroyInstance();
     AsyncTaskPool::destroyInstance();
-    
-    // cocos2d-x specific data structures
-    UserDefault::destroyInstance();
     
     GL::invalidateStateCache();
 

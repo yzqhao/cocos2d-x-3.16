@@ -106,7 +106,6 @@ set(TESTS_SRC
   Classes/TouchesTest/Paddle.cpp
   Classes/TouchesTest/TouchesTest.cpp
   Classes/TransitionsTest/TransitionsTest.cpp
-  Classes/UserDefaultTest/UserDefaultTest.cpp
   Classes/VisibleRect.cpp
   Classes/VibrateTest/VibrateTest.cpp
   Classes/ZwoptexTest/ZwoptexTest.cpp

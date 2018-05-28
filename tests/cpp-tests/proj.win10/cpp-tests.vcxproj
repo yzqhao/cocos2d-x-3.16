@@ -356,7 +356,6 @@
     <ClInclude Include="..\Classes\UITest\UITest.h" />
     <ClInclude Include="..\Classes\UnitTest\RefPtrTest.h" />
     <ClInclude Include="..\Classes\UnitTest\UnitTest.h" />
-    <ClInclude Include="..\Classes\UserDefaultTest\UserDefaultTest.h" />
     <ClInclude Include="..\Classes\VisibleRect.h" />
     <ClInclude Include="..\Classes\VibrateTest\VibrateTest.h" />
     <ClInclude Include="..\Classes\VRTest\VRTest.h" />
@@ -500,7 +499,6 @@
     <ClCompile Include="..\Classes\UITest\UITest.cpp" />
     <ClCompile Include="..\Classes\UnitTest\RefPtrTest.cpp" />
     <ClCompile Include="..\Classes\UnitTest\UnitTest.cpp" />
-    <ClCompile Include="..\Classes\UserDefaultTest\UserDefaultTest.cpp" />
     <ClCompile Include="..\Classes\VisibleRect.cpp" />
     <ClCompile Include="..\Classes\VibrateTest\VibrateTest.cpp" />
     <ClCompile Include="..\Classes\VRTest\VRTest.cpp" />

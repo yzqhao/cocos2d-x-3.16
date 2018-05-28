@@ -139,8 +139,6 @@ base/CCProperties.cpp \
 base/CCRef.cpp \
 base/CCScheduler.cpp \
 base/CCTouch.cpp \
-base/CCUserDefault-android.cpp \
-base/CCUserDefault.cpp \
 base/CCValue.cpp \
 base/ObjectFactory.cpp \
 base/TGAlib.cpp \

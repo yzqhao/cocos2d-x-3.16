@@ -70,7 +70,6 @@
 #include "TileMapTest/TileMapTest2.h"
 #include "TouchesTest/TouchesTest.h"
 #include "TransitionsTest/TransitionsTest.h"
-#include "UserDefaultTest/UserDefaultTest.h"
 #include "VibrateTest/VibrateTest.h"
 #include "ZwoptexTest/ZwoptexTest.h"
 #include "SpriteFrameCacheTest/SpriteFrameCacheTest.h"

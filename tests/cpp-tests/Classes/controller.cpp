@@ -76,7 +76,6 @@ public:
         addTest("Touches", [](){return new TouchesTests(); });
         addTest("Transitions", [](){return new TransitionsTests(); });
         addTest("URL Open Test", []() { return new OpenURLTests(); });
-        addTest("UserDefault", []() { return new UserDefaultTests(); });
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         addTest("Vibrate", []() { return new VibrateTests(); });
 #endif
