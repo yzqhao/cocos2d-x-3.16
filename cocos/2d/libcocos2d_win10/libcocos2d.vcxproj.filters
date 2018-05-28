@@ -275,9 +275,6 @@
     <ClCompile Include="..\CCSpriteFrameCache.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCTextFieldTTF.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCTransition.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -938,9 +935,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCSpriteFrameCache.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCTextFieldTTF.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCTMXObjectGroup.h">

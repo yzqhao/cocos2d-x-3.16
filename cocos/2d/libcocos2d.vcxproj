@@ -395,7 +395,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCSpriteBatchNode.cpp" />
     <ClCompile Include="CCSpriteFrame.cpp" />
     <ClCompile Include="CCSpriteFrameCache.cpp" />
-    <ClCompile Include="CCTextFieldTTF.cpp" />
     <ClCompile Include="CCTransition.cpp" />
     <ClCompile Include="CCTransitionPageTurn.cpp" />
     <ClCompile Include="CCTransitionProgress.cpp" />
@@ -648,7 +647,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCSpriteBatchNode.h" />
     <ClInclude Include="CCSpriteFrame.h" />
     <ClInclude Include="CCSpriteFrameCache.h" />
-    <ClInclude Include="CCTextFieldTTF.h" />
     <ClInclude Include="CCTransition.h" />
     <ClInclude Include="CCTransitionPageTurn.h" />
     <ClInclude Include="CCTransitionProgress.h" />

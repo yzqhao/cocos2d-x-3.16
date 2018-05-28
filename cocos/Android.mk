@@ -71,7 +71,6 @@ cocos2d.cpp \
 2d/CCSpriteBatchNode.cpp \
 2d/CCSpriteFrame.cpp \
 2d/CCSpriteFrameCache.cpp \
-2d/CCTextFieldTTF.cpp \
 2d/CCTransition.cpp \
 2d/CCTransitionPageTurn.cpp \
 2d/CCTransitionProgress.cpp \

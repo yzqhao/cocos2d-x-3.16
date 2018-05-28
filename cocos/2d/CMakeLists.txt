@@ -64,7 +64,6 @@ set(COCOS_2D_SRC
   2d/CCSpriteFrame.cpp
   2d/CCAutoPolygon.cpp
   ../external/clipper/clipper.cpp
-  2d/CCTextFieldTTF.cpp
   2d/CCTransition.cpp
   2d/CCTransitionPageTurn.cpp
   2d/CCTransitionProgress.cpp

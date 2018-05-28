@@ -61,7 +61,6 @@
 #include "Sprite3DTest/Sprite3DTest.h"
 #include "SpritePolygonTest/SpritePolygonTest.h"
 #include "TerrainTest/TerrainTest.h"
-#include "TextInputTest/TextInputTest.h"
 #include "Texture2dTest/Texture2dTest.h"
 #include "TextureCacheTest/TextureCacheTest.h"
 #include "TexturePackerEncryptionTest/TextureAtlasEncryptionTest.h"

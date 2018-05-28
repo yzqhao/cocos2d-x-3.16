@@ -318,7 +318,6 @@
     <ClInclude Include="..\Classes\testBasic.h" />
     <ClInclude Include="..\Classes\testResource.h" />
     <ClInclude Include="..\Classes\tests.h" />
-    <ClInclude Include="..\Classes\TextInputTest\TextInputTest.h" />
     <ClInclude Include="..\Classes\Texture2dTest\Texture2dTest.h" />
     <ClInclude Include="..\Classes\TextureCacheTest\TextureCacheTest.h" />
     <ClInclude Include="..\Classes\TexturePackerEncryptionTest\TextureAtlasEncryptionTest.h" />
@@ -460,7 +459,6 @@
     <ClCompile Include="..\Classes\SpritePolygonTest\SpritePolygonTest.cpp" />
     <ClCompile Include="..\Classes\SpriteTest\SpriteTest.cpp" />
     <ClCompile Include="..\Classes\TerrainTest\TerrainTest.cpp" />
-    <ClCompile Include="..\Classes\TextInputTest\TextInputTest.cpp" />
     <ClCompile Include="..\Classes\Texture2dTest\Texture2dTest.cpp" />
     <ClCompile Include="..\Classes\TextureCacheTest\TextureCacheTest.cpp" />
     <ClCompile Include="..\Classes\TexturePackerEncryptionTest\TextureAtlasEncryptionTest.cpp" />

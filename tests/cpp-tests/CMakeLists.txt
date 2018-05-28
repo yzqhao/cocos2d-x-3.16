@@ -95,7 +95,6 @@ set(TESTS_SRC
   Classes/Sprite3DTest/Sprite3DTest.cpp
   Classes/SpritePolygonTest/SpritePolygonTest.cpp
   Classes/TerrainTest/TerrainTest.cpp
-  Classes/TextInputTest/TextInputTest.cpp
   Classes/Texture2dTest/Texture2dTest.cpp
   Classes/TextureCacheTest/TextureCacheTest.cpp
   Classes/TexturePackerEncryptionTest/TextureAtlasEncryptionTest.cpp

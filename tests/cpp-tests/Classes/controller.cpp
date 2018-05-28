@@ -58,7 +58,6 @@ public:
         addTest("Node: Sprite3D", [](){  return new Sprite3DTests(); });
         addTest("Node: SpritePolygon", [](){return new (std::nothrow) SpritePolygonTest(); });
         addTest("Node: Terrain", [](){  return new TerrainTests(); });
-        addTest("Node: Text Input", [](){return new TextInputTests(); });
         addTest("Mouse", []() { return new MouseTests(); });
         addTest("MultiTouch", []() { return new MultiTouchTests(); });
         addTest("Renderer", []() { return new NewRendererTests(); });

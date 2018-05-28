@@ -140,9 +140,6 @@
     <Filter Include="Classes\TerrainTest">
       <UniqueIdentifier>{6135b950-f660-4f73-8c40-bbc31c6e2863}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\TextInputTest">
-      <UniqueIdentifier>{43e4143b-0be4-4800-9cd3-9293bb1006ce}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\Texture2dTest">
       <UniqueIdentifier>{1716fd6e-cd96-4bea-96d0-37d57dd602c5}</UniqueIdentifier>
     </Filter>
@@ -454,9 +451,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\TerrainTest\TerrainTest.cpp">
       <Filter>Classes\TerrainTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\TextInputTest\TextInputTest.cpp">
-      <Filter>Classes\TextInputTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Texture2dTest\Texture2dTest.cpp">
       <Filter>Classes\Texture2dTest</Filter>
@@ -807,9 +801,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TerrainTest\TerrainTest.h">
       <Filter>Classes\TerrainTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\TextInputTest\TextInputTest.h">
-      <Filter>Classes\TextInputTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Texture2dTest\Texture2dTest.h">
       <Filter>Classes\Texture2dTest</Filter>

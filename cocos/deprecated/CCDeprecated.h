@@ -59,7 +59,6 @@
 #include "2d/CCParticleSystemQuad.h"
 #include "2d/CCProgressTimer.h"
 #include "2d/CCSpriteFrameCache.h"
-#include "2d/CCTextFieldTTF.h"
 #include "2d/CCTransition.h"
 #include "2d/CCTransitionPageTurn.h"
 #include "2d/CCTransitionProgress.h"
@@ -598,8 +597,6 @@ CC_DEPRECATED_ATTRIBUTE typedef PointArray CCPointArray;
 CC_DEPRECATED_ATTRIBUTE typedef RemoveSelf CCRemoveSelf;
 CC_DEPRECATED_ATTRIBUTE typedef IMEDelegate CCIMEDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef IMEKeyboardNotificationInfo CCIMEKeyboardNotificationInfo;
-CC_DEPRECATED_ATTRIBUTE typedef TextFieldDelegate CCTextFieldDelegate;
-CC_DEPRECATED_ATTRIBUTE typedef TextFieldTTF CCTextFieldTTF;
 CC_DEPRECATED_ATTRIBUTE typedef __NotificationCenter CCNotificationCenter;
 CC_DEPRECATED_ATTRIBUTE typedef __NotificationCenter NotificationCenter;
 //CC_DEPRECATED_ATTRIBUTE typedef TargetedTouchDelegate CCTargetedTouchDelegate;

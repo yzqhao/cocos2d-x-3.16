@@ -70,9 +70,6 @@
     <Filter Include="Classes\CurlTest">
       <UniqueIdentifier>{6a365fa7-888d-46bf-9c63-0f1dd507339e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\TextInputTest">
-      <UniqueIdentifier>{9c6d3e16-37f6-47b1-9729-847b7fcf3316}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\BugsTest">
       <UniqueIdentifier>{33d3a425-5956-4faa-b582-56cf7e900fe9}</UniqueIdentifier>
     </Filter>
@@ -245,9 +242,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\CurlTest\CurlTest.cpp">
       <Filter>Classes\CurlTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\TextInputTest\TextInputTest.cpp">
-      <Filter>Classes\TextInputTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\BugsTest\Bug-1159.cpp">
       <Filter>Classes\BugsTest</Filter>
@@ -488,9 +482,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\CurlTest\CurlTest.h">
       <Filter>Classes\CurlTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\TextInputTest\TextInputTest.h">
-      <Filter>Classes\TextInputTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\BugsTest\Bug-1159.h">
       <Filter>Classes\BugsTest</Filter>

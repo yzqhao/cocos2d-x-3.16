@@ -209,7 +209,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClCompile Include="..\Classes\VibrateTest\VibrateTest.cpp" />
     <ClCompile Include="..\Classes\ZwoptexTest\ZwoptexTest.cpp" />
     <ClCompile Include="..\Classes\CurlTest\CurlTest.cpp" />
-    <ClCompile Include="..\Classes\TextInputTest\TextInputTest.cpp" />
     <ClCompile Include="..\Classes\BugsTest\Bug-1159.cpp" />
     <ClCompile Include="..\Classes\BugsTest\Bug-1174.cpp" />
     <ClCompile Include="..\Classes\BugsTest\Bug-350.cpp" />
@@ -292,7 +291,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClInclude Include="..\Classes\VibrateTest\VibrateTest.h" />
     <ClInclude Include="..\Classes\ZwoptexTest\ZwoptexTest.h" />
     <ClInclude Include="..\Classes\CurlTest\CurlTest.h" />
-    <ClInclude Include="..\Classes\TextInputTest\TextInputTest.h" />
     <ClInclude Include="..\Classes\BugsTest\Bug-1159.h" />
     <ClInclude Include="..\Classes\BugsTest\Bug-1174.h" />
     <ClInclude Include="..\Classes\BugsTest\Bug-350.h" />

@@ -165,8 +165,6 @@
         "cocos/2d/CCTMXObjectGroup.h", 
         "cocos/2d/CCTMXTiledMap.cpp", 
         "cocos/2d/CCTMXTiledMap.h", 
-        "cocos/2d/CCTextFieldTTF.cpp", 
-        "cocos/2d/CCTextFieldTTF.h", 
         "cocos/2d/CCTransition.cpp", 
         "cocos/2d/CCTransition.h", 
         "cocos/2d/CCTransitionPageTurn.cpp", 
