@@ -1,0 +1,613 @@
+编译模式：debug
+使用 Eclipse 工程：C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android
+正在执行：'"D:\tools\android\adt-bundle-windows-x86_64-20140321\sdk\tools\android" update project -t android-19 -p C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android'
+
+Updated project.properties
+Updated local.properties
+Updated file C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\proguard-project.txt
+It seems that there are sub-projects. If you want to update them
+please use the --subprojects parameter.
+正在执行：'"D:\tools\android\adt-bundle-windows-x86_64-20140321\sdk\tools\android" update lib-project -p C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java -t android-19'
+
+Updated project.properties
+Updated local.properties
+Updated file C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\proguard-project.txt
+正在执行 ndk-build...
+NDK 编译模式：debug
+正在执行：'"D:\tools\android\android-ndk-r14b\ndk-build" -C C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android -j12 NDK_MODULE_PATH=C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16;C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos;C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\external NDK_TOOLCHAIN_VERSION=4.9 NDK_DEBUG=1'
+
+Android NDK: WARNING: APP_PLATFORM android-19 is larger than android:minSdkVersion 9 in ./AndroidManifest.xml    
+make: Entering directory `C:/Users/Administrator/Documents/GitHub/cocos2d-x-3.16/tests/cpp-tests/proj.android'
+[armeabi] Compile++ arm  : cpp_tests_shared <= BaseTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= AppDelegate.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= VisibleRect.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= controller.cpp
+[armeabi] Gdbserver      : [arm-linux-androideabi-4.9] libs/armeabi/gdbserver
+[armeabi] Gdbsetup       : libs/armeabi/gdb.setup
+[armeabi] Compile++ arm  : cpp_tests_shared <= main.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ActionManagerTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ActionsEaseTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ActionsProgressTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ActionsTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= AllocatorTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= BillBoardTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-CCDrawNode.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-1159.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-1174.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-350.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-422.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-458.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= QuestionContainerSprite.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-624.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-886.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-899.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-914.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-12847.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-15594.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-15776.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Bug-Child.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= BugsTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Camera3DTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ClickAndMoveTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ClippingNodeTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ConsoleTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ConfigurationTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= CurlTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= CurrentLanguageTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= DataVisitorTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= DrawPrimitivesTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= EffectsTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= EffectsAdvancedTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ExtensionsTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= CustomTableViewCell.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TableViewTestScene.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= FontTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= FileUtilsTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= MouseTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= IntervalTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= JNITest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= LayerTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= LightTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= MaterialSystemTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= MenuTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= MotionStreakTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= MultiTouchTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= NewEventDispatcherTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= NewRendererTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= NodeTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= OpenURLTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ParallaxTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ReleasePoolTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= RenderTextureTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= RotateWorldTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= SceneTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= SchedulerTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ShaderTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ShaderTest2.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Scene3DTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= DrawNode3D.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Sprite3DTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= SpritePolygonTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TerrainTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TextInputTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Texture2dTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TextureCacheTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TextureAtlasEncryptionTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TileMapTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TileMapTest2.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Ball.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= Paddle.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TouchesTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= TransitionsTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= UserDefaultTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= VibrateTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= ZwoptexTest.cpp
+[armeabi] Compile++ arm  : cpp_tests_shared <= SpriteFrameCacheTest.cpp
+[armeabi] Compile++ arm  : cocos_extension_static <= CCScrollView.cpp
+[armeabi] Compile++ arm  : cocos_extension_static <= CCTableView.cpp
+[armeabi] Compile++ arm  : cocos_extension_static <= CCTableViewCell.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCRay.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCAABB.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCOBB.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCAnimate3D.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCAnimation3D.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCAttachNode.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCBillBoard.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCBundle3D.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCBundleReader.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCMesh.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCMeshVertexIndexData.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCMotionStreak3D.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCMeshSkin.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCSprite3DMaterial.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCObjLoader.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCSkeleton3D.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCSprite3D.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCTerrain.cpp
+[armeabi] Compile++ arm  : cocos3d_static <= CCSkybox.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= cocos2d.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAction.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionCamera.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionCatmullRom.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionEase.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionGrid.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionGrid3D.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionInstant.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionInterval.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionManager.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionPageTurn3D.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionProgressTimer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionTiledGrid.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAnimation.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCActionTween.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAnimationCache.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAtlasNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCCamera.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCCameraBackgroundBrush.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCClippingNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCClippingRectangleNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCComponent.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCComponentContainer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCDrawingPrimitives.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCDrawNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFastTMXLayer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFastTMXTiledMap.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFont.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFontAtlas.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFontAtlasCache.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFontCharMap.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFontFNT.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFontFreeType.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGLBufferedNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGrabber.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGrid.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCLabel.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCLabelAtlas.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCLabelTTF.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCLabelBMFont.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCLabelTextFormatter.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCLayer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCLight.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCMenu.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCMenuItem.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCMotionStreak.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCNodeGrid.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCParallaxNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCParticleBatchNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCParticleExamples.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCParticleSystem.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCParticleSystemQuad.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCProgressTimer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCProtectedNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCRenderTexture.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCScene.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCSprite.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCSpriteBatchNode.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCSpriteFrame.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCSpriteFrameCache.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTMXLayer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTMXObjectGroup.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTMXTiledMap.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTMXXMLParser.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTextFieldTTF.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTileMapAtlas.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTransition.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTransitionPageTurn.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTransitionProgress.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTweenFunction.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAutoPolygon.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFrustum.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCPlane.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFileUtils.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGLView.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCImage.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCSAXParser.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCThread.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= MathUtil.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAffineTransform.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGeometry.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCVertex.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= Mat4.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= Quaternion.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= TransformUtils.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= Vec3.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= Vec2.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= Vec4.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCNinePatchImageParser.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCStencilStateManager.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAsyncTaskPool.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAutoreleasePool.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCConfiguration.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCConsole.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCController-android.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCController.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCData.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCDataVisitor.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCDirector.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEvent.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventController.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventCustom.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventAcceleration.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventFocus.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventDispatcher.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventListener.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventListenerAcceleration.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventKeyboard.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventListenerController.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventListenerCustom.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventListenerFocus.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventListenerKeyboard.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventListenerMouse.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventListenerTouch.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventMouse.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCEventTouch.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCIMEDispatcher.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCNS.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCProfiling.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCProperties.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCRef.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCScheduler.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTouch.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCUserDefault-android.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCUserDefault.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCValue.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= TGAlib.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ObjectFactory.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ZipUtils.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAllocatorDiagnostics.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAllocatorGlobal.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCAllocatorGlobalNewDelete.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= atitc.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= base64.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ccCArray.cpp
+[armeabi] Compile arm    : cocos2dx_internal_static <= ccFPSImages.c
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ccRandom.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ccTypes.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ccUTF8.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ccUtils.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= etc1.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= pvr.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= s3tc.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCBatchCommand.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGLProgram.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCCustomCommand.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGLProgramCache.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGLProgramState.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGLProgramStateCache.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCGroupCommand.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCMaterial.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCMeshCommand.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCPass.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCPrimitive.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCPrimitiveCommand.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCQuadCommand.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCRenderState.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCRenderer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCRenderCommand.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTechnique.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTexture2D.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTextureAtlas.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTextureCache.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTextureCube.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCTrianglesCommand.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCVertexAttribBinding.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCVertexIndexBuffer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCVertexIndexData.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCFrameBuffer.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ccGLStateCache.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ccShaders.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCArray.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCDeprecated.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCDictionary.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCNotificationCenter.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCSet.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= CCString.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ConvertUTFWrapper.cpp
+[armeabi] Compile arm    : cocos2dx_internal_static <= ConvertUTF.c
+[armeabi] Compile arm    : cocos2dx_internal_static <= md5.c
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= tinyxml2.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ioapi_mem.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= ioapi.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= unzip.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= edtaa3func.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= shapes.cc
+[armeabi] Compile arm    : cocos2dx_internal_static <= xxhash.c
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= advancing_front.cc
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= cdt.cc
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= sweep_context.cc
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= clipper.cpp
+[armeabi] Compile++ arm  : cocos2dx_internal_static <= sweep.cc
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= CCApplication-android.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= CCCommon-android.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= CCDevice-android.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= CCGLViewImpl-android.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= CCFileUtils-android.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= javaactivity-android.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= CCEnhanceAPI-android.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= Java_org_cocos2dx_lib_Cocos2dxAccelerometer.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= Java_org_cocos2dx_lib_Cocos2dxBitmap.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= Java_org_cocos2dx_lib_Cocos2dxHelper.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= Java_org_cocos2dx_lib_Cocos2dxEngineDataManager.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= Java_org_cocos2dx_lib_Cocos2dxRenderer.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= JniHelper.cpp
+[armeabi] Compile++ thumb: cocos2dxandroid_static <= TouchesJni.cpp
+[armeabi] Compile thumb  : cpufeatures <= cpu-features.c
+[armeabi] StaticLibrary  : libcocos2d.a
+[armeabi] StaticLibrary  : libextension.a
+[armeabi] StaticLibrary  : libcocos3d.a
+[armeabi] StaticLibrary  : libcpufeatures.a
+[armeabi] StaticLibrary  : libcocos2dxinternal.a
+[armeabi] StaticLibrary  : libcocos2dandroid.a
+[armeabi] SharedLibrary  : libcpp_tests.so
+[armeabi] Install        : libcpp_tests.so => libs/armeabi/libcpp_tests.so
+make: Leaving directory `C:/Users/Administrator/Documents/GitHub/cocos2d-x-3.16/tests/cpp-tests/proj.android'
+正在生成 apk 文件...
+正在执行：'"D:\tools\android\apache-ant-1.10.1\bin\ant" clean debug -f C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\build.xml -Dsdk.dir="D:\tools\android\adt-bundle-windows-x86_64-20140321\sdk"'
+
+Buildfile: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\build.xml
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 22.6.2
+ [checkenv] Installed at D:\tools\android\adt-bundle-windows-x86_64-20140321\sdk
+
+-setup:
+     [echo] Project Name: CppTests
+  [gettype] Project Type: Application
+
+-pre-clean:
+
+clean:
+   [delete] Deleting directory C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin
+   [delete] Deleting directory C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\gen
+[getlibpath] Library dependencies:
+[getlibpath] 
+[getlibpath] ------------------
+[getlibpath] Ordered libraries:
+
+nodeps:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 22.6.2
+ [checkenv] Installed at D:\tools\android\adt-bundle-windows-x86_64-20140321\sdk
+
+-setup:
+     [echo] Project Name: cocos2dxandroid
+  [gettype] Project Type: Android Library
+
+-pre-clean:
+
+clean:
+   [delete] Deleting directory C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin
+   [delete] Deleting directory C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\gen
+
+-set-mode-check:
+
+-set-debug-files:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 22.6.2
+ [checkenv] Installed at D:\tools\android\adt-bundle-windows-x86_64-20140321\sdk
+
+-setup:
+     [echo] Project Name: CppTests
+  [gettype] Project Type: Application
+
+-set-debug-mode:
+
+-debug-obfuscation-check:
+
+-pre-build:
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 19.0.3
+     [echo] Resolving Build Target for CppTests...
+[gettarget] Project Target:   Android 4.2.2
+[gettarget] API level:        19
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\res
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\rsObj
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\rsLibs
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\gen
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\classes
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\dexedLibs
+     [echo] ----------
+     [echo] Resolving Dependencies for CppTests...
+[dependency] Ordered libraries:
+[dependency] C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java
+[dependency] 
+[dependency] ------------------
+     [echo] ----------
+     [echo] Building Libraries with 'debug'...
+
+nodeps:
+
+-set-mode-check:
+
+-set-debug-files:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 22.6.2
+ [checkenv] Installed at D:\tools\android\adt-bundle-windows-x86_64-20140321\sdk
+
+-setup:
+     [echo] Project Name: cocos2dxandroid
+  [gettype] Project Type: Android Library
+
+-set-debug-mode:
+
+-debug-obfuscation-check:
+
+-pre-build:
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 19.0.3
+     [echo] Resolving Build Target for cocos2dxandroid...
+[gettarget] Project Target:   Android 4.2.2
+[gettarget] API level:        19
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\res
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\rsObj
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\rsLibs
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\gen
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\classes
+    [mkdir] Created dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\dexedLibs
+     [echo] ----------
+     [echo] Resolving Dependencies for cocos2dxandroid...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+
+-code-gen:
+[mergemanifest] Merging AndroidManifest files into one.
+[mergemanifest] Manifest merger disabled. Using project manifest only.
+     [echo] Handling aidl files...
+     [aidl] Found 1 AIDL files.
+     [aidl] Compiling 1 AIDL files.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] Generating resource IDs...
+     [aapt]     (skipping file '.gitignore' due to ANDROID_AAPT_IGNORE pattern '.*')
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] Generating BuildConfig class.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 31 source files to C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\classes
+    [javac] 警告: [options] 源值1.5已过时, 将在未来所有发行版中删除
+    [javac] 警告: [options] 目标值1.5已过时, 将在未来所有发行版中删除
+    [javac] 警告: [options] 要隐藏有关已过时选项的警告, 请使用 -Xlint:-options。
+    [javac] 注: 某些输入文件使用或覆盖了已过时的 API。
+    [javac] 注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+    [javac] 注: 某些输入文件使用了未经检查或不安全的操作。
+    [javac] 注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+    [javac] 3 个警告
+     [echo] Creating library output jar file...
+      [jar] Building jar: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\classes.jar
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+     [echo] Library project: do not convert bytecode...
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\res
+   [crunch] To destination dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\res
+   [crunch] Crunched 0 PNG files to update cache
+
+-package-resources:
+     [echo] Library project: do not package resources...
+
+-package:
+     [echo] Library project: do not package apk...
+
+-post-package:
+
+-do-debug:
+     [echo] Library project: do not create apk...
+[propertyfile] Creating new property file: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\build.prop
+
+-post-build:
+
+debug:
+
+-code-gen:
+[mergemanifest] Merging AndroidManifest files into one.
+[mergemanifest] Manifest merger disabled. Using project manifest only.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] Generating resource IDs...
+     [aapt]     (skipping file '.gitignore' due to ANDROID_AAPT_IGNORE pattern '.*')
+     [echo] ----------
+     [echo] Handling BuildConfig class...
+[buildconfig] Generating BuildConfig class.
+
+-pre-compile:
+
+-compile:
+    [javac] Compiling 4 source files to C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\classes
+    [javac] 警告: [options] 源值1.5已过时, 将在未来所有发行版中删除
+    [javac] 警告: [options] 目标值1.5已过时, 将在未来所有发行版中删除
+    [javac] 警告: [options] 要隐藏有关已过时选项的警告, 请使用 -Xlint:-options。
+    [javac] 3 个警告
+
+-post-compile:
+
+-obfuscate:
+
+-dex:
+      [dex] input: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\classes
+      [dex] input: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\classes.jar
+      [dex] input: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\libs\com.android.vending.expansion.zipfile.jar
+      [dex] input: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\libs\httpclient-4.4.1.1.jar
+      [dex] input: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\libs\android-async-http-1.4.9.jar
+      [dex] input: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\libs\EngineDataManager.jar
+      [dex] Pre-Dexing C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\bin\classes.jar -> classes-f7f54d186c584b9aab631a9572f7623f.jar
+      [dex] Pre-Dexing C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\libs\com.android.vending.expansion.zipfile.jar -> com.android.vending.expansion.zipfile-8a595faf61f514f588cd843d08a2f5eb.jar
+      [dex] Pre-Dexing C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\libs\httpclient-4.4.1.1.jar -> httpclient-4.4.1.1-b2de3cf806e3e9fabd5ebf4b4bfebaa5.jar
+      [dex] Pre-Dexing C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\libs\android-async-http-1.4.9.jar -> android-async-http-1.4.9-8f176b9bee5edf535203f7e019a25e32.jar
+      [dex] Pre-Dexing C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\cocos\platform\android\java\libs\EngineDataManager.jar -> EngineDataManager-620cf04971e565cfefc9da9c666cfbdb.jar
+      [dex] Converting compiled files and external libraries into C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\classes.dex...
+       [dx] Merged dex A (7 defs/4.3KiB) with dex B (145 defs/155.7KiB). Result is 152 defs/189.8KiB. Took 0.1s
+       [dx] Merged dex A (152 defs/189.8KiB) with dex B (4 defs/15.8KiB). Result is 156 defs/256.4KiB. Took 0.0s
+       [dx] Merged dex A (156 defs/256.4KiB) with dex B (797 defs/844.2KiB). Result is 953 defs/1384.9KiB. Took 0.1s
+       [dx] Merged dex A (953 defs/1384.9KiB) with dex B (61 defs/106.8KiB). Result is 1014 defs/1989.6KiB. Took 0.0s
+       [dx] Result compacted from 2875.6KiB to 1095.1KiB to save 1780.5KiB
+       [dx] Merged dex A (1014 defs/1989.6KiB) with dex B (10 defs/10.4KiB). Result is 1024 defs/1095.1KiB. Took 0.1s
+
+-crunch:
+   [crunch] Crunching PNG Files in source dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\res
+   [crunch] To destination dir: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\res
+   [crunch] Processing image to cache: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\res\drawable-hdpi\icon.png => C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\res\drawable-hdpi\icon.png
+   [crunch]   (processed image to cache entry C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\res\drawable-hdpi\icon.png: 67% size of source)
+   [crunch] Processing image to cache: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\res\drawable-ldpi\icon.png => C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\res\drawable-ldpi\icon.png
+   [crunch]   (processed image to cache entry C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\res\drawable-ldpi\icon.png: 0% size of source)
+   [crunch] Processing image to cache: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\res\drawable-mdpi\icon.png => C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\res\drawable-mdpi\icon.png
+   [crunch]   (processed image to cache entry C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\res\drawable-mdpi\icon.png: 53% size of source)
+   [crunch] Crunched 3 PNG files to update cache
+
+-package-resources:
+     [aapt] Creating full resource package...
+     [aapt]     (skipping file '.gitignore' due to ANDROID_AAPT_IGNORE pattern '.*')
+     [aapt]     (skipping file '.gitignore' due to ANDROID_AAPT_IGNORE pattern '.*')
+
+-package:
+[apkbuilder] Current build type is different than previous build: forced apkbuilder run.
+[apkbuilder] Creating CppTests-debug-unaligned.apk and signing it with a debug key...
+
+-post-package:
+
+-do-debug:
+ [zipalign] Running zip align on final apk...
+     [echo] Debug Package: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\CppTests-debug.apk
+[propertyfile] Creating new property file: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\build.prop
+[propertyfile] Updating property file: C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\proj.android\bin\build.prop
+
+-post-build:
+
+debug:
+
+BUILD SUCCESSFUL
+Total time: 15 seconds
+正在移动 apk 文件 C:\Users\Administrator\Documents\GitHub\cocos2d-x-3.16\tests\cpp-tests\bin\debug\android
+编译成功。

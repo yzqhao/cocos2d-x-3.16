@@ -246,10 +246,6 @@ THE SOFTWARE.
 // textures
 #include "renderer/CCTextureAtlas.h"
 
-// component
-#include "2d/CCComponent.h"
-#include "2d/CCComponentContainer.h"
-
 //3d
 #include "3d/CCAABB.h"
 #include "3d/CCAnimate3D.h"

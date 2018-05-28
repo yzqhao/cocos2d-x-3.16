@@ -361,8 +361,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCCameraBackgroundBrush.cpp" />
     <ClCompile Include="CCClippingNode.cpp" />
     <ClCompile Include="CCClippingRectangleNode.cpp" />
-    <ClCompile Include="CCComponent.cpp" />
-    <ClCompile Include="CCComponentContainer.cpp" />
     <ClCompile Include="CCDrawingPrimitives.cpp" />
     <ClCompile Include="CCDrawNode.cpp" />
     <ClCompile Include="CCFontAtlas.cpp" />
@@ -616,8 +614,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCCameraBackgroundBrush.h" />
     <ClInclude Include="CCClippingNode.h" />
     <ClInclude Include="CCClippingRectangleNode.h" />
-    <ClInclude Include="CCComponent.h" />
-    <ClInclude Include="CCComponentContainer.h" />
     <ClInclude Include="CCDrawingPrimitives.h" />
     <ClInclude Include="CCDrawNode.h" />
     <ClInclude Include="CCFont.h" />

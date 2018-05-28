@@ -214,12 +214,6 @@
     <ClCompile Include="CCClippingRectangleNode.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCComponent.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCComponentContainer.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCDrawingPrimitives.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -859,12 +853,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCClippingRectangleNode.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCComponent.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCComponentContainer.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCDrawingPrimitives.h">

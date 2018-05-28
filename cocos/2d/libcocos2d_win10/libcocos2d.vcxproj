@@ -355,8 +355,6 @@
     <ClCompile Include="..\CCCameraBackgroundBrush.cpp" />
     <ClCompile Include="..\CCClippingNode.cpp" />
     <ClCompile Include="..\CCClippingRectangleNode.cpp" />
-    <ClCompile Include="..\CCComponent.cpp" />
-    <ClCompile Include="..\CCComponentContainer.cpp" />
     <ClCompile Include="..\CCDrawingPrimitives.cpp" />
     <ClCompile Include="..\CCDrawNode.cpp" />
     <ClCompile Include="..\CCFont.cpp" />
@@ -652,8 +650,6 @@
     <ClInclude Include="..\CCCamera.h" />
     <ClInclude Include="..\CCClippingNode.h" />
     <ClInclude Include="..\CCClippingRectangleNode.h" />
-    <ClInclude Include="..\CCComponent.h" />
-    <ClInclude Include="..\CCComponentContainer.h" />
     <ClInclude Include="..\CCDrawingPrimitives.h" />
     <ClInclude Include="..\CCDrawNode.h" />
     <ClInclude Include="..\CCFont.h" />
