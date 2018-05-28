@@ -41,14 +41,6 @@ void MessageBox(const char * pszMsg, const char * pszTitle)
     MessageBoxW(nullptr, wsMsg.c_str(), wsTitle.c_str(), MB_OK);
 }
 
-void LuaLog(const char *pszMsg)
-{
-    OutputDebugStringW(cocos2d::StringUtf8ToWideChar(pszMsg).c_str());
-    OutputDebugStringA("\n");
-
-    puts(UTF8StringToMultiByte(pszMsg).c_str());
-}
-
 NS_CC_END
 
 #endif // CC_TARGET_PLATFORM == CC_PLATFORM_WIN32

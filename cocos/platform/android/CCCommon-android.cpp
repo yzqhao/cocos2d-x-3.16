@@ -41,11 +41,6 @@ void MessageBox(const char * pszMsg, const char * pszTitle)
     JniHelper::callStaticVoidMethod("org/cocos2dx/lib/Cocos2dxHelper", "showDialog", pszTitle, pszMsg);
 }
 
-void LuaLog(const char * pszFormat)
-{
-    __android_log_write(ANDROID_LOG_DEBUG, "cocos2d-x debug info", pszFormat);
-}
-
 NS_CC_END
 
 #endif // CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID

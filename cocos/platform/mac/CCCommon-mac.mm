@@ -36,11 +36,6 @@ THE SOFTWARE.
 
 NS_CC_BEGIN
 
-void LuaLog(const char * format)
-{
-    puts(format);
-}
-
 // ios no MessageBox, use log instead
 void MessageBox(const char * msg, const char * title)
 {

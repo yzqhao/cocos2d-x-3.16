@@ -37,11 +37,6 @@ NS_CC_BEGIN
  */
 
 /**
- * lua can not deal with ...
- */
-void CC_DLL LuaLog(const char * format);
-
-/**
 @brief Pop out a message box
 */
 void CC_DLL MessageBox(const char * msg, const char * title);

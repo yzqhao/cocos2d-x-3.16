@@ -56,11 +56,6 @@ void MessageBox(const char * msg, const char * title)
 
 }
 
-void LuaLog(const char * format)
-{
-    puts(format);
-}
-
 NS_CC_END
 
 #endif // CC_PLATFORM_IOS
