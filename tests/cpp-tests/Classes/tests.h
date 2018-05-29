@@ -21,7 +21,6 @@
 
 // sort them alphabetically. thanks
 #include "ActionManagerTest/ActionManagerTest.h"
-#include "ActionsEaseTest/ActionsEaseTest.h"
 #include "ActionsProgressTest/ActionsProgressTest.h"
 #include "ActionsTest/ActionsTest.h"
 #include "BillBoardTest/BillBoardTest.h"

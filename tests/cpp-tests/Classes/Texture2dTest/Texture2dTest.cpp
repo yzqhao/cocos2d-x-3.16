@@ -316,17 +316,6 @@ void TextureMipMap::onEnter()
     img1->setTextureRect(Rect(85, 121, 85, 121));
     img1->setPosition(Vec2( 2*s.width/3.0f, s.height/2.0f));
     addChild(img1);
-    
-    
-    auto scale1 = EaseOut::create(ScaleBy::create(4, 0.01f), 3);
-    auto sc_back = scale1->reverse();
-    
-    auto scale2 = scale1->clone();
-    auto sc_back2 = scale2->reverse();
-
-    img0->runAction(RepeatForever::create(Sequence::create(scale1, sc_back, nullptr)));
-    img1->runAction(RepeatForever::create(Sequence::create(scale2, sc_back2, nullptr)));
-    log("%s\n", Director::getInstance()->getTextureCache()->getCachedTextureInfo().c_str());
 }
 
 std::string TextureMipMap::title() const
@@ -361,22 +350,6 @@ void TexturePVRMipMap::onEnter()
         Texture2D::TexParams texParams = { GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR, GL_CLAMP_TO_EDGE, GL_CLAMP_TO_EDGE };
         imgMipMap->getTexture()->setTexParameters(texParams);
     }
-
-    auto img = Sprite::create("Images/logo-nomipmap.pvr");
-    if( img )
-    {
-        img->setPosition(Vec2( s.width/2.0f+100, s.height/2.0f));
-        addChild(img);
-
-        auto scale1 = EaseOut::create(ScaleBy::create(4, 0.01f), 3);
-        auto sc_back = scale1->reverse();
-
-        auto scale2 = scale1->clone();
-        auto sc_back2 = scale2->reverse();
-        
-        imgMipMap->runAction(RepeatForever::create(Sequence::create(scale1, sc_back, nullptr)));
-        img->runAction(RepeatForever::create(Sequence::create(scale2, sc_back2, nullptr)));
-    }
     log("%s\n", Director::getInstance()->getTextureCache()->getCachedTextureInfo().c_str());
 }
 
@@ -410,16 +383,6 @@ void TexturePVRMipMap2::onEnter()
     auto img = Sprite::create("Images/test_image.png");
     img->setPosition(Vec2( s.width/2.0f+100, s.height/2.0f));
     addChild(img);
-    
-    auto scale1 = EaseOut::create(ScaleBy::create(4, 0.01f), 3);
-    auto sc_back = scale1->reverse();
-
-    auto scale2 = scale1->clone();
-    auto sc_back2 = scale2->reverse();
-    
-    imgMipMap->runAction(RepeatForever::create(Sequence::create(scale1, sc_back, nullptr)));
-    img->runAction(RepeatForever::create(Sequence::create(scale2, sc_back2, nullptr)));
-    log("%s\n", Director::getInstance()->getTextureCache()->getCachedTextureInfo().c_str());
 }
 
 std::string TexturePVRMipMap2::title() const

@@ -116,20 +116,7 @@ MenuLayerMainMenu::MenuLayerMainMenu()
     
     // elastic effect
     auto s = Director::getInstance()->getWinSize();
-    
-    int i=0;
-    for(const auto &child : menu->getChildren()) {
-        auto dstPoint = child->getPosition();
-        int offset = (int) (s.width/2 + 50);
-        if( i % 2 == 0)
-            offset = -offset;
-        
-        child->setPosition( Vec2( dstPoint.x + offset, dstPoint.y) );
-        child->runAction(
-                         EaseElasticOut::create(MoveBy::create(2, Vec2(dstPoint.x - offset,0)), 0.35f)
-                         );
-        i++;
-    }
+   
 
     _disabledItem = item3; item3->retain();
     _disabledItem->setEnabled( false );

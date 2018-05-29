@@ -10,7 +10,6 @@ set(COCOS_2D_SRC
   2d/CCActionCamera.cpp
   2d/CCActionCatmullRom.cpp
   2d/CCAction.cpp
-  2d/CCActionEase.cpp
   2d/CCActionGrid3D.cpp
   2d/CCActionGrid.cpp
   2d/CCActionInstant.cpp

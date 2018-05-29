@@ -184,7 +184,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClCompile Include="..\Classes\EffectsTest\EffectsTest.cpp" />
     <ClCompile Include="..\Classes\ClickAndMoveTest\ClickAndMoveTest.cpp" />
     <ClCompile Include="..\Classes\RotateWorldTest\RotateWorldTest.cpp" />
-    <ClCompile Include="..\Classes\ActionsEaseTest\ActionsEaseTest.cpp" />
     <ClCompile Include="..\Classes\MotionStreakTest\MotionStreakTest.cpp" />
     <ClCompile Include="..\Classes\DrawPrimitivesTest\DrawPrimitivesTest.cpp" />
     <ClCompile Include="..\Classes\ShaderTest\ShaderTest.cpp" />
@@ -248,7 +247,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClInclude Include="..\Classes\EffectsTest\EffectsTest.h" />
     <ClInclude Include="..\Classes\ClickAndMoveTest\ClickAndMoveTest.h" />
     <ClInclude Include="..\Classes\RotateWorldTest\RotateWorldTest.h" />
-    <ClInclude Include="..\Classes\ActionsEaseTest\ActionsEaseTest.h" />
     <ClInclude Include="..\Classes\MotionStreakTest\MotionStreakTest.h" />
     <ClInclude Include="..\Classes\DrawPrimitivesTest\DrawPrimitivesTest.h" />
     <ClInclude Include="..\Classes\ShaderTest\ShaderTest.h" />

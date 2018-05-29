@@ -33,7 +33,6 @@ endif()
 
 set(TESTS_SRC
   Classes/ActionManagerTest/ActionManagerTest.cpp
-  Classes/ActionsEaseTest/ActionsEaseTest.cpp
   Classes/ActionsProgressTest/ActionsProgressTest.cpp
   Classes/ActionsTest/ActionsTest.cpp
   Classes/AppDelegate.cpp

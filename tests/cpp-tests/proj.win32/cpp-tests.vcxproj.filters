@@ -19,9 +19,6 @@
     <Filter Include="Classes\RotateWorldTest">
       <UniqueIdentifier>{ab08059e-6970-412b-8806-e6209793cbf3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\ActionsEaseTest">
-      <UniqueIdentifier>{59114e2d-2034-48e4-8a08-38fb2555a99b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\MotionStreakTest">
       <UniqueIdentifier>{31a5d34e-5f46-40e9-9d9c-f4b7bf5ad501}</UniqueIdentifier>
     </Filter>
@@ -173,9 +170,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\RotateWorldTest\RotateWorldTest.cpp">
       <Filter>Classes\RotateWorldTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\ActionsEaseTest\ActionsEaseTest.cpp">
-      <Filter>Classes\ActionsEaseTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\MotionStreakTest\MotionStreakTest.cpp">
       <Filter>Classes\MotionStreakTest</Filter>
@@ -359,9 +353,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\RotateWorldTest\RotateWorldTest.h">
       <Filter>Classes\RotateWorldTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\ActionsEaseTest\ActionsEaseTest.h">
-      <Filter>Classes\ActionsEaseTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MotionStreakTest\MotionStreakTest.h">
       <Filter>Classes\MotionStreakTest</Filter>

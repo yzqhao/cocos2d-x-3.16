@@ -10,7 +10,6 @@ LOCAL_ARM_MODE := arm
 
 LOCAL_SRC_FILES := main.cpp \
 ../../Classes/ActionManagerTest/ActionManagerTest.cpp \
-../../Classes/ActionsEaseTest/ActionsEaseTest.cpp \
 ../../Classes/ActionsProgressTest/ActionsProgressTest.cpp \
 ../../Classes/ActionsTest/ActionsTest.cpp \
 ../../Classes/AppDelegate.cpp \

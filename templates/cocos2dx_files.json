@@ -55,8 +55,6 @@
         "cocos/2d/CCActionCamera.h", 
         "cocos/2d/CCActionCatmullRom.cpp", 
         "cocos/2d/CCActionCatmullRom.h", 
-        "cocos/2d/CCActionEase.cpp", 
-        "cocos/2d/CCActionEase.h", 
         "cocos/2d/CCActionGrid.cpp", 
         "cocos/2d/CCActionGrid.h", 
         "cocos/2d/CCActionGrid3D.cpp", 

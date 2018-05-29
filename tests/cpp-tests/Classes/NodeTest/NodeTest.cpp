@@ -340,20 +340,6 @@ StressTest2::StressTest2()
     
     auto sublayer = Layer::create();
     
-    auto sp1 = Sprite::create(s_pathSister1);
-    sp1->setPosition( Vec2(80, s.height/2) );
-    
-    auto move = MoveBy::create(3, Vec2(350,0));
-    auto move_ease_inout3 = EaseInOut::create(move->clone(), 2.0f);
-    auto move_ease_inout_back3 = move_ease_inout3->reverse();
-    auto seq3 = Sequence::create( move_ease_inout3, move_ease_inout_back3, nullptr);
-    sp1->runAction( RepeatForever::create(seq3) );
-    sublayer->addChild(sp1, 1);
-    
-    auto copy_seq3 = seq3->clone();
-            
-    schedule(CC_CALLBACK_1(StressTest2::shouldNotLeak,this), 6.0f, "should_not_leak_key");
-    
     addChild(sublayer, 0, kTagSprite1);
 }
 

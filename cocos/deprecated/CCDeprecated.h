@@ -35,7 +35,6 @@
 
 #include "2d/CCActionCamera.h"
 #include "2d/CCActionCatmullRom.h"
-#include "2d/CCActionEase.h"
 #include "2d/CCActionGrid.h"
 #include "2d/CCActionGrid3D.h"
 #include "2d/CCActionInstant.h"
@@ -640,28 +639,6 @@ CC_DEPRECATED_ATTRIBUTE typedef TargetedAction CCTargetedAction;
 CC_DEPRECATED_ATTRIBUTE typedef ActionCamera CCActionCamera;
 CC_DEPRECATED_ATTRIBUTE typedef OrbitCamera CCOrbitCamera;
 CC_DEPRECATED_ATTRIBUTE typedef ActionManager CCActionManager;
-CC_DEPRECATED_ATTRIBUTE typedef ActionEase CCActionEase;
-CC_DEPRECATED_ATTRIBUTE typedef EaseRateAction CCEaseRateAction;
-CC_DEPRECATED_ATTRIBUTE typedef EaseIn CCEaseIn;
-CC_DEPRECATED_ATTRIBUTE typedef EaseOut CCEaseOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseInOut CCEaseInOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseExponentialIn CCEaseExponentialIn;
-CC_DEPRECATED_ATTRIBUTE typedef EaseExponentialOut CCEaseExponentialOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseExponentialInOut CCEaseExponentialInOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseSineIn CCEaseSineIn;
-CC_DEPRECATED_ATTRIBUTE typedef EaseSineOut CCEaseSineOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseSineInOut CCEaseSineInOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseElastic CCEaseElastic;
-CC_DEPRECATED_ATTRIBUTE typedef EaseElasticIn CCEaseElasticIn;
-CC_DEPRECATED_ATTRIBUTE typedef EaseElasticOut CCEaseElasticOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseElasticInOut CCEaseElasticInOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseBounce CCEaseBounce;
-CC_DEPRECATED_ATTRIBUTE typedef EaseBounceIn CCEaseBounceIn;
-CC_DEPRECATED_ATTRIBUTE typedef EaseBounceOut CCEaseBounceOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseBounceInOut CCEaseBounceInOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseBackIn CCEaseBackIn;
-CC_DEPRECATED_ATTRIBUTE typedef EaseBackOut CCEaseBackOut;
-CC_DEPRECATED_ATTRIBUTE typedef EaseBackInOut CCEaseBackInOut;
 CC_DEPRECATED_ATTRIBUTE typedef ActionInstant CCActionInstant;
 CC_DEPRECATED_ATTRIBUTE typedef Show CCShow;
 CC_DEPRECATED_ATTRIBUTE typedef Hide CCHide;

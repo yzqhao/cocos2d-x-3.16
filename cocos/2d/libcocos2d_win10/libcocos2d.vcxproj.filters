@@ -123,9 +123,6 @@
     <ClCompile Include="..\CCActionCatmullRom.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCActionEase.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCActionGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -758,9 +755,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCActionCatmullRom.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCActionEase.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCActionGrid.h">
