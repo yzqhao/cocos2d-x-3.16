@@ -26,8 +26,6 @@ EffectTests::EffectTests()
     ADD_TEST_CASE(JumpTiles3DDemo);
     ADD_TEST_CASE(SplitRowsDemo);
     ADD_TEST_CASE(SplitColsDemo);
-    ADD_TEST_CASE(PageTurn3DDemo);
-    ADD_TEST_CASE(PageTurn3DRectDemo);
 }
 
 Shaky3DDemo::Shaky3DDemo()
@@ -292,28 +290,6 @@ cocos2d::ActionInterval* SplitColsDemo::createEffect(float t)
 SplitColsDemo::SplitColsDemo()
 {
     _title = "SplitCols";
-    _subtitle = "";
-}
-
-cocos2d::ActionInterval* PageTurn3DDemo::createEffect(float t)
-{
-    return PageTurn3D::create(t, Size(15,10));
-}
-
-PageTurn3DDemo::PageTurn3DDemo()
-{
-    _title = "PageTurn3D";
-    _subtitle = "";
-}
-
-cocos2d::ActionInterval* PageTurn3DRectDemo::createEffect(float t)
-{
-    return PageTurn3D::create(t, Size(15,10));
-}
-
-PageTurn3DRectDemo::PageTurn3DRectDemo()
-{
-    _title = "PageTurn3D-Rect";
     _subtitle = "";
 }
 

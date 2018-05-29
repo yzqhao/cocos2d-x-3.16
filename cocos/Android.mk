@@ -25,7 +25,6 @@ cocos2d.cpp \
 2d/CCActionInstant.cpp \
 2d/CCActionInterval.cpp \
 2d/CCActionManager.cpp \
-2d/CCActionPageTurn3D.cpp \
 2d/CCActionProgressTimer.cpp \
 2d/CCActionTiledGrid.cpp \
 2d/CCActionTween.cpp \
@@ -71,9 +70,6 @@ cocos2d.cpp \
 2d/CCSpriteBatchNode.cpp \
 2d/CCSpriteFrame.cpp \
 2d/CCSpriteFrameCache.cpp \
-2d/CCTransition.cpp \
-2d/CCTransitionPageTurn.cpp \
-2d/CCTransitionProgress.cpp \
 2d/CCTweenFunction.cpp \
 2d/CCAutoPolygon.cpp \
 3d/CCFrustum.cpp \

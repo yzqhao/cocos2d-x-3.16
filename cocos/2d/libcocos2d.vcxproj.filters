@@ -187,9 +187,6 @@
     <ClCompile Include="CCActionManager.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCActionPageTurn3D.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCActionProgressTimer.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -308,15 +305,6 @@
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCSpriteFrameCache.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTransition.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTransitionPageTurn.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTransitionProgress.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCTweenFunction.cpp">
@@ -825,9 +813,6 @@
     <ClInclude Include="CCActionManager.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="CCActionPageTurn3D.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCActionProgressTimer.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -946,15 +931,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCSpriteFrameCache.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTransition.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTransitionPageTurn.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTransitionProgress.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCTweenFunction.h">

@@ -39,7 +39,6 @@ THE SOFTWARE.
 #include "2d/CCFontFNT.h"
 #include "2d/CCFontAtlasCache.h"
 #include "2d/CCAnimationCache.h"
-#include "2d/CCTransition.h"
 #include "2d/CCFontFreeType.h"
 #include "2d/CCLabelAtlas.h"
 #include "renderer/CCGLProgramCache.h"
@@ -1108,26 +1107,6 @@ void Director::setNextScene()
 {
     _eventDispatcher->dispatchEvent(_beforeSetNextScene);
 
-    bool runningIsTransition = dynamic_cast<TransitionScene*>(_runningScene) != nullptr;
-    bool newIsTransition = dynamic_cast<TransitionScene*>(_nextScene) != nullptr;
-
-    // If it is not a transition, call onExit/cleanup
-     if (! newIsTransition)
-     {
-         if (_runningScene)
-         {
-             _runningScene->onExitTransitionDidStart();
-             _runningScene->onExit();
-         }
- 
-         // issue #709. the root node (scene) should receive the cleanup message too
-         // otherwise it might be leaked.
-         if (_sendCleanupToScene && _runningScene)
-         {
-             _runningScene->cleanup();
-         }
-     }
-
     if (_runningScene)
     {
         _runningScene->release();
@@ -1136,7 +1115,7 @@ void Director::setNextScene()
     _nextScene->retain();
     _nextScene = nullptr;
 
-    if ((! runningIsTransition) && _runningScene)
+    if (_runningScene)
     {
         _runningScene->onEnter();
         _runningScene->onEnterTransitionDidFinish();

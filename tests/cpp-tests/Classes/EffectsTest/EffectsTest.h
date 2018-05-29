@@ -211,23 +211,4 @@ protected:
     virtual cocos2d::ActionInterval* createEffect(float t) override;
 };
 
-class PageTurn3DDemo : public EffectBaseTest
-{
-public:
-    CREATE_FUNC(PageTurn3DDemo);
-    PageTurn3DDemo();
-protected:
-    virtual cocos2d::ActionInterval* createEffect(float t) override;
-};
-
-class PageTurn3DRectDemo : public EffectBaseTest
-{
-public:
-    CREATE_FUNC(PageTurn3DRectDemo);
-    PageTurn3DRectDemo();
-protected:
-    virtual bool isRectEffect() override {return true;}
-    virtual cocos2d::ActionInterval* createEffect(float t) override;
-};
-
 #endif

@@ -23,9 +23,6 @@
     <Filter Include="Classes\BillBoardTest">
       <UniqueIdentifier>{ff2c6e21-2e15-47ba-8e8a-d32db4c4bd7d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\BugsTest">
-      <UniqueIdentifier>{0a14dee6-42c3-4144-a086-30bcae298e81}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\Camera3DTest">
       <UniqueIdentifier>{36c8d894-0028-4d9a-b9c1-3d2b121630da}</UniqueIdentifier>
     </Filter>
@@ -122,9 +119,6 @@
     <Filter Include="Classes\RotateWorldTest">
       <UniqueIdentifier>{53ec3574-9cb7-4e7b-af67-e7f7f9e6a0e6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\SceneTest">
-      <UniqueIdentifier>{3a131364-6664-4c15-a66e-2dbdf2b296b9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\SchedulerTest">
       <UniqueIdentifier>{8d4ad0bf-81d4-4767-ac71-39b5c75b72ba}</UniqueIdentifier>
     </Filter>
@@ -152,9 +146,6 @@
     <Filter Include="Classes\TouchesTest">
       <UniqueIdentifier>{8240d810-c3a1-403c-8d60-f83ca945bf34}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\TransitionsTest">
-      <UniqueIdentifier>{f2357ab1-759e-42fa-87f3-1e33a775c912}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\UITest">
       <UniqueIdentifier>{c84d9ab4-0f15-4a7e-b214-238249f06204}</UniqueIdentifier>
     </Filter>
@@ -166,9 +157,6 @@
     </Filter>
     <Filter Include="Classes\ZwoptexTest">
       <UniqueIdentifier>{878bc3fc-cc88-43cb-85b7-f64c31c527b6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes\BugsTest\Bug-458">
-      <UniqueIdentifier>{ff68b4b0-3bdf-4813-8552-b79af838c8a3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Classes\FontTest">
       <UniqueIdentifier>{ccc87a7c-9e62-4035-a4c5-f7a5880139a8}</UniqueIdentifier>
@@ -284,45 +272,6 @@
     <ClCompile Include="..\Classes\BillBoardTest\BillBoardTest.cpp">
       <Filter>Classes\BillBoardTest</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-350.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-422.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-624.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-886.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-899.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-914.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-1159.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-1174.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-CCDrawNode.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-Child.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\BugsTest.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-458\Bug-458.cpp">
-      <Filter>Classes\BugsTest\Bug-458</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-458\QuestionContainerSprite.cpp">
-      <Filter>Classes\BugsTest\Bug-458</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Camera3DTest\Camera3DTest.cpp">
       <Filter>Classes\Camera3DTest</Filter>
     </ClCompile>
@@ -428,9 +377,6 @@
     <ClCompile Include="..\Classes\RotateWorldTest\RotateWorldTest.cpp">
       <Filter>Classes\RotateWorldTest</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\SceneTest\SceneTest.cpp">
-      <Filter>Classes\SceneTest</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\SchedulerTest\SchedulerTest.cpp">
       <Filter>Classes\SchedulerTest</Filter>
     </ClCompile>
@@ -469,9 +415,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\TouchesTest\TouchesTest.cpp">
       <Filter>Classes\TouchesTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\TransitionsTest\TransitionsTest.cpp">
-      <Filter>Classes\TransitionsTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\UITest\UITest.cpp">
       <Filter>Classes\UITest</Filter>
@@ -567,15 +510,6 @@
     <ClCompile Include="..\Classes\NavMeshTest\NavMeshTest.cpp">
       <Filter>Classes\NavMeshTest</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-12847.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-15594.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BugsTest\Bug-15776.cpp">
-      <Filter>Classes\BugsTest</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\CurlTest\CurlTest.cpp">
       <Filter>Classes\CurlTest</Filter>
     </ClCompile>
@@ -627,45 +561,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\BillBoardTest\BillBoardTest.h">
       <Filter>Classes\BillBoardTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-350.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-422.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-624.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-886.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-899.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-914.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-1159.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-1174.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-CCDrawNode.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-Child.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\BugsTest.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-458\Bug-458.h">
-      <Filter>Classes\BugsTest\Bug-458</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-458\QuestionContainerSprite.h">
-      <Filter>Classes\BugsTest\Bug-458</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Camera3DTest\Camera3DTest.h">
       <Filter>Classes\Camera3DTest</Filter>
@@ -772,9 +667,6 @@
     <ClInclude Include="..\Classes\RotateWorldTest\RotateWorldTest.h">
       <Filter>Classes\RotateWorldTest</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\SceneTest\SceneTest.h">
-      <Filter>Classes\SceneTest</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\SchedulerTest\SchedulerTest.h">
       <Filter>Classes\SchedulerTest</Filter>
     </ClInclude>
@@ -819,9 +711,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TouchesTest\TouchesTest.h">
       <Filter>Classes\TouchesTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\TransitionsTest\TransitionsTest.h">
-      <Filter>Classes\TransitionsTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\UITest\UITest.h">
       <Filter>Classes\UITest</Filter>
@@ -916,15 +805,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\NavMeshTest\NavMeshTest.h">
       <Filter>Classes\NavMeshTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-12847.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-15594.h">
-      <Filter>Classes\BugsTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BugsTest\Bug-15776.h">
-      <Filter>Classes\BugsTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\CurlTest\CurlTest.h">
       <Filter>Classes\CurlTest</Filter>

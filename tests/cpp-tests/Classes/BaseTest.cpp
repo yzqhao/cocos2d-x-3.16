@@ -269,16 +269,9 @@ void TestSuite::addTestCase(const std::string& testName, std::function<Scene*()>
 
 static TestCase* getTestCase(Scene* scene)
 {
-    auto transitionScene = dynamic_cast<TransitionScene*>(scene);
+    auto transitionScene = dynamic_cast<Scene*>(scene);
     TestCase* testCase = nullptr;
-    if (transitionScene)
-    {
-        testCase = dynamic_cast<TestCase*>(transitionScene->getInScene());
-    }
-    else
-    {
-        testCase = dynamic_cast<TestCase*>(scene);
-    }
+    testCase = dynamic_cast<TestCase*>(scene);
 
     return testCase;
 }

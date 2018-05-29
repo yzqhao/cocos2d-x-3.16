@@ -39,7 +39,6 @@
 #include "2d/CCActionGrid.h"
 #include "2d/CCActionGrid3D.h"
 #include "2d/CCActionInstant.h"
-#include "2d/CCActionPageTurn3D.h"
 #include "2d/CCActionProgressTimer.h"
 #include "2d/CCActionTiledGrid.h"
 #include "2d/CCActionTween.h"
@@ -54,14 +53,12 @@
 #include "2d/CCMenu.h"
 #include "2d/CCMenuItem.h"
 #include "2d/CCMotionStreak.h"
+#include "2d/CCRenderTexture.h"
 #include "2d/CCParticleBatchNode.h"
 #include "2d/CCParticleExamples.h"
 #include "2d/CCParticleSystemQuad.h"
 #include "2d/CCProgressTimer.h"
 #include "2d/CCSpriteFrameCache.h"
-#include "2d/CCTransition.h"
-#include "2d/CCTransitionPageTurn.h"
-#include "2d/CCTransitionProgress.h"
 #include "base/CCConfiguration.h"
 #include "base/CCDataVisitor.h"
 #include "base/CCEvent.h"
@@ -693,7 +690,6 @@ CC_DEPRECATED_ATTRIBUTE typedef Shaky3D CCShaky3D;
 CC_DEPRECATED_ATTRIBUTE typedef Liquid CCLiquid;
 CC_DEPRECATED_ATTRIBUTE typedef Waves CCWaves;
 CC_DEPRECATED_ATTRIBUTE typedef Twirl CCTwirl;
-CC_DEPRECATED_ATTRIBUTE typedef PageTurn3D CCPageTurn3D;
 CC_DEPRECATED_ATTRIBUTE typedef ProgressTo CCProgressTo;
 CC_DEPRECATED_ATTRIBUTE typedef ProgressFromTo CCProgressFromTo;
 CC_DEPRECATED_ATTRIBUTE typedef ShakyTiles3D CCShakyTiles3D;
@@ -735,43 +731,6 @@ CC_DEPRECATED_ATTRIBUTE typedef LayerColor CCLayerColor;
 CC_DEPRECATED_ATTRIBUTE typedef LayerGradient CCLayerGradient;
 CC_DEPRECATED_ATTRIBUTE typedef LayerMultiplex CCLayerMultiplex;
 CC_DEPRECATED_ATTRIBUTE typedef Scene CCScene;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionEaseScene CCTransitionEaseScene;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionScene CCTransitionScene;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionSceneOriented CCTransitionSceneOriented;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionRotoZoom CCTransitionRotoZoom;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionJumpZoom CCTransitionJumpZoom;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionMoveInL CCTransitionMoveInL;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionMoveInR CCTransitionMoveInR;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionMoveInT CCTransitionMoveInT;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionMoveInB CCTransitionMoveInB;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionSlideInL CCTransitionSlideInL;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionSlideInR CCTransitionSlideInR;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionSlideInB CCTransitionSlideInB;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionSlideInT CCTransitionSlideInT;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionShrinkGrow CCTransitionShrinkGrow;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionFlipX CCTransitionFlipX;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionFlipY CCTransitionFlipY;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionFlipAngular CCTransitionFlipAngular;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionZoomFlipX CCTransitionZoomFlipX;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionZoomFlipY CCTransitionZoomFlipY;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionZoomFlipAngular CCTransitionZoomFlipAngular;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionFade CCTransitionFade;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionCrossFade CCTransitionCrossFade;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionTurnOffTiles CCTransitionTurnOffTiles;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionSplitCols CCTransitionSplitCols;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionSplitRows CCTransitionSplitRows;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionFadeTR CCTransitionFadeTR;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionFadeBL CCTransitionFadeBL;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionFadeUp CCTransitionFadeUp;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionFadeDown CCTransitionFadeDown;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionPageTurn CCTransitionPageTurn;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionProgress CCTransitionProgress;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionProgressRadialCCW CCTransitionProgressRadialCCW;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionProgressRadialCW CCTransitionProgressRadialCW;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionProgressHorizontal CCTransitionProgressHorizontal;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionProgressVertical CCTransitionProgressVertical;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionProgressInOut CCTransitionProgressInOut;
-CC_DEPRECATED_ATTRIBUTE typedef TransitionProgressOutIn CCTransitionProgressOutIn;
 CC_DEPRECATED_ATTRIBUTE typedef MenuItem CCMenuItem;
 CC_DEPRECATED_ATTRIBUTE typedef MenuItemLabel CCMenuItemLabel;
 CC_DEPRECATED_ATTRIBUTE typedef MenuItemAtlasFont CCMenuItemAtlasFont;
@@ -958,13 +917,6 @@ CC_DEPRECATED_ATTRIBUTE const Image::Format kCCImageFormatPNG = Image::Format::P
 CC_DEPRECATED_ATTRIBUTE const Image::Format kCCImageFormatJPEG = Image::Format::JPG;
 
 CC_DEPRECATED_ATTRIBUTE typedef Image::Format tImageFormat;
-
-CC_DEPRECATED_ATTRIBUTE const TransitionScene::Orientation kCCTransitionOrientationLeftOver = TransitionScene::Orientation::LEFT_OVER;
-CC_DEPRECATED_ATTRIBUTE const TransitionScene::Orientation kCCTransitionOrientationRightOver = TransitionScene::Orientation::RIGHT_OVER;
-CC_DEPRECATED_ATTRIBUTE const TransitionScene::Orientation kCCTransitionOrientationUpOver = TransitionScene::Orientation::UP_OVER;
-CC_DEPRECATED_ATTRIBUTE const TransitionScene::Orientation kCCTransitionOrientationDownOver = TransitionScene::Orientation::DOWN_OVER;
-
-CC_DEPRECATED_ATTRIBUTE typedef TransitionScene::Orientation tOrientation;
 
 CC_DEPRECATED_ATTRIBUTE const int kCCPrioritySystem = Scheduler::PRIORITY_SYSTEM;
 CC_DEPRECATED_ATTRIBUTE const int kCCPriorityNonSystemMin = Scheduler::PRIORITY_NON_SYSTEM_MIN;

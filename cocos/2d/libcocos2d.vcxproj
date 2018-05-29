@@ -349,7 +349,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCActionInstant.cpp" />
     <ClCompile Include="CCActionInterval.cpp" />
     <ClCompile Include="CCActionManager.cpp" />
-    <ClCompile Include="CCActionPageTurn3D.cpp" />
     <ClCompile Include="CCActionProgressTimer.cpp" />
     <ClCompile Include="CCActionTiledGrid.cpp" />
     <ClCompile Include="CCActionTween.cpp" />
@@ -395,9 +394,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCSpriteBatchNode.cpp" />
     <ClCompile Include="CCSpriteFrame.cpp" />
     <ClCompile Include="CCSpriteFrameCache.cpp" />
-    <ClCompile Include="CCTransition.cpp" />
-    <ClCompile Include="CCTransitionPageTurn.cpp" />
-    <ClCompile Include="CCTransitionProgress.cpp" />
     <ClCompile Include="CCTweenFunction.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -601,7 +597,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCActionInstant.h" />
     <ClInclude Include="CCActionInterval.h" />
     <ClInclude Include="CCActionManager.h" />
-    <ClInclude Include="CCActionPageTurn3D.h" />
     <ClInclude Include="CCActionProgressTimer.h" />
     <ClInclude Include="CCActionTiledGrid.h" />
     <ClInclude Include="CCActionTween.h" />
@@ -647,9 +642,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCSpriteBatchNode.h" />
     <ClInclude Include="CCSpriteFrame.h" />
     <ClInclude Include="CCSpriteFrameCache.h" />
-    <ClInclude Include="CCTransition.h" />
-    <ClInclude Include="CCTransitionPageTurn.h" />
-    <ClInclude Include="CCTransitionProgress.h" />
     <ClInclude Include="CCTweenFunction.h" />
   </ItemGroup>
   <ItemGroup>

@@ -24,7 +24,6 @@ public:
         addTest("Actions - Basic", [](){ return new (std::nothrow) ActionsTests(); });
         addTest("Actions - Ease", [](){return new (std::nothrow) ActionsEaseTests(); });
         addTest("Actions - Progress", [](){return new (std::nothrow) ActionsProgressTests(); });
-        addTest("Bugs", []() { return new BugsTests(); });
         addTest("Click and Move", [](){return new ClickAndMoveTest(); });
         addTest("Configuration", []() { return new ConfigurationTests(); });
         addTest("Console", []() { return new ConsoleTests(); });
@@ -54,7 +53,6 @@ public:
         addTest("Node: MotionStreak", [](){return new MotionStreakTests(); });
         addTest("Node: Node", [](){return new CocosNodeTests(); });
         addTest("Node: RenderTexture", [](){return new RenderTextureTests(); });
-        addTest("Node: Scene", [](){return new SceneTests(); });
         addTest("Node: Sprite3D", [](){  return new Sprite3DTests(); });
         addTest("Node: SpritePolygon", [](){return new (std::nothrow) SpritePolygonTest(); });
         addTest("Node: Terrain", [](){  return new TerrainTests(); });
@@ -70,7 +68,6 @@ public:
         addTest("TextureCache", []() { return new TextureCacheTests(); });
         addTest("TexturePacker Encryption", []() { return new TextureAtlasEncryptionTests(); });
         addTest("Touches", [](){return new TouchesTests(); });
-        addTest("Transitions", [](){return new TransitionsTests(); });
         addTest("URL Open Test", []() { return new OpenURLTests(); });
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
         addTest("Vibrate", []() { return new VibrateTests(); });
@@ -218,7 +215,7 @@ void TestController::traverseTestSuite(TestSuite* testSuite)
         
         Scene* testScene = nullptr;
         TestCase* testCase = nullptr;
-        TransitionScene* transitionScene = nullptr;
+        Scene* transitionScene = nullptr;
 
         if (_stopAutoTest) break;
 
@@ -237,17 +234,9 @@ void TestController::traverseTestSuite(TestSuite* testSuite)
 
             if (scene)
             {
-                transitionScene = dynamic_cast<TransitionScene*>(scene);
-                if (transitionScene)
-                {
-                    testCase = (TestCase*)transitionScene->getInScene();
-                    testCaseDuration = transitionScene->getDuration() + 0.5f;
-                }
-                else
-                {
-                    testCase = (TestCase*)scene;
-                    testCaseDuration = testCase->getDuration();
-                }
+                testCase = (TestCase*)scene;
+                testCaseDuration = testCase->getDuration();
+    
                 testSuite->_currTestIndex++;
                 testCase->setTestSuite(testSuite);
                 testCase->setTestCaseName(testName);
@@ -281,32 +270,6 @@ void TestController::traverseTestSuite(TestSuite* testSuite)
 
         //Wait for test completed.
         _sleepCondition.wait_for(*_sleepUniqueLock, std::chrono::milliseconds(int(1000 * testCaseDuration)));
-
-        if (transitionScene == nullptr)
-        {
-            waitTime = 0.0f;
-            while (!_stopAutoTest && testCase->getRunTime() < testCaseDuration)
-            {
-                _sleepCondition.wait_for(*_sleepUniqueLock, std::chrono::milliseconds(50));
-                if (!_isRunInBackground)
-                {
-                    waitTime += 0.05f;
-                }
-
-                if (waitTime > TEST_TIME_OUT)
-                {
-                    logEx("%sRun test %s time out", LOG_TAG, testName.c_str());
-                    _stopAutoTest = true;
-                    break;
-                }
-            }
-
-            if (!_stopAutoTest)
-            {
-                //Check the result of test.
-                checkTest(testCase);
-            }
-        }
     }
 
     if (!_stopAutoTest)

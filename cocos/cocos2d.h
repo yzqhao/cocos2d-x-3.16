@@ -103,7 +103,6 @@ THE SOFTWARE.
 #include "2d/CCActionInstant.h"
 #include "2d/CCActionInterval.h"
 #include "2d/CCActionManager.h"
-#include "2d/CCActionPageTurn3D.h"
 #include "2d/CCActionProgressTimer.h"
 #include "2d/CCActionTiledGrid.h"
 #include "2d/CCActionTween.h"
@@ -134,9 +133,6 @@ THE SOFTWARE.
 #include "2d/CCProtectedNode.h"
 #include "2d/CCRenderTexture.h"
 #include "2d/CCScene.h"
-#include "2d/CCTransition.h"
-#include "2d/CCTransitionPageTurn.h"
-#include "2d/CCTransitionProgress.h"
 
 // 2d utils
 #include "2d/CCCamera.h"
