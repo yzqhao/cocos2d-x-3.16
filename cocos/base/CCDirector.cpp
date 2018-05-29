@@ -1107,6 +1107,19 @@ void Director::setNextScene()
 {
     _eventDispatcher->dispatchEvent(_beforeSetNextScene);
 
+	if (_runningScene)
+	{
+		_runningScene->onExitTransitionDidStart();
+		_runningScene->onExit();
+	}
+
+	// issue #709. the root node (scene) should receive the cleanup message too
+	// otherwise it might be leaked.
+	if (_sendCleanupToScene && _runningScene)
+	{
+		_runningScene->cleanup();
+	}
+
     if (_runningScene)
     {
         _runningScene->release();
