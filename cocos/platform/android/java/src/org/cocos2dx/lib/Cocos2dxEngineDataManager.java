@@ -126,7 +126,7 @@ public class Cocos2dxEngineDataManager {
                 glSurfaceView.queueEvent(new Runnable() {
                     @Override
                     public void run() {
-                        nativeOnChangeSpecialEffectLevel(level);
+                        // nativeOnChangeSpecialEffectLevel(level);
                     }
                 });
             }
@@ -256,6 +256,5 @@ public class Cocos2dxEngineDataManager {
     private native static void nativeOnChangeContinuousFrameLostConfig(int cycle, int continuousFrameLostThreshold);
     private native static void nativeOnChangeLowFpsConfig(int cycle, float lowFpsThreshold);
     private native static void nativeOnChangeExpectedFps(int fps);
-    private native static void nativeOnChangeSpecialEffectLevel(int level);
     private native static void nativeOnChangeMuteEnabled(boolean enabled);
 }

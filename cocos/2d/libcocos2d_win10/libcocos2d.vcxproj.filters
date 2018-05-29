@@ -236,18 +236,6 @@
     <ClCompile Include="..\CCNodeGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCParticleBatchNode.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCParticleExamples.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCParticleSystem.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCParticleSystemQuad.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCProgressTimer.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -884,18 +872,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCNodeGrid.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCParticleBatchNode.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCParticleExamples.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCParticleSystem.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCParticleSystemQuad.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCProgressTimer.h">

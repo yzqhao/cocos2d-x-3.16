@@ -19,14 +19,6 @@ IntervalTest::IntervalTest()
     _time0 = _time1 = _time2 = _time3 = _time4 = 0.0f;
 
     auto s = Director::getInstance()->getWinSize();
-    // sun
-    auto sun = ParticleSun::create();
-    sun->setTexture(Director::getInstance()->getTextureCache()->addImage("Images/fire.png"));
-    sun->setPosition(VisibleRect::rightTop().x-32,VisibleRect::rightTop().y-32);
-
-    sun->setTotalParticles(130);
-    sun->setLife(0.6f);
-    this->addChild(sun);
 
     // timers
     _label0 = Label::createWithBMFont("fonts/bitmapFontTest4.fnt", "0");

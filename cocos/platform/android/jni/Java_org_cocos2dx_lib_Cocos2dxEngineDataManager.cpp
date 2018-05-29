@@ -30,7 +30,6 @@ THE SOFTWARE.
 #include "base/CCEventDispatcher.h"
 #include "base/CCEventType.h"
 #include "renderer/CCRenderer.h"
-#include "2d/CCParticleSystem.h"
 #include "2d/CCActionManager.h"
 #include <android/log.h>
 #include <limits.h>
@@ -901,23 +900,6 @@ void setAnimationIntervalBySceneChange(float interval)
 
 namespace cocos2d {
 
-int EngineDataManager::getTotalParticleCount()
-{
-    auto& particleSystems = ParticleSystem::getAllParticleSystems();
-    if (particleSystems.empty())
-    {
-        return 0;
-    }
-
-    int count = 0;
-    for (auto&& system : particleSystems)
-    {
-        count += system->getTotalParticles();
-    }
-
-    return count;
-}
-
 // calculates frame lost event
 // static
 void EngineDataManager::calculateFrameLost()
@@ -1029,14 +1011,12 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
 
     Director* director = Director::getInstance();
     int totalNodeCount = Node::getAttachedNodeCount();
-    int totalParticleCount = getTotalParticleCount();
     int totalActionCount = director->getActionManager()->getNumberOfRunningActions();
 
     {
         float cpuLevelNode = toCpuLevelPerFactor(totalNodeCount, cbCpuLevelNode);
-        float cpuLevelParticle = toCpuLevelPerFactor(totalParticleCount, cbCpuLevelParticle);
         float cpuLevelAction = toCpuLevelPerFactor(totalActionCount, cbCpuLevelAction);
-        float fCpuLevel = cpuLevelNode + cpuLevelParticle + cpuLevelAction;
+        float fCpuLevel = cpuLevelNode + cpuLevelAction;
         float highestCpuLevel = CARRAY_SIZE(_cpuLevelArr) * 1.0f;
         fCpuLevel = fCpuLevel > highestCpuLevel ? highestCpuLevel : fCpuLevel;
         cpuLevel = std::floor(fCpuLevel);
@@ -1044,8 +1024,8 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
 #if EDM_DEBUG
         if (_printCpuGpuLevelCounter > _printCpuGpuLevelThreshold)
         {
-            LOGD("DEBUG: cpu level: %d, node: (%f, %d), particle: (%f, %d), action: (%f, %d)", 
-                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelParticle, totalParticleCount, cpuLevelAction, totalActionCount);
+            LOGD("DEBUG: cpu level: %d, node: (%f, %d), action: (%f, %d)", 
+                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelAction, totalActionCount);
         }
 #endif
         if (_oldCpuLevel < 0
@@ -1053,8 +1033,8 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
             || cpuLevel > _oldCpuLevel
             )
         {
-            LOGD("NOTIFY: cpu level: %d, node: (%f, %d), particle: (%f, %d), action: (%f, %d)", 
-                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelParticle, totalParticleCount, cpuLevelAction, totalActionCount);
+            LOGD("NOTIFY: cpu level: %d, node: (%f, %d), action: (%f, %d)", 
+                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelAction, totalActionCount);
             levelChangeReason |= LEVEL_CHANGE_REASON_CPU;
             _oldCpuLevel = cpuLevel;
         }
@@ -1602,22 +1582,6 @@ void EngineDataManager::nativeOnChangeExpectedFps(JNIEnv* env, jobject thiz, jin
     }
 }
 
-void EngineDataManager::nativeOnChangeSpecialEffectLevel(JNIEnv* env, jobject thiz, jint level)
-{
-    if (!_isSupported)
-        return;
-
-    LOGD("nativeOnChangeSpecialEffectLevel, set level: %d", level);
-
-    if (level < 0 || level >= CARRAY_SIZE(_particleLevelArr))
-    {
-        LOGE("Pass a wrong level value: %d, only 0 ~ %d is supported!", level, CARRAY_SIZE(_particleLevelArr) - 1);
-        return;
-    }
-
-    ParticleSystem::setTotalParticleCountFactor(_particleLevelArr[level]);
-}
-
 void EngineDataManager::nativeOnChangeMuteEnabled(JNIEnv* env, jobject thiz, jboolean isMuteEnabled)
 {
     if (!_isSupported)
@@ -1655,11 +1619,6 @@ JNIEXPORT void JNICALL JNI_FUNC_PREFIX(nativeOnChangeLowFpsConfig)(JNIEnv* env, 
 JNIEXPORT void JNICALL JNI_FUNC_PREFIX(nativeOnChangeExpectedFps)(JNIEnv* env, jobject thiz, jint fps)
 {
     EngineDataManager::nativeOnChangeExpectedFps(env, thiz, fps);
-}
-
-JNIEXPORT void JNICALL JNI_FUNC_PREFIX(nativeOnChangeSpecialEffectLevel)(JNIEnv* env, jobject thiz, jint level)
-{
-    EngineDataManager::nativeOnChangeSpecialEffectLevel(env, thiz, level);
 }
 
 JNIEXPORT void JNICALL JNI_FUNC_PREFIX(nativeOnChangeMuteEnabled)(JNIEnv* env, jobject thiz, jboolean enabled)

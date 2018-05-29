@@ -788,10 +788,6 @@ void SchedulerTimeScale::onEnter()
     grossini->runAction(Speed::create(action, 0.5f));
     tamara->runAction(Speed::create(action2, 1.5f));
     kathia->runAction(Speed::create(action3, 1.0f));
-
-    auto emitter = ParticleFireworks::create();
-    emitter->setTexture( Director::getInstance()->getTextureCache()->addImage(s_stars1) );
-    addChild(emitter);
 }
 
 void SchedulerTimeScale::onExit()

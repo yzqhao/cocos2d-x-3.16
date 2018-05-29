@@ -315,24 +315,6 @@ StressTest1::StressTest1()
 void StressTest1::shouldNotCrash(float dt)
 {
     unschedule("should_not_crash_key");
-
-    auto s = Director::getInstance()->getWinSize();
-
-    // if the node has timers, it crashes
-    auto explosion = ParticleSun::create();
-    explosion->setTexture(Director::getInstance()->getTextureCache()->addImage("Images/fire.png"));
-    
-    // if it doesn't, it works Ok.
-//    auto explosion = [Sprite create:@"grossinis_sister2.png");
-
-    explosion->setPosition( Vec2(s.width/2, s.height/2) );
-    
-    runAction( Sequence::create(
-                            RotateBy::create(2, 360),
-                            CallFuncN::create(CC_CALLBACK_1(StressTest1::removeMe, this)),
-                            nullptr) );
-    
-    addChild(explosion);
 }
 
 // remove
@@ -367,15 +349,8 @@ StressTest2::StressTest2()
     auto seq3 = Sequence::create( move_ease_inout3, move_ease_inout_back3, nullptr);
     sp1->runAction( RepeatForever::create(seq3) );
     sublayer->addChild(sp1, 1);
-
-    auto fire = ParticleFire::create();
-    fire->setTexture(Director::getInstance()->getTextureCache()->addImage("Images/fire.png"));
-    fire->setPosition( Vec2(80, s.height/2-50) );
     
     auto copy_seq3 = seq3->clone();
-
-    fire->runAction( RepeatForever::create(copy_seq3) );
-    sublayer->addChild(fire, 2);
             
     schedule(CC_CALLBACK_1(StressTest2::shouldNotLeak,this), 6.0f, "should_not_leak_key");
     

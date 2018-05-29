@@ -54,9 +54,6 @@
 #include "2d/CCMenuItem.h"
 #include "2d/CCMotionStreak.h"
 #include "2d/CCRenderTexture.h"
-#include "2d/CCParticleBatchNode.h"
-#include "2d/CCParticleExamples.h"
-#include "2d/CCParticleSystemQuad.h"
 #include "2d/CCProgressTimer.h"
 #include "2d/CCSpriteFrameCache.h"
 #include "base/CCConfiguration.h"
@@ -743,20 +740,6 @@ CC_DEPRECATED_ATTRIBUTE typedef ClippingNode CCClippingNode;
 CC_DEPRECATED_ATTRIBUTE typedef MotionStreak CCMotionStreak;
 CC_DEPRECATED_ATTRIBUTE typedef ProgressTimer CCProgressTimer;
 CC_DEPRECATED_ATTRIBUTE typedef RenderTexture CCRenderTexture;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleBatchNode CCParticleBatchNode;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleSystem CCParticleSystem;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleSystemQuad CCParticleSystemQuad;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleFire CCParticleFire;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleFireworks CCParticleFireworks;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleSun CCParticleSun;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleGalaxy CCParticleGalaxy;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleFlower CCParticleFlower;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleMeteor CCParticleMeteor;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleSpiral CCParticleSpiral;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleExplosion CCParticleExplosion;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleSmoke CCParticleSmoke;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleSnow CCParticleSnow;
-CC_DEPRECATED_ATTRIBUTE typedef ParticleRain CCParticleRain;
 CC_DEPRECATED_ATTRIBUTE typedef FileUtils CCFileUtils;
 CC_DEPRECATED_ATTRIBUTE typedef Application CCApplication;
 CC_DEPRECATED_ATTRIBUTE typedef GLProgramCache CCShaderCache;
@@ -880,25 +863,6 @@ CC_DEPRECATED_ATTRIBUTE const Texture2D::PixelFormat kCCTexture2DPixelFormat_PVR
 CC_DEPRECATED_ATTRIBUTE const Texture2D::PixelFormat kCCTexture2DPixelFormat_Default = Texture2D::PixelFormat::DEFAULT;
 
 CC_DEPRECATED_ATTRIBUTE typedef Texture2D::PixelFormat CCTexture2DPixelFormat;
-
-
-CC_DEPRECATED_ATTRIBUTE const int kCCParticleDurationInfinity = ParticleSystem::DURATION_INFINITY;
-CC_DEPRECATED_ATTRIBUTE const int kCCParticleStartSizeEqualToEndSize = ParticleSystem::START_SIZE_EQUAL_TO_END_SIZE;
-CC_DEPRECATED_ATTRIBUTE const int kCCParticleStartRadiusEqualToEndRadius = ParticleSystem::START_RADIUS_EQUAL_TO_END_RADIUS;
-
-CC_DEPRECATED_ATTRIBUTE const int kParticleDurationInfinity = ParticleSystem::DURATION_INFINITY;
-CC_DEPRECATED_ATTRIBUTE const int kParticleStartSizeEqualToEndSize = ParticleSystem::START_SIZE_EQUAL_TO_END_SIZE;
-CC_DEPRECATED_ATTRIBUTE const int kParticleStartRadiusEqualToEndRadius = ParticleSystem::START_RADIUS_EQUAL_TO_END_RADIUS;
-
-CC_DEPRECATED_ATTRIBUTE const ParticleSystem::Mode kCCParticleModeGravity = ParticleSystem::Mode::GRAVITY;
-CC_DEPRECATED_ATTRIBUTE const ParticleSystem::Mode kCCParticleModeRadius = ParticleSystem::Mode::RADIUS;
-CC_DEPRECATED_ATTRIBUTE const int kCCParticleDefaultCapacity = kParticleDefaultCapacity;
-
-CC_DEPRECATED_ATTRIBUTE const ParticleSystem::PositionType kCCPositionTypeFree =  ParticleSystem::PositionType::FREE;
-CC_DEPRECATED_ATTRIBUTE const ParticleSystem::PositionType kCCPositionTypeRelative =  ParticleSystem::PositionType::RELATIVE;
-CC_DEPRECATED_ATTRIBUTE const ParticleSystem::PositionType kCCPositionTypeGrouped =  ParticleSystem::PositionType::GROUPED;
-
-CC_DEPRECATED_ATTRIBUTE typedef ParticleSystem::PositionType tPositionType;
 
 #define kCCLabelAutomaticWidth  kLabelAutomaticWidth
 

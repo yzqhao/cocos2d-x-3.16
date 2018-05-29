@@ -86,10 +86,6 @@ CameraRotationTest::CameraRotationTest()
     l1->setColor(Color3B::WHITE);
     l1->setScale(3);
     bill1->addChild(l1);
-
-    auto p1 = ParticleSystemQuad::create("Particles/SmallSun.plist");
-    p1->setPosition(30,80);
-    bill1->addChild(p1);
     
     bill2 = BillBoard::create("Images/Icon.png");
     bill2->setPosition3D(Vec3(-50, -10, 10));
@@ -102,10 +98,6 @@ CameraRotationTest::CameraRotationTest()
     l2->setColor(Color3B::WHITE);
     l2->setScale(3);
     bill2->addChild(l2);
-    
-    auto p2 = ParticleSystemQuad::create("Particles/SmallSun.plist");
-    p2->setPosition(30,80);
-    bill2->addChild(p2);
 
     //3D models
     auto model = Sprite3D::create("Sprite3DTest/boss1.obj");

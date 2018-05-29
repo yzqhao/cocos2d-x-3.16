@@ -71,15 +71,12 @@ private:
     static void onEnterForeground(EventCustom* event);
     static void onEnterBackground(EventCustom* event);
 
-    static int getTotalParticleCount();
-
 // For JNI function use, should be public
 public:
     static void nativeOnQueryFps(JNIEnv* env, jobject thiz, jintArray arrExpectedFps, jintArray arrRealFps);
     static void nativeOnChangeContinuousFrameLostConfig(JNIEnv* env, jobject thiz, jint continueFrameLostCycle, jint continueFrameLostThreshold);
     static void nativeOnChangeLowFpsConfig(JNIEnv* env, jobject thiz, jint lowFpsCycle, jfloat lowFpsThreshold);
     static void nativeOnChangeExpectedFps(JNIEnv* env, jobject thiz, jint fps);
-    static void nativeOnChangeSpecialEffectLevel(JNIEnv* env, jobject thiz, jint level);
     static void nativeOnChangeMuteEnabled(JNIEnv* env, jobject thiz, jboolean enabled);
 };
 

@@ -377,10 +377,6 @@
     <ClCompile Include="..\CCMotionStreak.cpp" />
     <ClCompile Include="..\CCNode.cpp" />
     <ClCompile Include="..\CCNodeGrid.cpp" />
-    <ClCompile Include="..\CCParticleBatchNode.cpp" />
-    <ClCompile Include="..\CCParticleExamples.cpp" />
-    <ClCompile Include="..\CCParticleSystem.cpp" />
-    <ClCompile Include="..\CCParticleSystemQuad.cpp" />
     <ClCompile Include="..\CCProgressTimer.cpp" />
     <ClCompile Include="..\CCProtectedNode.cpp" />
     <ClCompile Include="..\CCRenderTexture.cpp" />
@@ -667,10 +663,6 @@
     <ClInclude Include="..\CCMotionStreak.h" />
     <ClInclude Include="..\CCNode.h" />
     <ClInclude Include="..\CCNodeGrid.h" />
-    <ClInclude Include="..\CCParticleBatchNode.h" />
-    <ClInclude Include="..\CCParticleExamples.h" />
-    <ClInclude Include="..\CCParticleSystem.h" />
-    <ClInclude Include="..\CCParticleSystemQuad.h" />
     <ClInclude Include="..\CCProgressTimer.h" />
     <ClInclude Include="..\CCProtectedNode.h" />
     <ClInclude Include="..\CCRenderTexture.h" />
