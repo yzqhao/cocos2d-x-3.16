@@ -207,7 +207,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClCompile Include="..\Classes\TextureCacheTest\TextureCacheTest.cpp" />
     <ClCompile Include="..\Classes\ExtensionsTest\ExtensionsTest.cpp" />
     <ClCompile Include="..\Classes\NodeTest\NodeTest.cpp" />
-    <ClCompile Include="..\Classes\ActionsProgressTest\ActionsProgressTest.cpp" />
     <ClCompile Include="..\Classes\MultiTouchTest\MultiTouchTest.cpp" />
     <ClCompile Include="..\Classes\SpriteFrameCacheTest\SpriteFrameCacheTest.cpp" />
   </ItemGroup>
@@ -270,7 +269,6 @@ xcopy "$(OutDir)..\*.dll" "$(OutDir)" /D /Y</Command>
     <ClInclude Include="..\Classes\TextureCacheTest\TextureCacheTest.h" />
     <ClInclude Include="..\Classes\ExtensionsTest\ExtensionsTest.h" />
     <ClInclude Include="..\Classes\NodeTest\NodeTest.h" />
-    <ClInclude Include="..\Classes\ActionsProgressTest\ActionsProgressTest.h" />
     <ClInclude Include="..\Classes\MultiTouchTest\MultiTouchTest.h" />
     <ClInclude Include="..\Classes\SpriteFrameCacheTest\SpriteFrameCacheTest.h" />
   </ItemGroup>

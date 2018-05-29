@@ -342,7 +342,6 @@
     <ClCompile Include="..\CCActionInstant.cpp" />
     <ClCompile Include="..\CCActionInterval.cpp" />
     <ClCompile Include="..\CCActionManager.cpp" />
-    <ClCompile Include="..\CCActionProgressTimer.cpp" />
     <ClCompile Include="..\CCActionTiledGrid.cpp" />
     <ClCompile Include="..\CCActionTween.cpp" />
     <ClCompile Include="..\CCAnimation.cpp" />
@@ -629,7 +628,6 @@
     <ClInclude Include="..\CCActionInstant.h" />
     <ClInclude Include="..\CCActionInterval.h" />
     <ClInclude Include="..\CCActionManager.h" />
-    <ClInclude Include="..\CCActionProgressTimer.h" />
     <ClInclude Include="..\CCActionTiledGrid.h" />
     <ClInclude Include="..\CCActionTween.h" />
     <ClInclude Include="..\CCAnimation.h" />

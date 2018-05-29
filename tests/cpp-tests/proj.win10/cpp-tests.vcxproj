@@ -240,7 +240,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\cocos\platform\win8.1-universal\pch.h" />
     <ClInclude Include="..\Classes\ActionManagerTest\ActionManagerTest.h" />
-    <ClInclude Include="..\Classes\ActionsProgressTest\ActionsProgressTest.h" />
     <ClInclude Include="..\Classes\ActionsTest\ActionsTest.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\BaseTest.h" />
@@ -368,7 +367,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\Classes\ActionManagerTest\ActionManagerTest.cpp" />
-    <ClCompile Include="..\Classes\ActionsProgressTest\ActionsProgressTest.cpp" />
     <ClCompile Include="..\Classes\ActionsTest\ActionsTest.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\BaseTest.cpp" />

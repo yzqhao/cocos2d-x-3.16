@@ -184,9 +184,6 @@
     <ClCompile Include="CCActionManager.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCActionProgressTimer.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCActionTiledGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -793,9 +790,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCActionManager.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCActionProgressTimer.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCActionTiledGrid.h">

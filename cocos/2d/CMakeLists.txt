@@ -15,7 +15,6 @@ set(COCOS_2D_SRC
   2d/CCActionInstant.cpp
   2d/CCActionInterval.cpp
   2d/CCActionManager.cpp
-  2d/CCActionProgressTimer.cpp
   2d/CCActionTiledGrid.cpp
   2d/CCActionTween.cpp
   2d/CCAnimationCache.cpp

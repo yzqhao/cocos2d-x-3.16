@@ -11,9 +11,6 @@
     <Filter Include="Classes\ActionManagerTest">
       <UniqueIdentifier>{81d00d76-81ec-4274-8e14-0066561a59f3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\ActionsProgressTest">
-      <UniqueIdentifier>{ec79851d-4b4e-4cca-a60a-db3bd19e9df0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\ActionsTest">
       <UniqueIdentifier>{c71ed4ef-b44c-4efa-a557-96d792c4082f}</UniqueIdentifier>
     </Filter>
@@ -256,9 +253,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\ActionManagerTest\ActionManagerTest.cpp">
       <Filter>Classes\ActionManagerTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\ActionsProgressTest\ActionsProgressTest.cpp">
-      <Filter>Classes\ActionsProgressTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\ActionsTest\ActionsTest.cpp">
       <Filter>Classes\ActionsTest</Filter>
@@ -543,9 +537,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\ActionManagerTest\ActionManagerTest.h">
       <Filter>Classes\ActionManagerTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\ActionsProgressTest\ActionsProgressTest.h">
-      <Filter>Classes\ActionsProgressTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\ActionsTest\ActionsTest.h">
       <Filter>Classes\ActionsTest</Filter>

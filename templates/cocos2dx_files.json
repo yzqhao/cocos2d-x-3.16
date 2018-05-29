@@ -65,8 +65,6 @@
         "cocos/2d/CCActionInterval.h", 
         "cocos/2d/CCActionManager.cpp", 
         "cocos/2d/CCActionManager.h", 
-        "cocos/2d/CCActionProgressTimer.cpp", 
-        "cocos/2d/CCActionProgressTimer.h", 
         "cocos/2d/CCActionTiledGrid.cpp", 
         "cocos/2d/CCActionTiledGrid.h", 
         "cocos/2d/CCActionTween.cpp", 

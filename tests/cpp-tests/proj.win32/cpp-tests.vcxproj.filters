@@ -79,9 +79,6 @@
     <Filter Include="Classes\NodeTest">
       <UniqueIdentifier>{74b8b965-89eb-43a5-9996-856a9e4b6326}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes\ActionsProgressTest">
-      <UniqueIdentifier>{d7f1c4af-37e8-441a-bbe0-dc63f64a0403}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes\MultiTouchTest">
       <UniqueIdentifier>{b3be049f-74ff-44a5-8895-0766e4807671}</UniqueIdentifier>
     </Filter>
@@ -236,9 +233,6 @@
     </ClCompile>
     <ClCompile Include="..\Classes\NodeTest\NodeTest.cpp">
       <Filter>Classes\NodeTest</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\ActionsProgressTest\ActionsProgressTest.cpp">
-      <Filter>Classes\ActionsProgressTest</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\MultiTouchTest\MultiTouchTest.cpp">
       <Filter>Classes\MultiTouchTest</Filter>
@@ -419,9 +413,6 @@
     </ClInclude>
     <ClInclude Include="..\Classes\NodeTest\NodeTest.h">
       <Filter>Classes\NodeTest</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\ActionsProgressTest\ActionsProgressTest.h">
-      <Filter>Classes\ActionsProgressTest</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MultiTouchTest\MultiTouchTest.h">
       <Filter>Classes\MultiTouchTest</Filter>

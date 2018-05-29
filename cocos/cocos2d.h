@@ -102,7 +102,6 @@ THE SOFTWARE.
 #include "2d/CCActionInstant.h"
 #include "2d/CCActionInterval.h"
 #include "2d/CCActionManager.h"
-#include "2d/CCActionProgressTimer.h"
 #include "2d/CCActionTiledGrid.h"
 #include "2d/CCActionTween.h"
 #include "2d/CCTweenFunction.h"

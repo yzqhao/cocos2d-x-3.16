@@ -38,7 +38,6 @@
 #include "2d/CCActionGrid.h"
 #include "2d/CCActionGrid3D.h"
 #include "2d/CCActionInstant.h"
-#include "2d/CCActionProgressTimer.h"
 #include "2d/CCActionTiledGrid.h"
 #include "2d/CCActionTween.h"
 #include "2d/CCAnimationCache.h"
@@ -664,8 +663,6 @@ CC_DEPRECATED_ATTRIBUTE typedef Shaky3D CCShaky3D;
 CC_DEPRECATED_ATTRIBUTE typedef Liquid CCLiquid;
 CC_DEPRECATED_ATTRIBUTE typedef Waves CCWaves;
 CC_DEPRECATED_ATTRIBUTE typedef Twirl CCTwirl;
-CC_DEPRECATED_ATTRIBUTE typedef ProgressTo CCProgressTo;
-CC_DEPRECATED_ATTRIBUTE typedef ProgressFromTo CCProgressFromTo;
 CC_DEPRECATED_ATTRIBUTE typedef ShakyTiles3D CCShakyTiles3D;
 CC_DEPRECATED_ATTRIBUTE typedef ShatteredTiles3D CCShatteredTiles3D;
 CC_DEPRECATED_ATTRIBUTE typedef ShuffleTiles CCShuffleTiles;
