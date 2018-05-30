@@ -28,7 +28,6 @@
 
 #include "2d/CCLayer.h"
 #include "base/CCEventListenerTouch.h"
-#include "2d/CCActionTween.h"
 #include "extensions/ExtensionMacros.h"
 #include "extensions/ExtensionExport.h"
 
@@ -66,7 +65,7 @@ public:
  * ScrollView support for cocos2d-x.
  * It provides scroll view functionalities to cocos2d projects natively.
  */
-class CC_EX_DLL  ScrollView : public Layer, public ActionTweenDelegate
+class CC_EX_DLL  ScrollView : public Layer
 {
 public:
     enum class Direction
@@ -134,13 +133,6 @@ public:
     void stopAnimatedContentOffset();
 
     void setZoomScale(float s);
-    /**
-     * Sets a new scale and does that for a predefined duration.
-     *
-     * @param s         The new scale vale
-     * @param animated  If true, scaling is animated
-     */
-    void setZoomScale(float s, bool animated);
 
     float getZoomScale();
 
@@ -261,10 +253,6 @@ public:
     virtual void removeAllChildren() override;
     virtual void removeAllChildrenWithCleanup(bool cleanup) override;
     virtual void removeChild(Node* child, bool cleanup = true) override;
-    /**
-     * CCActionTweenDelegate
-     */
-    void updateTweenAction(float value, const std::string& key) override;
 
     bool hasVisibleParents() const;
 protected:

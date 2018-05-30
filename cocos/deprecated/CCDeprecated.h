@@ -39,7 +39,6 @@
 #include "2d/CCActionGrid3D.h"
 #include "2d/CCActionInstant.h"
 #include "2d/CCActionTiledGrid.h"
-#include "2d/CCActionTween.h"
 #include "2d/CCAnimationCache.h"
 #include "2d/CCAtlasNode.h"
 #include "2d/CCClippingNode.h"
@@ -675,7 +674,6 @@ CC_DEPRECATED_ATTRIBUTE typedef WavesTiles3D CCWavesTiles3D;
 CC_DEPRECATED_ATTRIBUTE typedef JumpTiles3D CCJumpTiles3D;
 CC_DEPRECATED_ATTRIBUTE typedef SplitRows CCSplitRows;
 CC_DEPRECATED_ATTRIBUTE typedef SplitCols CCSplitCols;
-CC_DEPRECATED_ATTRIBUTE typedef ActionTween CCActionTween;
 CC_DEPRECATED_ATTRIBUTE typedef CardinalSplineTo CCCardinalSplineTo;
 CC_DEPRECATED_ATTRIBUTE typedef CardinalSplineBy CCCardinalSplineBy;
 CC_DEPRECATED_ATTRIBUTE typedef CatmullRomTo CCCatmullRomTo;

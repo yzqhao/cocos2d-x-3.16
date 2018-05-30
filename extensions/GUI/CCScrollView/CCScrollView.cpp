@@ -27,7 +27,6 @@
 #include "platform/CCDevice.h"
 #include "2d/CCActionInstant.h"
 #include "2d/CCActionInterval.h"
-#include "2d/CCActionTween.h"
 #include "base/CCDirector.h"
 #include "base/CCEventDispatcher.h"
 #include "renderer/CCRenderer.h"
@@ -299,40 +298,6 @@ void ScrollView::setZoomScale(float s)
 float ScrollView::getZoomScale()
 {
     return _container->getScale();
-}
-
-void ScrollView::setZoomScale(float s, bool animated)
-{
-    if (animated)
-    {
-        this->setZoomScaleInDuration(s, BOUNCE_DURATION);
-    }
-    else
-    {
-        this->setZoomScale(s);
-    }
-}
-
-void ScrollView::setZoomScaleInDuration(float s, float dt)
-{
-    if (dt > 0)
-    {
-        if (_container->getScale() != s)
-        {
-            ActionTween *scaleAction;
-            scaleAction = ActionTween::create(dt, "zoomScale", _container->getScale(), s);
-            this->runAction(scaleAction);
-        }
-    }
-    else
-    {
-        this->setZoomScale(s);
-    }
-}
-
-void ScrollView::updateTweenAction(float value, const std::string& /*key*/)
-{
-    this->setZoomScale(value);
 }
 
 void ScrollView::setViewSize(Size size)

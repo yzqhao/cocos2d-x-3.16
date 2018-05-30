@@ -683,9 +683,6 @@ protected:
     Texture2D*       _texture;              /// Texture2D object that is used to render the sprite
     SpriteFrame*     _spriteFrame;
     TrianglesCommand _trianglesCommand;     ///
-#if CC_SPRITE_DEBUG_DRAW
-    DrawNode *_debugDrawNode;
-#endif //CC_SPRITE_DEBUG_DRAW
     //
     // Shared data
     //

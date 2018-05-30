@@ -67,8 +67,6 @@
         "cocos/2d/CCActionManager.h", 
         "cocos/2d/CCActionTiledGrid.cpp", 
         "cocos/2d/CCActionTiledGrid.h", 
-        "cocos/2d/CCActionTween.cpp", 
-        "cocos/2d/CCActionTween.h", 
         "cocos/2d/CCAnimation.cpp", 
         "cocos/2d/CCAnimation.h", 
         "cocos/2d/CCAnimationCache.cpp", 

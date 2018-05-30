@@ -176,56 +176,6 @@ THE SOFTWARE.
 #define CC_USE_LA88_LABELS 1
 #endif
 
-/** @def CC_SPRITE_DEBUG_DRAW
- * If enabled, all subclasses of Sprite will draw a bounding box.
- * Useful for debugging purposes only. It is recommended to leave it disabled.
- * To enable set it to a value different than 0. Disabled by default:
- * 0 -- disabled
- * 1 -- draw bounding box
- * 2 -- draw texture box
- */
-#ifndef CC_SPRITE_DEBUG_DRAW
-#define CC_SPRITE_DEBUG_DRAW 0
-#endif
-
-/** @def CC_LABEL_DEBUG_DRAW
-* If enabled, all subclasses of Label will draw a bounding box.
-* Useful for debugging purposes only. It is recommended to leave it disabled.
-* To enable set it to a value different than 0. Disabled by default:
-* 0 -- disabled
-* 1 -- draw bounding box
-*/
-#ifndef CC_LABEL_DEBUG_DRAW
-#define CC_LABEL_DEBUG_DRAW 0
-#endif
-
-/** @def CC_SPRITEBATCHNODE_DEBUG_DRAW
- * If enabled, all subclasses of Sprite that are rendered using an SpriteBatchNode draw a bounding box.
- * Useful for debugging purposes only. It is recommended to leave it disabled.
- * To enable set it to a value different than 0. Disabled by default.
- */
-#ifndef CC_SPRITEBATCHNODE_DEBUG_DRAW
-#define CC_SPRITEBATCHNODE_DEBUG_DRAW 0
-#endif
-
-/** @def CC_LABELBMFONT_DEBUG_DRAW
- * If enabled, all subclasses of LabelBMFont will draw a bounding box.
- * Useful for debugging purposes only. It is recommended to leave it disabled.
- * To enable set it to a value different than 0. Disabled by default.
- */
-#ifndef CC_LABELBMFONT_DEBUG_DRAW
-#define CC_LABELBMFONT_DEBUG_DRAW 0
-#endif
-
-/** @def CC_LABELATLAS_DEBUG_DRAW
- * If enabled, all subclasses of LabeltAtlas will draw a bounding box
- * Useful for debugging purposes only. It is recommended to leave it disabled.
- * To enable set it to a value different than 0. Disabled by default.
- */
-#ifndef CC_LABELATLAS_DEBUG_DRAW
-#define CC_LABELATLAS_DEBUG_DRAW 0
-#endif
-
 /** @def CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS
  * If enabled (in conjunction with assertion macros) will verify on Node destruction that the node being destroyed has no event
  * listeners still associated with it in the event dispatcher. This can be used to track down problems where the event dispatch
@@ -244,35 +194,6 @@ THE SOFTWARE.
  */
 #ifndef CC_ENABLE_PROFILERS
 #define CC_ENABLE_PROFILERS 0
-#endif
-
-/** Enable Lua engine debug log. */
-#ifndef CC_LUA_ENGINE_DEBUG
-#define CC_LUA_ENGINE_DEBUG 0
-#endif
-
-/** Use physics integration API. */
-#ifndef CC_USE_PHYSICS
-//#define CC_USE_PHYSICS 1
-#endif
-
-/** Use 3d physics integration API. */
-#ifndef CC_USE_3D_PHYSICS
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_MAC || CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-//#define CC_USE_3D_PHYSICS 1
-#endif
-#endif
-
-#if (CC_USE_3D_PHYSICS)
-/** Use bullet physics engine. */
-#ifndef CC_ENABLE_BULLET_INTEGRATION
-//#define CC_ENABLE_BULLET_INTEGRATION 1
-#endif
-#endif
-
-/** Use 3D navigation API */
-#ifndef CC_USE_NAVMESH
-//#define CC_USE_NAVMESH 1
 #endif
 
 /** Use culling or not. */
@@ -317,23 +238,6 @@ THE SOFTWARE.
 #endif
 #endif // CC_USE_WIC
 
-/** Enable Script binding. */
-#ifndef CC_ENABLE_SCRIPT_BINDING
-//#define CC_ENABLE_SCRIPT_BINDING 1
-#endif
-
-/** When CC_ENABLE_SCRIPT_BINDING and CC_ENABLE_GC_FOR_NATIVE_OBJECTS are both 1
- then the Garbage collector will release the native objects, only when the JS/Lua objects
- are collected.
- The benefit is that users don't need to retain/release the JS/Lua objects manually.
-
- By default this behavior is disabled by default
- */
-#ifdef CC_ENABLE_SCRIPT_BINDING
-  #ifndef CC_ENABLE_GC_FOR_NATIVE_OBJECTS
-  //#define CC_ENABLE_GC_FOR_NATIVE_OBJECTS 0
-  #endif
-#endif
 
 /** @def CC_CONSTRUCTOR_ACCESS
  * Indicate the init functions access modifier. If value equals to protected, then these functions are protected.

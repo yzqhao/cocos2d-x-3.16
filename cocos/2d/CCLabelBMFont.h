@@ -37,10 +37,6 @@ Use any of these editors to generate BMFonts:
 /// @cond DO_NOT_SHOW
 
 #include "2d/CCLabel.h"
-#if CC_LABELBMFONT_DEBUG_DRAW
-#include "renderer/CCCustomCommand.h"
-#include "2d/CCDrawNode.h"
-#endif
 
 NS_CC_BEGIN
 
@@ -132,14 +128,8 @@ public:
     virtual Rect getBoundingBox() const override;
 
     virtual std::string getDescription() const override;
-#if CC_LABELBMFONT_DEBUG_DRAW
-    virtual void draw(Renderer *renderer, const Mat4 &transform, uint32_t flags) override;
-#endif
 
 private:
-#if CC_LABELBMFONT_DEBUG_DRAW
-    DrawNode *_debugDrawNode;
-#endif
     
     // name of fntFile
     std::string _fntFile;

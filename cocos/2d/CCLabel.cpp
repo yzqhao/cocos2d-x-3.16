@@ -390,11 +390,6 @@ Label::Label(TextHAlignment hAlignment /* = TextHAlignment::LEFT */,
     _hAlignment = hAlignment;
     _vAlignment = vAlignment;
 
-#if CC_LABEL_DEBUG_DRAW
-    _debugDrawNode = DrawNode::create();
-    addChild(_debugDrawNode);
-#endif
-
     _purgeTextureListener = EventListenerCustom::create(FontAtlas::CMD_PURGE_FONTATLAS, [this](EventCustom* event){
         if (_fontAtlas && _currentLabelType == LabelType::TTF && event->getUserData() == _fontAtlas)
         {
@@ -1448,18 +1443,6 @@ void Label::updateContent()
     if(updateFinished){
         _contentDirty = false;
     }
-
-#if CC_LABEL_DEBUG_DRAW
-    _debugDrawNode->clear();
-    Vec2 vertices[4] =
-    {
-        Vec2::ZERO,
-        Vec2(_contentSize.width, 0),
-        Vec2(_contentSize.width, _contentSize.height),
-        Vec2(0, _contentSize.height)
-    };
-    _debugDrawNode->drawPoly(vertices, 4, true, Color4F::WHITE);
-#endif
 }
 
 void Label::setBMFontSize(float fontSize)

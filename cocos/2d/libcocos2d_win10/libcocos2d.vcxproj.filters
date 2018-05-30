@@ -141,9 +141,6 @@
     <ClCompile Include="..\CCActionTiledGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCActionTween.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCAnimation.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -770,9 +767,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCActionTiledGrid.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCActionTween.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCAnimation.h">

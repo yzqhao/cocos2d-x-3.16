@@ -25,7 +25,6 @@ cocos2d.cpp \
 2d/CCActionInterval.cpp \
 2d/CCActionManager.cpp \
 2d/CCActionTiledGrid.cpp \
-2d/CCActionTween.cpp \
 2d/CCAnimation.cpp \
 2d/CCAnimationCache.cpp \
 2d/CCAtlasNode.cpp \

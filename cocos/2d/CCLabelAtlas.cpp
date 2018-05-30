@@ -31,10 +31,6 @@ THE SOFTWARE.
 #include "base/ccUTF8.h"
 #include "renderer/CCTextureCache.h"
 
-#if CC_LABELATLAS_DEBUG_DRAW
-#include "renderer/CCRenderer.h"
-#endif
-
 NS_CC_BEGIN
 
 //CCLabelAtlas - Creation & Init
@@ -249,25 +245,6 @@ void LabelAtlas::updateColor()
         }
     }
 }
-
-//CCLabelAtlas - draw
-#if CC_LABELATLAS_DEBUG_DRAW
-void LabelAtlas::draw(Renderer *renderer, const Mat4 &transform, uint32_t flags)
-{
-    AtlasNode::draw(renderer, transform, _transformUpdated);
-
-    _debugDrawNode->clear();
-    auto size = getContentSize();
-    Vec2 vertices[4]=
-    {
-        Vec2::ZERO,
-        Vec2(size.width, 0),
-        Vec2(size.width, size.height),
-        Vec2(0, size.height)
-    };
-    _debugDrawNode->drawPoly(vertices, 4, true, Color4F(1.0, 1.0, 1.0, 1.0));
-}
-#endif
 
 std::string LabelAtlas::getDescription() const
 {

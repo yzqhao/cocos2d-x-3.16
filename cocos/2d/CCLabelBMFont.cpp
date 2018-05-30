@@ -35,11 +35,6 @@ http://www.angelcode.com/products/bmfont/ (Free, Windows only)
 #include "base/ccUTF8.h"
 #include "2d/CCSprite.h"
 
-#if CC_LABELBMFONT_DEBUG_DRAW
-#include "renderer/CCRenderer.h"
-#include "base/CCDirector.h"
-#endif
-
 using namespace std;
 
 #if defined(__GNUC__) && ((__GNUC__ >= 4) || ((__GNUC__ == 3) && (__GNUC_MINOR__ >= 1)))
@@ -98,11 +93,6 @@ LabelBMFont::LabelBMFont()
     this->addChild(_label);
     this->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
     _cascadeOpacityEnabled = true;
-    
-#if CC_LABELBMFONT_DEBUG_DRAW
-    _debugDrawNode = DrawNode::create();
-    addChild(_debugDrawNode);
-#endif
 }
 
 LabelBMFont::~LabelBMFont()
@@ -210,23 +200,6 @@ Rect LabelBMFont::getBoundingBox() const
 {
     return Node::getBoundingBox();
 }
-#if CC_LABELBMFONT_DEBUG_DRAW
-void LabelBMFont::draw(Renderer *renderer, const Mat4 &transform, uint32_t flags)
-{
-    Node::draw(renderer, transform, _transformUpdated);
-
-    _debugDrawNode->clear();
-    auto size = getContentSize();
-    Vec2 vertices[4]=
-    {
-        Vec2::ZERO,
-        Vec2(size.width, 0),
-        Vec2(size.width, size.height),
-        Vec2(0, size.height)
-    };
-    _debugDrawNode->drawPoly(vertices, 4, true, Color4F(1.0, 1.0, 1.0, 1.0));
-}
-#endif
 
 #if defined(__GNUC__) && ((__GNUC__ >= 4) || ((__GNUC__ == 3) && (__GNUC_MINOR__ >= 1)))
 #pragma GCC diagnostic warning "-Wdeprecated-declarations"

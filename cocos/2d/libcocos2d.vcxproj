@@ -349,7 +349,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCActionInterval.cpp" />
     <ClCompile Include="CCActionManager.cpp" />
     <ClCompile Include="CCActionTiledGrid.cpp" />
-    <ClCompile Include="CCActionTween.cpp" />
     <ClCompile Include="CCAnimation.cpp" />
     <ClCompile Include="CCAnimationCache.cpp" />
     <ClCompile Include="CCAtlasNode.cpp" />
@@ -591,7 +590,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCActionInterval.h" />
     <ClInclude Include="CCActionManager.h" />
     <ClInclude Include="CCActionTiledGrid.h" />
-    <ClInclude Include="CCActionTween.h" />
     <ClInclude Include="CCAnimation.h" />
     <ClInclude Include="CCAnimationCache.h" />
     <ClInclude Include="CCAtlasNode.h" />

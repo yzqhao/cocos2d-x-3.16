@@ -767,10 +767,6 @@ protected:
     EventListenerCustom* _purgeTextureListener;
     EventListenerCustom* _resetTextureListener;
 
-#if CC_LABEL_DEBUG_DRAW
-    DrawNode* _debugDrawNode;
-#endif
-
     bool _enableWrap;
     float _bmFontSize;
     float _bmfontScale;
