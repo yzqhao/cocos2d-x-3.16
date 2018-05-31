@@ -2,73 +2,8 @@
 
 USING_NS_CC;
 
-TerrainTests::TerrainTests()
-{
-    ADD_TEST_CASE(TerrainSimple);
-    ADD_TEST_CASE(TerrainWalkThru);
-    ADD_TEST_CASE(TerrainWithLightMap);
-}
-
 Vec3 camera_offset(0, 45, 60);
 #define PLAYER_HEIGHT 0
-
-TerrainSimple::TerrainSimple()
-{
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-
-    //use custom camera
-    _camera = Camera::createPerspective(60,visibleSize.width/visibleSize.height,0.1f,800);
-    _camera->setCameraFlag(CameraFlag::USER1);
-    _camera->setPosition3D(Vec3(-1,1.6f,4));
-    addChild(_camera);
-
-    Terrain::DetailMap r("TerrainTest/dirt.jpg"),g("TerrainTest/Grass2.jpg"),b("TerrainTest/road.jpg"),a("TerrainTest/GreenSkin.jpg");
-
-    Terrain::TerrainData data("TerrainTest/heightmap16.jpg","TerrainTest/alphamap.png",r,g,b,a);
-
-    _terrain = Terrain::create(data,Terrain::CrackFixedType::SKIRT);
-    _terrain->setLODDistance(3.2f,6.4f,9.6f);
-    _terrain->setMaxDetailMapAmount(4);
-    addChild(_terrain);
-    _terrain->setCameraMask(2);
-    _terrain->setDrawWire(false);
-    auto listener = EventListenerTouchAllAtOnce::create();
-    listener->onTouchesMoved = CC_CALLBACK_2(TerrainSimple::onTouchesMoved, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
-}
-
-std::string TerrainSimple::title() const 
-{
-    return "Terrain with skirt";
-}
-
-std::string TerrainSimple::subtitle() const 
-{
-    return "Drag to walkThru";
-}
-
-void TerrainSimple::onTouchesMoved(const std::vector<cocos2d::Touch*>& touches, cocos2d::Event* event)
-{
-    float delta = Director::getInstance()->getDeltaTime();
-    auto touch = touches[0];
-    auto location = touch->getLocation();
-    auto PreviousLocation = touch->getPreviousLocation();
-    Point newPos = PreviousLocation - location;
-
-    Vec3 cameraDir;
-    Vec3 cameraRightDir;
-    _camera->getNodeToWorldTransform().getForwardVector(&cameraDir);
-    cameraDir.normalize();
-    cameraDir.y=0;
-    _camera->getNodeToWorldTransform().getRightVector(&cameraRightDir);
-    cameraRightDir.normalize();
-    cameraRightDir.y=0;
-    Vec3 cameraPos=  _camera->getPosition3D();
-    cameraPos+=cameraDir*newPos.y*0.5*delta;  
-    cameraPos+=cameraRightDir*newPos.x*0.5*delta;
-    _camera->setPosition3D(cameraPos);   
-}
-
 
 std::string TerrainWalkThru::title() const 
 {

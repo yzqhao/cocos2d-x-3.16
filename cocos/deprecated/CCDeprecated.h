@@ -44,11 +44,7 @@
 #include "2d/CCClippingNode.h"
 #include "2d/CCGrid.h"
 #include "2d/CCLabelAtlas.h"
-#include "2d/CCLabelBMFont.h"
-#include "2d/CCLabelTTF.h"
 #include "2d/CCLayer.h"
-#include "2d/CCMenu.h"
-#include "2d/CCMenuItem.h"
 #include "2d/CCMotionStreak.h"
 #include "2d/CCRenderTexture.h"
 #include "2d/CCProgressTimer.h"
@@ -690,9 +686,7 @@ CC_DEPRECATED_ATTRIBUTE typedef GridBase CCGridBase;
 CC_DEPRECATED_ATTRIBUTE typedef Grid3D CCGrid3D;
 CC_DEPRECATED_ATTRIBUTE typedef TiledGrid3D CCTiledGrid3D;
 CC_DEPRECATED_ATTRIBUTE typedef Sprite CCSprite;
-#define CCLabelTTF LabelTTF
 CC_DEPRECATED_ATTRIBUTE typedef SpriteBatchNode CCSpriteBatchNode;
-#define CCLabelBMFont LabelBMFont
 CC_DEPRECATED_ATTRIBUTE typedef Layer CCLayer;
 //CC_DEPRECATED_ATTRIBUTE typedef KeypadDelegate CCKeypadDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef Layer CCLayerRGBA;
@@ -700,14 +694,6 @@ CC_DEPRECATED_ATTRIBUTE typedef LayerColor CCLayerColor;
 CC_DEPRECATED_ATTRIBUTE typedef LayerGradient CCLayerGradient;
 CC_DEPRECATED_ATTRIBUTE typedef LayerMultiplex CCLayerMultiplex;
 CC_DEPRECATED_ATTRIBUTE typedef Scene CCScene;
-CC_DEPRECATED_ATTRIBUTE typedef MenuItem CCMenuItem;
-CC_DEPRECATED_ATTRIBUTE typedef MenuItemLabel CCMenuItemLabel;
-CC_DEPRECATED_ATTRIBUTE typedef MenuItemAtlasFont CCMenuItemAtlasFont;
-CC_DEPRECATED_ATTRIBUTE typedef MenuItemFont CCMenuItemFont;
-CC_DEPRECATED_ATTRIBUTE typedef MenuItemSprite CCMenuItemSprite;
-CC_DEPRECATED_ATTRIBUTE typedef MenuItemImage CCMenuItemImage;
-CC_DEPRECATED_ATTRIBUTE typedef MenuItemToggle CCMenuItemToggle;
-CC_DEPRECATED_ATTRIBUTE typedef Menu CCMenu;
 CC_DEPRECATED_ATTRIBUTE typedef ClippingNode CCClippingNode;
 CC_DEPRECATED_ATTRIBUTE typedef MotionStreak CCMotionStreak;
 CC_DEPRECATED_ATTRIBUTE typedef ProgressTimer CCProgressTimer;
@@ -837,12 +823,6 @@ CC_DEPRECATED_ATTRIBUTE const Texture2D::PixelFormat kCCTexture2DPixelFormat_Def
 CC_DEPRECATED_ATTRIBUTE typedef Texture2D::PixelFormat CCTexture2DPixelFormat;
 
 #define kCCLabelAutomaticWidth  kLabelAutomaticWidth
-
-
-CC_DEPRECATED_ATTRIBUTE const Menu::State kCCMenuStateWaiting = Menu::State::WAITING;
-CC_DEPRECATED_ATTRIBUTE const Menu::State kCCMenuStateTrackingTouch = Menu::State::TRACKING_TOUCH;
-
-CC_DEPRECATED_ATTRIBUTE typedef Menu::State tMenuState;
 
 CC_DEPRECATED_ATTRIBUTE const Touch::DispatchMode kCCTouchesOneByOne = Touch::DispatchMode::ONE_BY_ONE;
 CC_DEPRECATED_ATTRIBUTE const Touch::DispatchMode kCCTouchesAllAtOnce = Touch::DispatchMode::ALL_AT_ONCE;

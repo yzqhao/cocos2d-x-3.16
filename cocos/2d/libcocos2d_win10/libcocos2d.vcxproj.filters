@@ -170,9 +170,6 @@
     <ClCompile Include="..\CCFontAtlas.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCFontAtlasCache.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCFontCharMap.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -191,31 +188,13 @@
     <ClCompile Include="..\CCGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCLabel.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCLabelAtlas.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCLabelBMFont.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCLabelTextFormatter.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCLabelTTF.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="..\CCLayer.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="..\CCLight.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCMenu.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\CCMenuItem.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="..\CCMotionStreak.cpp">
@@ -799,9 +778,6 @@
     <ClInclude Include="..\CCFontAtlas.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="..\CCFontAtlasCache.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="..\CCFontCharMap.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -820,31 +796,13 @@
     <ClInclude Include="..\CCGrid.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="..\CCLabel.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="..\CCLabelAtlas.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCLabelBMFont.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCLabelTextFormatter.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCLabelTTF.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCLayer.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCLight.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCMenu.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCMenuItem.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCMotionStreak.h">

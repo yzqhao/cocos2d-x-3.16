@@ -45,7 +45,6 @@ public:
     CREATE_FUNC(TestFacebookUser);
 private:
     bool isLogin;
-    cocos2d::Label* callbackInfo;
 };
 
 #endif // __TEST_FACEBOOK_USER_SCENE_H__

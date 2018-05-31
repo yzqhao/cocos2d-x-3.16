@@ -85,42 +85,13 @@ bool TestShare::init()
     Size backSize = pBackItem->getContentSize();
     pBackItem->setPosition(posBR + Point(- backSize.width / 2, backSize.height / 2));
 
-    // create menu, it's an autorelease object
-    Menu* pMenu = Menu::create(pBackItem, NULL);
-    pMenu->setPosition( Point::ZERO );
-    this->addChild(pMenu, 1);
-
-    Point posStep = Point(150, -150);
-    Point beginPos = posTL + (posStep * 0.5f);
-    int line = 0;
-    int row = 0;
-    for (int i = 0; i < sizeof(s_EventMenuItem)/sizeof(s_EventMenuItem[0]); i++) {
-    	MenuItemImage* pMenuItem = MenuItemImage::create(s_EventMenuItem[i].id.c_str(), s_EventMenuItem[i].id.c_str(), CC_CALLBACK_1(TestShare::eventMenuCallback, this));
-        pMenu->addChild(pMenuItem, 0, s_EventMenuItem[i].tag);
-
-        Point pos = beginPos + Point(posStep.x * row, posStep.y * line);
-        Size itemSize = pMenuItem->getContentSize();
-        if ((pos.x + itemSize.width / 2) > posBR.x)
-		{
-			line += 1;
-			row = 0;
-			pos = beginPos + Point(posStep.x * row, posStep.y * line);
-		}
-        row += 1;
-        pMenuItem->setPosition(pos);
-    }
 
     return true;
 }
 
 void TestShare::eventMenuCallback(Ref* pSender)
 {
-	MenuItemLabel* pMenuItem = (MenuItemLabel*)pSender;
-    TShareInfo pInfo;
-    pInfo["SharedText"] = "Share message : HelloShare!";
-    // pInfo["SharedImagePath"] = "Full/path/to/image";
-    MyShareManager::MyShareMode mode = (MyShareManager::MyShareMode) (pMenuItem->getTag() - TAG_SHARE_BY_TWWITER + 1);
-    MyShareManager::getInstance()->shareByMode(pInfo, mode);
+
 }
 
 void TestShare::menuBackCallback(Ref* pSender)

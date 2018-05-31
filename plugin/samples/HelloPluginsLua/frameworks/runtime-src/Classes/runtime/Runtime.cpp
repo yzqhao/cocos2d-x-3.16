@@ -666,7 +666,6 @@ void FileServer::loopResponse()
 class ConnectWaitLayer: public Layer
 {
 private:
-    Label* _labelUploadFile;
     string _transferTip;
 public:
     ConnectWaitLayer()
@@ -716,42 +715,16 @@ public:
         Sequence * arrayAction = Sequence::create(arrayOfActions);
         shineSprite->runAction(RepeatForever::create(Sequence::create(arrayOfActions)));
         addChild(shineSprite,9998);
-
-        string strip = getIPAddress();
-        char szIPAddress[512]={0};
-        sprintf(szIPAddress, "IP: %s",strip.c_str());
-        auto IPlabel = Label::createWithSystemFont(szIPAddress,"",72);
-        IPlabel->setAnchorPoint(Vec2(0,0));
-        int spaceSizex = 72;
-        int spaceSizey = 200;
-        IPlabel->setPosition( Point(VisibleRect::leftTop().x+spaceSizex, VisibleRect::top().y -spaceSizey) );
-        addChild(IPlabel, 9001);
-
+        
         _transferTip = "waiting for file transfer ...";
         if (CC_PLATFORM_WIN32 == CC_TARGET_PLATFORM || CC_PLATFORM_MAC == CC_TARGET_PLATFORM){
             _transferTip = "waiting for debugger to connect ...";
         }
 
-        char szVersion[1024]={0};
-        sprintf(szVersion,"runtimeVersion:%s \ncocos2dVersion:%s",getRuntimeVersion(),cocos2dVersion());
-        Label* verLable = Label::createWithSystemFont(szVersion,"",24);
-        verLable->setAnchorPoint(Vec2(0,0));
-        int width = verLable->getBoundingBox().size.width;
-        int height = verLable->getBoundingBox().size.height;
-        verLable->setPosition( Point(VisibleRect::right().x-width, VisibleRect::rightBottom().y) );
-        verLable->setAlignment(TextHAlignment::LEFT);
-        addChild(verLable, 9002);
-        _labelUploadFile = Label::createWithSystemFont(_transferTip,"",36);
-        _labelUploadFile->setAnchorPoint(Vec2(0,0));
-        _labelUploadFile->setPosition( Point(VisibleRect::leftTop().x+spaceSizex, IPlabel->getPositionY()-spaceSizex) );
-        _labelUploadFile->setAlignment(TextHAlignment::LEFT);
-        addChild(_labelUploadFile, 9003);
-
         if (!ConfigParser::getInstance()->isLanscape())
         {
             if (playSprite)   playSprite->setPosition(portraitX,portraitY);
             if (shineSprite)  shineSprite->setPosition(portraitX,portraitY);
-            _labelUploadFile->setAlignment(TextHAlignment::LEFT);
         }
 
         auto listener = EventListenerTouchOneByOne::create();

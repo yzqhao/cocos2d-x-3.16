@@ -25,7 +25,6 @@ set(COCOS_2D_SRC
   2d/CCClippingRectangleNode.cpp
   2d/CCDrawingPrimitives.cpp
   2d/CCDrawNode.cpp
-  2d/CCFontAtlasCache.cpp
   2d/CCFontAtlas.cpp
   2d/CCFontCharMap.cpp
   2d/CCFont.cpp
@@ -35,14 +34,8 @@ set(COCOS_2D_SRC
   2d/CCGrabber.cpp
   2d/CCGrid.cpp
   2d/CCLabelAtlas.cpp
-  2d/CCLabelBMFont.cpp
-  2d/CCLabel.cpp
-  2d/CCLabelTextFormatter.cpp
-  2d/CCLabelTTF.cpp
   2d/CCLayer.cpp
   2d/CCLight.cpp
-  2d/CCMenu.cpp
-  2d/CCMenuItem.cpp
   2d/CCMotionStreak.cpp
   2d/CCNode.cpp
   2d/CCNodeGrid.cpp

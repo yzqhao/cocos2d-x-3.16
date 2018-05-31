@@ -26,13 +26,12 @@
 #include "AppDelegate.h"
 
 #include "cocos2d.h"
-#include "controller.h"
 #include "extensions/cocos-ext.h"
+#include "Scene3DTest/Scene3DTest.h"
 
 USING_NS_CC;
 
 AppDelegate::AppDelegate()
-: _testController(nullptr)
 {
 }
 
@@ -105,7 +104,8 @@ bool AppDelegate::applicationDidFinishLaunching()
     auto console = director->getConsole();
     console->listenOnTCP(5678);
 
-    _testController = TestController::getInstance();
+	auto _director = Director::getInstance();
+	_director->replaceScene(Scene3DTestScene::create());
 
     // To enable built-in VR, use this line.
 //    auto vrImpl = new VRGenericRenderer;
@@ -117,21 +117,11 @@ bool AppDelegate::applicationDidFinishLaunching()
 // This function will be called when the app is inactive. Note, when receiving a phone call it is invoked.
 void AppDelegate::applicationDidEnterBackground()
 {
-    if (_testController)
-    {
-        _testController->onEnterBackground();
-    }
-    
     Director::getInstance()->stopAnimation();
 }
 
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground()
 {
-    if (_testController)
-    {
-        _testController->onEnterForeground();
-    }
-    
     Director::getInstance()->startAnimation();
 }

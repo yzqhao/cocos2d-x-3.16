@@ -70,48 +70,6 @@ bool TestSocial::init()
     Size backSize = pBackItem->getContentSize();
     pBackItem->setPosition(posBR + Point(- backSize.width / 2, backSize.height / 2));
 
-    // create menu, it's an autorelease object
-    Menu* pMenu = Menu::create(pBackItem, NULL);
-    pMenu->setPosition( Point::ZERO );
-
-    Label* label1 = Label::create("Submit Score", "Arial", 28);
-    MenuItemLabel* pItemSubmit = MenuItemLabel::create(label1, CC_CALLBACK_1(TestSocial::testSubmit, this));
-    pItemSubmit->setAnchorPoint(Point(0.5f, 0));
-    pMenu->addChild(pItemSubmit, 0);
-    pItemSubmit->setPosition(posMid + Point(-140, -60));
-
-    Label* label2 = Label::create("Unlock Achievement", "Arial", 28);
-    MenuItemLabel* pItemUnlock = MenuItemLabel::create(label2, CC_CALLBACK_1(TestSocial::testUnlock, this));
-    pItemUnlock->setAnchorPoint(Point(0.5f, 0));
-    pMenu->addChild(pItemUnlock, 0);
-    pItemUnlock->setPosition(posMid + Point(140, -60));
-
-    Label* label3 = Label::create("Show Leaderboard", "Arial", 28);
-    MenuItemLabel* pItemLeader = MenuItemLabel::create(label3, CC_CALLBACK_1(TestSocial::testLeaderboard, this));
-    pItemLeader->setAnchorPoint(Point(0.5f, 0));
-    pMenu->addChild(pItemLeader, 0);
-    pItemLeader->setPosition(posMid + Point(-140, -120));
-
-    Label* label4 = Label::create("Show Achievement", "Arial", 28);
-    MenuItemLabel* pItemAchi = MenuItemLabel::create(label4, CC_CALLBACK_1(TestSocial::testAchievement, this));
-    pItemAchi->setAnchorPoint(Point(0.5f, 0));
-    pMenu->addChild(pItemAchi, 0);
-    pItemAchi->setPosition(posMid + Point(140, -120));
-
-    // create optional menu
-    // cases item
-    _caseItem = MenuItemToggle::createWithCallback(NULL,
-                                                MenuItemFont::create( s_aTestCases[0].c_str() ),
-                                                NULL );
-    int caseLen = sizeof(s_aTestCases) / sizeof(std::string);
-    for (int i = 1; i < caseLen; ++i)
-    {
-        _caseItem->getSubItems().pushBack( MenuItemFont::create( s_aTestCases[i].c_str() ) );
-    }
-    _caseItem->setPosition(posMid + Point(0, 120));
-    pMenu->addChild(_caseItem);
-
-    this->addChild(pMenu, 1);
 
     return true;
 }

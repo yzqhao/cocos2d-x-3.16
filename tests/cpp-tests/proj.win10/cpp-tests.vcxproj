@@ -242,7 +242,6 @@
     <ClInclude Include="..\Classes\ActionManagerTest\ActionManagerTest.h" />
     <ClInclude Include="..\Classes\ActionsTest\ActionsTest.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
-    <ClInclude Include="..\Classes\BaseTest.h" />
     <ClInclude Include="..\Classes\BillBoardTest\BillBoardTest.h" />
     <ClInclude Include="..\Classes\Camera3DTest\Camera3DTest.h" />
     <ClInclude Include="..\Classes\ChipmunkTest\ChipmunkTest.h" />
@@ -251,7 +250,6 @@
     <ClInclude Include="..\Classes\CocosStudio3DTest\CocosStudio3DTest.h" />
     <ClInclude Include="..\Classes\ConfigurationTest\ConfigurationTest.h" />
     <ClInclude Include="..\Classes\ConsoleTest\ConsoleTest.h" />
-    <ClInclude Include="..\Classes\controller.h" />
     <ClInclude Include="..\Classes\CurlTest\CurlTest.h" />
     <ClInclude Include="..\Classes\CurrentLanguageTest\CurrentLanguageTest.h" />
     <ClInclude Include="..\Classes\DataVisitorTest\DataVisitorTest.h" />
@@ -262,7 +260,6 @@
     <ClInclude Include="..\Classes\ExtensionsTest\TableViewTest\CustomTableViewCell.h" />
     <ClInclude Include="..\Classes\ExtensionsTest\TableViewTest\TableViewTestScene.h" />
     <ClInclude Include="..\Classes\FileUtilsTest\FileUtilsTest.h" />
-    <ClInclude Include="..\Classes\FontTest\FontTest.h" />
     <ClInclude Include="..\Classes\InputTest\MouseTest.h" />
     <ClInclude Include="..\Classes\IntervalTest\IntervalTest.h" />
     <ClInclude Include="..\Classes\LabelTest\LabelTest.h" />
@@ -296,7 +293,6 @@
     <ClInclude Include="..\Classes\SpritePolygonTest\SpritePolygonTest.h" />
     <ClInclude Include="..\Classes\SpriteTest\SpriteTest.h" />
     <ClInclude Include="..\Classes\TerrainTest\TerrainTest.h" />
-    <ClInclude Include="..\Classes\testBasic.h" />
     <ClInclude Include="..\Classes\testResource.h" />
     <ClInclude Include="..\Classes\tests.h" />
     <ClInclude Include="..\Classes\Texture2dTest\Texture2dTest.h" />
@@ -369,7 +365,6 @@
     <ClCompile Include="..\Classes\ActionManagerTest\ActionManagerTest.cpp" />
     <ClCompile Include="..\Classes\ActionsTest\ActionsTest.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
-    <ClCompile Include="..\Classes\BaseTest.cpp" />
     <ClCompile Include="..\Classes\BillBoardTest\BillBoardTest.cpp" />
     <ClCompile Include="..\Classes\Camera3DTest\Camera3DTest.cpp" />
     <ClCompile Include="..\Classes\ChipmunkTest\ChipmunkTest.cpp" />
@@ -377,7 +372,6 @@
     <ClCompile Include="..\Classes\ClippingNodeTest\ClippingNodeTest.cpp" />
     <ClCompile Include="..\Classes\ConfigurationTest\ConfigurationTest.cpp" />
     <ClCompile Include="..\Classes\ConsoleTest\ConsoleTest.cpp" />
-    <ClCompile Include="..\Classes\controller.cpp" />
     <ClCompile Include="..\Classes\CurlTest\CurlTest.cpp" />
     <ClCompile Include="..\Classes\CurrentLanguageTest\CurrentLanguageTest.cpp" />
     <ClCompile Include="..\Classes\DataVisitorTest\DataVisitorTest.cpp" />
@@ -388,7 +382,6 @@
     <ClCompile Include="..\Classes\ExtensionsTest\TableViewTest\CustomTableViewCell.cpp" />
     <ClCompile Include="..\Classes\ExtensionsTest\TableViewTest\TableViewTestScene.cpp" />
     <ClCompile Include="..\Classes\FileUtilsTest\FileUtilsTest.cpp" />
-    <ClCompile Include="..\Classes\FontTest\FontTest.cpp" />
     <ClCompile Include="..\Classes\InputTest\MouseTest.cpp" />
     <ClCompile Include="..\Classes\IntervalTest\IntervalTest.cpp" />
     <ClCompile Include="..\Classes\LabelTest\LabelTest.cpp" />

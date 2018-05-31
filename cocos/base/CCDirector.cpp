@@ -37,7 +37,6 @@ THE SOFTWARE.
 
 #include "2d/CCActionManager.h"
 #include "2d/CCFontFNT.h"
-#include "2d/CCFontAtlasCache.h"
 #include "2d/CCAnimationCache.h"
 #include "2d/CCFontFreeType.h"
 #include "2d/CCLabelAtlas.h"
@@ -716,7 +715,6 @@ void Director::setProjection(Projection projection)
 void Director::purgeCachedData(void)
 {
     FontFNT::purgeCachedData();
-    FontAtlasCache::purgeCachedData();
 
     if (s_SharedDirector->getOpenGLView())
     {
@@ -1028,7 +1026,6 @@ void Director::reset()
     
     // purge bitmap cache
     FontFNT::purgeCachedData();
-    FontAtlasCache::purgeCachedData();
     
     FontFreeType::shutdownFreeType();
     

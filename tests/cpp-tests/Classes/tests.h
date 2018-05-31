@@ -1,68 +1,6 @@
 #ifndef _TESTS_H_
 #define _TESTS_H_
 
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_MARMALADE)
-#include "ClippingNodeTest/ClippingNodeTest.h"
-#endif
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_EMSCRIPEN)
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_MARMALADE)
-// bada don't support libcurl
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_BADA)
-#include "CurlTest/CurlTest.h"
-#endif
-#endif
-#endif
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-#include "JNITest/JNITest.h"
-#endif
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_MAC || CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_LINUX)
-#include "WindowTest/WindowTest.h"
-#endif
-
-// sort them alphabetically. thanks
-#include "ActionManagerTest/ActionManagerTest.h"
-#include "ActionsTest/ActionsTest.h"
-#include "BillBoardTest/BillBoardTest.h"
-#include "Camera3DTest/Camera3DTest.h"
-#include "ClickAndMoveTest/ClickAndMoveTest.h"
-#include "ConfigurationTest/ConfigurationTest.h"
-#include "ConsoleTest/ConsoleTest.h"
-#include "CurrentLanguageTest/CurrentLanguageTest.h"
-#include "DataVisitorTest/DataVisitorTest.h"
-#include "DrawPrimitivesTest/DrawPrimitivesTest.h"
-#include "EffectsAdvancedTest/EffectsAdvancedTest.h"
-#include "EffectsTest/EffectsTest.h"
-#include "ExtensionsTest/ExtensionsTest.h"
-#include "FileUtilsTest/FileUtilsTest.h"
-#include "FontTest/FontTest.h"
-#include "InputTest/MouseTest.h"
-#include "IntervalTest/IntervalTest.h"
-#include "LayerTest/LayerTest.h"
-#include "LightTest/LightTest.h"
-#include "MaterialSystemTest/MaterialSystemTest.h"
-#include "MenuTest/MenuTest.h"
-#include "MotionStreakTest/MotionStreakTest.h"
-#include "MultiTouchTest/MultiTouchTest.h"
-#include "NewEventDispatcherTest/NewEventDispatcherTest.h"
-#include "NewRendererTest/NewRendererTest.h"
-#include "NodeTest/NodeTest.h"
-#include "OpenURLTest/OpenURLTest.h"
-#include "ReleasePoolTest/ReleasePoolTest.h"
-#include "RenderTextureTest/RenderTextureTest.h"
-#include "RotateWorldTest/RotateWorldTest.h"
 #include "Scene3DTest/Scene3DTest.h"
-#include "SchedulerTest/SchedulerTest.h"
-#include "ShaderTest/ShaderTest.h"
-#include "ShaderTest/ShaderTest2.h"
-#include "Sprite3DTest/Sprite3DTest.h"
-#include "SpritePolygonTest/SpritePolygonTest.h"
-#include "TerrainTest/TerrainTest.h"
-#include "Texture2dTest/Texture2dTest.h"
-#include "TextureCacheTest/TextureCacheTest.h"
-#include "TexturePackerEncryptionTest/TextureAtlasEncryptionTest.h"
-#include "TouchesTest/TouchesTest.h"
-#include "VibrateTest/VibrateTest.h"
-#include "ZwoptexTest/ZwoptexTest.h"
-#include "SpriteFrameCacheTest/SpriteFrameCacheTest.h"
 
 #endif

@@ -146,8 +146,6 @@ protected:
     EventListenerCustom* _rendererRecreatedListener;
     bool _antialiasEnabled;
     int _currLineHeight;
-
-    friend class Label;
 };
 
 NS_CC_END

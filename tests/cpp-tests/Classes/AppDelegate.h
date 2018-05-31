@@ -28,7 +28,6 @@
 
 #include "cocos2d.h"
 
-class TestController;
 /**
 @brief    The cocos2d Application.
 
@@ -61,8 +60,6 @@ public:
     */
     virtual void applicationWillEnterForeground();
 
-private:
-    TestController* _testController;
 };
 
 #endif // _APP_DELEGATE_H_
