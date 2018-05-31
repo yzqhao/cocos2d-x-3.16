@@ -117,10 +117,6 @@ namespace {
                         (LPARAM)(LPVOID)&myCDS);
         }
     }
-#elif CC_TARGET_PLATFORM == CC_PLATFORM_WINRT
-    void SendLogToWindow(const char *log)
-    {
-    }
 #endif
     
     void _log(const char *format, va_list args)
@@ -164,7 +160,7 @@ namespace {
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
         __android_log_print(ANDROID_LOG_DEBUG, "cocos2d-x debug info", "%s", buf);
         
-#elif CC_TARGET_PLATFORM ==  CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT
+#elif CC_TARGET_PLATFORM ==  CC_PLATFORM_WIN32 
         
         int pos = 0;
         int len = nret;
@@ -438,7 +434,7 @@ bool Console::listenOnTCP(int port)
     hints.ai_family = AF_UNSPEC;
     hints.ai_socktype = SOCK_STREAM;
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
     WSADATA wsaData;
     n = WSAStartup(MAKEWORD(2, 2),&wsaData);
 #endif
@@ -476,7 +472,7 @@ bool Console::listenOnTCP(int port)
             break;          /* success */
 
 /* bind error, close and try next one */
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
         closesocket(listenfd);
 #else
         close(listenfd);

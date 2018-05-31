@@ -37,7 +37,6 @@ cocos2d.cpp \
 2d/CCFont.cpp \
 2d/CCFontAtlas.cpp \
 2d/CCFontCharMap.cpp \
-2d/CCFontFNT.cpp \
 2d/CCFontFreeType.cpp \
 2d/CCGLBufferedNode.cpp \
 2d/CCGrabber.cpp \

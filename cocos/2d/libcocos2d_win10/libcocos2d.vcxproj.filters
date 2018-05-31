@@ -164,9 +164,6 @@
     <ClCompile Include="..\CCFontCharMap.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCFontFNT.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCFontFreeType.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -761,9 +758,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCFontCharMap.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CCFontFNT.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\CCFontFreeType.h">

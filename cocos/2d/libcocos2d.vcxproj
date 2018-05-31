@@ -358,7 +358,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCDrawNode.cpp" />
     <ClCompile Include="CCFontAtlas.cpp" />
     <ClCompile Include="CCFontCharMap.cpp" />
-    <ClCompile Include="CCFontFNT.cpp" />
     <ClCompile Include="CCFontFreeType.cpp" />
     <ClCompile Include="CCGLBufferedNode.cpp" />
     <ClCompile Include="CCGrabber.cpp" />
@@ -590,7 +589,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCFont.h" />
     <ClInclude Include="CCFontAtlas.h" />
     <ClInclude Include="CCFontCharMap.h" />
-    <ClInclude Include="CCFontFNT.h" />
     <ClInclude Include="CCFontFreeType.h" />
     <ClInclude Include="CCGLBufferedNode.h" />
     <ClInclude Include="CCGrabber.h" />

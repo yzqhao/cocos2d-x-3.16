@@ -36,7 +36,6 @@ THE SOFTWARE.
 #include "platform/CCFileUtils.h"
 
 #include "2d/CCActionManager.h"
-#include "2d/CCFontFNT.h"
 #include "2d/CCAnimationCache.h"
 #include "2d/CCFontFreeType.h"
 #include "2d/CCLabelAtlas.h"
@@ -714,8 +713,6 @@ void Director::setProjection(Projection projection)
 
 void Director::purgeCachedData(void)
 {
-    FontFNT::purgeCachedData();
-
     if (s_SharedDirector->getOpenGLView())
     {
         SpriteFrameCache::getInstance()->removeUnusedSpriteFrames();
@@ -1023,10 +1020,7 @@ void Director::reset()
     CC_SAFE_RELEASE_NULL(_FPSLabel);
     CC_SAFE_RELEASE_NULL(_drawnBatchesLabel);
     CC_SAFE_RELEASE_NULL(_drawnVerticesLabel);
-    
-    // purge bitmap cache
-    FontFNT::purgeCachedData();
-    
+
     FontFreeType::shutdownFreeType();
     
     // purge all managed caches

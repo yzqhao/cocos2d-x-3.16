@@ -93,8 +93,6 @@
         "cocos/2d/CCFontAtlas.h", 
         "cocos/2d/CCFontCharMap.cpp", 
         "cocos/2d/CCFontCharMap.h", 
-        "cocos/2d/CCFontFNT.cpp", 
-        "cocos/2d/CCFontFNT.h", 
         "cocos/2d/CCFontFreeType.cpp", 
         "cocos/2d/CCFontFreeType.h", 
         "cocos/2d/CCGLBufferedNode.cpp", 
