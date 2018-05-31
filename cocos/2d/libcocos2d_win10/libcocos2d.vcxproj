@@ -28,9 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\extensions\ExtensionDeprecated.cpp" />
-    <ClCompile Include="..\..\..\extensions\GUI\CCScrollView\CCScrollView.cpp" />
-    <ClCompile Include="..\..\..\extensions\GUI\CCScrollView\CCTableView.cpp" />
-    <ClCompile Include="..\..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp" />
     <ClCompile Include="..\..\..\external\clipper\clipper.cpp" />
     <ClCompile Include="..\..\..\external\ConvertUTF\ConvertUTF.c">
       <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
@@ -382,9 +379,6 @@
     <ClInclude Include="..\..\..\extensions\ExtensionDeprecated.h" />
     <ClInclude Include="..\..\..\extensions\ExtensionExport.h" />
     <ClInclude Include="..\..\..\extensions\ExtensionMacros.h" />
-    <ClInclude Include="..\..\..\extensions\GUI\CCScrollView\CCScrollView.h" />
-    <ClInclude Include="..\..\..\extensions\GUI\CCScrollView\CCTableView.h" />
-    <ClInclude Include="..\..\..\extensions\GUI\CCScrollView\CCTableViewCell.h" />
     <ClInclude Include="..\..\..\external\clipper\clipper.hpp" />
     <ClInclude Include="..\..\..\external\ConvertUTF\ConvertUTF.h" />
     <ClInclude Include="..\..\..\external\edtaa3func\edtaa3func.h" />

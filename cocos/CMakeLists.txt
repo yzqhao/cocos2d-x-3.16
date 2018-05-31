@@ -51,7 +51,6 @@ set(COCOS_SRC cocos2d.cpp
     ${COCOS_RENDERER_SRC}
     ${COCOS_BASE_SRC}
     ${COCOS_DEPRECATED_SRC}
-    ${COCOS_EXTENSIONS_SRC}
     )
 
   #todo: provide prebuild versions of the xx libs for all platforms

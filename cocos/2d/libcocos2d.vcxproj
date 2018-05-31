@@ -187,9 +187,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCScrollView.cpp" />
-    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableView.cpp" />
-    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp" />
     <ClCompile Include="..\..\external\clipper\clipper.cpp" />
     <ClCompile Include="..\..\external\ConvertUTF\ConvertUTF.c" />
     <ClCompile Include="..\..\external\ConvertUTF\ConvertUTFWrapper.cpp" />
@@ -386,9 +383,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\..\extensions\cocos-ext.h" />
     <ClInclude Include="..\..\extensions\ExtensionExport.h" />
     <ClInclude Include="..\..\extensions\ExtensionMacros.h" />
-    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCScrollView.h" />
-    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCTableView.h" />
-    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.h" />
     <ClInclude Include="..\..\external\clipper\clipper.hpp" />
     <ClInclude Include="..\..\external\ConvertUTF\ConvertUTF.h" />
     <ClInclude Include="..\..\external\edtaa3func\edtaa3func.h" />

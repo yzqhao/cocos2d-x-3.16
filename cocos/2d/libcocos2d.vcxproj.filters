@@ -67,12 +67,6 @@
     <Filter Include="extension\AssetsManager">
       <UniqueIdentifier>{ad47c713-2196-4c8f-9205-2a2a7ecc0b80}</UniqueIdentifier>
     </Filter>
-    <Filter Include="extension\GUI">
-      <UniqueIdentifier>{b27aba95-51a2-413c-8570-0aff9adf2b6b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\GUI\CCScrollView">
-      <UniqueIdentifier>{a1f539bc-d5be-4224-a4d2-01c0b6f17d6e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="cocosdenshion\Header Files">
       <UniqueIdentifier>{f42979de-0079-4eba-b469-81ebff9ec588}</UniqueIdentifier>
     </Filter>
@@ -105,9 +99,6 @@
     </Filter>
     <Filter Include="ui\UIWidgets\EditBox">
       <UniqueIdentifier>{89eb6312-dc7f-4fda-b9b2-ab67c31ddd55}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\GUI\CCControlExtensions">
-      <UniqueIdentifier>{118d80ca-ccf2-480c-b87d-25220af23440}</UniqueIdentifier>
     </Filter>
     <Filter Include="audioengine">
       <UniqueIdentifier>{e916e2b4-0a6e-4d25-8b36-66fa03719f48}</UniqueIdentifier>
@@ -564,15 +555,6 @@
     </ClCompile>
     <ClCompile Include="..\3d\CCMotionStreak3D.cpp">
       <Filter>3d</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCScrollView.cpp">
-      <Filter>extension\GUI\CCScrollView</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableView.cpp">
-      <Filter>extension\GUI\CCScrollView</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp">
-      <Filter>extension\GUI\CCScrollView</Filter>
     </ClCompile>
     <ClCompile Include="..\3d\CCMeshVertexIndexData.cpp">
       <Filter>3d</Filter>
@@ -1217,15 +1199,6 @@
     </ClInclude>
     <ClInclude Include="..\3d\cocos3d.h">
       <Filter>3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCScrollView.h">
-      <Filter>extension\GUI\CCScrollView</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCTableView.h">
-      <Filter>extension\GUI\CCScrollView</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.h">
-      <Filter>extension\GUI\CCScrollView</Filter>
     </ClInclude>
     <ClInclude Include="..\..\extensions\cocos-ext.h">
       <Filter>extension</Filter>

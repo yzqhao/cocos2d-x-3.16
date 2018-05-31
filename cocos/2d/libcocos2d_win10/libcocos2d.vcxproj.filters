@@ -47,17 +47,8 @@
     <Filter Include="extension\AssetsManager">
       <UniqueIdentifier>{2520090a-69d8-46d3-a958-de49c068035c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="extension\GUI">
-      <UniqueIdentifier>{21031d69-8a1d-468a-98d7-2c3080705ab3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="extension\physics_nodes">
       <UniqueIdentifier>{21d16309-93ee-4b38-a10a-de87be25dcc9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\GUI\CCControlExtensions">
-      <UniqueIdentifier>{939431be-589b-461b-a4dd-791ad66e9611}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\GUI\CCScrollView">
-      <UniqueIdentifier>{00ac48e4-fa60-4020-b924-18562a81d799}</UniqueIdentifier>
     </Filter>
     <Filter Include="external\ConvertUTF">
       <UniqueIdentifier>{6651f0d8-3685-457c-9674-91ba9c2bde9b}</UniqueIdentifier>
@@ -391,15 +382,6 @@
     </ClCompile>
     <ClCompile Include="..\..\deprecated\CCString.cpp">
       <Filter>deprecated</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\GUI\CCScrollView\CCScrollView.cpp">
-      <Filter>extension\GUI\CCScrollView</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\GUI\CCScrollView\CCTableView.cpp">
-      <Filter>extension\GUI\CCScrollView</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp">
-      <Filter>extension\GUI\CCScrollView</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\extensions\ExtensionDeprecated.cpp">
       <Filter>extension</Filter>
@@ -1050,15 +1032,6 @@
     </ClInclude>
     <ClInclude Include="..\..\deprecated\CCString.h">
       <Filter>deprecated</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\GUI\CCScrollView\CCScrollView.h">
-      <Filter>extension\GUI\CCScrollView</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\GUI\CCScrollView\CCTableView.h">
-      <Filter>extension\GUI\CCScrollView</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\extensions\GUI\CCScrollView\CCTableViewCell.h">
-      <Filter>extension\GUI\CCScrollView</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\extensions\cocos-ext.h">
       <Filter>extension</Filter>
