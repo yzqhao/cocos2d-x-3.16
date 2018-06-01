@@ -30,7 +30,6 @@ THE SOFTWARE.
 #include "base/CCEventDispatcher.h"
 #include "base/CCEventType.h"
 #include "renderer/CCRenderer.h"
-#include "2d/CCActionManager.h"
 #include <android/log.h>
 #include <limits.h>
 #include <sstream>
@@ -1011,12 +1010,10 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
 
     Director* director = Director::getInstance();
     int totalNodeCount = Node::getAttachedNodeCount();
-    int totalActionCount = director->getActionManager()->getNumberOfRunningActions();
 
     {
         float cpuLevelNode = toCpuLevelPerFactor(totalNodeCount, cbCpuLevelNode);
-        float cpuLevelAction = toCpuLevelPerFactor(totalActionCount, cbCpuLevelAction);
-        float fCpuLevel = cpuLevelNode + cpuLevelAction;
+        float fCpuLevel = cpuLevelNode;
         float highestCpuLevel = CARRAY_SIZE(_cpuLevelArr) * 1.0f;
         fCpuLevel = fCpuLevel > highestCpuLevel ? highestCpuLevel : fCpuLevel;
         cpuLevel = std::floor(fCpuLevel);
@@ -1024,8 +1021,8 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
 #if EDM_DEBUG
         if (_printCpuGpuLevelCounter > _printCpuGpuLevelThreshold)
         {
-            LOGD("DEBUG: cpu level: %d, node: (%f, %d), action: (%f, %d)", 
-                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelAction, totalActionCount);
+            LOGD("DEBUG: cpu level: %d, node: (%f, %d)", 
+                cpuLevel, cpuLevelNode, totalNodeCount);
         }
 #endif
         if (_oldCpuLevel < 0
@@ -1033,8 +1030,8 @@ void EngineDataManager::notifyGameStatusIfCpuOrGpuLevelChanged()
             || cpuLevel > _oldCpuLevel
             )
         {
-            LOGD("NOTIFY: cpu level: %d, node: (%f, %d), action: (%f, %d)", 
-                cpuLevel, cpuLevelNode, totalNodeCount, cpuLevelAction, totalActionCount);
+            LOGD("NOTIFY: cpu level: %d, node: (%f, %d)", 
+                cpuLevel, cpuLevelNode, totalNodeCount);
             levelChangeReason |= LEVEL_CHANGE_REASON_CPU;
             _oldCpuLevel = cpuLevel;
         }

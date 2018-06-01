@@ -29,7 +29,6 @@
 #include "math/CCGeometry.h"
 #include "base/ccTypes.h"
 #include "renderer/CCGLProgram.h"
-#include "2d/CCDrawingPrimitives.h"
 #include "base/CCDirector.h"
 
 
@@ -87,99 +86,6 @@ const char* kCCUniformAlphaTestValue = GLProgram::UNIFORM_NAME_ALPHA_TEST_VALUE;
 const char* kCCAttributeNameColor = GLProgram::ATTRIBUTE_NAME_COLOR;
 const char* kCCAttributeNamePosition = GLProgram::ATTRIBUTE_NAME_POSITION;
 const char* kCCAttributeNameTexCoord = GLProgram::ATTRIBUTE_NAME_TEX_COORD;
-
-void ccDrawInit()
-{
-    DrawPrimitives::init();
-}
-
-void ccDrawFree()
-{
-//it will crash clang static analyzer so hide it if __clang_analyzer__ defined
-#ifndef __clang_analyzer__
-    DrawPrimitives::free();
-#endif
-}
-
-void ccDrawPoint( const Vec2& point )
-{
-    DrawPrimitives::drawPoint(point);
-}
-
-void ccDrawPoints( const Vec2 *points, unsigned int numberOfPoints )
-{
-    DrawPrimitives::drawPoints(points, numberOfPoints);
-}
-
-void ccDrawLine( const Vec2& origin, const Vec2& destination )
-{
-    DrawPrimitives::drawLine(origin, destination);
-}
-
-void ccDrawRect( Vec2 origin, Vec2 destination )
-{
-    DrawPrimitives::drawRect(origin, destination);
-}
-
-void ccDrawSolidRect( Vec2 origin, Vec2 destination, Color4F color )
-{
-    DrawPrimitives::drawSolidRect(origin, destination, color);
-}
-
-void ccDrawPoly( const Vec2 *vertices, unsigned int numOfVertices, bool closePolygon )
-{
-    DrawPrimitives::drawPoly(vertices, numOfVertices, closePolygon);
-}
-
-void ccDrawSolidPoly( const Vec2 *poli, unsigned int numberOfPoints, Color4F color )
-{
-    DrawPrimitives::drawSolidPoly(poli, numberOfPoints, color);
-}
-
-void ccDrawCircle( const Vec2& center, float radius, float angle, unsigned int segments, bool drawLineToCenter, float scaleX, float scaleY)
-{
-    DrawPrimitives::drawCircle(center, radius, angle, segments, drawLineToCenter, scaleX, scaleY);
-}
-
-void ccDrawCircle( const Vec2& center, float radius, float angle, unsigned int segments, bool drawLineToCenter)
-{
-    DrawPrimitives::drawCircle(center, radius, angle, segments, drawLineToCenter);
-}
-
-void ccDrawSolidCircle( const Vec2& center, float radius, float angle, unsigned int segments, float scaleX, float scaleY)
-{
-    DrawPrimitives::drawSolidCircle(center, radius, angle, segments, scaleX, scaleY);
-}
-
-void ccDrawSolidCircle( const Vec2& center, float radius, float angle, unsigned int segments)
-{
-    DrawPrimitives::drawSolidCircle(center, radius, angle, segments);
-}
-
-void ccDrawQuadBezier(const Vec2& origin, const Vec2& control, const Vec2& destination, unsigned int segments)
-{
-    DrawPrimitives::drawQuadBezier(origin, control, destination, segments);
-}
-
-void ccDrawCubicBezier(const Vec2& origin, const Vec2& control1, const Vec2& control2, const Vec2& destination, unsigned int segments)
-{
-    DrawPrimitives::drawCubicBezier(origin, control1, control2, destination, segments);
-}
-
-void ccDrawColor4B( GLubyte r, GLubyte g, GLubyte b, GLubyte a )
-{
-    DrawPrimitives::setDrawColor4B(r, g, b, a);
-}
-
-void ccDrawColor4F( GLfloat r, GLfloat g, GLfloat b, GLfloat a )
-{
-    DrawPrimitives::setDrawColor4F(r, g, b, a);
-}
-
-void ccPointSize( GLfloat pointSize )
-{
-    DrawPrimitives::setPointSize(pointSize);
-}
 
 MATRIX_STACK_TYPE currentActiveStackType = MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW;
 

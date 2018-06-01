@@ -18,10 +18,6 @@ LOCAL_SRC_FILES := \
 2d/CCAtlasNode.cpp \
 2d/CCCamera.cpp \
 2d/CCCameraBackgroundBrush.cpp \
-2d/CCClippingNode.cpp \
-2d/CCClippingRectangleNode.cpp \
-2d/CCDrawNode.cpp \
-2d/CCDrawingPrimitives.cpp \
 2d/CCFont.cpp \
 2d/CCFontAtlas.cpp \
 2d/CCFontCharMap.cpp \
@@ -42,7 +38,6 @@ LOCAL_SRC_FILES := \
 2d/CCSpriteBatchNode.cpp \
 2d/CCSpriteFrame.cpp \
 2d/CCSpriteFrameCache.cpp \
-2d/CCTweenFunction.cpp \
 2d/CCAutoPolygon.cpp \
 3d/CCFrustum.cpp \
 3d/CCPlane.cpp \
@@ -195,7 +190,6 @@ LOCAL_STATIC_LIBRARIES := cocos_freetype2_static
 LOCAL_STATIC_LIBRARIES += cocos_png_static
 LOCAL_STATIC_LIBRARIES += cocos_jpeg_static
 LOCAL_STATIC_LIBRARIES += cocos_tiff_static
-LOCAL_STATIC_LIBRARIES += cocos_webp_static
 LOCAL_STATIC_LIBRARIES += cocos_zlib_static
 LOCAL_STATIC_LIBRARIES += cocos_ssl_static
 
@@ -236,7 +230,6 @@ $(call import-module,png/prebuilt/android)
 $(call import-module,zlib/prebuilt/android)
 $(call import-module,jpeg/prebuilt/android)
 $(call import-module,tiff/prebuilt/android)
-$(call import-module,webp/prebuilt/android)
 $(call import-module,3d)
 $(call import-module,extensions)
 # $(call import-module,curl/prebuilt/android)

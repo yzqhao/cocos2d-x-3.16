@@ -10,10 +10,6 @@ set(COCOS_2D_SRC
   2d/CCAtlasNode.cpp
   2d/CCCamera.cpp
   2d/CCCameraBackgroundBrush.cpp
-  2d/CCClippingNode.cpp
-  2d/CCClippingRectangleNode.cpp
-  2d/CCDrawingPrimitives.cpp
-  2d/CCDrawNode.cpp
   2d/CCFontAtlas.cpp
   2d/CCFontCharMap.cpp
   2d/CCFont.cpp
@@ -36,6 +32,5 @@ set(COCOS_2D_SRC
   2d/CCSpriteFrame.cpp
   2d/CCAutoPolygon.cpp
   ../external/clipper/clipper.cpp
-  2d/CCTweenFunction.cpp
 
 )

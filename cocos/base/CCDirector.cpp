@@ -31,7 +31,6 @@ THE SOFTWARE.
 // standard includes
 #include <string>
 
-#include "2d/CCDrawingPrimitives.h"
 #include "2d/CCSpriteFrameCache.h"
 #include "platform/CCFileUtils.h"
 
@@ -78,7 +77,6 @@ NS_CC_BEGIN
 static Director *s_SharedDirector = nullptr;
 
 #define kDefaultFPS        60  // 60 frames per second
-extern const char* cocos2dVersion(void);
 
 const char *Director::EVENT_BEFORE_SET_NEXT_SCENE = "director_before_set_next_scene";
 const char *Director::EVENT_AFTER_SET_NEXT_SCENE = "director_after_set_next_scene";
@@ -1027,7 +1025,7 @@ void Director::reset()
 #endif
 //it will crash clang static analyzer so hide it if __clang_analyzer__ defined
 #ifndef __clang_analyzer__
-    DrawPrimitives::free();
+   
 #endif
 #if defined(__GNUC__) && ((__GNUC__ >= 4) || ((__GNUC__ == 3) && (__GNUC_MINOR__ >= 1)))
 #pragma GCC diagnostic warning "-Wdeprecated-declarations"

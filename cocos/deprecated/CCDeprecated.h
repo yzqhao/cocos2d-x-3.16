@@ -34,7 +34,6 @@
 #include <math.h>
 
 #include "2d/CCAtlasNode.h"
-#include "2d/CCClippingNode.h"
 #include "2d/CCGrid.h"
 #include "2d/CCLabelAtlas.h"
 #include "2d/CCLayer.h"
@@ -591,7 +590,6 @@ CC_DEPRECATED_ATTRIBUTE typedef SpriteFrame CCSpriteFrame;
 CC_DEPRECATED_ATTRIBUTE typedef AtlasNode CCAtlasNode;
 CC_DEPRECATED_ATTRIBUTE typedef TextureProtocol CCTextureProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef BlendProtocol CCBlendProtocol;
-CC_DEPRECATED_ATTRIBUTE typedef DrawNode CCDrawNode;
 CC_DEPRECATED_ATTRIBUTE typedef Camera CCCamera;
 CC_DEPRECATED_ATTRIBUTE typedef LabelAtlas CCLabelAtlas;
 CC_DEPRECATED_ATTRIBUTE typedef LabelProtocol CCLabelProtocol;
@@ -608,7 +606,6 @@ CC_DEPRECATED_ATTRIBUTE typedef LayerColor CCLayerColor;
 CC_DEPRECATED_ATTRIBUTE typedef LayerGradient CCLayerGradient;
 CC_DEPRECATED_ATTRIBUTE typedef LayerMultiplex CCLayerMultiplex;
 CC_DEPRECATED_ATTRIBUTE typedef Scene CCScene;
-CC_DEPRECATED_ATTRIBUTE typedef ClippingNode CCClippingNode;
 CC_DEPRECATED_ATTRIBUTE typedef ProgressTimer CCProgressTimer;
 CC_DEPRECATED_ATTRIBUTE typedef RenderTexture CCRenderTexture;
 CC_DEPRECATED_ATTRIBUTE typedef FileUtils CCFileUtils;
@@ -806,26 +803,6 @@ CC_DEPRECATED_ATTRIBUTE const ResolutionPolicy kResolutionUnKnown       = Resolu
 
 /** use log() instead */
 CC_DEPRECATED_ATTRIBUTE void CC_DLL CCLog(const char * pszFormat, ...) CC_FORMAT_PRINTF(1, 2);
-
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawInit();
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawFree();
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawPoint( const Vec2& point );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawPoints( const Vec2 *points, unsigned int numberOfPoints );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawLine( const Vec2& origin, const Vec2& destination );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawRect( Vec2 origin, Vec2 destination );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawSolidRect( Vec2 origin, Vec2 destination, Color4F color );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawPoly( const Vec2 *vertices, unsigned int numOfVertices, bool closePolygon );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawSolidPoly( const Vec2 *poli, unsigned int numberOfPoints, Color4F color );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawCircle( const Vec2& center, float radius, float angle, unsigned int segments, bool drawLineToCenter, float scaleX, float scaleY);
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawCircle( const Vec2& center, float radius, float angle, unsigned int segments, bool drawLineToCenter);
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawSolidCircle( const Vec2& center, float radius, float angle, unsigned int segments, float scaleX, float scaleY);
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawSolidCircle( const Vec2& center, float radius, float angle, unsigned int segments);
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawQuadBezier(const Vec2& origin, const Vec2& control, const Vec2& destination, unsigned int segments);
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawCubicBezier(const Vec2& origin, const Vec2& control1, const Vec2& control2, const Vec2& destination, unsigned int segments);
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawColor4B( GLubyte r, GLubyte g, GLubyte b, GLubyte a );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawColor4F( GLfloat r, GLfloat g, GLfloat b, GLfloat a );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccPointSize( GLfloat pointSize );
-
 
 CC_DEPRECATED_ATTRIBUTE inline void CC_DLL ccGLInvalidateStateCache() { GL::invalidateStateCache(); }
 CC_DEPRECATED_ATTRIBUTE inline void CC_DLL ccGLUseProgram(GLuint program) { GL::useProgram(program); }

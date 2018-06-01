@@ -125,8 +125,6 @@
         "cocos/2d/CCTMXObjectGroup.h", 
         "cocos/2d/CCTMXTiledMap.cpp", 
         "cocos/2d/CCTMXTiledMap.h", 
-        "cocos/2d/CCTweenFunction.cpp", 
-        "cocos/2d/CCTweenFunction.h", 
         "cocos/2d/CMakeLists.txt", 
         "cocos/2d/cocos2d.def", 
         "cocos/2d/cocos2d_headers.props", 

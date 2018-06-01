@@ -69,8 +69,6 @@
 #include "base/ccUtils.h"
 NS_CC_BEGIN
 
-extern const char* cocos2dVersion(void);
-
 #define PROMPT  "> "
 
 static const size_t SEND_BUFSIZ = 512;
@@ -1425,7 +1423,6 @@ void Console::commandUpload(int fd)
 
 void Console::commandVersion(int fd, const std::string& /*args*/)
 {
-    Console::Utility::mydprintf(fd, "%s\n", cocos2dVersion());
 }
 
 // helper free functions

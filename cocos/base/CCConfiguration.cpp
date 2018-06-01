@@ -32,8 +32,6 @@ THE SOFTWARE.
 
 NS_CC_BEGIN
 
-extern const char* cocos2dVersion();
-
 Configuration* Configuration::s_sharedConfiguration = nullptr;
 
 const char* Configuration::CONFIG_FILE_LOADED = "config_file_loaded";
@@ -64,7 +62,6 @@ Configuration::Configuration()
 
 bool Configuration::init()
 {
-	_valueDict["cocos2d.x.version"] = Value(cocos2dVersion());
 	_valueDict["cocos2d.x.compiled_with_profiler"] = Value(false);
 
 #if CC_ENABLE_GL_STATE_CACHE == 0
