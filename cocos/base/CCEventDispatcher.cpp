@@ -139,16 +139,6 @@ bool EventDispatcher::EventListenerVector::empty() const
 
 void EventDispatcher::EventListenerVector::push_back(EventListener* listener)
 {
-#if CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS
-    CCASSERT(_sceneGraphListeners == nullptr ||
-             std::count(_sceneGraphListeners->begin(), _sceneGraphListeners->end(), listener) == 0,
-             "Listener should not be added twice!");
-        
-    CCASSERT(_fixedListeners == nullptr ||
-             std::count(_fixedListeners->begin(), _fixedListeners->end(), listener) == 0,
-             "Listener should not be added twice!");
-#endif
-
     if (listener->getFixedPriority() == 0)
     {
         if (_sceneGraphListeners == nullptr)
@@ -506,69 +496,6 @@ void EventDispatcher::addEventListenerWithSceneGraphPriority(EventListener* list
     addEventListener(listener);
 }
 
-#if CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS && COCOS2D_DEBUG > 0
-
-void EventDispatcher::debugCheckNodeHasNoEventListenersOnDestruction(Node* node)
-{
-    // Check the listeners map
-    for (const auto & keyValuePair : _listenerMap)
-    {
-        const EventListenerVector * eventListenerVector = keyValuePair.second;
-        
-        if (eventListenerVector)
-        {
-            if (eventListenerVector->getSceneGraphPriorityListeners())
-            {
-                for (EventListener * listener : *eventListenerVector->getSceneGraphPriorityListeners())
-                {
-                    CCASSERT(!listener ||
-                             listener->getAssociatedNode() != node,
-                             "Node should have no event listeners registered for it upon destruction!");
-                }
-            }
-        }
-    }
-    
-    // Check the node listeners map
-    for (const auto & keyValuePair : _nodeListenersMap)
-    {
-        CCASSERT(keyValuePair.first != node, "Node should have no event listeners registered for it upon destruction!");
-        
-        if (keyValuePair.second)
-        {
-            for (EventListener * listener : *keyValuePair.second)
-            {
-                CCASSERT(listener->getAssociatedNode() != node,
-                         "Node should have no event listeners registered for it upon destruction!");
-            }
-        }
-    }
-    
-    // Check the node priority map
-    for (const auto & keyValuePair : _nodePriorityMap)
-    {
-        CCASSERT(keyValuePair.first != node,
-                 "Node should have no event listeners registered for it upon destruction!");
-    }
-    
-    // Check the to be added list
-    for (EventListener * listener : _toAddedListeners)
-    {
-        CCASSERT(listener->getAssociatedNode() != node,
-                 "Node should have no event listeners registered for it upon destruction!");
-    }
-    
-    // Check the dirty nodes set
-    for (Node * dirtyNode : _dirtyNodes)
-    {
-        CCASSERT(dirtyNode != node,
-                 "Node should have no event listeners registered for it upon destruction!");
-    }
-}
-
-#endif  // #if CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS && COCOS2D_DEBUG > 0
-
-
 void EventDispatcher::addEventListenerWithFixedPriority(EventListener* listener, int fixedPriority)
 {
     CCASSERT(listener, "Invalid parameters.");
@@ -657,18 +584,6 @@ void EventDispatcher::removeEventListener(EventListener* listener)
                 setDirty(listener->getListenerID(), DirtyFlag::FIXED_PRIORITY);
             }
         }
-        
-#if CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS
-        CCASSERT(_inDispatch != 0 ||
-                 !sceneGraphPriorityListeners ||
-                 std::count(sceneGraphPriorityListeners->begin(), sceneGraphPriorityListeners->end(), listener) == 0,
-                 "Listener should be in no lists after this is done if we're not currently in dispatch mode.");
-            
-        CCASSERT(_inDispatch != 0 ||
-                 !fixedPriorityListeners ||
-                 std::count(fixedPriorityListeners->begin(), fixedPriorityListeners->end(), listener) == 0,
-                 "Listener should be in no lists after this is done if we're not currently in dispatch mode.");
-#endif
 
         if (iter->second->empty())
         {

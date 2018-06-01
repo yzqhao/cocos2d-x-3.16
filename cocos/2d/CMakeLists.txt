@@ -35,7 +35,6 @@ set(COCOS_2D_SRC
   2d/CCLabelAtlas.cpp
   2d/CCLayer.cpp
   2d/CCLight.cpp
-  2d/CCMotionStreak.cpp
   2d/CCNode.cpp
   2d/CCNodeGrid.cpp
   2d/CCProgressTimer.cpp

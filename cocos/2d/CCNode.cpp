@@ -153,10 +153,6 @@ Node::~Node()
     CC_SAFE_RELEASE_NULL(_scheduler);
     
     _eventDispatcher->removeEventListenersForTarget(this);
-    
-#if CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS && COCOS2D_DEBUG > 0
-    _eventDispatcher->debugCheckNodeHasNoEventListenersOnDestruction(this);
-#endif
 
     CCASSERT(!_running, "Node still marked as running on node destruction! Was base class onExit() called in derived class onExit() implementations?");
     CC_SAFE_RELEASE(_eventDispatcher);

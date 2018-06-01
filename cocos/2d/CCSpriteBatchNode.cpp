@@ -29,7 +29,6 @@ THE SOFTWARE.
 #include "2d/CCSpriteBatchNode.h"
 #include "2d/CCSprite.h"
 #include "base/CCDirector.h"
-#include "base/CCProfiling.h"
 #include "base/ccUTF8.h"
 #include "renderer/CCTextureCache.h"
 #include "renderer/CCRenderer.h"

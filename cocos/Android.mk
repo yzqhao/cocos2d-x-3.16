@@ -44,7 +44,6 @@ cocos2d.cpp \
 2d/CCLabelAtlas.cpp \
 2d/CCLayer.cpp \
 2d/CCLight.cpp \
-2d/CCMotionStreak.cpp \
 2d/CCNode.cpp \
 2d/CCNodeGrid.cpp \
 2d/CCProgressTimer.cpp \
@@ -104,7 +103,6 @@ base/CCEventMouse.cpp \
 base/CCEventTouch.cpp \
 base/CCIMEDispatcher.cpp \
 base/CCNS.cpp \
-base/CCProfiling.cpp \
 base/CCProperties.cpp \
 base/CCRef.cpp \
 base/CCScheduler.cpp \

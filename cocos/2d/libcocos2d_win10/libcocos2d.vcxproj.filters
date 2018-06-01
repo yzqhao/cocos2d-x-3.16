@@ -185,9 +185,6 @@
     <ClCompile Include="..\CCLight.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="..\CCMotionStreak.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\CCNode.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -315,9 +312,6 @@
       <Filter>base</Filter>
     </ClCompile>
     <ClCompile Include="..\..\base\CCNS.cpp">
-      <Filter>base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\base\CCProfiling.cpp">
       <Filter>base</Filter>
     </ClCompile>
     <ClCompile Include="..\..\base\ccRandom.cpp">
@@ -781,9 +775,6 @@
     <ClInclude Include="..\CCLight.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="..\CCMotionStreak.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="..\CCNode.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -932,9 +923,6 @@
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\..\base\CCNS.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\base\CCProfiling.h">
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\..\base\CCProtocols.h">

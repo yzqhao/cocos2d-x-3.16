@@ -263,7 +263,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\base\CCNinePatchImageParser.cpp" />
     <ClCompile Include="..\base\CCStencilStateManager.cpp" />
     <ClCompile Include="..\base\CCNS.cpp" />
-    <ClCompile Include="..\base\CCProfiling.cpp" />
     <ClCompile Include="..\base\CCProperties.cpp" />
     <ClCompile Include="..\base\ccRandom.cpp" />
     <ClCompile Include="..\base\CCRef.cpp" />
@@ -365,7 +364,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCLabelAtlas.cpp" />
     <ClCompile Include="CCLayer.cpp" />
     <ClCompile Include="CCLight.cpp" />
-    <ClCompile Include="CCMotionStreak.cpp" />
     <ClCompile Include="CCNode.cpp" />
     <ClCompile Include="CCNodeGrid.cpp" />
     <ClCompile Include="CCProgressTimer.cpp" />
@@ -474,7 +472,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\base\CCNinePatchImageParser.h" />
     <ClInclude Include="..\base\CCStencilStateManager.h" />
     <ClInclude Include="..\base\CCNS.h" />
-    <ClInclude Include="..\base\CCProfiling.h" />
     <ClInclude Include="..\base\CCProperties.h" />
     <ClInclude Include="..\base\CCProtocols.h" />
     <ClInclude Include="..\base\ccRandom.h" />
@@ -596,7 +593,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCLabelAtlas.h" />
     <ClInclude Include="CCLayer.h" />
     <ClInclude Include="CCLight.h" />
-    <ClInclude Include="CCMotionStreak.h" />
     <ClInclude Include="CCNode.h" />
     <ClInclude Include="CCNodeGrid.h" />
     <ClInclude Include="CCProgressTimer.h" />

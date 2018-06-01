@@ -77,26 +77,6 @@ THE SOFTWARE.
 #define CC_DIRECTOR_STATS_INTERVAL (0.5f)
 #endif
 
-/** @def CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS
- * If enabled (in conjunction with assertion macros) will verify on Node destruction that the node being destroyed has no event
- * listeners still associated with it in the event dispatcher. This can be used to track down problems where the event dispatch
- * system has dangling pointers to destroyed nodes.
- * Note: event listener verification will always be disabled in builds where assertions are disabled regardless of this setting.
- */
-#ifndef CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS
-#define CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS 0
-#endif
-
-/** @def CC_ENABLE_PROFILERS
- * If enabled, will activate various profilers within cocos2d. This statistical data will be output to the console
- * once per second showing average time (in milliseconds) required to execute the specific routine(s).
- * Useful for debugging purposes only. It is recommended to leave it disabled.
- * To enable set it to a value different than 0. Disabled by default.
- */
-#ifndef CC_ENABLE_PROFILERS
-#define CC_ENABLE_PROFILERS 0
-#endif
-
 /** Support PNG or not. If your application don't use png format picture, you can undefine this macro to save package size.
 */
 #ifndef CC_USE_PNG
@@ -114,18 +94,6 @@ THE SOFTWARE.
 #ifndef CC_USE_TIFF
 #define CC_USE_TIFF  1
 #endif // CC_USE_TIFF
-
-#ifndef CC_FILEUTILS_APPLE_ENABLE_OBJC
-#define CC_FILEUTILS_APPLE_ENABLE_OBJC  1
-#endif
-
-/** @def CC_ENABLE_PREMULTIPLIED_ALPHA
- * If enabled, all textures will be preprocessed to multiply its rgb components
- * by its alpha component.
- */
-#ifndef CC_ENABLE_PREMULTIPLIED_ALPHA
-# define CC_ENABLE_PREMULTIPLIED_ALPHA 1
-#endif
 
 /** @def CC_STRIP_FPS
  * Whether to strip FPS related data and functions, such as cc_fps_images_png

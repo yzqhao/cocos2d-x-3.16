@@ -193,26 +193,6 @@ It should work same as apples CFSwapInt32LittleToHost(..)
 /**********************/
 /** Profiling Macros **/
 /**********************/
-#if CC_ENABLE_PROFILERS
-
-#define CC_PROFILER_DISPLAY_TIMERS() NS_CC::Profiler::getInstance()->displayTimers()
-#define CC_PROFILER_PURGE_ALL() NS_CC::Profiler::getInstance()->releaseAllTimers()
-
-#define CC_PROFILER_START(__name__) NS_CC::ProfilingBeginTimingBlock(__name__)
-#define CC_PROFILER_STOP(__name__) NS_CC::ProfilingEndTimingBlock(__name__)
-#define CC_PROFILER_RESET(__name__) NS_CC::ProfilingResetTimingBlock(__name__)
-
-#define CC_PROFILER_START_CATEGORY(__cat__, __name__) do{ if(__cat__) NS_CC::ProfilingBeginTimingBlock(__name__); } while(0)
-#define CC_PROFILER_STOP_CATEGORY(__cat__, __name__) do{ if(__cat__) NS_CC::ProfilingEndTimingBlock(__name__); } while(0)
-#define CC_PROFILER_RESET_CATEGORY(__cat__, __name__) do{ if(__cat__) NS_CC::ProfilingResetTimingBlock(__name__); } while(0)
-
-#define CC_PROFILER_START_INSTANCE(__id__, __name__) do{ NS_CC::ProfilingBeginTimingBlock( NS_CC::String::createWithFormat("%08X - %s", __id__, __name__)->getCString() ); } while(0)
-#define CC_PROFILER_STOP_INSTANCE(__id__, __name__) do{ NS_CC::ProfilingEndTimingBlock(    NS_CC::String::createWithFormat("%08X - %s", __id__, __name__)->getCString() ); } while(0)
-#define CC_PROFILER_RESET_INSTANCE(__id__, __name__) do{ NS_CC::ProfilingResetTimingBlock( NS_CC::String::createWithFormat("%08X - %s", __id__, __name__)->getCString() ); } while(0)
-
-
-#else
-
 #define CC_PROFILER_DISPLAY_TIMERS() do {} while (0)
 #define CC_PROFILER_PURGE_ALL() do {} while (0)
 
@@ -228,7 +208,6 @@ It should work same as apples CFSwapInt32LittleToHost(..)
 #define CC_PROFILER_STOP_INSTANCE(__id__, __name__) do {} while(0)
 #define CC_PROFILER_RESET_INSTANCE(__id__, __name__) do {} while(0)
 
-#endif
 
 #if !defined(COCOS2D_DEBUG) || COCOS2D_DEBUG == 0
 #define CHECK_GL_ERROR_DEBUG()

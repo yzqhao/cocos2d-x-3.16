@@ -45,7 +45,6 @@
 #include "2d/CCGrid.h"
 #include "2d/CCLabelAtlas.h"
 #include "2d/CCLayer.h"
-#include "2d/CCMotionStreak.h"
 #include "2d/CCRenderTexture.h"
 #include "2d/CCProgressTimer.h"
 #include "2d/CCSpriteFrameCache.h"
@@ -695,7 +694,6 @@ CC_DEPRECATED_ATTRIBUTE typedef LayerGradient CCLayerGradient;
 CC_DEPRECATED_ATTRIBUTE typedef LayerMultiplex CCLayerMultiplex;
 CC_DEPRECATED_ATTRIBUTE typedef Scene CCScene;
 CC_DEPRECATED_ATTRIBUTE typedef ClippingNode CCClippingNode;
-CC_DEPRECATED_ATTRIBUTE typedef MotionStreak CCMotionStreak;
 CC_DEPRECATED_ATTRIBUTE typedef ProgressTimer CCProgressTimer;
 CC_DEPRECATED_ATTRIBUTE typedef RenderTexture CCRenderTexture;
 CC_DEPRECATED_ATTRIBUTE typedef FileUtils CCFileUtils;

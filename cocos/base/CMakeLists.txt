@@ -41,7 +41,6 @@ set(COCOS_BASE_SRC
   base/CCEventTouch.cpp
   base/CCIMEDispatcher.cpp
   base/CCNS.cpp
-  base/CCProfiling.cpp
   base/CCProperties.cpp
   base/CCRef.cpp
   base/CCScheduler.cpp
