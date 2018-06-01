@@ -130,12 +130,6 @@
     <ClCompile Include="..\..\external\ConvertUTF\ConvertUTFWrapper.cpp">
       <Filter>external\ConvertUTF</Filter>
     </ClCompile>
-    <ClCompile Include="CCAnimation.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCAnimationCache.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCAtlasNode.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -662,12 +656,6 @@
     <ClInclude Include="..\cocos2d.h" />
     <ClInclude Include="..\..\external\ConvertUTF\ConvertUTF.h">
       <Filter>external\ConvertUTF</Filter>
-    </ClInclude>
-    <ClInclude Include="CCAnimation.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCAnimationCache.h">
-      <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCAtlasNode.h">
       <Filter>2d</Filter>

@@ -41,7 +41,6 @@ NS_CC_BEGIN
 
 class SpriteBatchNode;
 class SpriteFrame;
-class Animation;
 class Rect;
 class Size;
 class Texture2D;
@@ -316,17 +315,6 @@ public:
     CC_DEPRECATED_ATTRIBUTE virtual SpriteFrame* displayFrame() const { return getSpriteFrame(); };
 
     /// @} End of frames methods
-
-
-    /// @{
-    /// @name Animation methods
-    /**
-     * Changes the display frame with animation name and index.
-     * The animation name will be get from the AnimationCache.
-     */
-    virtual void setDisplayFrameWithAnimationName(const std::string& animationName, ssize_t frameIndex);
-    /// @}
-
 
     /// @{
     /// @name Sprite Properties' setter/getters.

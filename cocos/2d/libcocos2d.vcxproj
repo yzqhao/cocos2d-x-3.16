@@ -335,8 +335,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\renderer\CCVertexIndexBuffer.cpp" />
     <ClCompile Include="..\renderer\CCVertexIndexData.cpp" />
     <ClCompile Include="..\storage\local-storage\LocalStorage.cpp" />
-    <ClCompile Include="CCAnimation.cpp" />
-    <ClCompile Include="CCAnimationCache.cpp" />
     <ClCompile Include="CCAtlasNode.cpp" />
     <ClCompile Include="CCAutoPolygon.cpp" />
     <ClCompile Include="CCCamera.cpp" />
@@ -552,8 +550,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\renderer\CCVertexIndexBuffer.h" />
     <ClInclude Include="..\renderer\CCVertexIndexData.h" />
     <ClInclude Include="..\storage\local-storage\LocalStorage.h" />
-    <ClInclude Include="CCAnimation.h" />
-    <ClInclude Include="CCAnimationCache.h" />
     <ClInclude Include="CCAtlasNode.h" />
     <ClInclude Include="CCAutoPolygon.h" />
     <ClInclude Include="CCCamera.h" />

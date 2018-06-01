@@ -35,7 +35,6 @@ THE SOFTWARE.
 #include "2d/CCSpriteFrameCache.h"
 #include "platform/CCFileUtils.h"
 
-#include "2d/CCAnimationCache.h"
 #include "2d/CCFontFreeType.h"
 #include "2d/CCLabelAtlas.h"
 #include "renderer/CCGLProgramCache.h"
@@ -1035,7 +1034,6 @@ void Director::reset()
 #elif _MSC_VER >= 1400 //vs 2005 or higher
 #pragma warning (pop)
 #endif
-    AnimationCache::destroyInstance();
     SpriteFrameCache::destroyInstance();
     GLProgramCache::destroyInstance();
     GLProgramStateCache::destroyInstance();

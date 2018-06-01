@@ -33,7 +33,6 @@
 
 #include <math.h>
 
-#include "2d/CCAnimationCache.h"
 #include "2d/CCAtlasNode.h"
 #include "2d/CCClippingNode.h"
 #include "2d/CCGrid.h"
@@ -589,8 +588,6 @@ CC_DEPRECATED_ATTRIBUTE typedef Node CCNode;
 CC_DEPRECATED_ATTRIBUTE typedef Node CCNodeRGBA;
 CC_DEPRECATED_ATTRIBUTE typedef Node CCRGBAProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef SpriteFrame CCSpriteFrame;
-CC_DEPRECATED_ATTRIBUTE typedef AnimationFrame CCAnimationFrame;
-CC_DEPRECATED_ATTRIBUTE typedef Animation CCAnimation;
 CC_DEPRECATED_ATTRIBUTE typedef AtlasNode CCAtlasNode;
 CC_DEPRECATED_ATTRIBUTE typedef TextureProtocol CCTextureProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef BlendProtocol CCBlendProtocol;
@@ -618,7 +615,6 @@ CC_DEPRECATED_ATTRIBUTE typedef FileUtils CCFileUtils;
 CC_DEPRECATED_ATTRIBUTE typedef Application CCApplication;
 CC_DEPRECATED_ATTRIBUTE typedef GLProgramCache CCShaderCache;
 CC_DEPRECATED_ATTRIBUTE typedef GLProgramCache ShaderCache;
-CC_DEPRECATED_ATTRIBUTE typedef AnimationCache CCAnimationCache;
 CC_DEPRECATED_ATTRIBUTE typedef SpriteFrameCache CCSpriteFrameCache;
 CC_DEPRECATED_ATTRIBUTE typedef TextureCache CCTextureCache;
 CC_DEPRECATED_ATTRIBUTE typedef Timer CCTimer;

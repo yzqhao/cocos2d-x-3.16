@@ -15,12 +15,6 @@ MATHNEONFILE := math/MathUtil.cpp
 endif
 
 LOCAL_SRC_FILES := \
-cocos2d.cpp \
-2d/CCAction.cpp \
-2d/CCActionInstant.cpp \
-2d/CCActionManager.cpp \
-2d/CCAnimation.cpp \
-2d/CCAnimationCache.cpp \
 2d/CCAtlasNode.cpp \
 2d/CCCamera.cpp \
 2d/CCCameraBackgroundBrush.cpp \

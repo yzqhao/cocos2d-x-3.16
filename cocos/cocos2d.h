@@ -201,8 +201,6 @@ THE SOFTWARE.
 #endif
 
 // sprite_nodes
-#include "2d/CCAnimation.h"
-#include "2d/CCAnimationCache.h"
 #include "2d/CCSprite.h"
 #include "2d/CCAutoPolygon.h"
 #include "2d/CCSpriteBatchNode.h"
