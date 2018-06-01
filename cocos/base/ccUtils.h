@@ -68,15 +68,6 @@ namespace utils
      */
     CC_DLL void  captureScreen(const std::function<void(bool, const std::string&)>& afterCaptured, const std::string& filename);
 
-    /** Capture a specific Node.
-    * @param startNode specify the snapshot Node. It should be cocos2d::Scene
-    * @param scale
-    * @returns: return a Image, then can call saveToFile to save the image as "xxx.png or xxx.jpg".
-    * @since v3.11
-    * !!! remark: Caller is responsible for releasing it by calling delete.
-    */
-    CC_DLL Image* captureNode(Node* startNode, float scale = 1.0f);
-    
     /** Find children by name, it will return all child that has the same name.
      * It supports c++ 11 regular expression. It is  a helper function of `Node::enumerateChildren()`.
      * You can refer to `Node::enumerateChildren()` for detail information.

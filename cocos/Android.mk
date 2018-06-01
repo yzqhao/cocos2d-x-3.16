@@ -20,9 +20,7 @@ LOCAL_SRC_FILES := \
 2d/CCCameraBackgroundBrush.cpp \
 2d/CCFont.cpp \
 2d/CCFontAtlas.cpp \
-2d/CCFontCharMap.cpp \
 2d/CCFontFreeType.cpp \
-2d/CCGLBufferedNode.cpp \
 2d/CCGrabber.cpp \
 2d/CCGrid.cpp \
 2d/CCLabelAtlas.cpp \
@@ -30,7 +28,6 @@ LOCAL_SRC_FILES := \
 2d/CCLight.cpp \
 2d/CCNode.cpp \
 2d/CCNodeGrid.cpp \
-2d/CCProtectedNode.cpp \
 2d/CCRenderTexture.cpp \
 2d/CCScene.cpp \
 2d/CCSprite.cpp \

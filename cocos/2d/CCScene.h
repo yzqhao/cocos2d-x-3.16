@@ -128,7 +128,6 @@ public:
 
 protected:
     friend class Node;
-    friend class ProtectedNode;
     friend class SpriteBatchNode;
     friend class Camera;
     friend class BaseLight;

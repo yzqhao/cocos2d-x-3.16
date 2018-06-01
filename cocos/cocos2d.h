@@ -98,7 +98,6 @@ THE SOFTWARE.
 #include "2d/CCLayer.h"
 #include "2d/CCNode.h"
 #include "2d/CCNodeGrid.h"
-#include "2d/CCProtectedNode.h"
 #include "2d/CCRenderTexture.h"
 #include "2d/CCScene.h"
 
