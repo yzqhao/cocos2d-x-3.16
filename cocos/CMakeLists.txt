@@ -41,8 +41,6 @@ include(base/CMakeLists.txt)
 include(deprecated/CMakeLists.txt)
 include(storage/CMakeLists.txt)
 
-include(../extensions/CMakeLists.txt)
-
 set(COCOS_SRC cocos2d.cpp
     ${COCOS_2D_SRC}
     ${COCOS_3D_SRC}

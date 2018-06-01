@@ -43,7 +43,6 @@ platform/CCFileUtils.cpp \
 platform/CCGLView.cpp \
 platform/CCImage.cpp \
 platform/CCSAXParser.cpp \
-platform/CCThread.cpp \
 $(MATHNEONFILE) \
 math/CCAffineTransform.cpp \
 math/CCGeometry.cpp \
@@ -215,8 +214,6 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := cocos2dx_static
 LOCAL_MODULE_FILENAME := libcocos2d
-
-LOCAL_STATIC_LIBRARIES += cocos_extension_static
 LOCAL_STATIC_LIBRARIES += cocos3d_static
 
 include $(BUILD_STATIC_LIBRARY)
@@ -229,7 +226,6 @@ $(call import-module,zlib/prebuilt/android)
 $(call import-module,jpeg/prebuilt/android)
 $(call import-module,tiff/prebuilt/android)
 $(call import-module,3d)
-$(call import-module,extensions)
 # $(call import-module,curl/prebuilt/android)
 $(call import-module,websockets/prebuilt/android)
 $(call import-module,openssl/prebuilt/android)

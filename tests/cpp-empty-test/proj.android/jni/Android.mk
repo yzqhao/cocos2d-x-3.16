@@ -13,7 +13,6 @@ LOCAL_SRC_FILES := main.cpp \
                    ../../Classes/HelloWorldScene.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes \
-                    $(LOCAL_PATH)/../../../../extensions \
                     $(LOCAL_PATH)/../../../.. \
 
 LOCAL_STATIC_LIBRARIES := cocos2dx_static

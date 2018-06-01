@@ -26,7 +26,6 @@
 #include "AppDelegate.h"
 
 #include "cocos2d.h"
-#include "extensions/cocos-ext.h"
 #include "Scene3DTest/Scene3DTest.h"
 
 USING_NS_CC;

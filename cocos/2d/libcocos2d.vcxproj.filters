@@ -55,21 +55,6 @@
     <Filter Include="cocostudio">
       <UniqueIdentifier>{dbdbbfad-71fc-4f1d-a809-b43651f87267}</UniqueIdentifier>
     </Filter>
-    <Filter Include="cocosdenshion">
-      <UniqueIdentifier>{3bd71d42-dfa4-4649-bb01-ad607fdca1c2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension">
-      <UniqueIdentifier>{976bf662-699e-482e-b5db-a20d4abab137}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="extension\AssetsManager">
-      <UniqueIdentifier>{ad47c713-2196-4c8f-9205-2a2a7ecc0b80}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="cocosdenshion\Header Files">
-      <UniqueIdentifier>{f42979de-0079-4eba-b469-81ebff9ec588}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="cocosdenshion\Source Files">
-      <UniqueIdentifier>{f42ec238-cddc-475a-b343-6d0984cb9681}</UniqueIdentifier>
-    </Filter>
     <Filter Include="cocostudio\json">
       <UniqueIdentifier>{a9901b6a-0c7b-4adb-8e17-105c872d744d}</UniqueIdentifier>
     </Filter>
@@ -377,9 +362,6 @@
       <Filter>platform</Filter>
     </ClCompile>
     <ClCompile Include="..\platform\CCSAXParser.cpp">
-      <Filter>platform</Filter>
-    </ClCompile>
-    <ClCompile Include="..\platform\CCThread.cpp">
       <Filter>platform</Filter>
     </ClCompile>
     <ClCompile Include="..\..\external\tinyxml2\tinyxml2.cpp">
@@ -942,9 +924,6 @@
     <ClInclude Include="..\platform\CCSAXParser.h">
       <Filter>platform</Filter>
     </ClInclude>
-    <ClInclude Include="..\platform\CCThread.h">
-      <Filter>platform</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\external\tinyxml2\tinyxml2.h">
       <Filter>external\tinyxml2</Filter>
     </ClInclude>
@@ -1046,15 +1025,6 @@
     </ClInclude>
     <ClInclude Include="..\3d\cocos3d.h">
       <Filter>3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\cocos-ext.h">
-      <Filter>extension</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\ExtensionExport.h">
-      <Filter>extension</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\extensions\ExtensionMacros.h">
-      <Filter>extension</Filter>
     </ClInclude>
     <ClInclude Include="..\..\external\json\document.h">
       <Filter>cocostudio\json\rapidjson</Filter>

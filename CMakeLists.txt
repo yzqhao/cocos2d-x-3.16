@@ -86,7 +86,6 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/cocos
   ${CMAKE_CURRENT_SOURCE_DIR}/deprecated
   ${CMAKE_CURRENT_SOURCE_DIR}/cocos/platform
-  ${CMAKE_CURRENT_SOURCE_DIR}/extensions
   ${CMAKE_CURRENT_SOURCE_DIR}/external
 )
 

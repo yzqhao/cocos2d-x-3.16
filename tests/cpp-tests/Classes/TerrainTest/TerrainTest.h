@@ -6,7 +6,6 @@
 #include "2d/CCCamera.h"
 
 #include "cocos2d.h"
-#include "extensions/cocos-ext.h"
 #include "VisibleRect.h"
 
 #define PLAYER_STATE_LEFT 0 

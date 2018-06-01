@@ -43,7 +43,6 @@ set(COCOS_PLATFORM_SPECIFIC_SRC
   platform/mac/CCDevice-mac.mm
   platform/apple/CCLock-apple.cpp
   platform/apple/CCFileUtils-apple.mm
-  platform/apple/CCThread-apple.mm
   platform/apple/CCDevice-apple.mm
   platform/desktop/CCGLViewImpl-desktop.cpp
 )
@@ -112,7 +111,6 @@ include_directories(
 set(COCOS_PLATFORM_SRC
 
   platform/CCSAXParser.cpp
-  platform/CCThread.cpp
   platform/CCGLView.cpp
   platform/CCFileUtils.cpp
   platform/CCImage.cpp
