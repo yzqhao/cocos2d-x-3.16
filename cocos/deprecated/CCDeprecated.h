@@ -34,7 +34,6 @@
 #include <math.h>
 
 #include "2d/CCAtlasNode.h"
-#include "2d/CCGrid.h"
 #include "2d/CCLabelAtlas.h"
 #include "2d/CCLayer.h"
 #include "2d/CCRenderTexture.h"
@@ -594,8 +593,6 @@ CC_DEPRECATED_ATTRIBUTE typedef LabelAtlas CCLabelAtlas;
 CC_DEPRECATED_ATTRIBUTE typedef LabelProtocol CCLabelProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef Director CCDirector;
 CC_DEPRECATED_ATTRIBUTE typedef GridBase CCGridBase;
-CC_DEPRECATED_ATTRIBUTE typedef Grid3D CCGrid3D;
-CC_DEPRECATED_ATTRIBUTE typedef TiledGrid3D CCTiledGrid3D;
 CC_DEPRECATED_ATTRIBUTE typedef Sprite CCSprite;
 CC_DEPRECATED_ATTRIBUTE typedef Layer CCLayer;
 //CC_DEPRECATED_ATTRIBUTE typedef KeypadDelegate CCKeypadDelegate;

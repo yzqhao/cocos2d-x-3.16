@@ -121,13 +121,7 @@
     <ClCompile Include="CCFontAtlas.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCFontCharMap.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCFontFreeType.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCGLBufferedNode.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCGrabber.cpp">
@@ -630,13 +624,7 @@
     <ClInclude Include="CCFontAtlas.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="CCFontCharMap.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCFontFreeType.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCGLBufferedNode.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCGrabber.h">

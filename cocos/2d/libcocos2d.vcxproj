@@ -339,9 +339,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCCamera.cpp" />
     <ClCompile Include="CCCameraBackgroundBrush.cpp" />
     <ClCompile Include="CCFontAtlas.cpp" />
-    <ClCompile Include="CCFontCharMap.cpp" />
     <ClCompile Include="CCFontFreeType.cpp" />
-    <ClCompile Include="CCGLBufferedNode.cpp" />
     <ClCompile Include="CCGrabber.cpp" />
     <ClCompile Include="CCGrid.cpp" />
     <ClCompile Include="CCLabelAtlas.cpp" />
@@ -545,9 +543,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCCameraBackgroundBrush.h" />
     <ClInclude Include="CCFont.h" />
     <ClInclude Include="CCFontAtlas.h" />
-    <ClInclude Include="CCFontCharMap.h" />
     <ClInclude Include="CCFontFreeType.h" />
-    <ClInclude Include="CCGLBufferedNode.h" />
     <ClInclude Include="CCGrabber.h" />
     <ClInclude Include="CCGrid.h" />
     <ClInclude Include="CCLabelAtlas.h" />
