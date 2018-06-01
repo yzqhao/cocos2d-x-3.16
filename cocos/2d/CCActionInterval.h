@@ -108,7 +108,6 @@ public:
         return nullptr;
     }
 
-CC_CONSTRUCTOR_ACCESS:
     /** initializes the action */
     bool initWithDuration(float d);
 
@@ -173,7 +172,6 @@ public:
      */
     virtual void update(float t) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Sequence();
     virtual ~Sequence();
 
@@ -241,7 +239,6 @@ public:
     virtual void update(float dt) override;
     virtual bool isDone(void) const override;
     
-CC_CONSTRUCTOR_ACCESS:
     Repeat() {}
     virtual ~Repeat();
 
@@ -310,7 +307,6 @@ public:
     virtual void step(float dt) override;
     virtual bool isDone(void) const override;
     
-CC_CONSTRUCTOR_ACCESS:
     RepeatForever()
     : _innerAction(nullptr)
     {}
@@ -381,7 +377,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Spawn();
     virtual ~Spawn();
 
@@ -442,7 +437,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     RotateTo();
     virtual ~RotateTo() {}
 
@@ -518,7 +512,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     RotateBy();
     virtual ~RotateBy() {}
 
@@ -579,7 +572,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     MoveBy():_is3D(false) {}
     virtual ~MoveBy() {}
 
@@ -628,7 +620,6 @@ public:
     virtual MoveTo* reverse() const  override;
     virtual void startWithTarget(Node *target) override;
     
-CC_CONSTRUCTOR_ACCESS:
     MoveTo() {}
     virtual ~MoveTo() {}
 
@@ -677,7 +668,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     SkewTo();
     virtual ~SkewTo() {}
     /**
@@ -722,7 +712,6 @@ public:
     virtual SkewBy* clone() const  override;
     virtual SkewBy* reverse() const override;
     
-CC_CONSTRUCTOR_ACCESS:
     SkewBy() {}
     virtual ~SkewBy() {}
     /**
@@ -756,7 +745,6 @@ public:
     void startWithTarget(cocos2d::Node* target) override;
     void update(float time) override;
 
-CC_CONSTRUCTOR_ACCESS:
     ResizeTo() {}
     virtual ~ResizeTo() {}
     
@@ -803,7 +791,6 @@ public:
     */
     virtual void update(float time) override;
 
-CC_CONSTRUCTOR_ACCESS:
     ResizeBy() {}
     virtual ~ResizeBy() {}
     
@@ -847,7 +834,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     JumpBy() {}
     virtual ~JumpBy() {}
 
@@ -891,7 +877,6 @@ public:
     virtual JumpTo* clone() const override;
     virtual JumpTo* reverse() const override;
 
-CC_CONSTRUCTOR_ACCESS:
     JumpTo() {}
     virtual ~JumpTo() {}
 
@@ -948,7 +933,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     BezierBy() {}
     virtual ~BezierBy() {}
 
@@ -993,7 +977,6 @@ public:
     virtual BezierTo* clone() const override;
     virtual BezierTo* reverse() const override;
     
-CC_CONSTRUCTOR_ACCESS:
     BezierTo() {}
     virtual ~BezierTo() {}
     /**
@@ -1054,7 +1037,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     ScaleTo() {}
     virtual ~ScaleTo() {}
 
@@ -1133,7 +1115,6 @@ public:
     virtual ScaleBy* clone() const override;
     virtual ScaleBy* reverse() const override;
 
-CC_CONSTRUCTOR_ACCESS:
     ScaleBy() {}
     virtual ~ScaleBy() {}
 
@@ -1167,7 +1148,6 @@ public:
     virtual void startWithTarget(Node *target) override;
     virtual void stop() override;
     
-CC_CONSTRUCTOR_ACCESS:
     Blink() {}
     virtual ~Blink() {}
 
@@ -1212,7 +1192,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     FadeTo() {}
     virtual ~FadeTo() {}
 
@@ -1257,7 +1236,6 @@ public:
      */
     void setReverseAction(FadeTo* ac);
 
-CC_CONSTRUCTOR_ACCESS:
     FadeIn():_reverseAction(nullptr) {}
     virtual ~FadeIn() {}
 
@@ -1291,7 +1269,6 @@ public:
      */
     void setReverseAction(FadeTo* ac);
 
-CC_CONSTRUCTOR_ACCESS:
     FadeOut():_reverseAction(nullptr) {}
     virtual ~FadeOut() {}
 private:
@@ -1335,7 +1312,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     TintTo() {}
     virtual ~TintTo() {}
 
@@ -1378,7 +1354,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     TintBy() {}
     virtual ~TintBy() {}
 
@@ -1421,7 +1396,6 @@ public:
     virtual DelayTime* reverse() const override;
     virtual DelayTime* clone() const override;
 
-CC_CONSTRUCTOR_ACCESS:
     DelayTime() {}
     virtual ~DelayTime() {}
 
@@ -1459,7 +1433,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     ReverseTime();
     virtual ~ReverseTime();
 
@@ -1516,7 +1489,6 @@ public:
      */
     virtual void update(float t) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Animate();
     virtual ~Animate();
 
@@ -1576,7 +1548,6 @@ public:
      */
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     TargetedAction();
     virtual ~TargetedAction();
 
@@ -1623,7 +1594,6 @@ public:
     ActionFloat* reverse() const override;
     ActionFloat* clone() const override;
 
-CC_CONSTRUCTOR_ACCESS:
     ActionFloat() {};
     virtual ~ActionFloat() {};
 

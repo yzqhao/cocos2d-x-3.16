@@ -103,7 +103,6 @@ public:
     */
     void enqueue(AsyncTaskPool::TaskType type, std::function<void()> task);
     
-CC_CONSTRUCTOR_ACCESS:
     AsyncTaskPool();
     ~AsyncTaskPool();
     

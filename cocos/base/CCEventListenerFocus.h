@@ -66,7 +66,6 @@ public:
 public:
     std::function<void(ui::Widget*, ui::Widget*)> onFocusChanged;
     
-CC_CONSTRUCTOR_ACCESS:
     EventListenerFocus();
     bool init();
     

@@ -115,31 +115,6 @@ THE SOFTWARE.
 #define CC_USE_TIFF  1
 #endif // CC_USE_TIFF
 
- /** Support WIC (Windows Image Component) or not. Replaces PNG, TIFF and JPEG
- */
-#ifndef CC_USE_WIC
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-#define CC_USE_WIC  1
-#undef CC_USE_TIFF
-#undef CC_USE_JPEG
-#undef CC_USE_PNG
-#endif
-#endif // CC_USE_WIC
-
-
-/** @def CC_CONSTRUCTOR_ACCESS
- * Indicate the init functions access modifier. If value equals to protected, then these functions are protected.
- * If value equals to public, these functions are public,
- * protected by default.
- */
-#ifndef CC_CONSTRUCTOR_ACCESS
-  //#ifdef CC_ENABLE_SCRIPT_BINDING
-    #define CC_CONSTRUCTOR_ACCESS public
-  // #else
-  //   #define CC_CONSTRUCTOR_ACCESS protected
-  // #endif
-#endif
-
 #ifndef CC_FILEUTILS_APPLE_ENABLE_OBJC
 #define CC_FILEUTILS_APPLE_ENABLE_OBJC  1
 #endif

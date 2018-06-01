@@ -159,7 +159,6 @@ public:
      */
     void setFlags(unsigned int flags) { _flags = flags; }
 
-CC_CONSTRUCTOR_ACCESS:
     Action();
     virtual ~Action();
 
@@ -217,7 +216,6 @@ public:
         return nullptr;
     }
 
-CC_CONSTRUCTOR_ACCESS:
     FiniteTimeAction()
     : _duration(0)
     {}
@@ -287,7 +285,6 @@ public:
      */
     virtual bool isDone() const  override;
     
-CC_CONSTRUCTOR_ACCESS:
     Speed();
     virtual ~Speed(void);
     /** Initializes the action. */
@@ -370,7 +367,6 @@ public:
     virtual bool isDone() const override;
     virtual void stop() override;
 
-CC_CONSTRUCTOR_ACCESS:
     /**
      * @js ctor
      */

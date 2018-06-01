@@ -71,7 +71,6 @@ public:
     virtual bool checkAvailable() override;
     virtual EventListenerCustom* clone() override;
     
-CC_CONSTRUCTOR_ACCESS:
     /** Constructor */
     EventListenerCustom();
     

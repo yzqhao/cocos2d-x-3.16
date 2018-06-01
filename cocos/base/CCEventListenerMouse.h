@@ -62,7 +62,6 @@ public:
     std::function<void(EventMouse* event)> onMouseMove;
     std::function<void(EventMouse* event)> onMouseScroll;
 
-CC_CONSTRUCTOR_ACCESS:
     EventListenerMouse();
     bool init();
 };

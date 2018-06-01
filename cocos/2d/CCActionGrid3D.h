@@ -80,7 +80,6 @@ public:
     virtual Waves3D* clone() const override;
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Waves3D() {}
     virtual ~Waves3D() {}
 
@@ -121,7 +120,6 @@ public:
     virtual FlipX3D* clone() const override;
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     FlipX3D() {}
     virtual ~FlipX3D() {}
 
@@ -162,7 +160,6 @@ public:
     virtual void update(float time) override;
     virtual FlipY3D* clone() const override;
 
-CC_CONSTRUCTOR_ACCESS:
     FlipY3D() {}
     virtual ~FlipY3D() {}
 private:
@@ -223,7 +220,6 @@ public:
     virtual Lens3D* clone() const override;
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Lens3D() {}
     virtual ~Lens3D() {}
 
@@ -311,7 +307,6 @@ public:
     virtual Ripple3D* clone() const override;
     virtual void update(float time) override;
 
-CC_CONSTRUCTOR_ACCESS:
     Ripple3D() {}
     virtual ~Ripple3D() {}
 
@@ -362,7 +357,6 @@ public:
     virtual Shaky3D* clone() const override;
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Shaky3D() {}
     virtual ~Shaky3D() {}
     
@@ -429,7 +423,6 @@ public:
     virtual Liquid* clone() const override;
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Liquid() {}
     virtual ~Liquid() {}
     
@@ -500,7 +493,6 @@ public:
     virtual Waves* clone() const override;
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Waves() {}
     virtual ~Waves() {}
     
@@ -585,7 +577,6 @@ public:
     virtual Twirl* clone() const override;
     virtual void update(float time) override;
     
-CC_CONSTRUCTOR_ACCESS:
     Twirl() {}
     virtual ~Twirl() {}
 

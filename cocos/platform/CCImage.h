@@ -30,10 +30,6 @@ THE SOFTWARE.
 #include "base/CCRef.h"
 #include "renderer/CCTexture2D.h"
 
-#if CC_USE_WIC
-#include "platform/winrt/WICImageLoader-winrt.h"
-#endif
-
 // premultiply alpha, or the effect will wrong when want to use other pixel format in Texture2D,
 // such as RGB888, RGB5A1
 #define CC_RGB_PREMULTIPLY_ALPHA(vr, vg, vb, va) \
@@ -159,10 +155,6 @@ public:
     bool saveToFile(const std::string &filename, bool isToRGB = true);
 
 protected:
-#if CC_USE_WIC
-    bool encodeWithWIC(const std::string& filePath, bool isToRGB, GUID containerFormat);
-    bool decodeWithWIC(const unsigned char *data, ssize_t dataLen);
-#endif
     bool initWithJpgData(const unsigned char *  data, ssize_t dataLen);
     bool initWithPngData(const unsigned char * data, ssize_t dataLen);
     bool initWithTiffData(const unsigned char * data, ssize_t dataLen);

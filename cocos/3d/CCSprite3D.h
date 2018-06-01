@@ -327,7 +327,6 @@ public:
     /**remove all the SpriteData from Sprite3D*/
     void removeAllSprite3DData();
     
-    CC_CONSTRUCTOR_ACCESS:
     Sprite3DCache();
     ~Sprite3DCache();
     

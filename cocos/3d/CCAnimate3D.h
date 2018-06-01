@@ -130,10 +130,6 @@ public:
     const ValueMap* getKeyFrameUserInfo(int keyFrame) const;
     ValueMap* getKeyFrameUserInfo(int keyFrame);
     
-
-    
-CC_CONSTRUCTOR_ACCESS:
-    
     Animate3D();
     virtual ~Animate3D();
     

@@ -318,7 +318,6 @@ public:
     // Get CocosStudio guide lines width.
     GLfloat getLineWidth();
 
-CC_CONSTRUCTOR_ACCESS:
     DrawNode(GLfloat lineWidth = DEFAULT_LINE_WIDTH);
     virtual ~DrawNode();
     virtual bool init() override;

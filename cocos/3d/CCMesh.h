@@ -226,9 +226,7 @@ public:
     void setForce2DQueue(bool force2D) { _force2DQueue = force2D; }
 
     std::string getTextureFileName(){ return _texFile; }
-
-CC_CONSTRUCTOR_ACCESS:
-
+    
     Mesh();
     virtual ~Mesh();
 

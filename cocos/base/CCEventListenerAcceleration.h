@@ -59,7 +59,6 @@ public:
     virtual EventListenerAcceleration* clone() override;
     virtual bool checkAvailable() override;
     
-CC_CONSTRUCTOR_ACCESS:
     EventListenerAcceleration();
     
     bool init(const std::function<void(Acceleration*, Event* event)>& callback);

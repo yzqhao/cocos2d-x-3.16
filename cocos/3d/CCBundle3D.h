@@ -167,7 +167,6 @@ protected:
      */
     Reference* seekToFirstType(unsigned int type, const std::string& id = "");
 
-CC_CONSTRUCTOR_ACCESS:
     Bundle3D();
     virtual ~Bundle3D();
     

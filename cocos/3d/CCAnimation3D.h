@@ -86,7 +86,6 @@ public:
     /**get the bone Curves set*/
     const std::unordered_map<std::string, Curve*>& getBoneCurves() const {return _boneCurves;}
     
-CC_CONSTRUCTOR_ACCESS:
     Animation3D();
     virtual ~Animation3D();  
     /**init Animation3D from bundle data*/
