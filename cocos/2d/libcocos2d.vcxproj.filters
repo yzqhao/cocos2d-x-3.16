@@ -163,9 +163,6 @@
     <ClCompile Include="CCNodeGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCProgressTimer.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCRenderTexture.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -173,9 +170,6 @@
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCSprite.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCSpriteBatchNode.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCSpriteFrame.cpp">
@@ -681,9 +675,6 @@
     <ClInclude Include="CCNodeGrid.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="CCProgressTimer.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCRenderTexture.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -691,9 +682,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCSprite.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCSpriteBatchNode.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCSpriteFrame.h">

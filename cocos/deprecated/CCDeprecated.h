@@ -38,7 +38,6 @@
 #include "2d/CCLabelAtlas.h"
 #include "2d/CCLayer.h"
 #include "2d/CCRenderTexture.h"
-#include "2d/CCProgressTimer.h"
 #include "2d/CCSpriteFrameCache.h"
 #include "base/CCConfiguration.h"
 #include "base/CCDataVisitor.h"
@@ -598,7 +597,6 @@ CC_DEPRECATED_ATTRIBUTE typedef GridBase CCGridBase;
 CC_DEPRECATED_ATTRIBUTE typedef Grid3D CCGrid3D;
 CC_DEPRECATED_ATTRIBUTE typedef TiledGrid3D CCTiledGrid3D;
 CC_DEPRECATED_ATTRIBUTE typedef Sprite CCSprite;
-CC_DEPRECATED_ATTRIBUTE typedef SpriteBatchNode CCSpriteBatchNode;
 CC_DEPRECATED_ATTRIBUTE typedef Layer CCLayer;
 //CC_DEPRECATED_ATTRIBUTE typedef KeypadDelegate CCKeypadDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef Layer CCLayerRGBA;
@@ -606,7 +604,6 @@ CC_DEPRECATED_ATTRIBUTE typedef LayerColor CCLayerColor;
 CC_DEPRECATED_ATTRIBUTE typedef LayerGradient CCLayerGradient;
 CC_DEPRECATED_ATTRIBUTE typedef LayerMultiplex CCLayerMultiplex;
 CC_DEPRECATED_ATTRIBUTE typedef Scene CCScene;
-CC_DEPRECATED_ATTRIBUTE typedef ProgressTimer CCProgressTimer;
 CC_DEPRECATED_ATTRIBUTE typedef RenderTexture CCRenderTexture;
 CC_DEPRECATED_ATTRIBUTE typedef FileUtils CCFileUtils;
 CC_DEPRECATED_ATTRIBUTE typedef Application CCApplication;
@@ -649,7 +646,6 @@ CC_DEPRECATED_ATTRIBUTE typedef FontDefinition ccFontDefinition;
 
 CC_DEPRECATED_ATTRIBUTE typedef TextVAlignment CCVerticalTextAlignment;
 CC_DEPRECATED_ATTRIBUTE typedef TextHAlignment CCTextAlignment;
-CC_DEPRECATED_ATTRIBUTE typedef ProgressTimer::Type CCProgressTimerType;
 
 CC_DEPRECATED_ATTRIBUTE typedef void* CCZone;
 
@@ -698,10 +694,6 @@ CC_DEPRECATED_ATTRIBUTE const int kCCVertexAttribFlag_Position = GL::VERTEX_ATTR
 CC_DEPRECATED_ATTRIBUTE const int kCCVertexAttribFlag_Color = GL::VERTEX_ATTRIB_FLAG_COLOR;
 CC_DEPRECATED_ATTRIBUTE const int kCCVertexAttribFlag_TexCoords = GL::VERTEX_ATTRIB_FLAG_TEX_COORD;
 CC_DEPRECATED_ATTRIBUTE const int kCCVertexAttribFlag_PosColorTex = GL::VERTEX_ATTRIB_FLAG_POS_COLOR_TEX;
-
-CC_DEPRECATED_ATTRIBUTE const ProgressTimer::Type kCCProgressTimerTypeRadial = ProgressTimer::Type::RADIAL;
-CC_DEPRECATED_ATTRIBUTE const ProgressTimer::Type kCCProgressTimerTypeBar = ProgressTimer::Type::BAR;
-CC_DEPRECATED_ATTRIBUTE typedef ProgressTimer::Type ProgressTimerType;
 
 CC_DEPRECATED_ATTRIBUTE const Director::Projection kCCDirectorProjection2D = Director::Projection::_2D;
 CC_DEPRECATED_ATTRIBUTE const Director::Projection kCCDirectorProjection3D = Director::Projection::_3D;

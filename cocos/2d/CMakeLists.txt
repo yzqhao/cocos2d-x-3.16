@@ -22,11 +22,9 @@ set(COCOS_2D_SRC
   2d/CCLight.cpp
   2d/CCNode.cpp
   2d/CCNodeGrid.cpp
-  2d/CCProgressTimer.cpp
   2d/CCProtectedNode.cpp
   2d/CCRenderTexture.cpp
   2d/CCScene.cpp
-  2d/CCSpriteBatchNode.cpp
   2d/CCSprite.cpp
   2d/CCSpriteFrameCache.cpp
   2d/CCSpriteFrame.cpp

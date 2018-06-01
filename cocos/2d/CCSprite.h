@@ -38,7 +38,6 @@ THE SOFTWARE.
 
 NS_CC_BEGIN
 
-class SpriteBatchNode;
 class SpriteFrame;
 class Rect;
 class Size;
@@ -88,7 +87,6 @@ public:
         QUAD,
         POLYGON,
         SLICE9,
-        QUAD_BATCHNODE
     };
      /** Sprite invalid index on the SpriteBatchNode. */
     static const int INDEX_NOT_INITIALIZED = -1;
@@ -179,36 +177,6 @@ public:
 
     //  end of creators group
     /// @}
-
-
-    /// @{
-    /// @name BatchNode methods
-
-    /**
-     * Updates the quad according the rotation, position, scale values.
-     */
-    virtual void updateTransform() override;
-
-    /**
-     * Returns the batch node object if this sprite is rendered by SpriteBatchNode.
-     *
-     * @return The SpriteBatchNode object if this sprite is rendered by SpriteBatchNode,
-     *         nullptr if the sprite isn't used batch node.
-     */
-    virtual SpriteBatchNode* getBatchNode() const;
-    /**
-     * Sets the batch node to sprite.
-     * @warning This method is not recommended for game developers. Sample code for using batch node
-     * @code
-     * SpriteBatchNode *batch = SpriteBatchNode::create("Images/grossini_dance_atlas.png", 15);
-     * Sprite *sprite = Sprite::createWithTexture(batch->getTexture(), Rect(0, 0, 57, 57));
-     * batch->addChild(sprite);
-     * layer->addChild(batch);
-     * @endcode
-     */
-    virtual void setBatchNode(SpriteBatchNode *spriteBatchNode);
-
-    /// @} end of BatchNode methods
 
 
     /// @{
@@ -646,7 +614,6 @@ protected:
     //
     TextureAtlas*       _textureAtlas;      /// SpriteBatchNode texture atlas (weak reference)
     ssize_t             _atlasIndex;        /// Absolute (real) Index on the SpriteSheet
-    SpriteBatchNode*    _batchNode;         /// Used batch node (weak reference)
 
     bool                _dirty;             /// Whether the sprite needs to be updated
     bool                _recursiveDirty;    /// Whether all of the sprite's children needs to be updated
