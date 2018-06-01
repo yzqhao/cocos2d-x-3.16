@@ -50,12 +50,12 @@ TerrainWalkThru::TerrainWalkThru()
     billboard->setCameraMask((unsigned short)CameraFlag::USER1);
     _player->addChild(billboard);
 
-    auto animation = Animation3D::create("Sprite3DTest/girl.c3b","Take 001");
-    if (animation)
-    {
-        auto animate = Animate3D::create(animation);
-        _player->runAction(RepeatForever::create(animate));
-    }
+    // auto animation = Animation3D::create("Sprite3DTest/girl.c3b","Take 001");
+    // if (animation)
+    // {
+    //     auto animate = Animate3D::create(animation);
+    //     _player->runAction(RepeatForever::create(animate));
+    // }
 
     _camera->setPosition3D(_player->getPosition3D()+camera_offset);
     _camera->setRotation3D(Vec3(-45,0,0));

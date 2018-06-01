@@ -133,28 +133,10 @@
     <ClCompile Include="CCAction.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCActionCamera.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCActionCatmullRom.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCActionGrid.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCActionGrid3D.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCActionInstant.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCActionInterval.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCActionManager.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCActionTiledGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCAnimation.cpp">
@@ -484,9 +466,6 @@
     <ClCompile Include="..\base\ccRandom.cpp">
       <Filter>base</Filter>
     </ClCompile>
-    <ClCompile Include="..\3d\CCAnimate3D.cpp">
-      <Filter>3d</Filter>
-    </ClCompile>
     <ClCompile Include="..\3d\CCAnimation3D.cpp">
       <Filter>3d</Filter>
     </ClCompile>
@@ -699,28 +678,10 @@
     <ClInclude Include="CCAction.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="CCActionCamera.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCActionCatmullRom.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCActionGrid.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCActionGrid3D.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCActionInstant.h">
       <Filter>2d</Filter>
     </ClInclude>
-    <ClInclude Include="CCActionInterval.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCActionManager.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCActionTiledGrid.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCAnimation.h">
@@ -1108,9 +1069,6 @@
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\3d\CCAABB.h">
-      <Filter>3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3d\CCAnimate3D.h">
       <Filter>3d</Filter>
     </ClInclude>
     <ClInclude Include="..\3d\CCAnimation3D.h">

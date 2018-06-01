@@ -94,14 +94,8 @@ THE SOFTWARE.
 
 // actions
 #include "2d/CCAction.h"
-#include "2d/CCActionCamera.h"
-#include "2d/CCActionCatmullRom.h"
-#include "2d/CCActionGrid.h"
-#include "2d/CCActionGrid3D.h"
 #include "2d/CCActionInstant.h"
-#include "2d/CCActionInterval.h"
 #include "2d/CCActionManager.h"
-#include "2d/CCActionTiledGrid.h"
 #include "2d/CCTweenFunction.h"
 
 // 2d nodes
@@ -226,7 +220,6 @@ THE SOFTWARE.
 
 //3d
 #include "3d/CCAABB.h"
-#include "3d/CCAnimate3D.h"
 #include "3d/CCAnimation3D.h"
 #include "3d/CCAttachNode.h"
 #include "3d/CCBillBoard.h"

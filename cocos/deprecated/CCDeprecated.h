@@ -33,12 +33,7 @@
 
 #include <math.h>
 
-#include "2d/CCActionCamera.h"
-#include "2d/CCActionCatmullRom.h"
-#include "2d/CCActionGrid.h"
-#include "2d/CCActionGrid3D.h"
 #include "2d/CCActionInstant.h"
-#include "2d/CCActionTiledGrid.h"
 #include "2d/CCAnimationCache.h"
 #include "2d/CCAtlasNode.h"
 #include "2d/CCClippingNode.h"
@@ -579,7 +574,6 @@ CC_DEPRECATED_ATTRIBUTE typedef PrettyPrinter CCPrettyPrinter;
 CC_DEPRECATED_ATTRIBUTE typedef Acceleration CCAcceleration;
 CC_DEPRECATED_ATTRIBUTE typedef TextureAtlas CCTextureAtlas;
 CC_DEPRECATED_ATTRIBUTE typedef Configuration CCConfiguration;
-CC_DEPRECATED_ATTRIBUTE typedef PointArray CCPointArray;
 CC_DEPRECATED_ATTRIBUTE typedef RemoveSelf CCRemoveSelf;
 CC_DEPRECATED_ATTRIBUTE typedef IMEDelegate CCIMEDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef IMEKeyboardNotificationInfo CCIMEKeyboardNotificationInfo;
@@ -592,7 +586,6 @@ CC_DEPRECATED_ATTRIBUTE typedef Image CCImage;
 
 CC_DEPRECATED_ATTRIBUTE typedef Action CCAction;
 CC_DEPRECATED_ATTRIBUTE typedef FiniteTimeAction CCFiniteTimeAction;
-CC_DEPRECATED_ATTRIBUTE typedef Speed CCSpeed;
 CC_DEPRECATED_ATTRIBUTE typedef Follow CCFollow;
 CC_DEPRECATED_ATTRIBUTE typedef GLProgram CCGLProgram;
 CC_DEPRECATED_ATTRIBUTE typedef Touch CCTouch;
@@ -604,33 +597,7 @@ CC_DEPRECATED_ATTRIBUTE typedef SpriteFrame CCSpriteFrame;
 CC_DEPRECATED_ATTRIBUTE typedef AnimationFrame CCAnimationFrame;
 CC_DEPRECATED_ATTRIBUTE typedef Animation CCAnimation;
 CC_DEPRECATED_ATTRIBUTE typedef ActionInterval CCActionInterval;
-CC_DEPRECATED_ATTRIBUTE typedef Sequence CCSequence;
-CC_DEPRECATED_ATTRIBUTE typedef Repeat CCRepeat;
 CC_DEPRECATED_ATTRIBUTE typedef RepeatForever CCRepeatForever;
-CC_DEPRECATED_ATTRIBUTE typedef Spawn CCSpawn;
-CC_DEPRECATED_ATTRIBUTE typedef RotateTo CCRotateTo;
-CC_DEPRECATED_ATTRIBUTE typedef RotateBy CCRotateBy;
-CC_DEPRECATED_ATTRIBUTE typedef MoveBy CCMoveBy;
-CC_DEPRECATED_ATTRIBUTE typedef MoveTo CCMoveTo;
-CC_DEPRECATED_ATTRIBUTE typedef SkewTo CCSkewTo;
-CC_DEPRECATED_ATTRIBUTE typedef SkewBy CCSkewBy;
-CC_DEPRECATED_ATTRIBUTE typedef JumpBy CCJumpBy;
-CC_DEPRECATED_ATTRIBUTE typedef JumpTo CCJumpTo;
-CC_DEPRECATED_ATTRIBUTE typedef BezierBy CCBezierBy;
-CC_DEPRECATED_ATTRIBUTE typedef BezierTo CCBezierTo;
-CC_DEPRECATED_ATTRIBUTE typedef ScaleTo CCScaleTo;
-CC_DEPRECATED_ATTRIBUTE typedef ScaleBy CCScaleBy;
-CC_DEPRECATED_ATTRIBUTE typedef Blink CCBlink;
-CC_DEPRECATED_ATTRIBUTE typedef FadeIn CCFadeIn;
-CC_DEPRECATED_ATTRIBUTE typedef FadeOut CCFadeOut;
-CC_DEPRECATED_ATTRIBUTE typedef FadeTo CCFadeTo;
-CC_DEPRECATED_ATTRIBUTE typedef TintTo CCTintTo;
-CC_DEPRECATED_ATTRIBUTE typedef TintBy CCTintBy;
-CC_DEPRECATED_ATTRIBUTE typedef DelayTime CCDelayTime;
-CC_DEPRECATED_ATTRIBUTE typedef Animate CCAnimate;
-CC_DEPRECATED_ATTRIBUTE typedef TargetedAction CCTargetedAction;
-CC_DEPRECATED_ATTRIBUTE typedef ActionCamera CCActionCamera;
-CC_DEPRECATED_ATTRIBUTE typedef OrbitCamera CCOrbitCamera;
 CC_DEPRECATED_ATTRIBUTE typedef ActionManager CCActionManager;
 CC_DEPRECATED_ATTRIBUTE typedef ActionInstant CCActionInstant;
 CC_DEPRECATED_ATTRIBUTE typedef Show CCShow;
@@ -643,36 +610,6 @@ CC_DEPRECATED_ATTRIBUTE typedef CallFunc CCCallFunc;
 CC_DEPRECATED_ATTRIBUTE typedef CallFuncN CCCallFuncN;
 CC_DEPRECATED_ATTRIBUTE typedef __CCCallFuncND CCCallFuncND;
 CC_DEPRECATED_ATTRIBUTE typedef __CCCallFuncO CCCallFuncO;
-CC_DEPRECATED_ATTRIBUTE typedef GridAction CCGridAction;
-CC_DEPRECATED_ATTRIBUTE typedef Grid3DAction CCGrid3DAction;
-CC_DEPRECATED_ATTRIBUTE typedef TiledGrid3DAction CCTiledGrid3DAction;
-CC_DEPRECATED_ATTRIBUTE typedef StopGrid CCStopGrid;
-CC_DEPRECATED_ATTRIBUTE typedef ReuseGrid CCReuseGrid;
-CC_DEPRECATED_ATTRIBUTE typedef Waves3D CCWaves3D;
-CC_DEPRECATED_ATTRIBUTE typedef FlipX3D CCFlipX3D;
-CC_DEPRECATED_ATTRIBUTE typedef FlipY3D CCFlipY3D;
-CC_DEPRECATED_ATTRIBUTE typedef Lens3D CCLens3D;
-CC_DEPRECATED_ATTRIBUTE typedef Ripple3D CCRipple3D;
-CC_DEPRECATED_ATTRIBUTE typedef Shaky3D CCShaky3D;
-CC_DEPRECATED_ATTRIBUTE typedef Liquid CCLiquid;
-CC_DEPRECATED_ATTRIBUTE typedef Waves CCWaves;
-CC_DEPRECATED_ATTRIBUTE typedef Twirl CCTwirl;
-CC_DEPRECATED_ATTRIBUTE typedef ShakyTiles3D CCShakyTiles3D;
-CC_DEPRECATED_ATTRIBUTE typedef ShatteredTiles3D CCShatteredTiles3D;
-CC_DEPRECATED_ATTRIBUTE typedef ShuffleTiles CCShuffleTiles;
-CC_DEPRECATED_ATTRIBUTE typedef FadeOutTRTiles CCFadeOutTRTiles;
-CC_DEPRECATED_ATTRIBUTE typedef FadeOutBLTiles CCFadeOutBLTiles;
-CC_DEPRECATED_ATTRIBUTE typedef FadeOutUpTiles CCFadeOutUpTiles;
-CC_DEPRECATED_ATTRIBUTE typedef FadeOutDownTiles CCFadeOutDownTiles;
-CC_DEPRECATED_ATTRIBUTE typedef TurnOffTiles CCTurnOffTiles;
-CC_DEPRECATED_ATTRIBUTE typedef WavesTiles3D CCWavesTiles3D;
-CC_DEPRECATED_ATTRIBUTE typedef JumpTiles3D CCJumpTiles3D;
-CC_DEPRECATED_ATTRIBUTE typedef SplitRows CCSplitRows;
-CC_DEPRECATED_ATTRIBUTE typedef SplitCols CCSplitCols;
-CC_DEPRECATED_ATTRIBUTE typedef CardinalSplineTo CCCardinalSplineTo;
-CC_DEPRECATED_ATTRIBUTE typedef CardinalSplineBy CCCardinalSplineBy;
-CC_DEPRECATED_ATTRIBUTE typedef CatmullRomTo CCCatmullRomTo;
-CC_DEPRECATED_ATTRIBUTE typedef CatmullRomBy CCCatmullRomBy;
 CC_DEPRECATED_ATTRIBUTE typedef AtlasNode CCAtlasNode;
 CC_DEPRECATED_ATTRIBUTE typedef TextureProtocol CCTextureProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef BlendProtocol CCBlendProtocol;
@@ -909,8 +846,6 @@ CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawSolidCircle( const Vec2& center, float
 CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawSolidCircle( const Vec2& center, float radius, float angle, unsigned int segments);
 CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawQuadBezier(const Vec2& origin, const Vec2& control, const Vec2& destination, unsigned int segments);
 CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawCubicBezier(const Vec2& origin, const Vec2& control1, const Vec2& control2, const Vec2& destination, unsigned int segments);
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawCatmullRom( PointArray *arrayOfControlPoints, unsigned int segments );
-CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawCardinalSpline( PointArray *config, float tension,  unsigned int segments );
 CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawColor4B( GLubyte r, GLubyte g, GLubyte b, GLubyte a );
 CC_DEPRECATED_ATTRIBUTE void CC_DLL ccDrawColor4F( GLfloat r, GLfloat g, GLfloat b, GLfloat a );
 CC_DEPRECATED_ATTRIBUTE void CC_DLL ccPointSize( GLfloat pointSize );

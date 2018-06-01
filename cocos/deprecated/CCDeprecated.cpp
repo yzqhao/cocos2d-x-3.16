@@ -166,16 +166,6 @@ void ccDrawCubicBezier(const Vec2& origin, const Vec2& control1, const Vec2& con
     DrawPrimitives::drawCubicBezier(origin, control1, control2, destination, segments);
 }
 
-void ccDrawCatmullRom( PointArray *arrayOfControlPoints, unsigned int segments )
-{
-    DrawPrimitives::drawCatmullRom(arrayOfControlPoints, segments);
-}
-
-void ccDrawCardinalSpline( PointArray *config, float tension,  unsigned int segments )
-{
-    DrawPrimitives::drawCardinalSpline(config, tension, segments);
-}
-
 void ccDrawColor4B( GLubyte r, GLubyte g, GLubyte b, GLubyte a )
 {
     DrawPrimitives::setDrawColor4B(r, g, b, a);

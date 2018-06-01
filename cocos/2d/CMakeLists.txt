@@ -7,15 +7,9 @@ include_directories(
 
 set(COCOS_2D_SRC
 
-  2d/CCActionCamera.cpp
-  2d/CCActionCatmullRom.cpp
   2d/CCAction.cpp
-  2d/CCActionGrid3D.cpp
-  2d/CCActionGrid.cpp
   2d/CCActionInstant.cpp
-  2d/CCActionInterval.cpp
   2d/CCActionManager.cpp
-  2d/CCActionTiledGrid.cpp
   2d/CCAnimationCache.cpp
   2d/CCAnimation.cpp
   2d/CCAtlasNode.cpp

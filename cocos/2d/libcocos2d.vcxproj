@@ -209,7 +209,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\..\external\unzip\unzip.cpp" />
     <ClCompile Include="..\..\external\xxhash\xxhash.c" />
     <ClCompile Include="..\3d\CCAABB.cpp" />
-    <ClCompile Include="..\3d\CCAnimate3D.cpp" />
     <ClCompile Include="..\3d\CCAnimation3D.cpp" />
     <ClCompile Include="..\3d\CCAttachNode.cpp" />
     <ClCompile Include="..\3d\CCBillBoard.cpp" />
@@ -337,14 +336,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\renderer\CCVertexIndexData.cpp" />
     <ClCompile Include="..\storage\local-storage\LocalStorage.cpp" />
     <ClCompile Include="CCAction.cpp" />
-    <ClCompile Include="CCActionCamera.cpp" />
-    <ClCompile Include="CCActionCatmullRom.cpp" />
-    <ClCompile Include="CCActionGrid.cpp" />
-    <ClCompile Include="CCActionGrid3D.cpp" />
     <ClCompile Include="CCActionInstant.cpp" />
-    <ClCompile Include="CCActionInterval.cpp" />
     <ClCompile Include="CCActionManager.cpp" />
-    <ClCompile Include="CCActionTiledGrid.cpp" />
     <ClCompile Include="CCAnimation.cpp" />
     <ClCompile Include="CCAnimationCache.cpp" />
     <ClCompile Include="CCAtlasNode.cpp" />
@@ -411,7 +404,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\..\external\unzip\unzip.h" />
     <ClInclude Include="..\..\external\xxhash\xxhash.h" />
     <ClInclude Include="..\3d\CCAABB.h" />
-    <ClInclude Include="..\3d\CCAnimate3D.h" />
     <ClInclude Include="..\3d\CCAnimation3D.h" />
     <ClInclude Include="..\3d\CCAnimationCurve.h" />
     <ClInclude Include="..\3d\CCAttachNode.h" />
@@ -565,14 +557,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\renderer\CCVertexIndexData.h" />
     <ClInclude Include="..\storage\local-storage\LocalStorage.h" />
     <ClInclude Include="CCAction.h" />
-    <ClInclude Include="CCActionCamera.h" />
-    <ClInclude Include="CCActionCatmullRom.h" />
-    <ClInclude Include="CCActionGrid.h" />
-    <ClInclude Include="CCActionGrid3D.h" />
     <ClInclude Include="CCActionInstant.h" />
-    <ClInclude Include="CCActionInterval.h" />
     <ClInclude Include="CCActionManager.h" />
-    <ClInclude Include="CCActionTiledGrid.h" />
     <ClInclude Include="CCAnimation.h" />
     <ClInclude Include="CCAnimationCache.h" />
     <ClInclude Include="CCAtlasNode.h" />

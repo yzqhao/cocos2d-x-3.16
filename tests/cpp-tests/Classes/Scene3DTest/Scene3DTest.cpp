@@ -254,12 +254,12 @@ void Scene3DTestScene::createWorld3D()
     _player->setPositionY(_terrain->getHeight(_player->getPositionX(),
                                               _player->getPositionZ()));
     
-    auto animation = Animation3D::create("Sprite3DTest/girl.c3b","Take 001");
-    if (animation)
-    {
-        auto animate = Animate3D::create(animation);
-        _player->runAction(RepeatForever::create(animate));
-    }
+    // auto animation = Animation3D::create("Sprite3DTest/girl.c3b","Take 001");
+    // if (animation)
+    // {
+    //     auto animate = Animate3D::create(animation);
+    //     _player->runAction(RepeatForever::create(animate));
+    // }
     
     // add BillBoard for test blend
     auto billboard = BillBoard::create("Images/btn-play-normal.png");
