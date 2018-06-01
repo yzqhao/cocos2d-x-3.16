@@ -136,8 +136,6 @@ SpriteBatchNode::~SpriteBatchNode()
 // don't call visit on it's children
 void SpriteBatchNode::visit(Renderer *renderer, const Mat4 &parentTransform, uint32_t parentFlags)
 {
-    CC_PROFILER_START_CATEGORY(kProfilerCategoryBatchSprite, "CCSpriteBatchNode - visit");
-
     // CAREFUL:
     // This visit is almost identical to CocosNode#visit
     // with the exception that it doesn't call visit on it's children
@@ -168,8 +166,6 @@ void SpriteBatchNode::visit(Renderer *renderer, const Mat4 &parentTransform, uin
         // FIX ME: Why need to set _orderOfArrival to 0??
         // Please refer to https://github.com/cocos2d/cocos2d-x/pull/6920
         //    setOrderOfArrival(0);
-        
-        CC_PROFILER_STOP_CATEGORY(kProfilerCategoryBatchSprite, "CCSpriteBatchNode - visit");
     }
 }
 

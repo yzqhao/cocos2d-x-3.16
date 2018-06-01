@@ -49,22 +49,7 @@ THE SOFTWARE.
 #endif  // CCASSERT
 
 #include "base/ccConfig.h"
-
-/** @def CC_SWAP
-simple macro that swaps 2 variables
- @deprecated use std::swap() instead
-*/
-#define CC_SWAP(x, y, type)    \
-{    type temp = (x);        \
-    x = y; y = temp;        \
-}
-
 #include "base/ccRandom.h"
-
-/** @def CCRANDOM_MINUS1_1
- returns a random float between -1 and 1
- */
-#define CCRANDOM_MINUS1_1() cocos2d::rand_minus1_1()
 
 /** @def CCRANDOM_0_1
  returns a random float between 0 and 1
@@ -82,40 +67,12 @@ simple macro that swaps 2 variables
 #define CC_RADIANS_TO_DEGREES(__ANGLE__) ((__ANGLE__) * 57.29577951f) // PI * 180
 
 #define CC_REPEAT_FOREVER (UINT_MAX -1)
-#define kRepeatForever CC_REPEAT_FOREVER
 
 /** @def CC_BLEND_SRC
 default gl blend src function. Compatible with premultiplied alpha images.
 */
 #define CC_BLEND_SRC GL_ONE
 #define CC_BLEND_DST GL_ONE_MINUS_SRC_ALPHA
-
-
-/** @def CC_NODE_DRAW_SETUP
- Helpful macro that setups the GL server state, the correct GL program and sets the Model View Projection matrix
- @since v2.0
- */
-#define CC_NODE_DRAW_SETUP() \
-do { \
-    CCASSERT(getGLProgram(), "No shader program set for this node"); \
-    { \
-        getGLProgram()->use(); \
-        getGLProgram()->setUniformsForBuiltins(_modelViewTransform); \
-    } \
-} while(0)
-
-
- /** @def CC_DIRECTOR_END
-  Stops and removes the director from memory.
-  Removes the GLView from its parent
-
-  @since v0.99.4
-  */
-#define CC_DIRECTOR_END()                                       \
-do {                                                            \
-    Director *__director = cocos2d::Director::getInstance();             \
-    __director->end();                                          \
-} while(0)
 
 /** @def CC_CONTENT_SCALE_FACTOR
 On Mac it returns 1;
@@ -170,10 +127,6 @@ cocos2d::Size( (__size_in_points__).width * CC_CONTENT_SCALE_FACTOR(), (__size_i
 #define FLT_EPSILON     1.192092896e-07F
 #endif // FLT_EPSILON
 
-#define DISALLOW_COPY_AND_ASSIGN(TypeName) \
-            TypeName(const TypeName&);\
-            void operator=(const TypeName&)
-
 /**
 Helper macros which converts 4-byte little/big endian 
 integral number to the machine native number representation
@@ -190,25 +143,6 @@ It should work same as apples CFSwapInt32LittleToHost(..)
 #define CC_SWAP_INT32_BIG_TO_HOST(i)    ((CC_HOST_IS_BIG_ENDIAN == true)? (i) : CC_SWAP32(i) )
 #define CC_SWAP_INT16_BIG_TO_HOST(i)    ((CC_HOST_IS_BIG_ENDIAN == true)? (i):  CC_SWAP16(i) )
 
-/**********************/
-/** Profiling Macros **/
-/**********************/
-#define CC_PROFILER_DISPLAY_TIMERS() do {} while (0)
-#define CC_PROFILER_PURGE_ALL() do {} while (0)
-
-#define CC_PROFILER_START(__name__)  do {} while (0)
-#define CC_PROFILER_STOP(__name__) do {} while (0)
-#define CC_PROFILER_RESET(__name__) do {} while (0)
-
-#define CC_PROFILER_START_CATEGORY(__cat__, __name__) do {} while(0)
-#define CC_PROFILER_STOP_CATEGORY(__cat__, __name__) do {} while(0)
-#define CC_PROFILER_RESET_CATEGORY(__cat__, __name__) do {} while(0)
-
-#define CC_PROFILER_START_INSTANCE(__id__, __name__) do {} while(0)
-#define CC_PROFILER_STOP_INSTANCE(__id__, __name__) do {} while(0)
-#define CC_PROFILER_RESET_INSTANCE(__id__, __name__) do {} while(0)
-
-
 #if !defined(COCOS2D_DEBUG) || COCOS2D_DEBUG == 0
 #define CHECK_GL_ERROR_DEBUG()
 #else
@@ -219,25 +153,6 @@ It should work same as apples CFSwapInt32LittleToHost(..)
             cocos2d::log("OpenGL error 0x%04X in %s %s %d\n", __error, __FILE__, __FUNCTION__, __LINE__); \
         } \
     } while (false)
-#endif
-
-/**
- * GL assertion that can be used for any OpenGL function call.
- *
- * This macro will assert if an error is detected when executing
- * the specified GL code. This macro will do nothing in release
- * mode and is therefore safe to use for realtime/per-frame GL
- * function calls.
- */
-#if defined(NDEBUG) || (defined(__APPLE__) && !defined(DEBUG))
-#define CC_GL_ASSERT( gl_code ) gl_code
-#else
-#define CC_GL_ASSERT( gl_code ) do \
-{ \
-gl_code; \
-__gl_error_code = glGetError(); \
-CC_ASSERT(__gl_error_code == GL_NO_ERROR, "Error"); \
-} while(0)
 #endif
 
  /*********************************/
@@ -254,7 +169,6 @@ CC_ASSERT(__gl_error_code == GL_NO_ERROR, "Error"); \
  Increments the GL Draws counts by one.
  The number of calls per frame are displayed on the screen when the Director's stats are enabled.
  */
-#define CC_INCREMENT_GL_DRAWS(__n__) cocos2d::Director::getInstance()->getRenderer()->addDrawnBatches(__n__)
 #define CC_INCREMENT_GL_DRAWN_BATCHES_AND_VERTICES(__drawcalls__, __vertices__) \
     do {                                                                \
         auto __renderer__ = cocos2d::Director::getInstance()->getRenderer();     \

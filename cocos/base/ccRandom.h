@@ -92,20 +92,6 @@ inline int random() {
 };
 
 /**
- * Returns a random float between -1 and 1.
- * It can be seeded using std::srand(seed);
- */
-inline float rand_minus1_1() {
-    // FIXME: using the new c++11 random engine generator
-    // without a proper way to set a seed is not useful.
-    // Resorting to the old random method since it can
-    // be seeded using std::srand()
-    return ((std::rand() / (float)RAND_MAX) * 2) -1;
-
-//    return cocos2d::random(-1.f, 1.f);
-};
-
-/**
  * Returns a random float between 0 and 1.
  * It can be seeded using std::srand(seed);
  */
