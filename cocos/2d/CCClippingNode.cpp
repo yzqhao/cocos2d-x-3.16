@@ -65,7 +65,6 @@ ClippingNode::~ClippingNode()
 {
     if (_stencil)
     {
-        _stencil->stopAllActions();
         _stencil->release();
     }
     CC_SAFE_DELETE(_stencilStateManager);

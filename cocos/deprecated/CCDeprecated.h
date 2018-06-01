@@ -33,7 +33,6 @@
 
 #include <math.h>
 
-#include "2d/CCActionInstant.h"
 #include "2d/CCAnimationCache.h"
 #include "2d/CCAtlasNode.h"
 #include "2d/CCClippingNode.h"
@@ -574,7 +573,6 @@ CC_DEPRECATED_ATTRIBUTE typedef PrettyPrinter CCPrettyPrinter;
 CC_DEPRECATED_ATTRIBUTE typedef Acceleration CCAcceleration;
 CC_DEPRECATED_ATTRIBUTE typedef TextureAtlas CCTextureAtlas;
 CC_DEPRECATED_ATTRIBUTE typedef Configuration CCConfiguration;
-CC_DEPRECATED_ATTRIBUTE typedef RemoveSelf CCRemoveSelf;
 CC_DEPRECATED_ATTRIBUTE typedef IMEDelegate CCIMEDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef IMEKeyboardNotificationInfo CCIMEKeyboardNotificationInfo;
 CC_DEPRECATED_ATTRIBUTE typedef __NotificationCenter CCNotificationCenter;
@@ -584,9 +582,6 @@ CC_DEPRECATED_ATTRIBUTE typedef __NotificationCenter NotificationCenter;
 //CC_DEPRECATED_ATTRIBUTE typedef TouchDelegate CCTouchDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef Image CCImage;
 
-CC_DEPRECATED_ATTRIBUTE typedef Action CCAction;
-CC_DEPRECATED_ATTRIBUTE typedef FiniteTimeAction CCFiniteTimeAction;
-CC_DEPRECATED_ATTRIBUTE typedef Follow CCFollow;
 CC_DEPRECATED_ATTRIBUTE typedef GLProgram CCGLProgram;
 CC_DEPRECATED_ATTRIBUTE typedef Touch CCTouch;
 CC_DEPRECATED_ATTRIBUTE typedef Texture2D CCTexture2D;
@@ -596,20 +591,6 @@ CC_DEPRECATED_ATTRIBUTE typedef Node CCRGBAProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef SpriteFrame CCSpriteFrame;
 CC_DEPRECATED_ATTRIBUTE typedef AnimationFrame CCAnimationFrame;
 CC_DEPRECATED_ATTRIBUTE typedef Animation CCAnimation;
-CC_DEPRECATED_ATTRIBUTE typedef ActionInterval CCActionInterval;
-CC_DEPRECATED_ATTRIBUTE typedef RepeatForever CCRepeatForever;
-CC_DEPRECATED_ATTRIBUTE typedef ActionManager CCActionManager;
-CC_DEPRECATED_ATTRIBUTE typedef ActionInstant CCActionInstant;
-CC_DEPRECATED_ATTRIBUTE typedef Show CCShow;
-CC_DEPRECATED_ATTRIBUTE typedef Hide CCHide;
-CC_DEPRECATED_ATTRIBUTE typedef ToggleVisibility CCToggleVisibility;
-CC_DEPRECATED_ATTRIBUTE typedef FlipX CCFlipX;
-CC_DEPRECATED_ATTRIBUTE typedef FlipY CCFlipY;
-CC_DEPRECATED_ATTRIBUTE typedef Place CCPlace;
-CC_DEPRECATED_ATTRIBUTE typedef CallFunc CCCallFunc;
-CC_DEPRECATED_ATTRIBUTE typedef CallFuncN CCCallFuncN;
-CC_DEPRECATED_ATTRIBUTE typedef __CCCallFuncND CCCallFuncND;
-CC_DEPRECATED_ATTRIBUTE typedef __CCCallFuncO CCCallFuncO;
 CC_DEPRECATED_ATTRIBUTE typedef AtlasNode CCAtlasNode;
 CC_DEPRECATED_ATTRIBUTE typedef TextureProtocol CCTextureProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef BlendProtocol CCBlendProtocol;
@@ -772,7 +753,6 @@ CC_DEPRECATED_ATTRIBUTE typedef Image::Format tImageFormat;
 CC_DEPRECATED_ATTRIBUTE const int kCCPrioritySystem = Scheduler::PRIORITY_SYSTEM;
 CC_DEPRECATED_ATTRIBUTE const int kCCPriorityNonSystemMin = Scheduler::PRIORITY_NON_SYSTEM_MIN;
 
-CC_DEPRECATED_ATTRIBUTE const int kCCActionTagInvalid = Action::INVALID_TAG;
 CC_DEPRECATED_ATTRIBUTE const int kCCNodeTagInvalid = Node::INVALID_TAG;
 
 CC_DEPRECATED_ATTRIBUTE const int kCCNodeOnEnter = kNodeOnEnter;

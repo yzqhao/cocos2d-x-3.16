@@ -863,12 +863,6 @@ const AABB& Sprite3D::getAABB() const
     return _aabb;
 }
 
-Action* Sprite3D::runAction(Action *action)
-{
-    setForceDepthWrite(true);
-    return Node::runAction(action);
-}
-
 Rect Sprite3D::getBoundingBox() const
 {
     AABB aabb = getAABB();

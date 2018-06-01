@@ -53,7 +53,6 @@ class LabelAtlas;
 class DirectorDelegate;
 class Node;
 class Scheduler;
-class ActionManager;
 class EventDispatcher;
 class EventCustom;
 class EventListenerCustom;
@@ -420,16 +419,6 @@ public:
      * @since v2.0
      */
     void setScheduler(Scheduler* scheduler);
-
-    /** Gets the ActionManager associated with this director.
-     * @since v2.0
-     */
-    ActionManager* getActionManager() const { return _actionManager; }
-    
-    /** Sets the ActionManager associated with this director.
-     * @since v2.0
-     */
-    void setActionManager(ActionManager* actionManager);
     
     /** Gets the EventDispatcher associated with this director.
      * @since v3.0
@@ -620,12 +609,7 @@ protected:
      @since v2.0
      */
     Scheduler *_scheduler;
-    
-    /** ActionManager associated with this director
-     @since v2.0
-     */
-    ActionManager *_actionManager;
-    
+
     /** EventDispatcher associated with this director
      @since v3.0
      */

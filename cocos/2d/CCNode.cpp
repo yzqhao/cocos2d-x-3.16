@@ -37,7 +37,6 @@ THE SOFTWARE.
 #include "base/CCEventDispatcher.h"
 #include "base/ccUTF8.h"
 #include "2d/CCCamera.h"
-#include "2d/CCActionManager.h"
 #include "2d/CCScene.h"
 #include "renderer/CCGLProgram.h"
 #include "renderer/CCGLProgramState.h"
@@ -107,8 +106,6 @@ Node::Node()
 {
     // set default scheduler and actionManager
     _director = Director::getInstance();
-    _actionManager = _director->getActionManager();
-    _actionManager->retain();
     _scheduler = _director->getScheduler();
     _scheduler->retain();
     _eventDispatcher = _director->getEventDispatcher();
@@ -147,9 +144,7 @@ Node::~Node()
         child->_parent = nullptr;
     }
     
-    stopAllActions();
     unscheduleAllCallbacks();
-    CC_SAFE_RELEASE_NULL(_actionManager);
     CC_SAFE_RELEASE_NULL(_scheduler);
     
     _eventDispatcher->removeEventListenersForTarget(this);
@@ -167,8 +162,6 @@ bool Node::init()
 
 void Node::cleanup()
 {
-    // actions
-    this->stopAllActions();
     // timers
     this->unscheduleAllCallbacks();
 
@@ -1288,73 +1281,6 @@ void Node::setEventDispatcher(EventDispatcher* dispatcher)
     }
 }
 
-void Node::setActionManager(ActionManager* actionManager)
-{
-    if( actionManager != _actionManager )
-    {
-        this->stopAllActions();
-        CC_SAFE_RETAIN(actionManager);
-        CC_SAFE_RELEASE(_actionManager);
-        _actionManager = actionManager;
-    }
-}
-
-// MARK: actions
-
-Action * Node::runAction(Action* action)
-{
-    CCASSERT( action != nullptr, "Argument must be non-nil");
-    _actionManager->addAction(action, this, !_running);
-    return action;
-}
-
-void Node::stopAllActions()
-{
-    _actionManager->removeAllActionsFromTarget(this);
-}
-
-void Node::stopAction(Action* action)
-{
-    _actionManager->removeAction(action);
-}
-
-void Node::stopActionByTag(int tag)
-{
-    CCASSERT( tag != Action::INVALID_TAG, "Invalid tag");
-    _actionManager->removeActionByTag(tag, this);
-}
-
-void Node::stopAllActionsByTag(int tag)
-{
-    CCASSERT( tag != Action::INVALID_TAG, "Invalid tag");
-    _actionManager->removeAllActionsByTag(tag, this);
-}
-
-void Node::stopActionsByFlags(unsigned int flags)
-{
-    if (flags > 0)
-    {
-        _actionManager->removeActionsByFlags(flags, this);
-    }
-}
-
-Action * Node::getActionByTag(int tag)
-{
-    CCASSERT( tag != Action::INVALID_TAG, "Invalid tag");
-    return _actionManager->getActionByTag(tag, this);
-}
-
-ssize_t Node::getNumberOfRunningActions() const
-{
-    return _actionManager->getNumberOfRunningActionsInTarget(this);
-}
-
-ssize_t Node::getNumberOfRunningActionsByTag(int tag) const
-{
-    return _actionManager->getNumberOfRunningActionsInTargetByTag(this, tag);
-}
-
-
 // MARK: Callbacks
 
 void Node::setScheduler(Scheduler* scheduler)
@@ -1465,14 +1391,12 @@ void Node::unscheduleAllCallbacks()
 void Node::resume()
 {
     _scheduler->resumeTarget(this);
-    _actionManager->resumeTarget(this);
     _eventDispatcher->resumeEventListenersForTarget(this);
 }
 
 void Node::pause()
 {
     _scheduler->pauseTarget(this);
-    _actionManager->pauseTarget(this);
     _eventDispatcher->pauseEventListenersForTarget(this);
 }
 

@@ -92,12 +92,6 @@ THE SOFTWARE.
 #include "math/Vec3.h"
 #include "math/Vec4.h"
 
-// actions
-#include "2d/CCAction.h"
-#include "2d/CCActionInstant.h"
-#include "2d/CCActionManager.h"
-#include "2d/CCTweenFunction.h"
-
 // 2d nodes
 #include "2d/CCAtlasNode.h"
 #include "2d/CCClippingNode.h"

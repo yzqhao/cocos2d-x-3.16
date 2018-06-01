@@ -130,15 +130,6 @@
     <ClCompile Include="..\..\external\ConvertUTF\ConvertUTFWrapper.cpp">
       <Filter>external\ConvertUTF</Filter>
     </ClCompile>
-    <ClCompile Include="CCAction.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCActionInstant.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCActionManager.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCAnimation.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -209,9 +200,6 @@
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCSpriteFrameCache.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCTweenFunction.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="..\base\atitc.cpp">
@@ -675,15 +663,6 @@
     <ClInclude Include="..\..\external\ConvertUTF\ConvertUTF.h">
       <Filter>external\ConvertUTF</Filter>
     </ClInclude>
-    <ClInclude Include="CCAction.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCActionInstant.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCActionManager.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCAnimation.h">
       <Filter>2d</Filter>
     </ClInclude>
@@ -757,9 +736,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCSpriteFrameCache.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCTweenFunction.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\base\atitc.h">

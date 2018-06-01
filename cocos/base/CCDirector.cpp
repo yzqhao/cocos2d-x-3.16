@@ -35,7 +35,6 @@ THE SOFTWARE.
 #include "2d/CCSpriteFrameCache.h"
 #include "platform/CCFileUtils.h"
 
-#include "2d/CCActionManager.h"
 #include "2d/CCAnimationCache.h"
 #include "2d/CCFontFreeType.h"
 #include "2d/CCLabelAtlas.h"
@@ -156,9 +155,6 @@ bool Director::init(void)
 
     // scheduler
     _scheduler = new (std::nothrow) Scheduler();
-    // action manager
-    _actionManager = new (std::nothrow) ActionManager();
-    _scheduler->scheduleUpdate(_actionManager, Scheduler::PRIORITY_SYSTEM, false);
 
     _eventDispatcher = new (std::nothrow) EventDispatcher();
     
@@ -203,7 +199,6 @@ Director::~Director(void)
     CC_SAFE_RELEASE(_runningScene);
     CC_SAFE_RELEASE(_notificationNode);
     CC_SAFE_RELEASE(_scheduler);
-    CC_SAFE_RELEASE(_actionManager);
     CC_SAFE_DELETE(_defaultFBO);
 
     CC_SAFE_RELEASE(_beforeSetNextScene);
@@ -1084,9 +1079,6 @@ void Director::restartDirector()
     // Texture cache need to be reinitialized
     initTextureCache();
     
-    // Reschedule for action manager
-    getScheduler()->scheduleUpdate(getActionManager(), Scheduler::PRIORITY_SYSTEM, false);
-    
     // release the objects
     PoolManager::getInstance()->getCurrentPool()->clear();
 
@@ -1349,16 +1341,6 @@ void Director::setScheduler(Scheduler* scheduler)
         CC_SAFE_RELEASE(_scheduler);
         _scheduler = scheduler;
     }
-}
-
-void Director::setActionManager(ActionManager* actionManager)
-{
-    if (_actionManager != actionManager)
-    {
-        CC_SAFE_RETAIN(actionManager);
-        CC_SAFE_RELEASE(_actionManager);
-        _actionManager = actionManager;
-    }    
 }
 
 void Director::setEventDispatcher(EventDispatcher* dispatcher)
