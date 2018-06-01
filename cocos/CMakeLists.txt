@@ -125,13 +125,6 @@ endif(LINUX)
 
 target_link_libraries(cocos2dInternal ${PLATFORM_SPECIFIC_LIBS} ${glfw_other_linker_flags})
 
-if(USE_WEBP)
-  add_definitions(-DCC_USE_WEBP=1)
-  cocos_use_pkg(cocos2dInternal WEBP)
-else()
-  add_definitions(-DCC_USE_WEBP=0)
-endif()
-
 ADD_LIBRARY(cocos2d cc_dummy.c)
 
 if(ANDROID)

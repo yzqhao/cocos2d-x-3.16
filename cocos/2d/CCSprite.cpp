@@ -795,18 +795,10 @@ void Sprite::setTextureCoords(const Rect& rectInPoints, V3F_C4B_T2F_Quad* outQua
     if (_rectRotated)
         std::swap(rw, rh);
 
-#if CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL
-    float left    = (2*rectInPixels.origin.x+1) / (2*atlasWidth);
-    float right   = left+(rw*2-2) / (2*atlasWidth);
-    float top     = (2*rectInPixels.origin.y+1) / (2*atlasHeight);
-    float bottom  = top+(rh*2-2) / (2*atlasHeight);
-#else
     float left    = rectInPixels.origin.x / atlasWidth;
     float right   = (rectInPixels.origin.x + rw) / atlasWidth;
     float top     = rectInPixels.origin.y / atlasHeight;
     float bottom  = (rectInPixels.origin.y + rh) / atlasHeight;
-#endif // CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL
-
 
     if ((!_rectRotated && _flippedX) || (_rectRotated && _flippedY))
     {
@@ -1012,10 +1004,10 @@ void Sprite::updateTransform(void)
             float dx = x1 * cr - y2 * sr2 + x;
             float dy = x1 * sr + y2 * cr2 + y;
 
-            _quad.bl.vertices.set(SPRITE_RENDER_IN_SUBPIXEL(ax), SPRITE_RENDER_IN_SUBPIXEL(ay), _positionZ);
-            _quad.br.vertices.set(SPRITE_RENDER_IN_SUBPIXEL(bx), SPRITE_RENDER_IN_SUBPIXEL(by), _positionZ);
-            _quad.tl.vertices.set(SPRITE_RENDER_IN_SUBPIXEL(dx), SPRITE_RENDER_IN_SUBPIXEL(dy), _positionZ);
-            _quad.tr.vertices.set(SPRITE_RENDER_IN_SUBPIXEL(cx), SPRITE_RENDER_IN_SUBPIXEL(cy), _positionZ);
+            _quad.bl.vertices.set(ax, ay, _positionZ);
+            _quad.br.vertices.set(bx, by, _positionZ);
+            _quad.tl.vertices.set(dx, dy, _positionZ);
+            _quad.tr.vertices.set(cx, cy, _positionZ);
             setTextureCoords(_rect);
         }
 
@@ -1049,7 +1041,6 @@ void Sprite::draw(Renderer *renderer, const Mat4 &transform, uint32_t flags)
         return;
     }
 
-#if CC_USE_CULLING
     // Don't calculate the culling if the transform was not updated
     auto visitingCamera = Camera::getVisitingCamera();
     auto defaultCamera = Camera::getDefaultCamera();
@@ -1066,7 +1057,6 @@ void Sprite::draw(Renderer *renderer, const Mat4 &transform, uint32_t flags)
     }
 
     if(_insideBounds)
-#endif
     {
         _trianglesCommand.init(_globalZOrder,
                                _texture,

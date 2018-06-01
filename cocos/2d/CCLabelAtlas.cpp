@@ -149,18 +149,10 @@ void LabelAtlas::updateAtlasValues()
         float row = (float) (a % _itemsPerRow);
         float col = (float) (a / _itemsPerRow);
 
-#if CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL
-        // Issue #938. Don't use texStepX & texStepY
-        float left        = (2 * row * itemWidthInPixels + 1) / (2 * textureWide);
-        float right        = left + (itemWidthInPixels * 2 - 2) / (2 * textureWide);
-        float top        = (2 * col * itemHeightInPixels + 1) / (2 * textureHigh);
-        float bottom    = top + (itemHeightInPixels * 2 - 2) / (2 * textureHigh);
-#else
         float left        = row * itemWidthInPixels / textureWide;
         float right        = left + itemWidthInPixels / textureWide;
         float top        = col * itemHeightInPixels / textureHigh;
         float bottom    = top + itemHeightInPixels / textureHigh;
-#endif // ! CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL
 
         quads[i].tl.texCoords.u = left;
         quads[i].tl.texCoords.v = top;

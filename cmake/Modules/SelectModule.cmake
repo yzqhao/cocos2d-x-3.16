@@ -25,7 +25,6 @@ macro (SelectModule)
     set(BUILD_JS_TESTS_DEFAULT OFF)
   endif()
 
-  option(USE_WEBP "Use WebP codec" ${USE_WEBP_DEFAULT})
   option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
   option(DEBUG_MODE "Debug or release?" ON)
   option(BUILD_EXTENSIONS "Build extension library" ON)

@@ -66,30 +66,6 @@ THE SOFTWARE.
 #define CC_ENABLE_GL_STATE_CACHE 1
 #endif
 
-/** @def CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL
- * If enabled, the texture coordinates will be calculated by using this formula:
- * - texCoord.left = (rect.origin.x*2+1) / (texture.wide*2);
- * - texCoord.right = texCoord.left + (rect.size.width*2-2)/(texture.wide*2);
-
- * The same for bottom and top.
-
- * This formula prevents artifacts by using 99% of the texture.
- * The "correct" way to prevent artifacts is by using the spritesheet-artifact-fixer.py or a similar tool.
-
- * Affected nodes:
- * - Sprite / SpriteBatchNode and subclasses: LabelBMFont, TMXTiledMap.
- * - LabelAtlas.
- * - QuadParticleSystem.
- * - TileMap.
-
- * To enabled set it to 1. Disabled by default.
-
- * @since v0.99.5
- */
-#ifndef CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL
-#define CC_FIX_ARTIFACTS_BY_STRECHING_TEXEL 0
-#endif
-
 /** @def CC_DIRECTOR_STATS_INTERVAL
  * Seconds between FPS updates.
  * 0.5 seconds, means that the FPS number will be updated every 0.5 seconds.
@@ -99,81 +75,6 @@ THE SOFTWARE.
  */
 #ifndef CC_DIRECTOR_STATS_INTERVAL
 #define CC_DIRECTOR_STATS_INTERVAL (0.5f)
-#endif
-
-/** @def CC_DIRECTOR_FPS_POSITION
- * Position of the FPS.
-
- * Default: 0,0 (bottom-left corner).
- */
-#ifndef CC_DIRECTOR_FPS_POSITION
-#define CC_DIRECTOR_FPS_POSITION Vec2(0,0)
-#endif
-
-/** @def CC_DIRECTOR_DISPATCH_FAST_EVENTS
- * If enabled, and only when it is used with FastDirector, the main loop will wait 0.04 seconds to
- * dispatch all the events, even if there are not events to dispatch.
- * If your game uses lot's of events (eg: touches) it might be a good idea to enable this feature.
- * Otherwise, it is safe to leave it disabled.
-
- * To enable set it to 1. Disabled by default.
-
- * @warning This feature is experimental.
- */
-#ifndef CC_DIRECTOR_DISPATCH_FAST_EVENTS
- #define CC_DIRECTOR_DISPATCH_FAST_EVENTS 0
-#endif
-
-/** @def CC_DIRECTOR_MAC_USE_DISPLAY_LINK_THREAD
- * If enabled, cocos2d-mac will run on the Display Link thread. If disabled cocos2d-mac will run in its own thread.
- * If enabled, the images will be drawn at the "correct" time, but the events might not be very responsive.
- * If disabled, some frames might be skipped, but the events will be dispatched as they arrived.
- * To enable set it to a 1, to disable it set to 0. Enabled by default.
- * Only valid for cocos2d-mac. Not supported on cocos2d-ios.
- */
-#ifndef CC_DIRECTOR_MAC_USE_DISPLAY_LINK_THREAD
-#define CC_DIRECTOR_MAC_USE_DISPLAY_LINK_THREAD 1
-#endif
-
-/** @def CC_NODE_RENDER_SUBPIXEL
- * If enabled, the Node objects (Sprite, Label,etc) will be able to render in subpixels.
- * If disabled, integer pixels will be used.
- * To enable set it to 1. Enabled by default.
- */
-#ifndef CC_NODE_RENDER_SUBPIXEL
-#define CC_NODE_RENDER_SUBPIXEL 1
-#endif
-
-/** @def CC_SPRITEBATCHNODE_RENDER_SUBPIXEL
- * If enabled, the Sprite objects rendered with SpriteBatchNode will be able to render in subpixels.
- * If disabled, integer pixels will be used.
- * To enable set it to 1. Enabled by default.
- */
-#ifndef CC_SPRITEBATCHNODE_RENDER_SUBPIXEL
-#define CC_SPRITEBATCHNODE_RENDER_SUBPIXEL    1
-#endif
-
-/** @def CC_TEXTURE_ATLAS_USE_VAO
- * By default, TextureAtlas (used by many cocos2d classes) will use VAO (Vertex Array Objects).
- * Apple recommends its usage but they might consume a lot of memory, specially if you use many of them.
- * So for certain cases, where you might need hundreds of VAO objects, it might be a good idea to disable it.
- * To disable it set it to 0. Enabled by default.
- * If a device doesn't support VAO though it claims to support should add exceptions list here.
- */
-#ifndef CC_TEXTURE_ATLAS_USE_VAO
-#define CC_TEXTURE_ATLAS_USE_VAO 1
-#endif
-
-
-/** @def CC_USE_LA88_LABELS
- * If enabled, it will use LA88 (Luminance Alpha 16-bit textures) for LabelTTF objects.
- * If it is disabled, it will use A8 (Alpha 8-bit textures).
- * LA88 textures are 6% faster than A8 textures, but they will consume 2x memory.
- * This feature is enabled by default.
- * @since v0.99.5
- */
-#ifndef CC_USE_LA88_LABELS
-#define CC_USE_LA88_LABELS 1
 #endif
 
 /** @def CC_NODE_DEBUG_VERIFY_EVENT_LISTENERS
@@ -196,11 +97,6 @@ THE SOFTWARE.
 #define CC_ENABLE_PROFILERS 0
 #endif
 
-/** Use culling or not. */
-#ifndef CC_USE_CULLING
-#define CC_USE_CULLING 1
-#endif
-
 /** Support PNG or not. If your application don't use png format picture, you can undefine this macro to save package size.
 */
 #ifndef CC_USE_PNG
@@ -218,14 +114,6 @@ THE SOFTWARE.
 #ifndef CC_USE_TIFF
 #define CC_USE_TIFF  1
 #endif // CC_USE_TIFF
-
-/** Support webp or not. If your application don't use webp format picture, you can undefine this macro to save package size.
- */
-#ifndef CC_USE_WEBP
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WINRT)
-#define CC_USE_WEBP  1
-#endif
-#endif // CC_USE_WEBP
 
  /** Support WIC (Windows Image Component) or not. Replaces PNG, TIFF and JPEG
  */
