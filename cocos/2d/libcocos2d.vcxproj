@@ -347,7 +347,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCLight.cpp" />
     <ClCompile Include="CCNode.cpp" />
     <ClCompile Include="CCNodeGrid.cpp" />
-    <ClCompile Include="CCRenderTexture.cpp" />
     <ClCompile Include="CCScene.cpp" />
     <ClCompile Include="CCSprite.cpp" />
     <ClCompile Include="CCSpriteFrame.cpp" />
@@ -550,7 +549,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCLight.h" />
     <ClInclude Include="CCNode.h" />
     <ClInclude Include="CCNodeGrid.h" />
-    <ClInclude Include="CCRenderTexture.h" />
     <ClInclude Include="CCScene.h" />
     <ClInclude Include="CCSprite.h" />
     <ClInclude Include="CCSpriteFrame.h" />

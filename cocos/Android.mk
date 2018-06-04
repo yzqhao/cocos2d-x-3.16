@@ -28,7 +28,6 @@ LOCAL_SRC_FILES := \
 2d/CCLight.cpp \
 2d/CCNode.cpp \
 2d/CCNodeGrid.cpp \
-2d/CCRenderTexture.cpp \
 2d/CCScene.cpp \
 2d/CCSprite.cpp \
 2d/CCSpriteFrame.cpp \

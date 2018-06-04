@@ -142,9 +142,6 @@
     <ClCompile Include="CCNodeGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCRenderTexture.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCScene.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -640,9 +637,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCNodeGrid.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCRenderTexture.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCScene.h">

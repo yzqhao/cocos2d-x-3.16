@@ -40,7 +40,6 @@ THE SOFTWARE.
 #include "platform/CCImage.h"
 #include "platform/CCFileUtils.h"
 #include "2d/CCSprite.h"
-#include "2d/CCRenderTexture.h"
 
 NS_CC_BEGIN
 

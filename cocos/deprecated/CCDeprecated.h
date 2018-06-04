@@ -36,7 +36,6 @@
 #include "2d/CCAtlasNode.h"
 #include "2d/CCLabelAtlas.h"
 #include "2d/CCLayer.h"
-#include "2d/CCRenderTexture.h"
 #include "2d/CCSpriteFrameCache.h"
 #include "base/CCConfiguration.h"
 #include "base/CCDataVisitor.h"
@@ -601,7 +600,6 @@ CC_DEPRECATED_ATTRIBUTE typedef LayerColor CCLayerColor;
 CC_DEPRECATED_ATTRIBUTE typedef LayerGradient CCLayerGradient;
 CC_DEPRECATED_ATTRIBUTE typedef LayerMultiplex CCLayerMultiplex;
 CC_DEPRECATED_ATTRIBUTE typedef Scene CCScene;
-CC_DEPRECATED_ATTRIBUTE typedef RenderTexture CCRenderTexture;
 CC_DEPRECATED_ATTRIBUTE typedef FileUtils CCFileUtils;
 CC_DEPRECATED_ATTRIBUTE typedef Application CCApplication;
 CC_DEPRECATED_ATTRIBUTE typedef GLProgramCache CCShaderCache;
