@@ -28,102 +28,7 @@ THE SOFTWARE.
 #define __CCARRAY_H__
 /// @cond DO_NOT_SHOW
 
-#define CC_USE_ARRAY_VECTOR 0
-
-#if CC_USE_ARRAY_VECTOR
-#include <vector>
-#include <algorithm>
-#include "base/CCRef.h"
-#include "base/ccMacros.h"
-#else
 #include "base/ccCArray.h"
-#endif
-
-#if CC_USE_ARRAY_VECTOR
-/**
- * A reference counting-managed pointer for classes derived from RCBase which can
- * be used as C pointer
- * Original code: http://www.codeproject.com/Articles/64111/Building-a-Quick-and-Handy-Reference-Counting-Clas
- * License: http://www.codeproject.com/info/cpol10.aspx
- */
-template < class T >
-class RCPtr
-{
-public:
-	//Construct using a C pointer
-	//e.g. RCPtr< T > x = new (std::nothrow) T();
-	RCPtr(T* ptr = nullptr)
-    : _ptr(ptr)
-	{
-        if(ptr != nullptr) {ptr->retain();}
-	}
-
-	//Copy constructor
-	RCPtr(const RCPtr &ptr)
-    : _ptr(ptr._ptr)
-	{
-//        printf("Array: copy constructor: %p\n", this);
-		if(_ptr != NULL) {_ptr->retain();}
-	}
-
-    //Move constructor
-	RCPtr(RCPtr &&ptr)
-    : _ptr(ptr._ptr)
-	{
-//        printf("Array: Move Constructor: %p\n", this);
-        ptr._ptr = nullptr;
-	}
-
-	~RCPtr()
-	{
-//        printf("Array: Destructor: %p\n", this);
-        if(_ptr != nullptr) {_ptr->release();}
-	}
-
-	//Assign a pointer
-	//e.g. x = new (std::nothrow) T();
-	RCPtr &operator=(T* ptr)
-	{
-//        printf("Array: operator= T*: %p\n", this);
-
-        //The following grab and release operations have to be performed
-        //in that order to handle the case where ptr == _ptr
-        //(See comment below by David Garlisch)
-        if(ptr != nullptr) {ptr->retain();}
-        if(_ptr != nullptr) {_ptr->release();}
-        _ptr = ptr;
-        return (*this);
-	}
-
-	//Assign another RCPtr
-	RCPtr &operator=(const RCPtr &ptr)
-	{
-//        printf("Array: operator= const&: %p\n", this);
-        return (*this) = ptr._ptr;
-	}
-
-	//Retrieve actual pointer
-	T* get() const
-	{
-        return _ptr;
-	}
-
-    //Some overloaded operators to facilitate dealing with an RCPtr
-    //as a conventional C pointer.
-    //Without these operators, one can still use the less transparent
-    //get() method to access the pointer.
-    T* operator->() const {return _ptr;}		//x->member
-    T &operator*() const {return *_ptr;}		//*x, (*x).member
-    explicit operator T*() const {return _ptr;}		//T* y = x;
-    explicit operator bool() const {return _ptr != nullptr;}	//if(x) {/*x is not NULL*/}
-    bool operator==(const RCPtr &ptr) {return _ptr == ptr._ptr;}
-    bool operator==(const T *ptr) {return _ptr == ptr;}
-
-private:
-    T *_ptr;	//Actual pointer
-};
-#endif // CC_USE_ARRAY_VECTOR
-
 
 /**
  * @addtogroup data_structures
@@ -146,25 +51,6 @@ __arr__++)
 
 I found that it's not work in C++. So it keep what it's look like in version 1.0.0-rc3. ---By Bin
 */
-
-#if CC_USE_ARRAY_VECTOR
-#define CCARRAY_FOREACH(__array__, __object__)                  \
-    if (__array__) \
-    for( auto __it__ = (__array__)->data.begin();              \
-        __it__ != (__array__)->data.end() && ((__object__) = __it__->get()) != nullptr;                     \
-        ++__it__)
-
-
-#define CCARRAY_FOREACH_REVERSE(__array__, __object__)          \
-    if (__array__) \
-    for( auto __it__ = (__array__)->data.rbegin();             \
-    __it__ != (__array__)->data.rend() && ((__object__) = __it__->get()) != nullptr;                        \
-    ++__it__ )
-
-
-#define CCARRAY_VERIFY_TYPE(__array__, __type__) void(0)
-
-#else // ! CC_USE_ARRAY_VECTOR --------------------------
 
 #define CCARRAY_FOREACH(__array__, __object__)                                                                         \
     if ((__array__) && (__array__)->data->num > 0)                                                                     \
@@ -190,7 +76,6 @@ I found that it's not work in C++. So it keep what it's look like in version 1.0
 #define CCARRAY_VERIFY_TYPE(__array__, __type__) void(0)
 #endif
 
-#endif // ! CC_USE_ARRAY_VECTOR
 
 
 // Common defines -----------------------------------------------------------------------------------------------
@@ -311,22 +196,14 @@ public:
      */
     ssize_t count() const
     {
-#if CC_USE_ARRAY_VECTOR
-        return data.size();
-#else
         return data->num;
-#endif
     }
     /** Returns capacity of the array 
      * @js NA
      */
     ssize_t capacity() const
     {
-#if CC_USE_ARRAY_VECTOR
-        return data.capacity();
-#else
         return data->max;
-#endif
     }
     /** Returns index of a certain object, return UINT_MAX if doesn't contain the object 
      * @js NA
@@ -345,11 +222,7 @@ public:
     Ref* getObjectAtIndex(ssize_t index)
     {
         CCASSERT(index>=0 && index < count(), "index out of range in getObjectAtIndex()");
-#if CC_USE_ARRAY_VECTOR
-        return data[index].get();
-#else
         return data->arr[index];
-#endif
     }
     CC_DEPRECATED_ATTRIBUTE Ref* objectAtIndex(ssize_t index) { return getObjectAtIndex(index); }
     /** Returns the last element of the array 
@@ -357,14 +230,10 @@ public:
      */
     Ref* getLastObject()
     {
-#if CC_USE_ARRAY_VECTOR
-        return data.back().get();
-#else
         if(data->num > 0)
             return data->arr[data->num-1];
         
         return nullptr;
-#endif
     }
     /**
      * @js NA
@@ -415,12 +284,8 @@ public:
      */
     void fastSetObject(Ref* object, ssize_t index)
     {
-#if CC_USE_ARRAY_VECTOR
-        setObject(object, index);
-#else
         // no retain
         data->arr[index] = object;
-#endif
     }
     /**
      * @js NA
@@ -429,11 +294,7 @@ public:
     void swap( ssize_t indexOne, ssize_t indexTwo )
     {
         CCASSERT(indexOne >=0 && indexOne < count() && indexTwo >= 0 && indexTwo < count(), "Invalid indices");
-#if CC_USE_ARRAY_VECTOR
-        std::swap(data[indexOne], data[indexTwo]);
-#else
         std::swap(data->arr[indexOne], data->arr[indexTwo]);
-#endif
     }
 
     // Removing Objects
@@ -501,29 +362,6 @@ public:
     // ------------------------------------------
     // Iterators
     // ------------------------------------------
-#if CC_USE_ARRAY_VECTOR
-    typedef std::vector<RCPtr<Object>>::iterator iterator;
-    typedef std::vector<RCPtr<Object>>::const_iterator const_iterator;
-    /**
-     * @js NA
-     * @lua NA
-     */
-    iterator begin() { return data.begin(); }
-    /**
-     * @js NA
-     * @lua NA
-     */
-    iterator end() { return data.end(); }
-    const_iterator cbegin() { return data.cbegin(); }
-    /**
-     * @js NA
-     * @lua NA
-     */
-    const_iterator cend() { return data.cend(); }
-
-    std::vector<RCPtr<Object>> data;
-
-#else
     /**
      * @js NA
      * @lua NA
@@ -536,8 +374,6 @@ public:
     Ref** end() { return &data->arr[data->num]; }
 
     ccArray* data;
-
-#endif
 
 //protected:
     /**
