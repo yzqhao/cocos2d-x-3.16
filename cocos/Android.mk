@@ -128,7 +128,6 @@ renderer/ccShaders.cpp \
 deprecated/CCArray.cpp \
 deprecated/CCDeprecated.cpp \
 deprecated/CCDictionary.cpp \
-deprecated/CCNotificationCenter.cpp \
 deprecated/CCSet.cpp \
 deprecated/CCString.cpp \
 ../external/ConvertUTF/ConvertUTFWrapper.cpp \

@@ -48,7 +48,6 @@
 #include "deprecated/CCDouble.h"
 #include "deprecated/CCFloat.h"
 #include "deprecated/CCInteger.h"
-#include "deprecated/CCNotificationCenter.h"
 #include "deprecated/CCSet.h"
 #include "math/CCAffineTransform.h"
 #include "math/CCGeometry.h"
@@ -567,8 +566,6 @@ CC_DEPRECATED_ATTRIBUTE typedef TextureAtlas CCTextureAtlas;
 CC_DEPRECATED_ATTRIBUTE typedef Configuration CCConfiguration;
 CC_DEPRECATED_ATTRIBUTE typedef IMEDelegate CCIMEDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef IMEKeyboardNotificationInfo CCIMEKeyboardNotificationInfo;
-CC_DEPRECATED_ATTRIBUTE typedef __NotificationCenter CCNotificationCenter;
-CC_DEPRECATED_ATTRIBUTE typedef __NotificationCenter NotificationCenter;
 //CC_DEPRECATED_ATTRIBUTE typedef TargetedTouchDelegate CCTargetedTouchDelegate;
 //CC_DEPRECATED_ATTRIBUTE typedef StandardTouchDelegate CCStandardTouchDelegate;
 //CC_DEPRECATED_ATTRIBUTE typedef TouchDelegate CCTouchDelegate;

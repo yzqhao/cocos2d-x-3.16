@@ -280,7 +280,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\deprecated\CCArray.cpp" />
     <ClCompile Include="..\deprecated\CCDeprecated.cpp" />
     <ClCompile Include="..\deprecated\CCDictionary.cpp" />
-    <ClCompile Include="..\deprecated\CCNotificationCenter.cpp" />
     <ClCompile Include="..\deprecated\CCSet.cpp" />
     <ClCompile Include="..\deprecated\CCString.cpp" />
     <ClCompile Include="..\math\CCAffineTransform.cpp" />
@@ -471,7 +470,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\deprecated\CCDouble.h" />
     <ClInclude Include="..\deprecated\CCFloat.h" />
     <ClInclude Include="..\deprecated\CCInteger.h" />
-    <ClInclude Include="..\deprecated\CCNotificationCenter.h" />
     <ClInclude Include="..\deprecated\CCSet.h" />
     <ClInclude Include="..\deprecated\CCString.h" />
     <ClInclude Include="..\math\CCAffineTransform.h" />
