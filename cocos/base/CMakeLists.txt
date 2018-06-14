@@ -45,7 +45,6 @@ set(COCOS_BASE_SRC
   base/CCScheduler.cpp
   base/CCTouch.cpp
   base/CCValue.cpp
-  base/ObjectFactory.cpp
   base/CCStencilStateManager.cpp
   base/TGAlib.cpp
   base/ZipUtils.cpp

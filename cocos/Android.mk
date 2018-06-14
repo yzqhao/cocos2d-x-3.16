@@ -83,7 +83,6 @@ base/CCRef.cpp \
 base/CCScheduler.cpp \
 base/CCTouch.cpp \
 base/CCValue.cpp \
-base/ObjectFactory.cpp \
 base/TGAlib.cpp \
 base/ZipUtils.cpp \
 base/atitc.cpp \
