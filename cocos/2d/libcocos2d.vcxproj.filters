@@ -187,9 +187,6 @@
     <ClCompile Include="..\base\CCEventDispatcher.cpp">
       <Filter>base</Filter>
     </ClCompile>
-    <ClCompile Include="..\base\CCEventFocus.cpp">
-      <Filter>base</Filter>
-    </ClCompile>
     <ClCompile Include="..\base\CCEventKeyboard.cpp">
       <Filter>base</Filter>
     </ClCompile>
@@ -200,9 +197,6 @@
       <Filter>base</Filter>
     </ClCompile>
     <ClCompile Include="..\base\CCEventListenerCustom.cpp">
-      <Filter>base</Filter>
-    </ClCompile>
-    <ClCompile Include="..\base\CCEventListenerFocus.cpp">
       <Filter>base</Filter>
     </ClCompile>
     <ClCompile Include="..\base\CCEventListenerKeyboard.cpp">
@@ -678,9 +672,6 @@
     <ClInclude Include="..\base\CCEventDispatcher.h">
       <Filter>base</Filter>
     </ClInclude>
-    <ClInclude Include="..\base\CCEventFocus.h">
-      <Filter>base</Filter>
-    </ClInclude>
     <ClInclude Include="..\base\CCEventKeyboard.h">
       <Filter>base</Filter>
     </ClInclude>
@@ -691,9 +682,6 @@
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\base\CCEventListenerCustom.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\base\CCEventListenerFocus.h">
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\base\CCEventListenerKeyboard.h">

@@ -42,11 +42,6 @@ class NinePatchInfo;
 class SpriteFrame;
 typedef struct _MipmapInfo MipmapInfo;
 
-namespace ui
-{
-    class Scale9Sprite;
-}
-
 /**
  * @addtogroup _2d
  * @{
@@ -547,7 +542,6 @@ protected:
     NinePatchInfo* _ninePatchInfo;
     friend class SpriteFrameCache;
     friend class TextureCache;
-    friend class ui::Scale9Sprite;
 
     bool _valid;
     std::string _filePath;
