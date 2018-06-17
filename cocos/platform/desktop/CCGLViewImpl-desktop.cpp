@@ -34,7 +34,6 @@ THE SOFTWARE.
 #include "base/CCEventDispatcher.h"
 #include "base/CCEventKeyboard.h"
 #include "base/CCEventMouse.h"
-#include "base/CCIMEDispatcher.h"
 #include "base/ccUtils.h"
 #include "base/ccUTF8.h"
 #include "2d/CCCamera.h"
@@ -743,34 +742,34 @@ void GLViewImpl::onGLFWMouseScrollCallback(GLFWwindow* /*window*/, double x, dou
 
 void GLViewImpl::onGLFWKeyCallback(GLFWwindow* /*window*/, int key, int /*scancode*/, int action, int /*mods*/)
 {
-    if (GLFW_REPEAT != action)
-    {
-        EventKeyboard event(g_keyCodeMap[key], GLFW_PRESS == action);
-        auto dispatcher = Director::getInstance()->getEventDispatcher();
-        dispatcher->dispatchEvent(&event);
-    }
+    // if (GLFW_REPEAT != action)
+    // {
+    //     EventKeyboard event(g_keyCodeMap[key], GLFW_PRESS == action);
+    //     auto dispatcher = Director::getInstance()->getEventDispatcher();
+    //     dispatcher->dispatchEvent(&event);
+    // }
 
-    if (GLFW_RELEASE != action)
-    {
-        switch (g_keyCodeMap[key])
-        {
-        case EventKeyboard::KeyCode::KEY_BACKSPACE:
-            IMEDispatcher::sharedDispatcher()->dispatchDeleteBackward();
-            break;
-        case EventKeyboard::KeyCode::KEY_HOME:
-        case EventKeyboard::KeyCode::KEY_KP_HOME:
-        case EventKeyboard::KeyCode::KEY_DELETE:
-        case EventKeyboard::KeyCode::KEY_KP_DELETE:
-        case EventKeyboard::KeyCode::KEY_END:
-        case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
-        case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
-        case EventKeyboard::KeyCode::KEY_ESCAPE:
-            IMEDispatcher::sharedDispatcher()->dispatchControlKey(g_keyCodeMap[key]);
-            break;
-        default:
-            break;
-        }
-    }
+    // if (GLFW_RELEASE != action)
+    // {
+    //     switch (g_keyCodeMap[key])
+    //     {
+    //     case EventKeyboard::KeyCode::KEY_BACKSPACE:
+    //         IMEDispatcher::sharedDispatcher()->dispatchDeleteBackward();
+    //         break;
+    //     case EventKeyboard::KeyCode::KEY_HOME:
+    //     case EventKeyboard::KeyCode::KEY_KP_HOME:
+    //     case EventKeyboard::KeyCode::KEY_DELETE:
+    //     case EventKeyboard::KeyCode::KEY_KP_DELETE:
+    //     case EventKeyboard::KeyCode::KEY_END:
+    //     case EventKeyboard::KeyCode::KEY_LEFT_ARROW:
+    //     case EventKeyboard::KeyCode::KEY_RIGHT_ARROW:
+    //     case EventKeyboard::KeyCode::KEY_ESCAPE:
+    //         IMEDispatcher::sharedDispatcher()->dispatchControlKey(g_keyCodeMap[key]);
+    //         break;
+    //     default:
+    //         break;
+    //     }
+    // }
 }
 
 void GLViewImpl::onGLFWCharCallback(GLFWwindow* /*window*/, unsigned int character)
@@ -794,7 +793,7 @@ void GLViewImpl::onGLFWCharCallback(GLFWwindow* /*window*/, unsigned int charact
     // Check for send control key
     if (controlUnicode.find(utf8String) == controlUnicode.end())
     {
-        IMEDispatcher::sharedDispatcher()->dispatchInsertText( utf8String.c_str(), utf8String.size() );
+        // IMEDispatcher::sharedDispatcher()->dispatchInsertText( utf8String.c_str(), utf8String.size() );
     }
 }
 

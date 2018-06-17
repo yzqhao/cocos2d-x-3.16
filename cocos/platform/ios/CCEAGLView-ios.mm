@@ -70,7 +70,6 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 
 #import "base/CCDirector.h"
 #import "base/CCTouch.h"
-#import "base/CCIMEDispatcher.h"
 #import "platform/ios/CCGLViewImpl-ios.h"
 #import "platform/ios/CCES2Renderer-ios.h"
 #import "platform/ios/OpenGL_Internal-ios.h"
@@ -544,21 +543,21 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
 
 - (void)insertText:(NSString *)text
 {
-    if (nil != markedText_) {
-        [markedText_ release];
-        markedText_ = nil;
-    }
-    const char * pszText = [text cStringUsingEncoding:NSUTF8StringEncoding];
-    cocos2d::IMEDispatcher::sharedDispatcher()->dispatchInsertText(pszText, strlen(pszText));
+    // if (nil != markedText_) {
+    //     [markedText_ release];
+    //     markedText_ = nil;
+    // }
+    // const char * pszText = [text cStringUsingEncoding:NSUTF8StringEncoding];
+    // cocos2d::IMEDispatcher::sharedDispatcher()->dispatchInsertText(pszText, strlen(pszText));
 }
 
 - (void)deleteBackward
 {
-    if (nil != markedText_) {
-        [markedText_ release];
-        markedText_ = nil;
-    }
-    cocos2d::IMEDispatcher::sharedDispatcher()->dispatchDeleteBackward();
+    // if (nil != markedText_) {
+    //     [markedText_ release];
+    //     markedText_ = nil;
+    // }
+    // cocos2d::IMEDispatcher::sharedDispatcher()->dispatchDeleteBackward();
 }
 
 #pragma mark - UITextInputTrait protocol
@@ -846,33 +845,33 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
                                    end.size.height);
     notiInfo.duration = (float)aniDuration;
     
-    cocos2d::IMEDispatcher* dispatcher = cocos2d::IMEDispatcher::sharedDispatcher();
-    if (UIKeyboardWillShowNotification == type) 
-    {
-        self.keyboardShowNotification = notif; // implicit copy
-        dispatcher->dispatchKeyboardWillShow(notiInfo);
-    }
-    else if (UIKeyboardDidShowNotification == type)
-    {
-        //CGSize screenSize = self.window.screen.bounds.size;
-        dispatcher->dispatchKeyboardDidShow(notiInfo);
-        caretRect_ = end;
+    // cocos2d::IMEDispatcher* dispatcher = cocos2d::IMEDispatcher::sharedDispatcher();
+    // if (UIKeyboardWillShowNotification == type) 
+    // {
+    //     self.keyboardShowNotification = notif; // implicit copy
+    //     dispatcher->dispatchKeyboardWillShow(notiInfo);
+    // }
+    // else if (UIKeyboardDidShowNotification == type)
+    // {
+    //     //CGSize screenSize = self.window.screen.bounds.size;
+    //     dispatcher->dispatchKeyboardDidShow(notiInfo);
+    //     caretRect_ = end;
 
-        int fontSize = [UIFont smallSystemFontSize];
-        caretRect_.origin.y = viewSize.height - (caretRect_.origin.y + caretRect_.size.height + fontSize);
-        caretRect_.size.height = 0;
-        isKeyboardShown_ = YES;
-    }
-    else if (UIKeyboardWillHideNotification == type)
-    {
-        dispatcher->dispatchKeyboardWillHide(notiInfo);
-    }
-    else if (UIKeyboardDidHideNotification == type)
-    {
-        caretRect_ = CGRectZero;
-        dispatcher->dispatchKeyboardDidHide(notiInfo);
-        isKeyboardShown_ = NO;
-    }
+    //     int fontSize = [UIFont smallSystemFontSize];
+    //     caretRect_.origin.y = viewSize.height - (caretRect_.origin.y + caretRect_.size.height + fontSize);
+    //     caretRect_.size.height = 0;
+    //     isKeyboardShown_ = YES;
+    // }
+    // else if (UIKeyboardWillHideNotification == type)
+    // {
+    //     dispatcher->dispatchKeyboardWillHide(notiInfo);
+    // }
+    // else if (UIKeyboardDidHideNotification == type)
+    // {
+    //     caretRect_ = CGRectZero;
+    //     dispatcher->dispatchKeyboardDidHide(notiInfo);
+    //     isKeyboardShown_ = NO;
+    // }
 }
 #endif
 

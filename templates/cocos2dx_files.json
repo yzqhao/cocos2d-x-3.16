@@ -218,8 +218,6 @@
         "cocos/base/CCEventType.h", 
         "cocos/base/CCGameController.h", 
         "cocos/base/CCIMEDelegate.h", 
-        "cocos/base/CCIMEDispatcher.cpp", 
-        "cocos/base/CCIMEDispatcher.h", 
         "cocos/base/CCMap.h", 
         "cocos/base/CCNS.cpp", 
         "cocos/base/CCNS.h", 

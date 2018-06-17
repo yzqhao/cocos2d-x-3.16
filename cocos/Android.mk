@@ -74,7 +74,6 @@ base/CCEventListenerMouse.cpp \
 base/CCEventListenerTouch.cpp \
 base/CCEventMouse.cpp \
 base/CCEventTouch.cpp \
-base/CCIMEDispatcher.cpp \
 base/CCNS.cpp \
 base/CCProperties.cpp \
 base/CCRef.cpp \

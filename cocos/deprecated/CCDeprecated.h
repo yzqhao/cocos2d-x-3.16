@@ -39,7 +39,6 @@
 #include "2d/CCSpriteFrameCache.h"
 #include "base/CCConfiguration.h"
 #include "base/CCEvent.h"
-#include "base/CCIMEDelegate.h"
 #include "base/CCScheduler.h"
 #include "base/ccTypes.h"
 #include "deprecated/CCArray.h"
@@ -564,8 +563,6 @@ CC_DEPRECATED_ATTRIBUTE typedef Event CCEvent;
 CC_DEPRECATED_ATTRIBUTE typedef Acceleration CCAcceleration;
 CC_DEPRECATED_ATTRIBUTE typedef TextureAtlas CCTextureAtlas;
 CC_DEPRECATED_ATTRIBUTE typedef Configuration CCConfiguration;
-CC_DEPRECATED_ATTRIBUTE typedef IMEDelegate CCIMEDelegate;
-CC_DEPRECATED_ATTRIBUTE typedef IMEKeyboardNotificationInfo CCIMEKeyboardNotificationInfo;
 //CC_DEPRECATED_ATTRIBUTE typedef TargetedTouchDelegate CCTargetedTouchDelegate;
 //CC_DEPRECATED_ATTRIBUTE typedef StandardTouchDelegate CCStandardTouchDelegate;
 //CC_DEPRECATED_ATTRIBUTE typedef TouchDelegate CCTouchDelegate;
