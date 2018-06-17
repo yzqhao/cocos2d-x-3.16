@@ -101,7 +101,6 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     // Enable Remote Console
     auto console = director->getConsole();
-    console->listenOnTCP(5678);
 
 	auto _director = Director::getInstance();
 	_director->replaceScene(Scene3DTestScene::create());
