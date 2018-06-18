@@ -115,8 +115,6 @@ bool Director::init(void)
     _runningScene = nullptr;
     _nextScene = nullptr;
 
-    _notificationNode = nullptr;
-
     _scenesStack.reserve(15);
 
     // FPS
@@ -194,7 +192,6 @@ Director::~Director(void)
     CC_SAFE_RELEASE(_drawnBatchesLabel);
 
     CC_SAFE_RELEASE(_runningScene);
-    CC_SAFE_RELEASE(_notificationNode);
     CC_SAFE_RELEASE(_scheduler);
     CC_SAFE_DELETE(_defaultFBO);
 
@@ -307,12 +304,6 @@ void Director::drawScene()
         _openGLView->renderScene(_runningScene, _renderer);
         
         _eventDispatcher->dispatchEvent(_eventAfterVisit);
-    }
-
-    // draw the notifications node
-    if (_notificationNode)
-    {
-        _notificationNode->visit(_renderer, Mat4::IDENTITY, 0);
     }
 
     updateFrameRate();
@@ -994,21 +985,12 @@ void Director::reset()
     {
         _eventDispatcher->removeAllEventListeners();
     }
-    
-    if(_notificationNode)
-    {
-        _notificationNode->onExit();
-        _notificationNode->cleanup();
-        _notificationNode->release();
-    }
-    
-    _notificationNode = nullptr;
+
     
     _scenesStack.clear();
     
     stopAnimation();
     
-    CC_SAFE_RELEASE_NULL(_notificationNode);
     CC_SAFE_RELEASE_NULL(_FPSLabel);
     CC_SAFE_RELEASE_NULL(_drawnBatchesLabel);
     CC_SAFE_RELEASE_NULL(_drawnVerticesLabel);
@@ -1310,23 +1292,6 @@ void Director::setContentScaleFactor(float scaleFactor)
         _contentScaleFactor = scaleFactor;
         _isStatusLabelUpdated = true;
     }
-}
-
-void Director::setNotificationNode(Node *node)
-{
-	if (_notificationNode != nullptr){
-		_notificationNode->onExitTransitionDidStart();
-		_notificationNode->onExit();
-		_notificationNode->cleanup();
-	}
-	CC_SAFE_RELEASE(_notificationNode);
-
-	_notificationNode = node;
-	if (node == nullptr)
-		return;
-	_notificationNode->onEnter();
-	_notificationNode->onEnterTransitionDidFinish();
-    CC_SAFE_RETAIN(_notificationNode);
 }
 
 void Director::setScheduler(Scheduler* scheduler)

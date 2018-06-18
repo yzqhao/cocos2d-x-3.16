@@ -225,18 +225,6 @@ public:
      * @since v0.99.0
      */
     bool isSendCleanupToScene() { return _sendCleanupToScene; }
-
-    /** This object will be visited after the main scene is visited.
-     * This object MUST implement the "visit" function.
-     * Useful to hook a notification object, like Notifications (http://github.com/manucorporat/CCNotifications)
-     * @since v0.99.5
-     */
-    Node* getNotificationNode() const { return _notificationNode; }
-    /** 
-     * Sets the notification node.
-     * @see Director::getNotificationNode()
-     */
-    void setNotificationNode(Node *node);
     
     // window size
 
@@ -676,10 +664,7 @@ protected:
     
     /* content scale factor */
     float _contentScaleFactor;
-
-    /* This object will be visited after the scene. Useful to hook a notification node */
-    Node *_notificationNode;
-
+    
     /* Renderer for the Director */
     Renderer *_renderer;
     
