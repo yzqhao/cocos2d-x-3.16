@@ -6,8 +6,6 @@
 	<dict>
 		<key>cocos2d.x.fps</key>
 		<integer>60</integer>
-		<key>cocos2d.x.display_fps</key>
-		<true/>
 		<key>cocos2d.x.gl.projection</key>
 		<string>3d</string>
 		<key>cocos2d.x.texture.pixel_format_for_png</key>

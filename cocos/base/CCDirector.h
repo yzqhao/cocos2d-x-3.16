@@ -167,11 +167,6 @@ public:
     float getAnimationInterval() { return _animationInterval; }
     /** Sets the FPS value. FPS = 1/interval. */
     void setAnimationInterval(float interval);
-
-    /** Whether or not displaying the FPS on the bottom-left corner of the screen. */
-    bool isDisplayStats() { return _displayStats; }
-    /** Display the FPS on the bottom-left corner of the screen. */
-    void setDisplayStats(bool displayStats) { _displayStats = displayStats; }
     
     /** Get seconds per frame. */
     float getSecondsPerFrame() { return _secondsPerFrame; }
@@ -557,7 +552,6 @@ public:
 protected:
     void reset();
     
-
     virtual void startAnimation(SetIntervalReason reason);
     virtual void setAnimationInterval(float interval, SetIntervalReason reason);
 
@@ -570,12 +564,6 @@ protected:
     void setNextScene();
     
     void updateFrameRate();
-#if !CC_STRIP_FPS
-    void showStats();
-    void createStatsLabel();
-    void calculateMPF();
-    void getFPSImageData(unsigned char** datapointer, ssize_t* length);
-#endif
     
     /** calculates delta time since last time it was called */    
     void calculateDeltaTime();
@@ -621,13 +609,8 @@ protected:
     /* landscape mode ? */
     bool _landscape;
     
-    bool _displayStats;
     float _accumDt;
     float _frameRate;
-    
-    LabelAtlas *_FPSLabel;
-    LabelAtlas *_drawnBatchesLabel;
-    LabelAtlas *_drawnVerticesLabel;
     
     /** Whether or not the Director is paused */
     bool _paused;
@@ -664,7 +647,7 @@ protected:
     
     /* content scale factor */
     float _contentScaleFactor;
-    
+
     /* Renderer for the Director */
     Renderer *_renderer;
     

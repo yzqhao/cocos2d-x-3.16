@@ -101,8 +101,6 @@ FILE_DIR = {
     'cpp':'',
     'lua':'/frameworks/runtime-src'
 }
-PARSE_WORD = 'director->setDisplayStats(true);'
-CONSOLE_COMMAND = 'director->getConsole()->listenOnTCP(5678);'
 
 # add console listenOnTCP to AppDelegate.cpp.
 def addConsoleListenOnTCP(name):
