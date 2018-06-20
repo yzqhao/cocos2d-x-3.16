@@ -361,9 +361,6 @@
     <ClCompile Include="..\base\ccRandom.cpp">
       <Filter>base</Filter>
     </ClCompile>
-    <ClCompile Include="..\3d\CCAnimation3D.cpp">
-      <Filter>3d</Filter>
-    </ClCompile>
     <ClCompile Include="..\3d\CCAttachNode.cpp">
       <Filter>3d</Filter>
     </ClCompile>
@@ -870,12 +867,6 @@
     <ClInclude Include="..\3d\CCAABB.h">
       <Filter>3d</Filter>
     </ClInclude>
-    <ClInclude Include="..\3d\CCAnimation3D.h">
-      <Filter>3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3d\CCAnimationCurve.h">
-      <Filter>3d</Filter>
-    </ClInclude>
     <ClInclude Include="..\3d\CCAttachNode.h">
       <Filter>3d</Filter>
     </ClInclude>
@@ -1105,8 +1096,5 @@
       <Filter>math</Filter>
     </None>
     <None Include="cocos2d.def" />
-    <None Include="..\3d\CCAnimationCurve.inl">
-      <Filter>3d</Filter>
-    </None>
   </ItemGroup>
 </Project>

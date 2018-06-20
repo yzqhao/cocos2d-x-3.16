@@ -209,7 +209,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\..\external\unzip\unzip.cpp" />
     <ClCompile Include="..\..\external\xxhash\xxhash.c" />
     <ClCompile Include="..\3d\CCAABB.cpp" />
-    <ClCompile Include="..\3d\CCAnimation3D.cpp" />
     <ClCompile Include="..\3d\CCAttachNode.cpp" />
     <ClCompile Include="..\3d\CCBillBoard.cpp" />
     <ClCompile Include="..\3d\CCBundle3D.cpp" />
@@ -371,8 +370,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\..\external\unzip\unzip.h" />
     <ClInclude Include="..\..\external\xxhash\xxhash.h" />
     <ClInclude Include="..\3d\CCAABB.h" />
-    <ClInclude Include="..\3d\CCAnimation3D.h" />
-    <ClInclude Include="..\3d\CCAnimationCurve.h" />
     <ClInclude Include="..\3d\CCAttachNode.h" />
     <ClInclude Include="..\3d\CCBillBoard.h" />
     <ClInclude Include="..\3d\CCBundle3D.h" />
@@ -527,7 +524,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCSpriteFrameCache.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\3d\CCAnimationCurve.inl" />
     <None Include="..\math\Mat4.inl" />
     <None Include="..\math\MathUtil.inl" />
     <None Include="..\math\MathUtilNeon.inl" />

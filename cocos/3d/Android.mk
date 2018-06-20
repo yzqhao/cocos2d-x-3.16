@@ -10,7 +10,6 @@ LOCAL_SRC_FILES := \
 CCRay.cpp \
 CCAABB.cpp \
 CCOBB.cpp \
-CCAnimation3D.cpp \
 CCAttachNode.cpp \
 CCBillBoard.cpp \
 CCBundle3D.cpp \

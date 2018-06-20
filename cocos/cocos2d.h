@@ -194,7 +194,6 @@ THE SOFTWARE.
 
 //3d
 #include "3d/CCAABB.h"
-#include "3d/CCAnimation3D.h"
 #include "3d/CCAttachNode.h"
 #include "3d/CCBillBoard.h"
 #include "3d/CCFrustum.h"

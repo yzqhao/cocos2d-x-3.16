@@ -6,7 +6,6 @@ endif()
 set(COCOS_3D_SRC
 
   3d/CCAABB.cpp
-  3d/CCAnimation3D.cpp
   3d/CCAttachNode.cpp
   3d/CCBillBoard.cpp
   3d/CCBundle3D.cpp
