@@ -27,7 +27,6 @@ THE SOFTWARE.
 
 #include "renderer/ccGLStateCache.h"
 
-#include "renderer/CCGLProgram.h"
 #include "renderer/CCRenderState.h"
 #include "base/CCDirector.h"
 #include "base/ccConfig.h"

@@ -38,7 +38,6 @@ THE SOFTWARE.
 #include "base/CCEventType.h"
 #include "base/CCDirector.h"
 #include "base/CCEventDispatcher.h"
-#include "2d/CCCamera.h"
 
 NS_CC_BEGIN
 
