@@ -89,8 +89,6 @@ THE SOFTWARE.
 #include "math/Vec4.h"
 
 // 2d nodes
-#include "2d/CCAtlasNode.h"
-#include "2d/CCLabelAtlas.h"
 #include "2d/CCLayer.h"
 #include "2d/CCNode.h"
 #include "2d/CCNodeGrid.h"

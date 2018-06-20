@@ -7,15 +7,10 @@ include_directories(
 
 set(COCOS_2D_SRC
 
-  2d/CCAtlasNode.cpp
   2d/CCCamera.cpp
   2d/CCCameraBackgroundBrush.cpp
-  2d/CCFontAtlas.cpp
-  2d/CCFont.cpp
-  2d/CCFontFreeType.cpp
   2d/CCGrabber.cpp
   2d/CCGrid.cpp
-  2d/CCLabelAtlas.cpp
   2d/CCLayer.cpp
   2d/CCLight.cpp
   2d/CCNode.cpp

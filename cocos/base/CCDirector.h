@@ -47,8 +47,6 @@ NS_CC_BEGIN
  * @{
  */
 
-/* Forward declarations. */
-class LabelAtlas;
 //class GLView;
 class DirectorDelegate;
 class Node;

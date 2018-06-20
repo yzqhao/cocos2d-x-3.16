@@ -359,8 +359,6 @@
 							<key>r</key>
 							<string>0.2</string>
 						</dict>
-						<key>Font</key>
-						<string>Verdana</string>
 						<key>NSKern</key>
 						<real>0.0</real>
 						<key>Size</key>
@@ -820,8 +818,6 @@
 							<key>r</key>
 							<string>0.2</string>
 						</dict>
-						<key>Font</key>
-						<string>Verdana</string>
 						<key>NSKern</key>
 						<real>0.0</real>
 						<key>Size</key>

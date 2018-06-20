@@ -112,22 +112,10 @@
     <ClCompile Include="..\..\external\ConvertUTF\ConvertUTFWrapper.cpp">
       <Filter>external\ConvertUTF</Filter>
     </ClCompile>
-    <ClCompile Include="CCAtlasNode.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCFontAtlas.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCFontFreeType.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCGrabber.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCGrid.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCLabelAtlas.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCLayer.cpp">
@@ -588,25 +576,10 @@
     <ClInclude Include="..\..\external\ConvertUTF\ConvertUTF.h">
       <Filter>external\ConvertUTF</Filter>
     </ClInclude>
-    <ClInclude Include="CCAtlasNode.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCFont.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCFontAtlas.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCFontFreeType.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCGrabber.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCGrid.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCLabelAtlas.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCLayer.h">

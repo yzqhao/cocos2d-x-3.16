@@ -34,8 +34,6 @@ THE SOFTWARE.
 #include "2d/CCSpriteFrameCache.h"
 #include "platform/CCFileUtils.h"
 
-#include "2d/CCFontFreeType.h"
-#include "2d/CCLabelAtlas.h"
 #include "renderer/CCGLProgramCache.h"
 #include "renderer/CCGLProgramStateCache.h"
 #include "renderer/CCTextureCache.h"
@@ -968,8 +966,6 @@ void Director::reset()
     _scenesStack.clear();
     
     stopAnimation();
-
-    FontFreeType::shutdownFreeType();
     
     // purge all managed caches
     

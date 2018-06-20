@@ -33,8 +33,6 @@
 
 #include <math.h>
 
-#include "2d/CCAtlasNode.h"
-#include "2d/CCLabelAtlas.h"
 #include "2d/CCLayer.h"
 #include "2d/CCSpriteFrameCache.h"
 #include "base/CCConfiguration.h"
@@ -575,11 +573,9 @@ CC_DEPRECATED_ATTRIBUTE typedef Node CCNode;
 CC_DEPRECATED_ATTRIBUTE typedef Node CCNodeRGBA;
 CC_DEPRECATED_ATTRIBUTE typedef Node CCRGBAProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef SpriteFrame CCSpriteFrame;
-CC_DEPRECATED_ATTRIBUTE typedef AtlasNode CCAtlasNode;
 CC_DEPRECATED_ATTRIBUTE typedef TextureProtocol CCTextureProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef BlendProtocol CCBlendProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef Camera CCCamera;
-CC_DEPRECATED_ATTRIBUTE typedef LabelAtlas CCLabelAtlas;
 CC_DEPRECATED_ATTRIBUTE typedef LabelProtocol CCLabelProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef Director CCDirector;
 CC_DEPRECATED_ATTRIBUTE typedef GridBase CCGridBase;
