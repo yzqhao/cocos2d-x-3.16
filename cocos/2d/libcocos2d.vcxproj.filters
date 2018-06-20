@@ -112,19 +112,10 @@
     <ClCompile Include="..\..\external\ConvertUTF\ConvertUTFWrapper.cpp">
       <Filter>external\ConvertUTF</Filter>
     </ClCompile>
-    <ClCompile Include="CCGrabber.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCGrid.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCLayer.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCNode.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCNodeGrid.cpp">
       <Filter>2d</Filter>
     </ClCompile>
     <ClCompile Include="CCScene.cpp">
@@ -576,19 +567,10 @@
     <ClInclude Include="..\..\external\ConvertUTF\ConvertUTF.h">
       <Filter>external\ConvertUTF</Filter>
     </ClInclude>
-    <ClInclude Include="CCGrabber.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCGrid.h">
-      <Filter>2d</Filter>
-    </ClInclude>
     <ClInclude Include="CCLayer.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCNode.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCNodeGrid.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCScene.h">

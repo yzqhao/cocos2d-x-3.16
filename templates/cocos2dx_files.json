@@ -85,8 +85,6 @@
         "cocos/2d/CCLight.h", 
         "cocos/2d/CCNode.cpp", 
         "cocos/2d/CCNode.h", 
-        "cocos/2d/CCNodeGrid.cpp", 
-        "cocos/2d/CCNodeGrid.h", 
         "cocos/2d/CCScene.cpp", 
         "cocos/2d/CCScene.h", 
         "cocos/2d/CCSprite.cpp", 

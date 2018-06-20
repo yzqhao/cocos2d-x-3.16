@@ -91,7 +91,6 @@ THE SOFTWARE.
 // 2d nodes
 #include "2d/CCLayer.h"
 #include "2d/CCNode.h"
-#include "2d/CCNodeGrid.h"
 #include "2d/CCScene.h"
 
 // 2d utils

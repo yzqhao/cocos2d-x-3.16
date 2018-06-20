@@ -331,12 +331,9 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCAutoPolygon.cpp" />
     <ClCompile Include="CCCamera.cpp" />
     <ClCompile Include="CCCameraBackgroundBrush.cpp" />
-    <ClCompile Include="CCGrabber.cpp" />
-    <ClCompile Include="CCGrid.cpp" />
     <ClCompile Include="CCLayer.cpp" />
     <ClCompile Include="CCLight.cpp" />
     <ClCompile Include="CCNode.cpp" />
-    <ClCompile Include="CCNodeGrid.cpp" />
     <ClCompile Include="CCScene.cpp" />
     <ClCompile Include="CCSprite.cpp" />
     <ClCompile Include="CCSpriteFrame.cpp" />
@@ -521,12 +518,9 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCAutoPolygon.h" />
     <ClInclude Include="CCCamera.h" />
     <ClInclude Include="CCCameraBackgroundBrush.h" />
-    <ClInclude Include="CCGrabber.h" />
-    <ClInclude Include="CCGrid.h" />
     <ClInclude Include="CCLayer.h" />
     <ClInclude Include="CCLight.h" />
     <ClInclude Include="CCNode.h" />
-    <ClInclude Include="CCNodeGrid.h" />
     <ClInclude Include="CCScene.h" />
     <ClInclude Include="CCSprite.h" />
     <ClInclude Include="CCSpriteFrame.h" />

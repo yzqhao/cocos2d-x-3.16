@@ -9,12 +9,9 @@ set(COCOS_2D_SRC
 
   2d/CCCamera.cpp
   2d/CCCameraBackgroundBrush.cpp
-  2d/CCGrabber.cpp
-  2d/CCGrid.cpp
   2d/CCLayer.cpp
   2d/CCLight.cpp
   2d/CCNode.cpp
-  2d/CCNodeGrid.cpp
   2d/CCScene.cpp
   2d/CCSprite.cpp
   2d/CCSpriteFrameCache.cpp
