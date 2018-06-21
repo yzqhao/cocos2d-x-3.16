@@ -29,7 +29,7 @@
 #include <string>
 
 #include "renderer/CCTexture2D.h"
-#include "renderer/CCPass.h"
+// #include "renderer/CCPass.h"
 #include "renderer/ccGLStateCache.h"
 
 
@@ -285,37 +285,6 @@ void RenderState::StateBlock::bindNoRestore()
         glDepthFunc((GLenum)_depthFunction);
         _defaultState->_depthFunction = _depthFunction;
     }
-//    if ((_bits & RS_STENCIL_TEST) && (_stencilTestEnabled != _defaultState->_stencilTestEnabled))
-//    {
-//        if (_stencilTestEnabled)
-//            glEnable(GL_STENCIL_TEST);
-//        else
-//            glDisable(GL_STENCIL_TEST);
-//        _defaultState->_stencilTestEnabled = _stencilTestEnabled;
-//    }
-//    if ((_bits & RS_STENCIL_WRITE) && (_stencilWrite != _defaultState->_stencilWrite))
-//    {
-//        glStencilMask(_stencilWrite);
-//        _defaultState->_stencilWrite = _stencilWrite;
-//    }
-//    if ((_bits & RS_STENCIL_FUNC) && (_stencilFunction != _defaultState->_stencilFunction ||
-//                                      _stencilFunctionRef != _defaultState->_stencilFunctionRef ||
-//                                      _stencilFunctionMask != _defaultState->_stencilFunctionMask))
-//    {
-//        glStencilFunc((GLenum)_stencilFunction, _stencilFunctionRef, _stencilFunctionMask);
-//        _defaultState->_stencilFunction = _stencilFunction;
-//        _defaultState->_stencilFunctionRef = _stencilFunctionRef;
-//        _defaultState->_stencilFunctionMask = _stencilFunctionMask;
-//    }
-//    if ((_bits & RS_STENCIL_OP) && (_stencilOpSfail != _defaultState->_stencilOpSfail ||
-//                                    _stencilOpDpfail != _defaultState->_stencilOpDpfail ||
-//                                    _stencilOpDppass != _defaultState->_stencilOpDppass))
-//    {
-//        glStencilOp((GLenum)_stencilOpSfail, (GLenum)_stencilOpDpfail, (GLenum)_stencilOpDppass);
-//        _defaultState->_stencilOpSfail = _stencilOpSfail;
-//        _defaultState->_stencilOpDpfail = _stencilOpDpfail;
-//        _defaultState->_stencilOpDppass = _stencilOpDppass;
-//    }
 
     _defaultState->_bits |= _bits;
 }
@@ -381,34 +350,6 @@ void RenderState::StateBlock::restore(long stateOverrideBits)
         _defaultState->_bits &= ~RS_DEPTH_FUNC;
         _defaultState->_depthFunction = RenderState::DEPTH_LESS;
     }
-//    if (!(stateOverrideBits & RS_STENCIL_TEST) && (_defaultState->_bits & RS_STENCIL_TEST))
-//    {
-//        glDisable(GL_STENCIL_TEST);
-//        _defaultState->_bits &= ~RS_STENCIL_TEST;
-//        _defaultState->_stencilTestEnabled = false;
-//    }
-//    if (!(stateOverrideBits & RS_STENCIL_WRITE) && (_defaultState->_bits & RS_STENCIL_WRITE))
-//    {
-//        glStencilMask(RS_ALL_ONES);
-//        _defaultState->_bits &= ~RS_STENCIL_WRITE;
-//        _defaultState->_stencilWrite = RS_ALL_ONES;
-//    }
-//    if (!(stateOverrideBits & RS_STENCIL_FUNC) && (_defaultState->_bits & RS_STENCIL_FUNC))
-//    {
-//        glStencilFunc((GLenum)RenderState::STENCIL_ALWAYS, 0, RS_ALL_ONES);
-//        _defaultState->_bits &= ~RS_STENCIL_FUNC;
-//        _defaultState->_stencilFunction = RenderState::STENCIL_ALWAYS;
-//        _defaultState->_stencilFunctionRef = 0;
-//        _defaultState->_stencilFunctionMask = RS_ALL_ONES;
-//    }
-//    if (!(stateOverrideBits & RS_STENCIL_OP) && (_defaultState->_bits & RS_STENCIL_OP))
-//    {
-//        glStencilOp((GLenum)RenderState::STENCIL_OP_KEEP, (GLenum)RenderState::STENCIL_OP_KEEP, (GLenum)RenderState::STENCIL_OP_KEEP);
-//        _defaultState->_bits &= ~RS_STENCIL_OP;
-//        _defaultState->_stencilOpSfail = RenderState::STENCIL_OP_KEEP;
-//        _defaultState->_stencilOpDpfail = RenderState::STENCIL_OP_KEEP;
-//        _defaultState->_stencilOpDppass = RenderState::STENCIL_OP_KEEP;
-//    }
 }
 
 void RenderState::StateBlock::enableDepthWrite()
@@ -454,27 +395,6 @@ static bool parseBoolean(const std::string& value)
 {
     return (value.compare("true")==0);
 }
-
-//static int parseInt(const std::string& value)
-//{
-//    // Android NDK 10 doesn't support std::stoi a/ std::stoul
-//#if CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID
-//    return std::stoi(value);
-//#else
-//    return atoi(value.c_str());
-//#endif
-//}
-//
-//static unsigned int parseUInt(const std::string& value)
-//{
-//    // Android NDK 10 doesn't support std::stoi a/ std::stoul
-//#if CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID
-//    return (unsigned int)std::stoul(value);
-//#else
-//    return (unsigned int)atoi(value.c_str());
-//#endif
-//
-//}
 
 static RenderState::Blend parseBlend(const std::string& value)
 {
@@ -576,62 +496,6 @@ static RenderState::FrontFace parseFrontFace(const std::string& value)
     }
 }
 
-//static RenderState::StencilFunction parseStencilFunc(const std::string& value)
-//{
-//    // Convert string to uppercase for comparison
-//    std::string upper(value);
-//    std::transform(upper.begin(), upper.end(), upper.begin(), (int(*)(int))toupper);
-//    if (upper == "NEVER")
-//        return RenderState::STENCIL_NEVER;
-//    else if (upper == "LESS")
-//        return RenderState::STENCIL_LESS;
-//    else if (upper == "EQUAL")
-//        return RenderState::STENCIL_EQUAL;
-//    else if (upper == "LEQUAL")
-//        return RenderState::STENCIL_LEQUAL;
-//    else if (upper == "GREATER")
-//        return RenderState::STENCIL_GREATER;
-//    else if (upper == "NOTEQUAL")
-//        return RenderState::STENCIL_NOTEQUAL;
-//    else if (upper == "GEQUAL")
-//        return RenderState::STENCIL_GEQUAL;
-//    else if (upper == "ALWAYS")
-//        return RenderState::STENCIL_ALWAYS;
-//    else
-//    {
-//        CCLOG("Unsupported stencil function value (%s). Will default to STENCIL_ALWAYS if errors are treated as warnings)", value.c_str());
-//        return RenderState::STENCIL_ALWAYS;
-//    }
-//}
-//
-//static RenderState::StencilOperation parseStencilOp(const std::string& value)
-//{
-//    // Convert string to uppercase for comparison
-//    std::string upper(value);
-//    std::transform(upper.begin(), upper.end(), upper.begin(), (int(*)(int))toupper);
-//    if (upper == "KEEP")
-//        return RenderState::STENCIL_OP_KEEP;
-//    else if (upper == "ZERO")
-//        return RenderState::STENCIL_OP_ZERO;
-//    else if (upper == "REPLACE")
-//        return RenderState::STENCIL_OP_REPLACE;
-//    else if (upper == "INCR")
-//        return RenderState::STENCIL_OP_INCR;
-//    else if (upper == "DECR")
-//        return RenderState::STENCIL_OP_DECR;
-//    else if (upper == "INVERT")
-//        return RenderState::STENCIL_OP_INVERT;
-//    else if (upper == "INCR_WRAP")
-//        return RenderState::STENCIL_OP_INCR_WRAP;
-//    else if (upper == "DECR_WRAP")
-//        return RenderState::STENCIL_OP_DECR_WRAP;
-//    else
-//    {
-//        CCLOG("Unsupported stencil operation value (%s). Will default to STENCIL_OP_KEEP if errors are treated as warnings)", value.c_str());
-//        return RenderState::STENCIL_OP_KEEP;
-//    }
-//}
-
 void RenderState::StateBlock::setState(const std::string& name, const std::string& value)
 {
     if (name.compare("blend") == 0)
@@ -670,38 +534,6 @@ void RenderState::StateBlock::setState(const std::string& name, const std::strin
     {
         setDepthFunction(parseDepthFunc(value));
     }
-//    else if (name.compare("stencilTest") == 0)
-//    {
-//        setStencilTest(parseBoolean(value));
-//    }
-//    else if (name.compare("stencilWrite") == 0)
-//    {
-//        setStencilWrite(parseUInt(value));
-//    }
-//    else if (name.compare("stencilFunc") == 0)
-//    {
-//        setStencilFunction(parseStencilFunc(value), _stencilFunctionRef, _stencilFunctionMask);
-//    }
-//    else if (name.compare("stencilFuncRef") == 0)
-//    {
-//        setStencilFunction(_stencilFunction, parseInt(value), _stencilFunctionMask);
-//    }
-//    else if (name.compare("stencilFuncMask") == 0)
-//    {
-//        setStencilFunction(_stencilFunction, _stencilFunctionRef, parseUInt(value));
-//    }
-//    else if (name.compare("stencilOpSfail") == 0)
-//    {
-//        setStencilOperation(parseStencilOp(value), _stencilOpDpfail, _stencilOpDppass);
-//    }
-//    else if (name.compare("stencilOpDpfail") == 0)
-//    {
-//        setStencilOperation(_stencilOpSfail, parseStencilOp(value), _stencilOpDppass);
-//    }
-//    else if (name.compare("stencilOpDppass") == 0)
-//    {
-//        setStencilOperation(_stencilOpSfail, _stencilOpDpfail, parseStencilOp(value));
-//    }
     else
     {
         CCLOG("Unsupported render state string '%s'.", name.c_str());
@@ -855,64 +687,5 @@ void RenderState::StateBlock::setDepthFunction(DepthFunction func)
         _bits |= RS_DEPTH_FUNC;
     }
 }
-
-//void RenderState::StateBlock::setStencilTest(bool enabled)
-//{
-//    _stencilTestEnabled = enabled;
-//    if (!enabled)
-//    {
-//        _bits &= ~RS_STENCIL_TEST;
-//    }
-//    else
-//    {
-//        _bits |= RS_STENCIL_TEST;
-//    }
-//}
-//
-//void RenderState::StateBlock::setStencilWrite(unsigned int mask)
-//{
-//    _stencilWrite = mask;
-//    if (mask == RS_ALL_ONES)
-//    {
-//        // Default stencil write
-//        _bits &= ~RS_STENCIL_WRITE;
-//    }
-//    else
-//    {
-//        _bits |= RS_STENCIL_WRITE;
-//    }
-//}
-//
-//void RenderState::StateBlock::setStencilFunction(StencilFunction func, int ref, unsigned int mask)
-//{
-//    _stencilFunction = func;
-//    _stencilFunctionRef = ref;
-//    _stencilFunctionMask = mask;
-//    if (func == STENCIL_ALWAYS && ref == 0 && mask == RS_ALL_ONES)
-//    {
-//        // Default stencil function
-//        _bits &= ~RS_STENCIL_FUNC;
-//    }
-//    else
-//    {
-//        _bits |= RS_STENCIL_FUNC;
-//    }
-//}
-//
-//void RenderState::StateBlock::setStencilOperation(StencilOperation sfail, StencilOperation dpfail, StencilOperation dppass)
-//{
-//    _stencilOpSfail = sfail;
-//    _stencilOpDpfail = dpfail;
-//    _stencilOpDppass = dppass;
-//    if (sfail == STENCIL_OP_KEEP && dpfail == STENCIL_OP_KEEP && dppass == STENCIL_OP_KEEP)
-//    {
-//        // Default stencil operation
-//        _bits &= ~RS_STENCIL_OP;
-//    }
-//    else
-//    {
-//        _bits |= RS_STENCIL_OP;
-//    }
-//}
 
 NS_CC_END
