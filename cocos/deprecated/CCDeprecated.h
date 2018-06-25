@@ -34,7 +34,6 @@
 #include <math.h>
 
 #include "2d/CCLayer.h"
-#include "2d/CCSpriteFrameCache.h"
 #include "base/CCConfiguration.h"
 #include "base/CCEvent.h"
 #include "base/CCScheduler.h"
@@ -54,6 +53,7 @@
 #include "renderer/CCGLProgramCache.h"
 #include "renderer/CCTextureAtlas.h"
 #include "renderer/ccGLStateCache.h"
+#include "platform/CCImage.h"
 
 NS_CC_BEGIN
 
@@ -572,14 +572,12 @@ CC_DEPRECATED_ATTRIBUTE typedef Texture2D CCTexture2D;
 CC_DEPRECATED_ATTRIBUTE typedef Node CCNode;
 CC_DEPRECATED_ATTRIBUTE typedef Node CCNodeRGBA;
 CC_DEPRECATED_ATTRIBUTE typedef Node CCRGBAProtocol;
-CC_DEPRECATED_ATTRIBUTE typedef SpriteFrame CCSpriteFrame;
 CC_DEPRECATED_ATTRIBUTE typedef TextureProtocol CCTextureProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef BlendProtocol CCBlendProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef Camera CCCamera;
 CC_DEPRECATED_ATTRIBUTE typedef LabelProtocol CCLabelProtocol;
 CC_DEPRECATED_ATTRIBUTE typedef Director CCDirector;
 CC_DEPRECATED_ATTRIBUTE typedef GridBase CCGridBase;
-CC_DEPRECATED_ATTRIBUTE typedef Sprite CCSprite;
 CC_DEPRECATED_ATTRIBUTE typedef Layer CCLayer;
 //CC_DEPRECATED_ATTRIBUTE typedef KeypadDelegate CCKeypadDelegate;
 CC_DEPRECATED_ATTRIBUTE typedef Layer CCLayerRGBA;
@@ -591,7 +589,6 @@ CC_DEPRECATED_ATTRIBUTE typedef FileUtils CCFileUtils;
 CC_DEPRECATED_ATTRIBUTE typedef Application CCApplication;
 CC_DEPRECATED_ATTRIBUTE typedef GLProgramCache CCShaderCache;
 CC_DEPRECATED_ATTRIBUTE typedef GLProgramCache ShaderCache;
-CC_DEPRECATED_ATTRIBUTE typedef SpriteFrameCache CCSpriteFrameCache;
 CC_DEPRECATED_ATTRIBUTE typedef TextureCache CCTextureCache;
 CC_DEPRECATED_ATTRIBUTE typedef Timer CCTimer;
 CC_DEPRECATED_ATTRIBUTE typedef Scheduler CCScheduler;

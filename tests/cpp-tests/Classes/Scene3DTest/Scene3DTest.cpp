@@ -286,8 +286,6 @@ void Scene3DTestScene::createUI()
 
 void Scene3DTestScene::createPlayerDlg()
 {
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile(s_s9s_ui_plist);
-    
     Size dlgSize(190, 240);
     Vec2 pos = VisibleRect::center();
     float margin = 10;
@@ -295,8 +293,6 @@ void Scene3DTestScene::createPlayerDlg()
 
 void Scene3DTestScene::createDetailDlg()
 {
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile(s_s9s_ui_plist);
-    
     Size dlgSize(190, 240);
     Vec2 pos = VisibleRect::center();
     float margin = 10;
@@ -304,8 +300,6 @@ void Scene3DTestScene::createDetailDlg()
 
 void Scene3DTestScene::createDescDlg()
 {
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile(s_s9s_ui_plist);
-    
     Size dlgSize(440, 240);
     Vec2 pos = VisibleRect::center();
     float margin = 10;

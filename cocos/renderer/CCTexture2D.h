@@ -540,7 +540,6 @@ protected:
 
     bool _antialiasEnabled;
     NinePatchInfo* _ninePatchInfo;
-    friend class SpriteFrameCache;
     friend class TextureCache;
 
     bool _valid;

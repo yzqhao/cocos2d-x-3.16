@@ -121,12 +121,6 @@
     <ClCompile Include="CCScene.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCSpriteFrame.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
-    <ClCompile Include="CCSpriteFrameCache.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="..\base\atitc.cpp">
       <Filter>base</Filter>
     </ClCompile>
@@ -565,12 +559,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCScene.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCSpriteFrame.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCSpriteFrameCache.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="..\base\atitc.h">

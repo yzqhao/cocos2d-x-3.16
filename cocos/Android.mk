@@ -21,8 +21,6 @@ LOCAL_SRC_FILES := \
 2d/CCLight.cpp \
 2d/CCNode.cpp \
 2d/CCScene.cpp \
-2d/CCSpriteFrame.cpp \
-2d/CCSpriteFrameCache.cpp \
 2d/CCAutoPolygon.cpp \
 3d/CCFrustum.cpp \
 3d/CCPlane.cpp \

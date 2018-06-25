@@ -333,8 +333,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="CCLight.cpp" />
     <ClCompile Include="CCNode.cpp" />
     <ClCompile Include="CCScene.cpp" />
-    <ClCompile Include="CCSpriteFrame.cpp" />
-    <ClCompile Include="CCSpriteFrameCache.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\external\clipper\clipper.hpp" />
@@ -516,8 +514,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="CCLight.h" />
     <ClInclude Include="CCNode.h" />
     <ClInclude Include="CCScene.h" />
-    <ClInclude Include="CCSpriteFrame.h" />
-    <ClInclude Include="CCSpriteFrameCache.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\math\Mat4.inl" />

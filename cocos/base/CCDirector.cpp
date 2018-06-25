@@ -31,7 +31,6 @@ THE SOFTWARE.
 // standard includes
 #include <string>
 
-#include "2d/CCSpriteFrameCache.h"
 #include "platform/CCFileUtils.h"
 
 #include "renderer/CCGLProgramCache.h"
@@ -674,7 +673,6 @@ void Director::purgeCachedData(void)
 {
     if (s_SharedDirector->getOpenGLView())
     {
-        SpriteFrameCache::getInstance()->removeUnusedSpriteFrames();
         _textureCache->removeUnusedTextures();
 
         // Note: some tests such as ActionsTest are leaking refcounted textures
@@ -984,7 +982,6 @@ void Director::reset()
 #elif _MSC_VER >= 1400 //vs 2005 or higher
 #pragma warning (pop)
 #endif
-    SpriteFrameCache::destroyInstance();
     GLProgramCache::destroyInstance();
     GLProgramStateCache::destroyInstance();
     FileUtils::destroyInstance();

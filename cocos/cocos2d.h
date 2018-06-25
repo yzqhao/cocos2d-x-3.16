@@ -185,8 +185,6 @@ THE SOFTWARE.
 
 // sprite_nodes
 #include "2d/CCAutoPolygon.h"
-#include "2d/CCSpriteFrame.h"
-#include "2d/CCSpriteFrameCache.h"
 
 // textures
 #include "renderer/CCTextureAtlas.h"
