@@ -53,7 +53,6 @@ Examples:
 
 int ccNextPOT(int value);
 
-class Sprite;
 class Image;
 
 namespace utils
@@ -104,21 +103,6 @@ namespace utils
      * @return Returns unionof bounding box of a node and its children.
      */
     CC_DLL Rect getCascadeBoundingBox(Node *node);
-
-    /**
-     * Create a sprite instance from base64 encoded image and adds the texture to the Texture Cache.
-
-     * @return Returns an instance of sprite
-     */
-    CC_DLL Sprite* createSpriteFromBase64Cached(const char* base64String, const char* key);
-
-    /**
-    * Create a sprite instance from base64 encoded image.
-
-    * @return Returns an instance of sprite
-    */
-    CC_DLL Sprite* createSpriteFromBase64(const char* base64String);
-
 
     /**
      * Find a child by name recursively

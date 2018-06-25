@@ -262,9 +262,9 @@ void Scene3DTestScene::createWorld3D()
     // }
     
     // add BillBoard for test blend
-    auto billboard = BillBoard::create("Images/btn-play-normal.png");
-    billboard->setPosition3D(Vec3(0,180,0));
-    _player->addChild(billboard);
+    // auto billboard = BillBoard::create("Images/btn-play-normal.png");
+    // billboard->setPosition3D(Vec3(0,180,0));
+    // _player->addChild(billboard);
     
     // create two Sprite3D monster, one is transparent
     auto monster = Sprite3D::create("Sprite3DTest/orc.c3b");

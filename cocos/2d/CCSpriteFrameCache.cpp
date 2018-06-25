@@ -32,7 +32,6 @@ THE SOFTWARE.
 #include <vector>
 
 
-#include "2d/CCSprite.h"
 #include "2d/CCAutoPolygon.h"
 #include "platform/CCFileUtils.h"
 #include "base/CCNS.h"

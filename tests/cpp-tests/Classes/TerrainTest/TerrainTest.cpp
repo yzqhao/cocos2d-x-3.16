@@ -45,10 +45,10 @@ TerrainWalkThru::TerrainWalkThru()
     _player->setPositionY(_terrain->getHeight(_player->getPositionX(),_player->getPositionZ())+PLAYER_HEIGHT);
     
     // add BillBoard for test blend
-    auto billboard = BillBoard::create("Images/btn-play-normal.png");
-    billboard->setPosition3D(Vec3(0,180,0));
-    billboard->setCameraMask((unsigned short)CameraFlag::USER1);
-    _player->addChild(billboard);
+    // auto billboard = BillBoard::create("Images/btn-play-normal.png");
+    // billboard->setPosition3D(Vec3(0,180,0));
+    // billboard->setCameraMask((unsigned short)CameraFlag::USER1);
+    // _player->addChild(billboard);
 
     // auto animation = Animation3D::create("Sprite3DTest/girl.c3b","Take 001");
     // if (animation)

@@ -39,13 +39,13 @@ bool HelloWorld::init()
     // 3. add your codes below...
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    // auto sprite = Sprite::create("HelloWorld.png");
 
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize / 2) + origin);
+    // // position the sprite on the center of the screen
+    // sprite->setPosition(Vec2(visibleSize / 2) + origin);
 
-    // add the sprite as a child to this layer
-    this->addChild(sprite);
+    // // add the sprite as a child to this layer
+    // this->addChild(sprite);
     
     return true;
 }

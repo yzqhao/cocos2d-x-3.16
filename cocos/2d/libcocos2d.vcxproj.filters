@@ -121,9 +121,6 @@
     <ClCompile Include="CCScene.cpp">
       <Filter>2d</Filter>
     </ClCompile>
-    <ClCompile Include="CCSprite.cpp">
-      <Filter>2d</Filter>
-    </ClCompile>
     <ClCompile Include="CCSpriteFrame.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -400,9 +397,6 @@
     <ClCompile Include="..\3d\CCMeshVertexIndexData.cpp">
       <Filter>3d</Filter>
     </ClCompile>
-    <ClCompile Include="..\3d\CCBillBoard.cpp">
-      <Filter>3d</Filter>
-    </ClCompile>
     <ClCompile Include="..\platform\win32\CCApplication-win32.cpp">
       <Filter>platform\win32</Filter>
     </ClCompile>
@@ -571,9 +565,6 @@
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCScene.h">
-      <Filter>2d</Filter>
-    </ClInclude>
-    <ClInclude Include="CCSprite.h">
       <Filter>2d</Filter>
     </ClInclude>
     <ClInclude Include="CCSpriteFrame.h">
@@ -943,9 +934,6 @@
       <Filter>cocostudio\json\rapidjson\internal</Filter>
     </ClInclude>
     <ClInclude Include="..\3d\CCMeshVertexIndexData.h">
-      <Filter>3d</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3d\CCBillBoard.h">
       <Filter>3d</Filter>
     </ClInclude>
     <ClInclude Include="..\platform\win32\CCApplication-win32.h">

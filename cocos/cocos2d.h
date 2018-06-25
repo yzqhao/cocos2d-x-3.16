@@ -184,7 +184,6 @@ THE SOFTWARE.
 #endif
 
 // sprite_nodes
-#include "2d/CCSprite.h"
 #include "2d/CCAutoPolygon.h"
 #include "2d/CCSpriteFrame.h"
 #include "2d/CCSpriteFrameCache.h"
@@ -195,7 +194,6 @@ THE SOFTWARE.
 //3d
 #include "3d/CCAABB.h"
 #include "3d/CCAttachNode.h"
-#include "3d/CCBillBoard.h"
 #include "3d/CCFrustum.h"
 #include "3d/CCMesh.h"
 #include "3d/CCMeshSkin.h"

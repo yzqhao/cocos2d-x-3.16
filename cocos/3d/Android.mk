@@ -11,7 +11,6 @@ CCRay.cpp \
 CCAABB.cpp \
 CCOBB.cpp \
 CCAttachNode.cpp \
-CCBillBoard.cpp \
 CCBundle3D.cpp \
 CCBundleReader.cpp \
 CCMesh.cpp \

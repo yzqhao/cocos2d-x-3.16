@@ -13,7 +13,6 @@ set(COCOS_2D_SRC
   2d/CCLight.cpp
   2d/CCNode.cpp
   2d/CCScene.cpp
-  2d/CCSprite.cpp
   2d/CCSpriteFrameCache.cpp
   2d/CCSpriteFrame.cpp
   2d/CCAutoPolygon.cpp
