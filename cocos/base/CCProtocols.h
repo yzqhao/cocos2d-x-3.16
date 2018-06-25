@@ -224,33 +224,6 @@ public:
     virtual void setTexture(Texture2D *texture) = 0;
 };
 
-/**
- * Common interface for Labels
- */
-class CC_DLL LabelProtocol
-{
-public:
-    virtual ~LabelProtocol() {}
-
-    /**
-     * Sets a new label using a string
-     *
-     * @param label A null terminated string
-     * @js NA
-     * @lua NA
-     */
-    virtual void setString(const std::string &label) = 0;
-
-    /** 
-     * Returns the string that is currently being used in this label 
-     *
-     * @return The string that is currently being used in this label
-     * @js NA
-     * @lua NA
-     */
-    virtual const std::string& getString() const = 0;
-};
-
 /** 
  * OpenGL projection protocol 
  */
@@ -267,18 +240,6 @@ public:
     virtual void updateProjection() = 0;
 };
 
-/**
- * interface for playable items
- */
-class CC_DLL PlayableProtocol
-{
-public:
-    virtual ~PlayableProtocol(){}
-    
-    virtual void start() = 0;
-    
-    virtual void stop() = 0;
-};
 NS_CC_END
 
 /// @endcond

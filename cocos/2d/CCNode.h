@@ -43,9 +43,7 @@
 
 NS_CC_BEGIN
 
-class GridBase;
 class Touch;
-class LabelProtocol;
 class Scheduler;
 class EventDispatcher;
 class Scene;
