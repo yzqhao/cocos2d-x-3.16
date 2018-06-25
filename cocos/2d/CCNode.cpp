@@ -748,121 +748,6 @@ Node* Node::getChildByName(const std::string& name) const
     return nullptr;
 }
 
-void Node::enumerateChildren(const std::string &name, std::function<bool (Node *)> callback) const
-{
-    CCASSERT(!name.empty(), "Invalid name");
-    CCASSERT(callback != nullptr, "Invalid callback function");
-    
-    size_t length = name.length();
-    
-    size_t subStrStartPos = 0;  // sub string start index
-    size_t subStrlength = length; // sub string length
-    
-    // Starts with '//'?
-    bool searchRecursively = false;
-    if (length > 2 && name[0] == '/' && name[1] == '/')
-    {
-        searchRecursively = true;
-        subStrStartPos = 2;
-        subStrlength -= 2;
-    }
-    
-    // End with '/..'?
-    bool searchFromParent = false;
-    if (length > 3 &&
-        name[length-3] == '/' &&
-        name[length-2] == '.' &&
-        name[length-1] == '.')
-    {
-        searchFromParent = true;
-        subStrlength -= 3;
-    }
-    
-    // Remove '//', '/..' if exist
-    std::string newName = name.substr(subStrStartPos, subStrlength);
-
-    if (searchFromParent)
-    {
-        newName.insert(0, "[[:alnum:]]+/");
-    }
-    
-    
-    if (searchRecursively)
-    {
-        // name is '//xxx'
-        doEnumerateRecursive(this, newName, callback);
-    }
-    else
-    {
-        // name is xxx
-        doEnumerate(newName, callback);
-    }
-}
-
-bool Node::doEnumerateRecursive(const Node* node, const std::string &name, std::function<bool (Node *)> callback) const
-{
-    bool ret =false;
-    
-    if (node->doEnumerate(name, callback))
-    {
-        // search itself
-        ret = true;
-    }
-    else
-    {
-        // search its children
-        for (const auto& child : node->getChildren())
-        {
-            if (doEnumerateRecursive(child, name, callback))
-            {
-                ret = true;
-                break;
-            }
-        }
-    }
-    
-    return ret;
-}
-
-bool Node::doEnumerate(std::string name, std::function<bool (Node *)> callback) const
-{
-    // name may be xxx/yyy, should find its parent
-    size_t pos = name.find('/');
-    std::string searchName = name;
-    bool needRecursive = false;
-    if (pos != name.npos)
-    {
-        searchName = name.substr(0, pos);
-        name.erase(0, pos+1);
-        needRecursive = true;
-    }
-    
-    bool ret = false;
-    for (const auto& child : getChildren())
-    {
-        if (std::regex_match(child->_name, std::regex(searchName)))
-        {
-            if (!needRecursive)
-            {
-                // terminate enumeration if callback return true
-                if (callback(child))
-                {
-                    ret = true;
-                    break;
-                }
-            }
-            else
-            {
-                ret = child->doEnumerate(name, callback);
-                if (ret)
-                    break;
-            }
-        }
-    }
-    
-    return ret;
-}
-
 /* "add" logic MUST only be on this method
 * If a class want's to extend the 'addChild' behavior it only needs
 * to override this method
@@ -1311,13 +1196,6 @@ void Node::scheduleUpdate()
 
 void Node::scheduleUpdateWithPriority(int priority)
 {
-    _scheduler->scheduleUpdate(this, priority, !_running);
-}
-
-void Node::scheduleUpdateWithPriorityLua(int nHandler, int priority)
-{
-    unscheduleUpdate();
-    
     _scheduler->scheduleUpdate(this, priority, !_running);
 }
 
@@ -1916,13 +1794,6 @@ void Node::setCameraMask(unsigned short mask, bool applyChildren)
 int Node::getAttachedNodeCount()
 {
     return __attachedNodeCount;
-}
-
-// MARK: Deprecated
-
-__NodeRGBA::__NodeRGBA()
-{
-    CCLOG("NodeRGBA deprecated.");
 }
 
 NS_CC_END

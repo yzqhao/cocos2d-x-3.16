@@ -799,34 +799,6 @@ public:
     */
     template <typename T>
     T getChildByName(const std::string& name) const { return static_cast<T>(getChildByName(name)); }
-    /** Search the children of the receiving node to perform processing for nodes which share a name.
-     *
-     * @param name The name to search for, supports c++11 regular expression.
-     * Search syntax options:
-     * `//`: Can only be placed at the begin of the search string. This indicates that it will search recursively.
-     * `..`: The search should move up to the node's parent. Can only be placed at the end of string.
-     * `/` : When placed anywhere but the start of the search string, this indicates that the search should move to the node's children.
-     *
-     * @code
-     * enumerateChildren("//MyName", ...): This searches the children recursively and matches any node with the name `MyName`.
-     * enumerateChildren("[[:alnum:]]+", ...): This search string matches every node of its children.
-     * enumerateChildren("A[[:digit:]]", ...): This searches the node's children and returns any child named `A0`, `A1`, ..., `A9`.
-     * enumerateChildren("Abby/Normal", ...): This searches the node's grandchildren and returns any node whose name is `Normal`
-     * and whose parent is named `Abby`.
-     * enumerateChildren("//Abby/Normal", ...): This searches recursively and returns any node whose name is `Normal` and whose
-     * parent is named `Abby`.
-     * @endcode
-     *
-     * @warning Only support alpha or number for name, and not support unicode.
-     *
-     * @param callback A callback function to execute on nodes that match the `name` parameter. The function takes the following arguments:
-     *  `node` 
-     *      A node that matches the name
-     *  And returns a boolean result. Your callback can return `true` to terminate the enumeration.
-     *
-     * @since v3.2
-     */
-    virtual void enumerateChildren(const std::string &name, std::function<bool(Node* node)> callback) const;
     /**
      * Returns the array of the node's children.
      *
@@ -1089,17 +1061,6 @@ public:
      * @return Whether or not the node is running.
      */
     virtual bool isRunning() const;
-
-    /**
-     * Schedules for lua script.
-     * @js NA
-     *
-     * @param handler The key to search lua function.
-     * @param priority A given priority value.
-     */
-    void scheduleUpdateWithPriorityLua(int handler, int priority);
-
-    /// @}  end Script Bindings
 
 
     /// @{
@@ -1733,9 +1694,6 @@ protected:
     virtual void disableCascadeColor();
     virtual void updateColor() {}
     
-    bool doEnumerate(std::string name, std::function<bool (Node *)> callback) const;
-    bool doEnumerateRecursive(const Node* node, const std::string &name, std::function<bool (Node *)> callback) const;
-    
     //check whether this camera mask is visible by the current visiting camera
     bool isVisitableByVisitingCamera() const;
     
@@ -1860,47 +1818,6 @@ private:
  * @return true if the point is in content rectangle, false otherwise.
  */
 bool CC_DLL isScreenPointInRect(const Vec2 &pt, const Camera* camera, const Mat4& w2l, const Rect& rect, Vec3 *p);
-
-// NodeRGBA
-
-/** @class __NodeRGBA
- * @brief __NodeRGBA is a subclass of Node that implements the RGBAProtocol protocol.
- 
- All features from Node are valid, plus the following new features:
- - opacity
- - RGB colors
- 
- Opacity/Color propagates into children that conform to the RGBAProtocol if cascadeOpacity/cascadeColor is enabled.
- @since v2.1
- @js NA
- */
-class CC_DLL __NodeRGBA : public Node, public __RGBAProtocol
-{
-public:
-    // overrides
-    virtual GLubyte getOpacity() const override { return Node::getOpacity(); }
-    virtual GLubyte getDisplayedOpacity() const  override { return Node::getDisplayedOpacity(); }
-    virtual void setOpacity(GLubyte opacity) override { return Node::setOpacity(opacity); }
-    virtual void updateDisplayedOpacity(GLubyte parentOpacity) override { return Node::updateDisplayedOpacity(parentOpacity); }
-    virtual bool isCascadeOpacityEnabled() const  override { return Node::isCascadeOpacityEnabled(); }
-    virtual void setCascadeOpacityEnabled(bool cascadeOpacityEnabled) override { return Node::setCascadeOpacityEnabled(cascadeOpacityEnabled); }
-
-    virtual const Color3B& getColor(void) const override { return Node::getColor(); }
-    virtual const Color3B& getDisplayedColor() const override { return Node::getDisplayedColor(); }
-    virtual void setColor(const Color3B& color) override { return Node::setColor(color); }
-    virtual void updateDisplayedColor(const Color3B& parentColor) override { return Node::updateDisplayedColor(parentColor); }
-    virtual bool isCascadeColorEnabled() const override { return Node::isCascadeColorEnabled(); }
-    virtual void setCascadeColorEnabled(bool cascadeColorEnabled) override { return Node::setCascadeColorEnabled(cascadeColorEnabled); }
-
-    virtual void setOpacityModifyRGB(bool bValue) override { return Node::setOpacityModifyRGB(bValue); }
-    virtual bool isOpacityModifyRGB() const override { return Node::isOpacityModifyRGB(); }
-
-    __NodeRGBA();
-    virtual ~__NodeRGBA() {}
-
-private:
-    CC_DISALLOW_COPY_AND_ASSIGN(__NodeRGBA);
-};
 
 // end of _2d group
 /// @}
