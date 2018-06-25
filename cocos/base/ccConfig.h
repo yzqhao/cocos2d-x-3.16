@@ -95,11 +95,4 @@ THE SOFTWARE.
 #define CC_USE_TIFF  1
 #endif // CC_USE_TIFF
 
-/** @def CC_STRIP_FPS
- * Whether to strip FPS related data and functions, such as cc_fps_images_png
- */
-#ifndef CC_STRIP_FPS
-#define CC_STRIP_FPS 0
-#endif
-
 #endif // __CCCONFIG_H__

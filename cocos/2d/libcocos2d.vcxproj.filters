@@ -184,9 +184,6 @@
     <ClCompile Include="..\base\CCEventTouch.cpp">
       <Filter>base</Filter>
     </ClCompile>
-    <ClCompile Include="..\base\ccFPSImages.c">
-      <Filter>base</Filter>
-    </ClCompile>
     <ClCompile Include="..\base\CCNS.cpp">
       <Filter>base</Filter>
     </ClCompile>
@@ -628,9 +625,6 @@
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\base\CCEventType.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\base\ccFPSImages.h">
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\base\ccMacros.h">

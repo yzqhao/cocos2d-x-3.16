@@ -228,8 +228,6 @@
         "cocos/base/ccCArray.cpp", 
         "cocos/base/ccCArray.h", 
         "cocos/base/ccConfig.h", 
-        "cocos/base/ccFPSImages.c", 
-        "cocos/base/ccFPSImages.h", 
         "cocos/base/ccMacros.h", 
         "cocos/base/ccRandom.cpp", 
         "cocos/base/ccRandom.h", 

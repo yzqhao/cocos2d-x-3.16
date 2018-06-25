@@ -252,7 +252,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\base\CCEventListenerTouch.cpp" />
     <ClCompile Include="..\base\CCEventMouse.cpp" />
     <ClCompile Include="..\base\CCEventTouch.cpp" />
-    <ClCompile Include="..\base\ccFPSImages.c" />
     <ClCompile Include="..\base\CCNinePatchImageParser.cpp" />
     <ClCompile Include="..\base\CCStencilStateManager.cpp" />
     <ClCompile Include="..\base\CCNS.cpp" />
@@ -412,7 +411,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\base\CCEventMouse.h" />
     <ClInclude Include="..\base\CCEventTouch.h" />
     <ClInclude Include="..\base\CCEventType.h" />
-    <ClInclude Include="..\base\ccFPSImages.h" />
     <ClInclude Include="..\base\ccMacros.h" />
     <ClInclude Include="..\base\CCMap.h" />
     <ClInclude Include="..\base\CCNinePatchImageParser.h" />

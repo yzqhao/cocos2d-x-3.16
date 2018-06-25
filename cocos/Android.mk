@@ -74,7 +74,6 @@ base/ZipUtils.cpp \
 base/atitc.cpp \
 base/base64.cpp \
 base/ccCArray.cpp \
-base/ccFPSImages.c \
 base/ccRandom.cpp \
 base/ccTypes.cpp \
 base/ccUTF8.cpp \
