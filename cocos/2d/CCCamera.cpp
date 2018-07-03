@@ -39,7 +39,7 @@
 NS_CC_BEGIN
 
 Camera* Camera::_visitingCamera = nullptr;
-experimental::Viewport Camera::_defaultViewport;
+Viewport Camera::_defaultViewport;
 
 // start static methods
 
@@ -90,11 +90,11 @@ Camera* Camera::getDefaultCamera()
     return nullptr;
 }
 
-const experimental::Viewport& Camera::getDefaultViewport()
+const Viewport& Camera::getDefaultViewport()
 {
     return _defaultViewport;
 }
-void Camera::setDefaultViewport(const experimental::Viewport& vp)
+void Camera::setDefaultViewport(const Viewport& vp)
 {
     _defaultViewport = vp;
 }
@@ -478,7 +478,7 @@ void Camera::applyViewport()
     }
 }
 
-void Camera::setViewport(const experimental::Viewport& vp)
+void Camera::setViewport(const Viewport& vp)
 {
     _viewport = vp;
 }

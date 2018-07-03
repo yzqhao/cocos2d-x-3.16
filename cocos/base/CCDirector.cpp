@@ -289,7 +289,7 @@ void Director::drawScene()
         _renderer->clearDrawStats();
         
         //render the scene
-        _openGLView->renderScene(_runningScene, _renderer);
+        _runningScene->render(_renderer, Mat4::IDENTITY, nullptr);
         
         _eventDispatcher->dispatchEvent(_eventAfterVisit);
     }

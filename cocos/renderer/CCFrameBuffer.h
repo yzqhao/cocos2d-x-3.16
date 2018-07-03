@@ -37,21 +37,6 @@ class EventListenerCustom;
 
 namespace experimental {
 
-/**
- Viewport is a normalized to FrameBufferObject
- But for default FBO, the size is absolute.
- */
-struct CC_DLL Viewport
-{
-    Viewport(float left, float bottom, float width, float height);
-    Viewport();
-    
-    float _left;
-    float _bottom;
-    float _width;
-    float _height;
-};
-    
 class CC_DLL RenderTargetBase : public Ref
 {
 public:

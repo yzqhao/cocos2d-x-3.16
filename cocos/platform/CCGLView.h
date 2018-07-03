@@ -391,12 +391,6 @@ public:
     virtual id getCocoaWindow() = 0;
 #endif /* (CC_TARGET_PLATFORM == CC_PLATFORM_MAC) */
 
-    /**
-     * Renders a Scene with a Renderer
-     * This method is called directly by the Director
-     */
-    void renderScene(Scene* scene, Renderer* renderer);
-
 protected:
     void updateDesignResolutionSize();
     

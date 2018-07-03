@@ -31,6 +31,7 @@ THE SOFTWARE.
 #include "2d/CCCamera.h"
 #include "2d/CCScene.h"
 #include "renderer/CCRenderer.h"
+#include "renderer/CCViewPort.h"
 
 NS_CC_BEGIN
 
@@ -243,7 +244,7 @@ Vec2 GLView::getVisibleOrigin() const
 
 void GLView::setViewPortInPoints(float x , float y , float w , float h)
 {
-    experimental::Viewport vp((float)(x * _scaleX + _viewPortRect.origin.x),
+    Viewport vp((float)(x * _scaleX + _viewPortRect.origin.x),
         (float)(y * _scaleY + _viewPortRect.origin.y),
         (float)(w * _scaleX),
         (float)(h * _scaleY));
@@ -478,14 +479,6 @@ float GLView::getScaleX() const
 float GLView::getScaleY() const
 {
     return _scaleY;
-}
-
-void GLView::renderScene(Scene* scene, Renderer* renderer)
-{
-    CCASSERT(scene, "Invalid Scene");
-    CCASSERT(renderer, "Invalid Renderer");
-
-    scene->render(renderer, Mat4::IDENTITY, nullptr);
 }
 
 NS_CC_END

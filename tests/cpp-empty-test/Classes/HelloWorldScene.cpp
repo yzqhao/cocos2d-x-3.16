@@ -27,12 +27,12 @@ bool HelloWorld::init()
     //    you may modify it.
 
     // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = MenuItemImage::create(
-                                        "CloseNormal.png",
-                                        "CloseSelected.png",
-                                        CC_CALLBACK_1(HelloWorld::menuCloseCallback,this));
+    // auto closeItem = MenuItemImage::create(
+    //                                     "CloseNormal.png",
+    //                                     "CloseSelected.png",
+    //                                     CC_CALLBACK_1(HelloWorld::menuCloseCallback,this));
     
-    closeItem->setPosition(origin + Vec2(visibleSize) - Vec2(closeItem->getContentSize() / 2));
+    // closeItem->setPosition(origin + Vec2(visibleSize) - Vec2(closeItem->getContentSize() / 2));
 
     
     /////////////////////////////

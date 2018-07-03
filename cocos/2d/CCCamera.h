@@ -32,6 +32,7 @@ THE SOFTWARE.
 #include "renderer/CCQuadCommand.h"
 #include "renderer/CCCustomCommand.h"
 #include "renderer/CCFrameBuffer.h"
+#include "renderer/CCViewPort.h"
 
 NS_CC_BEGIN
 
@@ -104,8 +105,8 @@ public:
      */
     static const Camera* getVisitingCamera();
 
-    static const experimental::Viewport& getDefaultViewport();
-    static void setDefaultViewport(const experimental::Viewport& vp);
+    static const Viewport& getDefaultViewport();
+    static void setDefaultViewport(const Viewport& vp);
 
     /**
      * Get the default camera of the current running scene.
@@ -260,7 +261,7 @@ public:
     /**
      Set Viewport for camera.
      */
-    void setViewport(const experimental::Viewport& vp);
+    void setViewport(const Viewport& vp);
 
     /**
      * Whether or not the viewprojection matrix was updated since the last frame.
@@ -305,7 +306,7 @@ public:
 
 protected:
     static Camera* _visitingCamera;
-    static experimental::Viewport _defaultViewport;
+    static Viewport _defaultViewport;
 
     Scene* _scene; //Scene camera belongs to
     Mat4 _projection;
@@ -329,7 +330,7 @@ protected:
 
     CameraBackgroundBrush* _clearBrush; //brush used to clear the back ground
 
-    experimental::Viewport _viewport;
+    Viewport _viewport;
     experimental::FrameBuffer* _fbo;
     GLint _oldViewport[4];
 };
