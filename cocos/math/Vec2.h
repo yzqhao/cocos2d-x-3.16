@@ -45,8 +45,6 @@ inline float clampf(float value, float min_inclusive, float max_inclusive)
     return value < min_inclusive ? min_inclusive : value < max_inclusive? value : max_inclusive;
 }
 
-class Mat4;
-
 /**
  * Defines a 2-element floating point vector.
  */

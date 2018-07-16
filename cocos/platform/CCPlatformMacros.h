@@ -30,7 +30,6 @@ Copyright (c) 2013-2017 Chukong Technologies
  * Define some platform specific macros.
  */
 #include "base/ccConfig.h"
-#include "platform/CCPlatformConfig.h"
 #include "platform/CCPlatformDefine.h"
 
 /** @def CREATE_FUNC(__TYPE__)

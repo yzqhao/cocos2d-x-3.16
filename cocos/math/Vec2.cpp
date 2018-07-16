@@ -19,7 +19,6 @@
  */
 
 #include "math/Vec2.h"
-#include "math/MathUtil.h"
 #include "base/ccMacros.h"
 
 NS_CC_MATH_BEGIN

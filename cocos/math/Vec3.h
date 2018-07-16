@@ -32,7 +32,6 @@
 
 NS_CC_MATH_BEGIN
 
-class Mat4;
 class Quaternion;
 
 /**
