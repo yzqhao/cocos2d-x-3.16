@@ -41,7 +41,8 @@ NS_CC_BEGIN
 
 class Pass;
 class GLProgramState;
-class Material;
+class parent;
+class Node;
 
 /// Technique
 class CC_DLL Technique : public RenderState
@@ -56,8 +57,8 @@ public:
     /** Creates a new Technique with a GLProgramState.
      Method added to support legacy code
      */
-    static Technique* createWithGLProgramState(Material* parent, GLProgramState* state);
-    static Technique* create(Material* parent);
+    static Technique* createWithGLProgramState(Node* target, GLProgramState* state);
+    static Technique* create();
 
     /** Adds a new pass to the Technique.
      Order matters. First added, first rendered
@@ -82,7 +83,7 @@ public:
 protected:
     Technique();
     ~Technique();
-    bool init(Material* parent);
+    bool init();
 
     void setName(const std::string& name);
 

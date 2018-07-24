@@ -91,8 +91,10 @@ Material* Material::createWithGLStateProgram(GLProgramState* programState)
 
 bool Material::initWithGLProgramState(cocos2d::GLProgramState *state)
 {
-    auto technique = Technique::createWithGLProgramState(this, state);
+    auto technique = Technique::createWithGLProgramState(this->_target, state);
     if (technique) {
+        technique->_parent = this;
+
         _techniques.pushBack(technique);
 
         // weak pointer
@@ -149,7 +151,8 @@ bool Material::parseProperties(Properties* materialProperties)
 
 bool Material::parseTechnique(Properties* techniqueProperties)
 {
-    auto technique = Technique::create(this);
+    auto technique = Technique::create();
+    technique->_parent = this;
     _techniques.pushBack(technique);
 
     // first one is the default one
@@ -182,7 +185,8 @@ bool Material::parseTechnique(Properties* techniqueProperties)
 
 bool Material::parsePass(Technique* technique, Properties* passProperties)
 {
-    auto pass = Pass::create(technique);
+    auto pass = Pass::create(_target);
+    pass->_parent = technique;
     technique->addPass(pass);
 
     // Pass can have 3 different namespaces:

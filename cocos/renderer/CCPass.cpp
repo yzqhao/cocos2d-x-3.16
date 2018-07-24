@@ -32,8 +32,6 @@
 #include "renderer/CCGLProgram.h"
 #include "renderer/CCTexture2D.h"
 #include "renderer/ccGLStateCache.h"
-#include "renderer/CCTechnique.h"
-#include "renderer/CCMaterial.h"
 #include "renderer/CCVertexAttribBinding.h"
 
 #include "base/ccTypes.h"
@@ -44,10 +42,10 @@
 NS_CC_BEGIN
 
 
-Pass* Pass::create(Technique* technique)
+Pass* Pass::create(Node* target)
 {
     auto pass = new (std::nothrow) Pass();
-    if (pass && pass->init(technique))
+    if (pass && pass->init(target))
     {
         pass->autorelease();
         return pass;
@@ -56,10 +54,10 @@ Pass* Pass::create(Technique* technique)
     return nullptr;
 }
 
-Pass* Pass::createWithGLProgramState(Technique* technique, GLProgramState* programState)
+Pass* Pass::createWithGLProgramState(Node* target, GLProgramState* programState)
 {
     auto pass = new (std::nothrow) Pass();
-    if (pass && pass->initWithGLProgramState(technique, programState))
+    if (pass && pass->initWithGLProgramState(target, programState))
     {
         pass->autorelease();
         return pass;
@@ -68,28 +66,30 @@ Pass* Pass::createWithGLProgramState(Technique* technique, GLProgramState* progr
     return nullptr;
 }
 
-bool Pass::init(Technique* technique)
+bool Pass::init(Node* target)
 {
-    _parent = technique;
+    _target = target;
     return true;
 }
 
-bool Pass::initWithGLProgramState(Technique* technique, GLProgramState *glProgramState)
+bool Pass::initWithGLProgramState(Node* target, GLProgramState *glProgramState)
 {
-    _parent = technique;
+    _target = target;
     _glProgramState = glProgramState;
     CC_SAFE_RETAIN(_glProgramState);
     return true;
 }
 
 Pass::Pass()
-: _glProgramState(nullptr)
+: _target(nullptr) 
+, _glProgramState(nullptr)
 , _vertexAttribBinding(nullptr)
 {
 }
 
 Pass::~Pass()
 {
+    CC_SAFE_RELEASE(_target);
     CC_SAFE_RELEASE(_glProgramState);
     CC_SAFE_RELEASE(_vertexAttribBinding);
 }
@@ -100,6 +100,10 @@ Pass* Pass::clone() const
     if (pass)
     {
         RenderState::cloneInto(pass);
+
+        pass->_target = _target;
+        CC_SAFE_RETAIN(pass->_target);
+
         pass->_glProgramState = _glProgramState->clone();
         CC_SAFE_RETAIN(pass->_glProgramState);
 
@@ -136,7 +140,6 @@ uint32_t Pass::getHash() const
 
         _hash = glProgram ^ textureid ^ stateblockid;
 
-//        _hash = XXH32((const void*)intArray, sizeof(intArray), 0);
         _hashDirty = false;
     }
 
@@ -167,10 +170,7 @@ void Pass::bind(const Mat4& modelView, bool bindAttributes)
 
 Node* Pass::getTarget() const
 {
-    CCASSERT(_parent && _parent->_parent, "Pass must have a Technique and Material");
-
-    Material *material = static_cast<Material*>(_parent->_parent);
-    return material->_target;
+    return _target;
 }
 
 void Pass::unbind()

@@ -38,7 +38,6 @@
 NS_CC_BEGIN
 
 class GLProgramState;
-class Technique;
 class Node;
 class VertexAttribBinding;
 
@@ -49,9 +48,9 @@ class CC_DLL Pass : public RenderState
 public:
     /** Creates a Pass with a GLProgramState.
      */
-    static Pass* createWithGLProgramState(Technique* parent, GLProgramState* programState);
+    static Pass* createWithGLProgramState(Node* target, GLProgramState* programState);
 
-    static Pass* create(Technique* parent);
+    static Pass* create(Node* target);
 
     /** Returns the GLProgramState */
     GLProgramState* getGLProgramState() const;
@@ -93,12 +92,13 @@ public:
 protected:
     Pass();
     ~Pass();
-    bool init(Technique* parent);
-    bool initWithGLProgramState(Technique* parent, GLProgramState *glProgramState);
+    bool init(Node* target);
+    bool initWithGLProgramState(Node* target, GLProgramState *glProgramState);
 
     void setGLProgramState(GLProgramState* glProgramState);
     Node* getTarget() const;
 
+    Node* _target;
     GLProgramState* _glProgramState;
     VertexAttribBinding* _vertexAttribBinding;
 };
