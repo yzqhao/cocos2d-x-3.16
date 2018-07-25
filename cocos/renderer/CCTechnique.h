@@ -57,7 +57,7 @@ public:
     /** Creates a new Technique with a GLProgramState.
      Method added to support legacy code
      */
-    static Technique* createWithGLProgramState(Node* target, GLProgramState* state);
+    static Technique* createWithGLProgramState(GLProgramState* state);
     static Technique* create();
 
     /** Adds a new pass to the Technique.

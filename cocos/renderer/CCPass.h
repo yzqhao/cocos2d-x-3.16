@@ -48,9 +48,9 @@ class CC_DLL Pass : public RenderState
 public:
     /** Creates a Pass with a GLProgramState.
      */
-    static Pass* createWithGLProgramState(Node* target, GLProgramState* programState);
+    static Pass* createWithGLProgramState(GLProgramState* programState);
 
-    static Pass* create(Node* target);
+    static Pass* create();
 
     /** Returns the GLProgramState */
     GLProgramState* getGLProgramState() const;
@@ -89,11 +89,15 @@ public:
      * Returns a clone (deep-copy) of this instance */
     Pass* clone() const;
 
+    /**
+     * set target */
+    void setTarget(Node* target);
+
 protected:
     Pass();
     ~Pass();
-    bool init(Node* target);
-    bool initWithGLProgramState(Node* target, GLProgramState *glProgramState);
+    bool init();
+    bool initWithGLProgramState(GLProgramState *glProgramState);
 
     void setGLProgramState(GLProgramState* glProgramState);
     Node* getTarget() const;

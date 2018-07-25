@@ -55,8 +55,6 @@ class Properties;
 class CC_DLL Material : public RenderState
 {
     friend class Node;
-    friend class Technique;
-    friend class Pass;
     friend class MeshCommand;
     friend class Renderer;
     friend class Mesh;

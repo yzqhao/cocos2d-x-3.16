@@ -42,10 +42,10 @@
 NS_CC_BEGIN
 
 
-Pass* Pass::create(Node* target)
+Pass* Pass::create()
 {
     auto pass = new (std::nothrow) Pass();
-    if (pass && pass->init(target))
+    if (pass && pass->init())
     {
         pass->autorelease();
         return pass;
@@ -54,10 +54,10 @@ Pass* Pass::create(Node* target)
     return nullptr;
 }
 
-Pass* Pass::createWithGLProgramState(Node* target, GLProgramState* programState)
+Pass* Pass::createWithGLProgramState(GLProgramState* programState)
 {
     auto pass = new (std::nothrow) Pass();
-    if (pass && pass->initWithGLProgramState(target, programState))
+    if (pass && pass->initWithGLProgramState(programState))
     {
         pass->autorelease();
         return pass;
@@ -66,15 +66,13 @@ Pass* Pass::createWithGLProgramState(Node* target, GLProgramState* programState)
     return nullptr;
 }
 
-bool Pass::init(Node* target)
+bool Pass::init()
 {
-    _target = target;
     return true;
 }
 
-bool Pass::initWithGLProgramState(Node* target, GLProgramState *glProgramState)
+bool Pass::initWithGLProgramState(GLProgramState *glProgramState)
 {
-    _target = target;
     _glProgramState = glProgramState;
     CC_SAFE_RETAIN(_glProgramState);
     return true;
@@ -171,6 +169,11 @@ void Pass::bind(const Mat4& modelView, bool bindAttributes)
 Node* Pass::getTarget() const
 {
     return _target;
+}
+
+void Pass::setTarget(Node* target)
+{
+    _target = target;
 }
 
 void Pass::unbind()

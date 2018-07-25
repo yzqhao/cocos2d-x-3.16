@@ -91,7 +91,7 @@ Material* Material::createWithGLStateProgram(GLProgramState* programState)
 
 bool Material::initWithGLProgramState(cocos2d::GLProgramState *state)
 {
-    auto technique = Technique::createWithGLProgramState(this->_target, state);
+    auto technique = Technique::createWithGLProgramState(state);
     if (technique) {
         technique->_parent = this;
 
@@ -125,6 +125,14 @@ bool Material::initWithProperties(Properties* materialProperties)
 void Material::setTarget(cocos2d::Node *target)
 {
     _target = target;
+
+    for (const auto& technique: _techniques)
+    {
+        for (const auto& pass: technique->_passes)
+        {
+            pass->setTarget(target);
+        }
+    }
 }
 
 bool Material::parseProperties(Properties* materialProperties)
@@ -185,7 +193,7 @@ bool Material::parseTechnique(Properties* techniqueProperties)
 
 bool Material::parsePass(Technique* technique, Properties* passProperties)
 {
-    auto pass = Pass::create(_target);
+    auto pass = Pass::create();
     pass->_parent = technique;
     technique->addPass(pass);
 

@@ -33,12 +33,12 @@
 
 NS_CC_BEGIN
 
-Technique* Technique::createWithGLProgramState(Node* target, GLProgramState* state)
+Technique* Technique::createWithGLProgramState(GLProgramState* state)
 {
     auto technique = new (std::nothrow) Technique();
     if (technique && technique->init())
     {
-        auto pass = Pass::createWithGLProgramState(target, state);
+        auto pass = Pass::createWithGLProgramState(state);
         pass->_parent = technique;
         technique->addPass(pass);
 
