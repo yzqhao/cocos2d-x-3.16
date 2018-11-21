@@ -25,6 +25,7 @@
 
 #include "base/CCStencilStateManager.h"
 #include "base/CCDirector.h"
+#include "base/MVPMatManager.h"
 #include "renderer/CCGLProgramCache.h"
 #include "renderer/ccGLStateCache.h"
 #include "renderer/CCRenderer.h"
@@ -60,14 +61,13 @@ StencilStateManager::StencilStateManager()
 
 void StencilStateManager::drawFullScreenQuadClearStencil()
 {
-    Director* director = Director::getInstance();
-    CCASSERT(nullptr != director, "Director is null when setting matrix stack");
+	MVPMatManager* mvpMatMng = MVPMatManager::getInstance();
     
-    director->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
-    director->loadIdentityMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+	mvpMatMng->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+	mvpMatMng->loadIdentityMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
     
-    director->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
-    director->loadIdentityMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
+	mvpMatMng->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
+	mvpMatMng->loadIdentityMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
     
     Vec2 vertices[] = {
         Vec2(-1.0f, -1.0f),
@@ -94,8 +94,8 @@ void StencilStateManager::drawFullScreenQuadClearStencil()
     
     CC_INCREMENT_GL_DRAWN_BATCHES_AND_VERTICES(1, 4);
     
-    director->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
-    director->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+	mvpMatMng->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
+	mvpMatMng->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
 }
 
 

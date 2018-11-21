@@ -30,7 +30,7 @@
 #include "base/ccTypes.h"
 #include "renderer/CCGLProgram.h"
 #include "base/CCDirector.h"
-
+#include "base/MVPMatManager.h"
 
 #if defined(__GNUC__) && ((__GNUC__ >= 4) || ((__GNUC__ == 3) && (__GNUC_MINOR__ >= 1)))
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
@@ -91,17 +91,17 @@ MATRIX_STACK_TYPE currentActiveStackType = MATRIX_STACK_TYPE::MATRIX_STACK_MODEL
 
 void CC_DLL kmGLFreeAll(void)
 {
-    Director::getInstance()->resetMatrixStack();
+	MVPMatManager::getInstance()->resetMatrixStack();
 }
 
 void CC_DLL kmGLPushMatrix(void)
 {
-    Director::getInstance()->pushMatrix(currentActiveStackType);
+	MVPMatManager::getInstance()->pushMatrix(currentActiveStackType);
 }
 
 void CC_DLL kmGLPopMatrix(void)
 {
-    Director::getInstance()->popMatrix(currentActiveStackType);
+	MVPMatManager::getInstance()->popMatrix(currentActiveStackType);
 }
 
 void CC_DLL kmGLMatrixMode(unsigned int mode)
@@ -120,48 +120,48 @@ void CC_DLL kmGLMatrixMode(unsigned int mode)
 
 void CC_DLL kmGLLoadIdentity(void)
 {
-    Director::getInstance()->loadIdentityMatrix(currentActiveStackType);
+	MVPMatManager::getInstance()->loadIdentityMatrix(currentActiveStackType);
 }
 
 void CC_DLL kmGLLoadMatrix(const Mat4* pIn)
 {
-    Director::getInstance()->loadMatrix(currentActiveStackType, *pIn);
+	MVPMatManager::getInstance()->loadMatrix(currentActiveStackType, *pIn);
 }
 
 void CC_DLL kmGLMultMatrix(const Mat4* pIn)
 {
-    Director::getInstance()->multiplyMatrix(currentActiveStackType, *pIn);
+	MVPMatManager::getInstance()->multiplyMatrix(currentActiveStackType, *pIn);
 }
 
 void CC_DLL kmGLTranslatef(float x, float y, float z)
 {
     Mat4 mat;
     Mat4::createTranslation(Vec3(x, y, z), &mat);
-    Director::getInstance()->multiplyMatrix(currentActiveStackType, mat);
+	MVPMatManager::getInstance()->multiplyMatrix(currentActiveStackType, mat);
 }
 
 void CC_DLL kmGLRotatef(float angle, float x, float y, float z)
 {
     Mat4 mat;
     Mat4::createRotation(Vec3(x, y, z), angle, &mat);
-    Director::getInstance()->multiplyMatrix(currentActiveStackType, mat);
+	MVPMatManager::getInstance()->multiplyMatrix(currentActiveStackType, mat);
 }
 
 void CC_DLL kmGLScalef(float x, float y, float z)
 {
     Mat4 mat;
     Mat4::createScale(x, y, z, &mat);
-    Director::getInstance()->multiplyMatrix(currentActiveStackType, mat);
+	MVPMatManager::getInstance()->multiplyMatrix(currentActiveStackType, mat);
 }
 
 void CC_DLL kmGLGetMatrix(unsigned int mode, Mat4* pOut)
 {
     if(KM_GL_MODELVIEW == mode)
-        *pOut = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+        *pOut = MVPMatManager::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
     else if(KM_GL_PROJECTION == mode)
-        *pOut = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
+        *pOut = MVPMatManager::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
     else if(KM_GL_TEXTURE == mode)
-        *pOut = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_TEXTURE);
+        *pOut = MVPMatManager::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_TEXTURE);
     else
     {
         CC_ASSERT(false);

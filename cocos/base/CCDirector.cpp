@@ -50,6 +50,7 @@ THE SOFTWARE.
 #include "base/CCConfiguration.h"
 #include "base/CCAsyncTaskPool.h"
 #include "platform/CCApplication.h"
+#include "base/MVPMatManager.h"
 
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 #include "platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxEngineDataManager.h"
@@ -167,7 +168,7 @@ bool Director::init(void)
     _eventResetDirector = new (std::nothrow) EventCustom(EVENT_RESET);
     //init TextureCache
     initTextureCache();
-    initMatrixStack();
+    MVPMatManager::getInstance()->initMatrixStack();
 
     _renderer = new (std::nothrow) Renderer;
     RenderState::initialize();
@@ -281,7 +282,7 @@ void Director::drawScene()
         setNextScene();
     }
 
-    pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+	MVPMatManager::getInstance()->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
     
     if (_runningScene)
     {
@@ -300,7 +301,7 @@ void Director::drawScene()
 
     _eventDispatcher->dispatchEvent(_eventAfterDraw);
 
-    popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+	MVPMatManager::getInstance()->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
 
     _totalFrames++;
 
@@ -416,201 +417,6 @@ void Director::setNextDeltaTimeZero(bool nextDeltaTimeZero)
     _nextDeltaTimeZero = nextDeltaTimeZero;
 }
 
-//
-// FIXME TODO
-// Matrix code MUST NOT be part of the Director
-// MUST BE moved outside.
-// Why the Director must have this code ?
-//
-void Director::initMatrixStack()
-{
-    while (!_modelViewMatrixStack.empty())
-    {
-        _modelViewMatrixStack.pop();
-    }
-
-    _projectionMatrixStackList.clear();
-
-    while (!_textureMatrixStack.empty())
-    {
-        _textureMatrixStack.pop();
-    }
-
-    _modelViewMatrixStack.push(Mat4::IDENTITY);
-    std::stack<Mat4> projectionMatrixStack;
-    projectionMatrixStack.push(Mat4::IDENTITY);
-    _projectionMatrixStackList.push_back(projectionMatrixStack);
-    _textureMatrixStack.push(Mat4::IDENTITY);
-}
-
-void Director::resetMatrixStack()
-{
-    initMatrixStack();
-}
-
-void Director::initProjectionMatrixStack(size_t stackCount)
-{
-    _projectionMatrixStackList.clear();
-    std::stack<Mat4> projectionMatrixStack;
-    projectionMatrixStack.push(Mat4::IDENTITY);
-    for (size_t i = 0; i < stackCount; ++i)
-        _projectionMatrixStackList.push_back(projectionMatrixStack);
-}
-
-size_t Director::getProjectionMatrixStackSize()
-{
-    return _projectionMatrixStackList.size();
-}
-
-void Director::popMatrix(MATRIX_STACK_TYPE type)
-{
-    if(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW == type)
-    {
-        _modelViewMatrixStack.pop();
-    }
-    else if(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION == type)
-    {
-        _projectionMatrixStackList[0].pop();
-    }
-    else if(MATRIX_STACK_TYPE::MATRIX_STACK_TEXTURE == type)
-    {
-        _textureMatrixStack.pop();
-    }
-    else
-    {
-        CCASSERT(false, "unknown matrix stack type");
-    }
-}
-
-void Director::popProjectionMatrix(size_t index)
-{
-    _projectionMatrixStackList[index].pop();
-}
-
-void Director::loadIdentityMatrix(MATRIX_STACK_TYPE type)
-{
-    if(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW == type)
-    {
-        _modelViewMatrixStack.top() = Mat4::IDENTITY;
-    }
-    else if(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION == type)
-    {
-        _projectionMatrixStackList[0].top() = Mat4::IDENTITY;
-    }
-    else if(MATRIX_STACK_TYPE::MATRIX_STACK_TEXTURE == type)
-    {
-        _textureMatrixStack.top() = Mat4::IDENTITY;
-    }
-    else
-    {
-        CCASSERT(false, "unknown matrix stack type");
-    }
-}
-
-void Director::loadProjectionIdentityMatrix(size_t index)
-{
-    _projectionMatrixStackList[index].top() = Mat4::IDENTITY;
-}
-
-void Director::loadMatrix(MATRIX_STACK_TYPE type, const Mat4& mat)
-{
-    if(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW == type)
-    {
-        _modelViewMatrixStack.top() = mat;
-    }
-    else if(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION == type)
-    {
-        _projectionMatrixStackList[0].top() = mat;
-    }
-    else if(MATRIX_STACK_TYPE::MATRIX_STACK_TEXTURE == type)
-    {
-        _textureMatrixStack.top() = mat;
-    }
-    else
-    {
-        CCASSERT(false, "unknown matrix stack type");
-    }
-}
-
-void Director::loadProjectionMatrix(const Mat4& mat, size_t index)
-{
-    _projectionMatrixStackList[index].top() = mat;
-}
-
-void Director::multiplyMatrix(MATRIX_STACK_TYPE type, const Mat4& mat)
-{
-    if(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW == type)
-    {
-        _modelViewMatrixStack.top() *= mat;
-    }
-    else if(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION == type)
-    {
-        _projectionMatrixStackList[0].top() *= mat;
-    }
-    else if(MATRIX_STACK_TYPE::MATRIX_STACK_TEXTURE == type)
-    {
-        _textureMatrixStack.top() *= mat;
-    }
-    else
-    {
-        CCASSERT(false, "unknown matrix stack type");
-    }
-}
-
-void Director::multiplyProjectionMatrix(const Mat4& mat, size_t index)
-{
-    _projectionMatrixStackList[index].top() *= mat;
-}
-
-void Director::pushMatrix(MATRIX_STACK_TYPE type)
-{
-    if(type == MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW)
-    {
-        _modelViewMatrixStack.push(_modelViewMatrixStack.top());
-    }
-    else if(type == MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION)
-    {
-        _projectionMatrixStackList[0].push(_projectionMatrixStackList[0].top());
-    }
-    else if(type == MATRIX_STACK_TYPE::MATRIX_STACK_TEXTURE)
-    {
-        _textureMatrixStack.push(_textureMatrixStack.top());
-    }
-    else
-    {
-        CCASSERT(false, "unknown matrix stack type");
-    }
-}
-
-void Director::pushProjectionMatrix(size_t index)
-{
-    _projectionMatrixStackList[index].push(_projectionMatrixStackList[index].top());
-}
-
-const Mat4& Director::getMatrix(MATRIX_STACK_TYPE type) const
-{
-    if(type == MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW)
-    {
-        return _modelViewMatrixStack.top();
-    }
-    else if(type == MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION)
-    {
-        return _projectionMatrixStackList[0].top();
-    }
-    else if(type == MATRIX_STACK_TYPE::MATRIX_STACK_TEXTURE)
-    {
-        return _textureMatrixStack.top();
-    }
-
-    CCASSERT(false, "unknown matrix stack type, will return modelview matrix instead");
-    return  _modelViewMatrixStack.top();
-}
-
-const Mat4& Director::getProjectionMatrix(size_t index) const
-{
-    return _projectionMatrixStackList[index].top();
-}
-
 void Director::setProjection(Projection projection)
 {
     Size size = _winSizeInPoints;
@@ -629,8 +435,8 @@ void Director::setProjection(Projection projection)
         {
             Mat4 orthoMatrix;
             Mat4::createOrthographicOffCenter(0, size.width, 0, size.height, -1024, 1024, &orthoMatrix);
-            loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION, orthoMatrix);
-            loadIdentityMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+            MVPMatManager::getInstance()->loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION, orthoMatrix);
+            MVPMatManager::getInstance()->loadIdentityMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
             break;
         }
             
@@ -647,8 +453,8 @@ void Director::setProjection(Projection projection)
             Mat4::createLookAt(eye, center, up, &matrixLookup);
             Mat4 proj3d = matrixPerspective * matrixLookup;
 
-            loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION, proj3d);
-            loadIdentityMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+            MVPMatManager::getInstance()->loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION, proj3d);
+            MVPMatManager::getInstance()->loadIdentityMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
             break;
         }
 
@@ -720,8 +526,8 @@ static void GLToClipTransform(Mat4 *transformOut)
     Director* director = Director::getInstance();
     CCASSERT(nullptr != director, "Director is null when setting matrix stack");
 
-    auto projection = director->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
-    auto modelview = director->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+    auto projection = MVPMatManager::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
+    auto modelview = MVPMatManager::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
     *transformOut = projection * modelview;
 }
 

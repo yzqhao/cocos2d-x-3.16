@@ -45,6 +45,7 @@
 #include "renderer/CCMaterial.h"
 #include "renderer/CCTechnique.h"
 #include "renderer/CCPass.h"
+#include "base/MVPMatManager.h"
 
 NS_CC_BEGIN
 
@@ -719,9 +720,8 @@ void Sprite3D::visit(cocos2d::Renderer *renderer, const cocos2d::Mat4 &parentTra
     flags |= FLAGS_RENDER_AS_3D;
     
     //
-    Director* director = Director::getInstance();
-    director->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
-    director->loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW, _modelViewTransform);
+	MVPMatManager::getInstance()->pushMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+	MVPMatManager::getInstance()->loadMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW, _modelViewTransform);
     
     bool visibleByCamera = isVisitableByVisitingCamera();
     
@@ -752,7 +752,7 @@ void Sprite3D::visit(cocos2d::Renderer *renderer, const cocos2d::Mat4 &parentTra
         this->draw(renderer, _modelViewTransform, flags);
     }
     
-    director->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
+	MVPMatManager::getInstance()->popMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
 }
 
 void Sprite3D::draw(Renderer *renderer, const Mat4 &transform, uint32_t flags)

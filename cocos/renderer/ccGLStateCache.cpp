@@ -31,6 +31,7 @@ THE SOFTWARE.
 #include "base/CCDirector.h"
 #include "base/ccConfig.h"
 #include "base/CCConfiguration.h"
+#include "base/MVPMatManager.h"
 
 NS_CC_BEGIN
 
@@ -61,7 +62,7 @@ namespace GL {
 
 void invalidateStateCache( void )
 {
-    Director::getInstance()->resetMatrixStack();
+	MVPMatManager::getInstance()->resetMatrixStack();
     s_currentProjectionMatrix = -1;
     s_attributeFlags = 0;
 

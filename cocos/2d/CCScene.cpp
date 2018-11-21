@@ -33,6 +33,7 @@ THE SOFTWARE.
 #include "base/ccUTF8.h"
 #include "renderer/CCRenderer.h"
 #include "renderer/CCFrameBuffer.h"
+#include "base/MVPMatManager.h"
 
 NS_CC_BEGIN
 
@@ -163,8 +164,8 @@ void Scene::render(Renderer* renderer, const Mat4* eyeTransforms, const Mat4* ey
                 camera->setAdditionalProjection(eyeProjections[i] * camera->getProjectionMatrix().getInversed());
             if (eyeTransforms)
                 camera->setAdditionalTransform(eyeTransforms[i].getInversed());
-            director->pushProjectionMatrix(i);
-            director->loadProjectionMatrix(Camera::_visitingCamera->getViewProjectionMatrix(), i);
+			MVPMatManager::getInstance()->pushProjectionMatrix(i);
+			MVPMatManager::getInstance()->loadProjectionMatrix(Camera::_visitingCamera->getViewProjectionMatrix(), i);
         }
 
         camera->apply();
@@ -177,15 +178,10 @@ void Scene::render(Renderer* renderer, const Mat4* eyeTransforms, const Mat4* ey
         camera->restore();
 
         for (unsigned int i = 0; i < multiViewCount; ++i)
-            director->popProjectionMatrix(i);
-
-        // we shouldn't restore the transform matrix since it could be used
-        // from "update" or other parts of the game to calculate culling or something else.
-//        camera->setNodeToParentTransform(eyeCopy);
+			MVPMatManager::getInstance()->popProjectionMatrix(i);
     }
 
     Camera::_visitingCamera = nullptr;
-//    experimental::FrameBuffer::applyDefaultFBO();
 }
 
 void Scene::removeAllChildren()

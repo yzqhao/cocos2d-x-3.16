@@ -36,6 +36,7 @@ THE SOFTWARE.
 #include "base/ccUTF8.h"
 #include "renderer/ccGLStateCache.h"
 #include "platform/CCFileUtils.h"
+#include "base/MVPMatManager.h"
 
 // helper functions
 
@@ -914,12 +915,12 @@ void GLProgram::setUniformLocationWithMatrix4fv(GLint location, const GLfloat* m
 
 void GLProgram::setUniformsForBuiltins()
 {
-    setUniformsForBuiltins(_director->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW));
+    setUniformsForBuiltins(MVPMatManager::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW));
 }
 
 void GLProgram::setUniformsForBuiltins(const Mat4 &matrixMV)
 {
-    const auto& matrixP = _director->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
+    const auto& matrixP = MVPMatManager::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_PROJECTION);
 
     if (_flags.usesP)
         setUniformLocationWithMatrix4fv(_builtInUniforms[UNIFORM_P_MATRIX], matrixP.m, 1);
@@ -927,9 +928,9 @@ void GLProgram::setUniformsForBuiltins(const Mat4 &matrixMV)
     if (_flags.usesMultiViewP)
     {
         Mat4 mats[4];
-        const auto stackSize = std::min<size_t>(_director->getProjectionMatrixStackSize(), 4);
+        const auto stackSize = std::min<size_t>(MVPMatManager::getInstance()->getProjectionMatrixStackSize(), 4);
         for (size_t i = 0; i < stackSize; ++i) {
-            mats[i] = _director->getProjectionMatrix(i);
+            mats[i] = MVPMatManager::getInstance()->getProjectionMatrix(i);
         }
         setUniformLocationWithMatrix4fv(_builtInUniforms[UNIFORM_MULTIVIEW_P_MATRIX], mats[0].m, 4);
     }
@@ -946,9 +947,9 @@ void GLProgram::setUniformsForBuiltins(const Mat4 &matrixMV)
     if (_flags.usesMultiViewMVP)
     {
         Mat4 mats[4];
-        const auto stackSize = std::min<size_t>(_director->getProjectionMatrixStackSize(), 4);
+        const auto stackSize = std::min<size_t>(MVPMatManager::getInstance()->getProjectionMatrixStackSize(), 4);
         for (size_t i = 0; i < stackSize; ++i) {
-            mats[i] = _director->getProjectionMatrix(i) * matrixMV;
+            mats[i] = MVPMatManager::getInstance()->getProjectionMatrix(i) * matrixMV;
         }
         setUniformLocationWithMatrix4fv(_builtInUniforms[UNIFORM_MULTIVIEW_MVP_MATRIX], mats[0].m, 4);
     }
