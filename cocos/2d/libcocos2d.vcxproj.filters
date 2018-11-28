@@ -485,8 +485,6 @@
       <Filter>base</Filter>
     </ClCompile>
     <ClCompile Include="..\base\CCNinePatchImageParser.cpp" />
-      <Filter>renderer</Filter>
-    </ClCompile>
     <ClCompile Include="CCAutoPolygon.cpp">
       <Filter>2d</Filter>
     </ClCompile>
@@ -1020,8 +1018,6 @@
       <Filter>base</Filter>
     </ClInclude>
     <ClInclude Include="..\base\CCNinePatchImageParser.h" />
-      <Filter>renderer</Filter>
-    </ClInclude>
     <ClInclude Include="CCAutoPolygon.h">
       <Filter>2d</Filter>
     </ClInclude>
