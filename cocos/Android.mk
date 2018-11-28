@@ -81,6 +81,7 @@ base/ccUtils.cpp \
 base/etc1.cpp \
 base/pvr.cpp \
 base/s3tc.cpp \
+base/MVPMatManager.cpp \
 renderer/CCBatchCommand.cpp \
 renderer/CCCustomCommand.cpp \
 renderer/CCGLProgram.cpp \
