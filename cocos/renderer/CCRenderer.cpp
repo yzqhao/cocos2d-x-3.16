@@ -27,9 +27,7 @@
 #include <algorithm>
 
 #include "renderer/CCTrianglesCommand.h"
-#include "renderer/CCBatchCommand.h"
 #include "renderer/CCCustomCommand.h"
-#include "renderer/CCGroupCommand.h"
 #include "renderer/CCPrimitiveCommand.h"
 #include "renderer/CCMeshCommand.h"
 #include "renderer/CCGLProgramCache.h"
@@ -206,8 +204,6 @@ Renderer::Renderer()
 ,_cacheTextureListener(nullptr)
 #endif
 {
-    _groupCommandManager = new (std::nothrow) GroupCommandManager();
-    
     _commandGroupStack.push(DEFAULT_RENDER_QUEUE);
     
     RenderQueue defaultRenderQueue;
@@ -225,7 +221,6 @@ Renderer::Renderer()
 Renderer::~Renderer()
 {
     _renderGroups.clear();
-    _groupCommandManager->release();
     
     glDeleteBuffers(2, _buffersVBO);
 
@@ -430,26 +425,11 @@ void Renderer::processRenderCommand(RenderCommand* command)
             cmd->batchDraw();
         }
     }
-    else if(RenderCommand::Type::GROUP_COMMAND == commandType)
-    {
-        flush();
-        int renderQueueID = ((GroupCommand*) command)->getRenderQueueID();
-        CCGL_DEBUG_PUSH_GROUP_MARKER("RENDERER_GROUP_COMMAND");
-        visitRenderQueue(_renderGroups[renderQueueID]);
-        CCGL_DEBUG_POP_GROUP_MARKER();
-    }
     else if(RenderCommand::Type::CUSTOM_COMMAND == commandType)
     {
         flush();
         auto cmd = static_cast<CustomCommand*>(command);
         CCGL_DEBUG_INSERT_EVENT_MARKER("RENDERER_CUSTOM_COMMAND");
-        cmd->execute();
-    }
-    else if(RenderCommand::Type::BATCH_COMMAND == commandType)
-    {
-        flush();
-        auto cmd = static_cast<BatchCommand*>(command);
-        CCGL_DEBUG_INSERT_EVENT_MARKER("RENDERER_BATCH_COMMAND");
         cmd->execute();
     }
     else if(RenderCommand::Type::PRIMITIVE_COMMAND == commandType)

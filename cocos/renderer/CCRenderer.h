@@ -131,8 +131,6 @@ struct RenderStackElement
     ssize_t currentIndex;
 };
 
-class GroupCommandManager;
-
 /* Class responsible for the rendering in.
 
 Whenever possible prefer to use `TrianglesCommand` objects since the renderer will automatically batch them.
@@ -199,9 +197,6 @@ public:
      * For 2D object depth test is disabled by default
      */
     void setDepthTest(bool enable);
-    
-    //This will not be used outside.
-    GroupCommandManager* getGroupCommandManager() const { return _groupCommandManager; }
 
     /** returns whether or not a rectangle is visible or not */
     bool checkVisibility(const Mat4& transform, const Size& size);
@@ -269,8 +264,6 @@ protected:
     bool _isRendering;
     
     bool _isDepthTestFor2D;
-    
-    GroupCommandManager* _groupCommandManager;
     
 #if CC_ENABLE_CACHE_TEXTURE_DATA
     EventListenerCustom* _cacheTextureListener;

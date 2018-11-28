@@ -82,13 +82,11 @@ base/etc1.cpp \
 base/pvr.cpp \
 base/s3tc.cpp \
 base/MVPMatManager.cpp \
-renderer/CCBatchCommand.cpp \
 renderer/CCCustomCommand.cpp \
 renderer/CCGLProgram.cpp \
 renderer/CCGLProgramCache.cpp \
 renderer/CCGLProgramState.cpp \
 renderer/CCGLProgramStateCache.cpp \
-renderer/CCGroupCommand.cpp \
 renderer/CCMaterial.cpp \
 renderer/CCMeshCommand.cpp \
 renderer/CCPass.cpp \

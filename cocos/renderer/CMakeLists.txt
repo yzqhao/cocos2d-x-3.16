@@ -1,12 +1,10 @@
 
 set(COCOS_RENDERER_SRC
-  renderer/CCBatchCommand.cpp
   renderer/CCCustomCommand.cpp
   renderer/CCGLProgram.cpp
   renderer/CCGLProgramCache.cpp
   renderer/CCGLProgramState.cpp
   renderer/CCGLProgramStateCache.cpp
-  renderer/CCGroupCommand.cpp
   renderer/CCMaterial.cpp
   renderer/CCMeshCommand.cpp
   renderer/CCPass.cpp

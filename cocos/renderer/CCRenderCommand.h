@@ -54,10 +54,6 @@ public:
         QUAD_COMMAND,
         /**Custom command, used for calling callback for rendering.*/
         CUSTOM_COMMAND,
-        /**Batch command, used for draw batches in texture atlas.*/
-        BATCH_COMMAND,
-        /**Group command, which can group command in a tree hierarchy.*/
-        GROUP_COMMAND,
         /**Mesh command, used to draw 3D meshes.*/
         MESH_COMMAND,
         /**Primitive command, used to draw primitives such as lines, points and triangles.*/
