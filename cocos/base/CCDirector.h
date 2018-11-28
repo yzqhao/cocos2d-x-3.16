@@ -59,10 +59,6 @@ class Renderer;
 class Camera;
 
 class Console;
-namespace experimental
-{
-    class FrameBuffer;
-}
 
 /**
  @brief Class that creates and handles the main Window and manages how
@@ -530,9 +526,6 @@ protected:
 
     /* Renderer for the Director */
     Renderer *_renderer;
-    
-    /* Default FrameBufferObject*/
-    experimental::FrameBuffer* _defaultFBO;
 
     /* Console for the director */
     Console *_console;

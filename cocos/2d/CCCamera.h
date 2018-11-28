@@ -31,7 +31,6 @@ THE SOFTWARE.
 #include "3d/CCFrustum.h"
 #include "renderer/CCQuadCommand.h"
 #include "renderer/CCCustomCommand.h"
-#include "renderer/CCFrameBuffer.h"
 #include "renderer/CCViewPort.h"
 
 NS_CC_BEGIN
@@ -255,10 +254,6 @@ public:
     void restore();
 
     /**
-     Set FBO, which will attach several render target for the rendered result.
-     */
-    void setFrameBufferObject(experimental::FrameBuffer* fbo);
-    /**
      Set Viewport for camera.
      */
     void setViewport(const Viewport& vp);
@@ -299,9 +294,7 @@ public:
     bool initDefault();
     bool initPerspective(float fieldOfView, float aspectRatio, float nearPlane, float farPlane);
     bool initOrthographic(float zoomX, float zoomY, float nearPlane, float farPlane);
-    void applyFrameBufferObject();
     void applyViewport();
-    void restoreFrameBufferObject();
     void restoreViewport();
 
 protected:
@@ -331,7 +324,6 @@ protected:
     CameraBackgroundBrush* _clearBrush; //brush used to clear the back ground
 
     Viewport _viewport;
-    experimental::FrameBuffer* _fbo;
     GLint _oldViewport[4];
 };
 

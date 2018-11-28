@@ -32,7 +32,6 @@ THE SOFTWARE.
 #include "base/CCEventListenerCustom.h"
 #include "base/ccUTF8.h"
 #include "renderer/CCRenderer.h"
-#include "renderer/CCFrameBuffer.h"
 #include "base/MVPMatManager.h"
 
 NS_CC_BEGIN
