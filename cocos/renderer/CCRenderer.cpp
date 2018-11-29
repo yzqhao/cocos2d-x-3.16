@@ -632,11 +632,6 @@ void Renderer::clean()
     // Clear render group
     for (size_t j = 0, size = _renderGroups.size() ; j < size; j++)
     {
-        //commands are owned by nodes
-        // for (const auto &cmd : _renderGroups[j])
-        // {
-        //     cmd->releaseToCommandPool();
-        // }
         _renderGroups[j].clear();
     }
 
@@ -668,8 +663,6 @@ void Renderer::setDepthTest(bool enable)
 
         RenderState::StateBlock::_defaultState->setDepthTest(true);
         RenderState::StateBlock::_defaultState->setDepthFunction(RenderState::DEPTH_LEQUAL);
-
-//        glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
     }
     else
     {

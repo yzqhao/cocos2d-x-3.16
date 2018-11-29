@@ -207,9 +207,6 @@ RenderState::StateBlock::StateBlock()
 , _depthTestEnabled(true), _depthWriteEnabled(false), _depthFunction(RenderState::DEPTH_LESS)
 , _blendEnabled(true), _blendSrc(RenderState::BLEND_ONE), _blendDst(RenderState::BLEND_ZERO)
 , _cullFaceSide(CULL_FACE_SIDE_BACK), _frontFace(FRONT_FACE_CCW)
-, _stencilTestEnabled(false), _stencilWrite(RS_ALL_ONES)
-, _stencilFunction(RenderState::STENCIL_ALWAYS), _stencilFunctionRef(0), _stencilFunctionMask(RS_ALL_ONES)
-, _stencilOpSfail(RenderState::STENCIL_OP_KEEP), _stencilOpDpfail(RenderState::STENCIL_OP_KEEP), _stencilOpDppass(RenderState::STENCIL_OP_KEEP)
 , _bits(0L)
 {
 }
@@ -380,14 +377,6 @@ void RenderState::StateBlock::cloneInto(StateBlock* state) const
     state->_blendDst = _blendDst;
     state->_cullFaceSide = _cullFaceSide;
     state->_frontFace = _frontFace;
-    state->_stencilTestEnabled = _stencilTestEnabled;
-    state->_stencilWrite = _stencilWrite;
-    state->_stencilFunction = _stencilFunction;
-    state->_stencilFunctionRef = _stencilFunctionRef;
-    state->_stencilFunctionMask = _stencilFunctionMask;
-    state->_stencilOpSfail = _stencilOpSfail;
-    state->_stencilOpDpfail = _stencilOpDpfail;
-    state->_stencilOpDppass = _stencilOpDppass;
     state->_bits = _bits;
 }
 

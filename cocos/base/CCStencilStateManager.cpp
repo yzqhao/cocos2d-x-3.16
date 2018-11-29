@@ -275,18 +275,13 @@ void StencilStateManager::onAfterVisit()
     
     // manually restore the stencil state
     glStencilFunc(_currentStencilFunc, _currentStencilRef, _currentStencilValueMask);
-    //    RenderState::StateBlock::_defaultState->setStencilFunction((RenderState::StencilFunction)_currentStencilFunc, _currentStencilRef, _currentStencilValueMask);
     
     glStencilOp(_currentStencilFail, _currentStencilPassDepthFail, _currentStencilPassDepthPass);
-    //    RenderState::StateBlock::_defaultState->setStencilOperation((RenderState::StencilOperation)_currentStencilFail,
-    //                                                                (RenderState::StencilOperation)_currentStencilPassDepthFail,
-    //                                                                (RenderState::StencilOperation)_currentStencilPassDepthPass);
     
     glStencilMask(_currentStencilWriteMask);
     if (!_currentStencilEnabled)
     {
         glDisable(GL_STENCIL_TEST);
-        //        RenderState::StateBlock::_defaultState->setStencilTest(false);
     }
     
     // we are done using this layer, decrement

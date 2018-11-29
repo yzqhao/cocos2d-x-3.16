@@ -148,45 +148,6 @@ public:
     };
 
     /**
-     * Defines the supported stencil compare functions.
-     *
-     * Stencil compare functions determine if a new pixel will be drawn.
-     *
-     * The initial stencil compare function is STENCIL_ALWAYS.
-     */
-    enum StencilFunction
-    {
-        STENCIL_NEVER = GL_NEVER,
-        STENCIL_ALWAYS = GL_ALWAYS,
-        STENCIL_LESS = GL_LESS,
-        STENCIL_LEQUAL = GL_LEQUAL,
-        STENCIL_EQUAL = GL_EQUAL,
-        STENCIL_GREATER = GL_GREATER,
-        STENCIL_GEQUAL = GL_GEQUAL,
-        STENCIL_NOTEQUAL = GL_NOTEQUAL
-    };
-
-    /**
-     * Defines the supported stencil operations to perform.
-     *
-     * Stencil operations determine what should happen to the pixel if the
-     * stencil test fails, passes, or passes but fails the depth test.
-     *
-     * The initial stencil operation is STENCIL_OP_KEEP.
-     */
-    enum StencilOperation
-    {
-        STENCIL_OP_KEEP = GL_KEEP,
-        STENCIL_OP_ZERO = GL_ZERO,
-        STENCIL_OP_REPLACE = GL_REPLACE,
-        STENCIL_OP_INCR = GL_INCR,
-        STENCIL_OP_DECR = GL_DECR,
-        STENCIL_OP_INVERT = GL_INVERT,
-        STENCIL_OP_INCR_WRAP = GL_INCR_WRAP,
-        STENCIL_OP_DECR_WRAP = GL_DECR_WRAP
-    };
-
-    /**
      * Defines a block of fixed-function render states that can be applied to a
      * RenderState object.
      */
@@ -378,14 +339,6 @@ public:
         Blend _blendDst;
         CullFaceSide _cullFaceSide;
         FrontFace _frontFace;
-        bool _stencilTestEnabled;
-        unsigned int _stencilWrite;
-        StencilFunction _stencilFunction;
-        int _stencilFunctionRef;
-        unsigned int _stencilFunctionMask;
-        StencilOperation _stencilOpSfail;
-        StencilOperation _stencilOpDpfail;
-        StencilOperation _stencilOpDppass;
 
         long _bits;
 
