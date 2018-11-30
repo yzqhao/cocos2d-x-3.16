@@ -75,12 +75,6 @@ public:
     Texture2D* getTexture() const;
 
     /**
-     * Binds the render state for this RenderState and any of its parents, top-down,
-     * for the given pass.
-     */
-    void bind(Pass* pass);
-
-    /**
      * Returns the topmost RenderState in the hierarchy below the given RenderState.
      */
     RenderState* getTopmost(RenderState* below);
@@ -277,7 +271,6 @@ public:
         void setState(const std::string& name, const std::string& value);
 
         uint32_t getHash() const;
-        bool isDirty() const;
 
         /** StateBlock bits to be used with invalidate */
         enum
@@ -343,7 +336,6 @@ public:
         long _bits;
 
         mutable uint32_t _hash;
-        mutable bool _hashDirty;
     };
 
     void setStateBlock(StateBlock* state);
@@ -356,7 +348,6 @@ protected:
     void cloneInto(RenderState* state) const;
 
     mutable uint32_t _hash;
-    mutable bool _hashDirty;
 
     /**
      * The StateBlock of fixed-function render states that can be applied to the RenderState.

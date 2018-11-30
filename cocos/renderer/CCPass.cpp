@@ -124,22 +124,16 @@ void Pass::setGLProgramState(GLProgramState* glProgramState)
         CC_SAFE_RELEASE(_glProgramState);
         _glProgramState = glProgramState;
         CC_SAFE_RETAIN(_glProgramState);
-
-        _hashDirty = true;
     }
 }
 
 uint32_t Pass::getHash() const
 {
-    if (_hashDirty || _state->isDirty()) {
-        uint32_t glProgram = (uint32_t)_glProgramState->getGLProgram()->getProgram();
-        uint32_t textureid = _texture ? _texture->getName() : -1;
-        uint32_t stateblockid = _state->getHash();
+    uint32_t glProgram = (uint32_t)_glProgramState->getGLProgram()->getProgram();
+    uint32_t textureid = _texture ? _texture->getName() : -1;
+    uint32_t stateblockid = _state->getHash();
 
-        _hash = glProgram ^ textureid ^ stateblockid;
-
-        _hashDirty = false;
-    }
+    _hash = glProgram ^ textureid ^ stateblockid;
 
     return _hash;
 }
@@ -162,8 +156,33 @@ void Pass::bind(const Mat4& modelView, bool bindAttributes)
     glprogramstate->applyUniforms();
 
     //set render state
-    RenderState::bind(this);
+    if (_texture)
+        GL::bindTexture2D(_texture->getName());
 
+    // Get the combined modified state bits for our RenderState hierarchy.
+    long stateOverrideBits = _state ? _state->_bits : 0;
+    RenderState* rs = _parent;
+    while (rs)
+    {
+        if (rs->_state)
+        {
+            stateOverrideBits |= rs->_state->_bits;
+        }
+        rs = rs->_parent;
+    }
+
+    // Restore renderer state to its default, except for explicitly specified states
+    StateBlock::restore(stateOverrideBits);
+
+    // Apply renderer state for the entire hierarchy, top-down.
+    rs = nullptr;
+    while ((rs = getTopmost(rs)))
+    {
+        if (rs->_state)
+        {
+            rs->_state->bindNoRestore();
+        }
+    }
 }
 
 Node* Pass::getTarget() const

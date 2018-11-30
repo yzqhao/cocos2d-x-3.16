@@ -40,7 +40,6 @@ RenderState::StateBlock* RenderState::StateBlock::_defaultState = nullptr;
 
 RenderState::RenderState()
 : _hash(0)
-, _hashDirty(true)
 , _parent(nullptr)
 , _texture(nullptr)
 {
@@ -97,39 +96,6 @@ void RenderState::setTexture(Texture2D* texture)
 Texture2D* RenderState::getTexture() const
 {
     return _texture;
-}
-
-void RenderState::bind(Pass* pass)
-{
-    CC_ASSERT(pass);
-
-    if (_texture)
-        GL::bindTexture2D(_texture->getName());
-
-    // Get the combined modified state bits for our RenderState hierarchy.
-    long stateOverrideBits = _state ? _state->_bits : 0;
-    RenderState* rs = _parent;
-    while (rs)
-    {
-        if (rs->_state)
-        {
-            stateOverrideBits |= rs->_state->_bits;
-        }
-        rs = rs->_parent;
-    }
-
-    // Restore renderer state to its default, except for explicitly specified states
-    StateBlock::restore(stateOverrideBits);
-
-    // Apply renderer state for the entire hierarchy, top-down.
-    rs = nullptr;
-    while ((rs = getTopmost(rs)))
-    {
-        if (rs->_state)
-        {
-            rs->_state->bindNoRestore();
-        }
-    }
 }
 
 RenderState* RenderState::getTopmost(RenderState* below)
@@ -527,12 +493,6 @@ void RenderState::StateBlock::setState(const std::string& name, const std::strin
     {
         CCLOG("Unsupported render state string '%s'.", name.c_str());
     }
-}
-
-bool RenderState::StateBlock::isDirty() const
-{
-    // XXX
-    return true;
 }
 
 uint32_t RenderState::StateBlock::getHash() const
