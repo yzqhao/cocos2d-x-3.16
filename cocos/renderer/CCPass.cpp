@@ -79,15 +79,13 @@ bool Pass::initWithGLProgramState(GLProgramState *glProgramState)
 }
 
 Pass::Pass()
-: _target(nullptr) 
-, _glProgramState(nullptr)
+: _glProgramState(nullptr)
 , _vertexAttribBinding(nullptr)
 {
 }
 
 Pass::~Pass()
 {
-    CC_SAFE_RELEASE(_target);
     CC_SAFE_RELEASE(_glProgramState);
     CC_SAFE_RELEASE(_vertexAttribBinding);
 }
@@ -98,9 +96,6 @@ Pass* Pass::clone() const
     if (pass)
     {
         RenderState::cloneInto(pass);
-
-        pass->_target = _target;
-        CC_SAFE_RETAIN(pass->_target);
 
         pass->_glProgramState = _glProgramState->clone();
         CC_SAFE_RETAIN(pass->_glProgramState);
@@ -150,10 +145,8 @@ void Pass::bind(const Mat4& modelView, bool bindAttributes)
     if (bindAttributes && _vertexAttribBinding)
         _vertexAttribBinding->bind();
 
-    auto glprogramstate = _glProgramState ? _glProgramState : getTarget()->getGLProgramState();
-
-    glprogramstate->applyGLProgram(modelView);
-    glprogramstate->applyUniforms();
+    _glProgramState->applyGLProgram(modelView);
+    _glProgramState->applyUniforms();
 
     //set render state
     if (_texture)
@@ -183,16 +176,6 @@ void Pass::bind(const Mat4& modelView, bool bindAttributes)
             rs->_state->bindNoRestore();
         }
     }
-}
-
-Node* Pass::getTarget() const
-{
-    return _target;
-}
-
-void Pass::setTarget(Node* target)
-{
-    _target = target;
 }
 
 void Pass::unbind()

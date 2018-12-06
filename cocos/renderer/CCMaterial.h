@@ -126,8 +126,6 @@ protected:
     bool initWithFile(const std::string& file);
     bool initWithProperties(Properties* materialProperties);
 
-    void setTarget(Node* target);
-
     bool parseProperties(Properties* properties);
     bool parseTechnique(Properties* properties);
     bool parsePass(Technique* technique, Properties* properties);
@@ -145,9 +143,6 @@ protected:
 
     // weak pointer since it is being help by _techniques
     Technique* _currentTechnique;
-
-    // weak reference
-    Node* _target;
 };
 
 NS_CC_END

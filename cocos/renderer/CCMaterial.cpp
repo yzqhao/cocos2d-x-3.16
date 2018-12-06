@@ -122,19 +122,6 @@ bool Material::initWithProperties(Properties* materialProperties)
     return parseProperties(materialProperties);
 }
 
-void Material::setTarget(cocos2d::Node *target)
-{
-    _target = target;
-
-    for (const auto& technique: _techniques)
-    {
-        for (const auto& pass: technique->_passes)
-        {
-            pass->setTarget(target);
-        }
-    }
-}
-
 bool Material::parseProperties(Properties* materialProperties)
 {
     setName(materialProperties->getId());
@@ -432,7 +419,6 @@ std::string Material::getName() const
 Material::Material()
 : _name("")
 , _currentTechnique(nullptr)
-, _target(nullptr)
 {
 }
 

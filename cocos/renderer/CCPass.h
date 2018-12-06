@@ -38,7 +38,6 @@
 NS_CC_BEGIN
 
 class GLProgramState;
-class Node;
 class VertexAttribBinding;
 
 class CC_DLL Pass : public RenderState
@@ -89,10 +88,6 @@ public:
      * Returns a clone (deep-copy) of this instance */
     Pass* clone() const;
 
-    /**
-     * set target */
-    void setTarget(Node* target);
-
 protected:
     Pass();
     ~Pass();
@@ -100,9 +95,7 @@ protected:
     bool initWithGLProgramState(GLProgramState *glProgramState);
 
     void setGLProgramState(GLProgramState* glProgramState);
-    Node* getTarget() const;
 
-    Node* _target;
     GLProgramState* _glProgramState;
     VertexAttribBinding* _vertexAttribBinding;
 };
