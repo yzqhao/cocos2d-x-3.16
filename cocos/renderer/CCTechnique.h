@@ -41,8 +41,6 @@ NS_CC_BEGIN
 
 class Pass;
 class GLProgramState;
-class parent;
-class Node;
 
 /// Technique
 class CC_DLL Technique : public RenderState

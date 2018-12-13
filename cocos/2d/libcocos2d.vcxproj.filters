@@ -510,6 +510,9 @@
     <ClCompile Include="..\base\MVPMatManager.cpp">
       <Filter>base</Filter>
     </ClCompile>
+    <ClCompile Include="..\3d\Sprite3DCache.cpp">
+      <Filter>3d</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\external\xxhash\xxhash.h">
@@ -1035,6 +1038,9 @@
     </ClInclude>
     <ClInclude Include="..\base\MVPMatManager.h">
       <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3d\Sprite3DCache.h">
+      <Filter>3d</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
